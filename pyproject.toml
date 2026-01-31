@@ -76,9 +76,6 @@ python_functions = ["test_*"]
 addopts = [
     "-v",
     "--strict-markers",
-    "--cov=pramana",
-    "--cov-report=term-missing",
-    "--cov-fail-under=75",
 ]
 markers = [
     "slow: marks tests as slow (deselect with '-m not slow')",

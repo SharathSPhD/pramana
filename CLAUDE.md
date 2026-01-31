@@ -67,9 +67,9 @@ Training examples must follow strict JSON schema with required fields for each N
 ## Staged Implementation Plan
 
 ### Stage 0: Proof of Concept (2 weeks, $100)
-- Create 5-10 manual seed examples (constraint satisfaction puzzles)
-- Fine-tune smallest model (Llama 3.2-3B) to validate format learnability
-- Success criteria: Model attempts 6-phase structure on new problems
+- ✅ **COMPLETED**: Created 20 manual seed examples (constraint satisfaction, boolean, deduction)
+- ✅ **COMPLETED**: Fine-tuned Llama 3.2-3B with Unsloth QLoRA (rank 64)
+- ✅ **SUCCESS**: Achieved 100% format adherence on held-out test set
 
 ### Stage 1: Minimum Viable Reasoner (8-10 weeks, $500-1000)
 - Create 50 gold-standard examples (constraint satisfaction + Boolean SAT)

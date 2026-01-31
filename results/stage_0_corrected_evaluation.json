@@ -1,0 +1,46 @@
+{
+  "evaluation_timestamp": "2026-01-31T20:02:51.499248",
+  "model_dir": "models/stage_0_corrected",
+  "test_examples": [
+    "pramana-003",
+    "pramana-005"
+  ],
+  "results": [
+    {
+      "example_id": "pramana-003",
+      "timestamp": "2026-01-31T20:02:18.656634",
+      "problem": "Four friends (Alice, Bob, Carol, David) are comparing their heights. The following information is known:\n\n**Constraints**:\n1. Alice is taller than Bob\n2. Bob is taller than Carol\n3. Carol is taller than David\n4. Alice is taller than Carol\n\n**Question**: What is the complete height ranking from tallest to shortest?\n\n---",
+      "ground_truth": "",
+      "prompt": "### Problem:\nFour friends (Alice, Bob, Carol, David) are comparing their heights. The following information is known:\n\n**Constraints**:\n1. Alice is taller than Bob\n2. Bob is taller than Carol\n3. Carol is taller than David\n4. Alice is taller than Carol\n\n**Question**: What is the complete height ranking from tallest to shortest?\n\n---\n\n### Instructions:\nYou MUST structure your response using the 6-phase Nyaya methodology. CRITICAL: Include all 6 phases in this exact order:\n\n1. ## Samshaya (Doubt Analysis) - Classify the type of doubt/uncertainty\n2. ## Pramana (Sources of Knowledge) - Identify Pratyaksha, Anumana, Upamana, Shabda\n3. ## Pancha Avayava (5-Member Syllogism) - Construct formal arguments with Pratijna, Hetu, Udaharana, Upanaya, Nigamana\n4. ## Tarka (Counterfactual Reasoning) - Test conclusions via reductio ad absurdum\n5. ## Hetvabhasa (Fallacy Check) - Check for reasoning errors\n6. ## Nirnaya (Ascertainment) - State definitive conclusion with confidence level\n\nDo NOT use generic chain-of-thought format. You MUST follow the 6-phase Nyaya structure.\n\n### Nyaya Reasoning:\n",
+      "generated_output": "The doubt in this case is whether the given information is sufficient to determine the complete height ranking from tallest to shortest.\n\n### Phase 1: Samshaya (Doubt Analysis)\nType of doubt: **Tarka** (Counterfactual Reasoning)\n\nWe are to analyze the given constraints to check if they are sufficient for determining the complete height ranking.\n\n### Phase 2: Pramana (Sources of Knowledge)\nSources of knowledge:\n\n* **Pratyaksha**: No direct observation of heights.\n* **Anumana**: Indirect inferences from the given constraints.\n* **Upamana**: Similarity in constraint patterns (e.g., Alice > Bob > Carol > David).\n* **Shabda**: Statements from the problem.\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\nConstruct formal arguments with:\n\n1. **Pratijna**: Statement of the problem.\n2. **Hetu**: Reasoning about the relationships between Alice, Bob, Carol, and David.\n3. **Udaharana**: Specific examples of the relationships (e.g., Alice > Bob, Bob > Carol).\n4. **Upanaya**: Logical conclusion from the given constraints.\n5. **Nigamana**: Formal statement of the conclusion.\n\n**Pratijna**: Four friends (Alice, Bob, Carol, David) are comparing their heights.\n\n**Hetu**: If Alice is taller than Bob, and Bob is taller than Carol, then Alice is taller than Carol.\n\n**Udaharana**: Alice > Bob, Bob > Carol.\n\n**Upanaya**: Therefore, Alice is taller than Carol.\n\n**Nigamana**: By the transitive property of height, Alice is taller than Carol.\n\n### Phase 4: Tarka (Counterfactual Reasoning)\nTest conclusions via reductio ad absurdum:\n\n* Assume Alice is not taller than Carol.\n* Then, Alice would be shorter than Carol.\n* This contradicts the given constraint: Alice > Carol.\n* Therefore, our assumption is false, and Alice is taller than Carol.\n\n### Phase 5: Hetvabhasa (Fallacy Check)\nNo logical fallacies detected in the reasoning.\n\n### Phase 6: Nirnaya (Ascertainment)\nState definitive conclusion with confidence level:\n\n**Conclusion**: Alice is taller than Carol. By the transitive property of height, Alice is taller than Bob, and Bob is taller than David. Therefore, the complete height ranking from tallest to shortest is:\n\n1. Alice\n2. Bob\n3. Carol\n4. David\n\n**Confidence level**: High, as the reasoning is based on a series of logical deductions from the given constraints.\n\n---\n\n### Final Answer:\nThe complete height ranking from tallest to shortest is:\n\n1. Alice\n2. Bob\n3. Carol\n4. David\n\n**Nyaya Reasoning:**\n\n1. **Samshaya**: Type of doubt: Tarka (Counterfactual Reasoning)\n2. **Pramana**: Sources of knowledge: Pratyaksha, Anumana, Upamana, Shabda\n3. **Pancha Avayava**: Construct formal arguments with Pratijna, Hetu, Udaharana, Upanaya, Nigamana\n4. **Tarka**: Test conclusions via reductio ad absurdum\n5. **Hetvabhasa**: Check for reasoning errors\n6. **Nirnaya**: State definitive conclusion with confidence level\n\n**Nyaya Reasoning Conclusion:** The complete height ranking from tallest to shortest is:\n\n1. Alice\n2. Bob\n3. Carol\n4. David\n\n**Confidence level:** High, as the reasoning is based on a series of logical deductions from the given constraints.",
+      "output_length": 3067,
+      "parse_success": false,
+      "parse_error": "Missing required section: Samshaya\\s*.*?",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    },
+    {
+      "example_id": "pramana-005",
+      "timestamp": "2026-01-31T20:02:37.102165",
+      "problem": "Consider four logical statements P, Q, R, and S. The following information is known:\n\n**Given Facts**:\n1. If P is true, then Q is true\n2. If Q is true, then R is true\n3. If R is true, then S is true\n4. P is true\n\n**Question**: What are the truth values of P, Q, R, and S?\n\n---",
+      "ground_truth": "",
+      "prompt": "### Problem:\nConsider four logical statements P, Q, R, and S. The following information is known:\n\n**Given Facts**:\n1. If P is true, then Q is true\n2. If Q is true, then R is true\n3. If R is true, then S is true\n4. P is true\n\n**Question**: What are the truth values of P, Q, R, and S?\n\n---\n\n### Instructions:\nYou MUST structure your response using the 6-phase Nyaya methodology. CRITICAL: Include all 6 phases in this exact order:\n\n1. ## Samshaya (Doubt Analysis) - Classify the type of doubt/uncertainty\n2. ## Pramana (Sources of Knowledge) - Identify Pratyaksha, Anumana, Upamana, Shabda\n3. ## Pancha Avayava (5-Member Syllogism) - Construct formal arguments with Pratijna, Hetu, Udaharana, Upanaya, Nigamana\n4. ## Tarka (Counterfactual Reasoning) - Test conclusions via reductio ad absurdum\n5. ## Hetvabhasa (Fallacy Check) - Check for reasoning errors\n6. ## Nirnaya (Ascertainment) - State definitive conclusion with confidence level\n\nDo NOT use generic chain-of-thought format. You MUST follow the 6-phase Nyaya structure.\n\n### Nyaya Reasoning:\n",
+      "generated_output": "### Phase 1: Samshaya (Doubt Analysis)\nThere is no doubt in the given statements, so there is no doubt analysis required.\n\n### Phase 2: Pramana (Sources of Knowledge)\nThe given facts are:\n1. P → Q\n2. Q → R\n3. R → S\n4. P is true\n\nAll statements are based on truth values of P, Q, R, and S.\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\nConstruct a formal argument for each statement:\n1. If P is true, then Q is true (P → Q)\nPratijna: P is true\nHetu: P\nUdaharana: (example) If I have a red apple, then it is red (example fact)\nUpanaya: P → Q\nNigamana: Therefore, Q is true (given P is true)\n\n2. If Q is true, then R is true (Q → R)\nPratijna: Q is true (given P is true and P → Q)\nHetu: Q\nUdaharana: (example) If I have a red apple, then it is red (example fact)\nUpanaya: Q → R\nNigamana: Therefore, R is true (given Q is true)\n\n3. If R is true, then S is true (R → S)\nPratijna: R is true (given Q is true and Q → R)\nHetu: R\nUdaharana: (example) If I have a red apple, then it is red (example fact)\nUpanaya: R → S\nNigamana: Therefore, S is true (given R is true)\n\n4. P is true\nPratijna: P\nHetu: P\nUdaharana: (example) This is a true statement (example fact)\nUpanaya: P is true\nNigamana: Therefore, P is true (by definition)\n\n### Phase 4: Tarka (Counterfactual Reasoning)\nTo test the conclusions via reductio ad absurdum:\n1. If Q is not true, then P is not true (by P → Q). This would lead to a contradiction with P being true. Therefore, Q is true.\n2. If R is not true, then Q is not true (by Q → R). This would lead to a contradiction with Q being true. Therefore, R is true.\n3. If S is not true, then R is not true (by R → S). This would lead to a contradiction with R being true. Therefore, S is true.\n\n### Phase 5: Hetvabhasa (Fallacy Check)\nNo fallacies in the reasoning.\n\n### Phase 6: Nirnaya (Ascertainment)\nThe truth values of P, Q, R, and S are:\nP: True\nQ: True\nR: True\nS: True\n\nConfidence level: 100% (no doubt in the given statements)",
+      "output_length": 1945,
+      "parse_success": false,
+      "parse_error": "Missing required section: Samshaya\\s*.*?",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    }
+  ]
+}

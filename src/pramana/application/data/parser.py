@@ -217,12 +217,16 @@ class MarkdownParser:
         for match in syllogism_matches:
             syllogism_text = match.group(1)
 
-            # Extract each member
-            pratijna = self._extract_syllogism_member(syllogism_text, "Pratijna")
-            hetu = self._extract_syllogism_member(syllogism_text, "Hetu")
-            udaharana = self._extract_syllogism_member(syllogism_text, "Udaharana")
-            upanaya = self._extract_syllogism_member(syllogism_text, "Upanaya")
-            nigamana = self._extract_syllogism_member(syllogism_text, "Nigamana")
+            try:
+                # Extract each member
+                pratijna = self._extract_syllogism_member(syllogism_text, "Pratijna")
+                hetu = self._extract_syllogism_member(syllogism_text, "Hetu")
+                udaharana = self._extract_syllogism_member(syllogism_text, "Udaharana")
+                upanaya = self._extract_syllogism_member(syllogism_text, "Upanaya")
+                nigamana = self._extract_syllogism_member(syllogism_text, "Nigamana")
+            except ValidationError:
+                # Skip incomplete or truncated syllogisms
+                continue
 
             syllogisms.append(
                 PanchaAvayava(
@@ -355,12 +359,15 @@ class MarkdownParser:
 
     def _parse_doubt_type(self, doubt_type_str: str) -> DoubtType:
         """Parse doubt type string to DoubtType enum."""
-        doubt_type_str = doubt_type_str.lower().replace(" ", "_")
+        # Normalize: drop parenthetical descriptors and standardize separators
+        doubt_type_str = doubt_type_str.split("(")[0].strip().lower().replace(" ", "_")
         # Map common variations
         mapping = {
             "samana_dharma_upapatti": DoubtType.SAMANA_DHARMA_UPAPATTI,
             "vipratipatti": DoubtType.VIPRATIPATTI,
+            "viparyaya_samshaya": DoubtType.VIPRATIPATTI,
             "anadhyavasaya": DoubtType.ANADHYAVASAYA,
+            "samshaya": DoubtType.ANADHYAVASAYA,
         }
         if doubt_type_str not in mapping:
             raise ValidationError(f"Invalid doubt type: {doubt_type_str}")

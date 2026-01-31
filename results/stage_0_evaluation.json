@@ -1,0 +1,46 @@
+{
+  "evaluation_timestamp": "2026-01-31T19:04:06.435707",
+  "model_dir": "models/stage_0",
+  "test_examples": [
+    "pramana-003",
+    "pramana-005"
+  ],
+  "results": [
+    {
+      "example_id": "pramana-003",
+      "timestamp": "2026-01-31T19:03:39.673574",
+      "problem": "Four friends (Alice, Bob, Carol, David) are comparing their heights. The following information is known:\n\n**Constraints**:\n1. Alice is taller than Bob\n2. Bob is taller than Carol\n3. Carol is taller than David\n4. Alice is taller than Carol\n\n**Question**: What is the complete height ranking from tallest to shortest?\n\n---",
+      "ground_truth": "",
+      "prompt": "### Problem:\nFour friends (Alice, Bob, Carol, David) are comparing their heights. The following information is known:\n\n**Constraints**:\n1. Alice is taller than Bob\n2. Bob is taller than Carol\n3. Carol is taller than David\n4. Alice is taller than Carol\n\n**Question**: What is the complete height ranking from tallest to shortest?\n\n---\n\n### Nyaya Reasoning:\n",
+      "generated_output": "We need to reason through this problem using Nyaya logic rules. We will start with the given constraints and use the rules of Nyaya to derive the complete height ranking.\n\n**Rule 1: If A is taller than B, then B is shorter than A (Transitive Property of Height).**\n\n**Rule 2: If A is taller than B and B is taller than C, then A is taller than C (Transitive Property of Height).**\n\n**Rule 3: If A is taller than B and B is shorter than A, then A is taller than B (Symmetric Property of Height).**\n\n**Rule 4: If A is taller than B, then B is shorter than A (Antisymmetric Property of Height).**\n\n**Step 1: Apply Rule 3 to constraint 1: Alice is taller than Bob**\nBob is shorter than Alice.\n\n**Step 2: Apply Rule 3 to constraint 2: Bob is taller than Carol**\nCarol is shorter than Bob.\n\n**Step 3: Apply Rule 3 to constraint 3: Carol is taller than David**\nDavid is shorter than Carol.\n\n**Step 4: Apply Rule 1 to constraints 1 and 4: Alice is taller than Carol and Carol is taller than David**\nBy transitivity, Alice is taller than David.\n\n**Step 5: Apply Rule 1 to constraints 2 and 4: Bob is taller than Carol and Carol is taller than David**\nBy transitivity, Bob is taller than David.\n\n**Step 6: Combine all the comparisons**\nThe complete height ranking from tallest to shortest is: Alice, Bob, Carol, David.\n\n---\n\n### Code Solution:\n```python\ndef height_ranking():\n    # Define the height ranking as a list\n    heights = ['Alice', 'Bob', 'Carol', 'David']\n\n    # Define the height constraints\n    constraints = [\n        ('Alice', 'Bob'),  # Alice > Bob\n        ('Bob', 'Carol'),  # Bob > Carol\n        ('Carol', 'David'),  # Carol > David\n        ('Alice', 'Carol')  # Alice > Carol\n    ]\n\n    # Iterate over the constraints and apply the transitive property\n    for i in range(len(constraints)):\n        for j in range(i + 1, len(constraints)):\n            if constraints[i][0] == constraints[j][0]:  # Alice > Bob\n                heights.remove(constraints[j][1])  # Bob is shorter than Alice\n            elif constraints[i][1] == constraints[j][1]:  # Bob > Carol\n                heights.remove(constraints[i][0])  # Carol is shorter than Bob\n            elif constraints[i][0] == constraints[j][0]:  # Carol > David\n                heights.remove(constraints[i][1])  # David is shorter than Carol\n\n    # Sort the heights in descending order\n    heights.sort(reverse=True)\n\n    return heights\n\n# Print the height ranking\nprint(height_ranking())\n```\n\n---\n\n### Explanation:\nThe code defines a function `height_ranking` that calculates the complete height ranking from tallest to shortest using the given constraints. It first defines the height ranking as a list and the constraints as a list of tuples. Then it iterates over the constraints and applies the transitive property to update the height ranking. Finally, it sorts the heights in descending order and returns the result. The output of the code is the complete height ranking from tallest to shortest.",
+      "output_length": 2964,
+      "parse_success": false,
+      "parse_error": "Missing required section: Samshaya\\s*.*?",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    },
+    {
+      "example_id": "pramana-005",
+      "timestamp": "2026-01-31T19:03:56.013601",
+      "problem": "Consider four logical statements P, Q, R, and S. The following information is known:\n\n**Given Facts**:\n1. If P is true, then Q is true\n2. If Q is true, then R is true\n3. If R is true, then S is true\n4. P is true\n\n**Question**: What are the truth values of P, Q, R, and S?\n\n---",
+      "ground_truth": "",
+      "prompt": "### Problem:\nConsider four logical statements P, Q, R, and S. The following information is known:\n\n**Given Facts**:\n1. If P is true, then Q is true\n2. If Q is true, then R is true\n3. If R is true, then S is true\n4. P is true\n\n**Question**: What are the truth values of P, Q, R, and S?\n\n---\n\n### Nyaya Reasoning:\n",
+      "generated_output": "We will use the Nyaya method of reasoning to deduce the truth values of the statements.\n\n**Premises**:\n1. If P is true, then Q is true\n2. If Q is true, then R is true\n3. If R is true, then S is true\n4. P is true\n\n**Inferences**:\nWe will use the Nyaya rules to derive the truth values of Q, R, and S.\n\n### Step-by-Step Solution:\n**Step 1**: Given that P is true, we can infer that Q is true (Premise 1).\n**Step 2**: Given that Q is true, we can infer that R is true (Premise 2).\n**Step 3**: Given that R is true, we can infer that S is true (Premise 3).\n**Step 4**: Now that we have the truth values of Q and R, we can conclude that S is true.\n\n**Truth Values**:\n- P is true\n- Q is true\n- R is true\n- S is true\n\n### Code:\n```python\ndef deduce_truth_values():\n    # Define the given facts\n    P = True\n    Q = None\n    R = None\n    S = None\n\n    # Define the premises\n    if P:\n        Q = True\n\n    if Q:\n        R = True\n\n    if R:\n        S = True\n\n    # Return the truth values\n    return P, Q, R, S\n\n# Execute the function\np, q, r, s = deduce_truth_values()\nprint(f\"P is {p}, Q is {q}, R is {r}, and S is {s}.\")\n```\n\n### Explanation:\nThis code defines a function `deduce_truth_values()` that takes the given facts and premises as input and returns the truth values of P, Q, R, and S. The function uses the Nyaya method of reasoning to deduce the truth values of Q, R, and S from the given premises. Finally, the function returns the truth values of P, Q, R, and S.\n\nNote: This code assumes that the given facts and premises are represented as boolean values (True or False). The code uses the Nyaya rules of reasoning to derive the truth values of Q, R, and S from the given premises. The code then returns the truth values of P, Q, R, and S.",
+      "output_length": 1745,
+      "parse_success": false,
+      "parse_error": "Missing required section: Samshaya\\s*.*?",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    }
+  ]
+}
