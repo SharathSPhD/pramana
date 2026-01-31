@@ -1,0 +1,405 @@
+The answer is **D) Hybrid with GPT-4 judge**, but implemented with a specific three-tier filtering architecture that's more sophisticated than just "automated + GPT-4 + spot-check." Let me show you why and exactly how to implement it.
+
+## Why Pure Options Fail for Nyaya Reasoning
+
+**Option A (Manual review all)**: You correctly identified this is ~100 hours. But it's actually worse - reviewing synthetic examples is cognitively harder than creating originals because you're looking for subtle errors in someone else's reasoning. You'll burn out and the quality will degrade as fatigue sets in.
+
+**Option B (Statistical sampling)**: The plan document suggests this, but it has a fatal flaw for Nyaya reasoning. A 20% sample might catch obviously broken examples (malformed JSON, missing phases), but **Nyaya errors are often subtle**:
+- Pratyaksha citing inferred facts instead of observable ones
+- Anumana that's actually Upamana (or vice versa)
+- Udaharana providing a specific example instead of a universal rule
+- Tarka that doesn't actually test the conclusion
+- Missing a Hetvabhasa that should be detected
+
+These errors look structurally fine but epistemologically wrong. A 20% sample won't catch systematic errors in how your generation prompt teaches Nyaya methodology.
+
+**Option C (Automated filters only)**: JSON schema catches syntax errors. Z3 catches logical contradictions. But neither catches "this is valid logic expressed in incorrect Nyaya format." You could generate perfectly correct solutions that don't follow Nyaya principles at all.
+
+## The Three-Tier Architecture
+
+Here's how to scale to 500 examples while maintaining Nyaya epistemic rigor:
+
+### Tier 1: Automated Structural Filters (100% of examples)
+
+**Purpose**: Catch obvious errors without human involvement
+
+```python
+def tier1_structural_validation(example):
+    """Fast automated checks - reject immediately if fails"""
+    
+    filters = {
+        # JSON Schema Validation
+        "valid_json": validate_json_schema(example),
+        
+        # Phase Presence Check
+        "has_all_phases": all(
+            phase in example for phase in 
+            ["samshaya", "pramana", "pancha_avayava", "tarka", "hetvabhasa", "nirnaya"]
+        ),
+        
+        # Phase Order Validation
+        "correct_phase_order": check_phase_sequence(example),
+        
+        # Component Completeness
+        "pramana_complete": all(
+            source in example["pramana"] for source in 
+            ["pratyaksha", "anumana", "upamana", "shabda"]
+        ),
+        "avayava_complete": all(
+            component in example["pancha_avayava"] for component in
+            ["pratijna", "hetu", "udaharana", "upanaya", "nigamana"]
+        ),
+        
+        # Logical Consistency (for CSP/SAT problems)
+        "z3_verifiable": verify_with_z3(example) if is_formal_logic(example) else True,
+        
+        # Answer Existence
+        "has_answer": "answer" in example.get("nirnaya", {}),
+        
+        # Length Sanity Checks
+        "reasonable_length": 100 < len(str(example)) < 10000,
+        
+        # No Obvious Contradictions
+        "no_self_contradiction": not has_internal_contradiction(example),
+    }
+    
+    return all(filters.values()), filters
+```
+
+**Pass rate target**: 70-80% of synthetic examples should pass Tier 1. If less, your generation prompts are broken.
+
+**Rejection reasons to track**: Which filters fail most often tells you what to fix in your prompts.
+
+### Tier 2: LLM-as-Judge Nyaya Quality Scoring (100% of Tier 1 passes)
+
+**Purpose**: Catch subtle Nyaya methodology errors at scale
+
+Here's the critical insight: **GPT-4 can't generate good Nyaya reasoning reliably, but it CAN evaluate whether existing reasoning follows Nyaya principles when given explicit rubrics.**
+
+```python
+NYAYA_EVALUATION_PROMPT = """You are an expert in Nyaya Darshan (Indian logic) evaluating whether an AI model correctly applied the six-phase Nyaya methodology to solve a logical problem.
+
+PROBLEM:
+{problem}
+
+PROPOSED NYAYA SOLUTION:
+{nyaya_solution}
+
+Evaluate this solution on the following criteria (0-10 scale for each):
+
+1. SAMSHAYA ANALYSIS (Doubt Identification)
+   - Does it correctly identify which type of Samshaya exists?
+   - Valid types: Samana Dharma Upapatti, Aneka Dharma Upapatti, Vipratipatti, Upalabdhi Avyavastha, Anupalabdhi Avyavastha
+   - Is the doubt actually worthy of investigation?
+   Score: __/10
+   Issues: __
+
+2. PRAMANA APPLICATION (Knowledge Sources)
+   
+   A. Pratyaksha (Direct Perception):
+   - Are these ONLY directly observable facts from the problem?
+   - No inferences allowed here
+   Score: __/10
+   Issues: __
+   
+   B. Anumana (Inference):
+   - Are these actual logical inferences?
+   - Is the inference type correctly identified? (Purvavat/Sheshavat/Samanyatodrishta)
+   Score: __/10
+   Issues: __
+   
+   C. Upamana (Comparison):
+   - Is there a genuine analogy to a known case?
+   - Is the similarity relevant?
+   Score: __/10
+   Issues: __
+   
+   D. Shabda (Authoritative Testimony):
+   - Are these established logical principles?
+   - Not just restating the problem?
+   Score: __/10
+   Issues: __
+
+3. PANCHA AVAYAVA (Five-Part Syllogism)
+   For EACH syllogism (evaluate all present):
+   
+   - Pratijna (Proposition): Clear claim being established?
+   - Hetu (Reason): Proper justification provided?
+   - Udaharana (Example): Is this a UNIVERSAL rule, not specific instance?
+   - Upanaya (Application): Correctly applies universal to specific?
+   - Nigamana (Conclusion): Logically follows from above?
+   
+   Score: __/10
+   Issues: __
+
+4. TARKA (Hypothetical Reasoning)
+   - Is there actual reductio ad absurdum?
+   - Does assuming opposite lead to genuine absurdity?
+   - Not just "if X then X" tautology?
+   Score: __/10
+   Issues: __
+
+5. HETVABHASA (Fallacy Detection)
+   - Are the five fallacy types explicitly checked?
+   - Savyabhichara, Viruddha, Prakaranasama, Sadhyasama, Kalaatita
+   - Are checks meaningful or just pro forma?
+   Score: __/10
+   Issues: __
+
+6. NIRNAYA (Definitive Conclusion)
+   - Does it establish truth definitively?
+   - Is the answer correct based on the problem?
+   Score: __/10
+   Issues: __
+
+7. OVERALL METHODOLOGY
+   - Is this genuine Nyaya reasoning or just formatted text?
+   - Does the structure actually help reach the conclusion?
+   - Would a Nyaya scholar recognize this as valid methodology?
+   Score: __/10
+   Issues: __
+
+Provide scores in JSON format:
+{
+  "samshaya": score,
+  "pratyaksha": score,
+  "anumana": score,
+  "upamana": score,
+  "shabda": score,
+  "pancha_avayava": score,
+  "tarka": score,
+  "hetvabhasa": score,
+  "nirnaya": score,
+  "overall": score,
+  "total": sum/90,
+  "issues": [list of specific problems found],
+  "recommendation": "ACCEPT" | "REJECT" | "MANUAL_REVIEW"
+}
+
+CRITICAL: Be strict. A score above 80/90 means this is publication-quality Nyaya reasoning.
+Scores of 60-80 mean acceptable but improvable.
+Below 60 means significant methodology errors.
+"""
+```
+
+**Implementation**:
+```python
+def tier2_nyaya_quality_scoring(example, use_gpt4=True):
+    """LLM-as-judge evaluation of Nyaya methodology"""
+    
+    prompt = NYAYA_EVALUATION_PROMPT.format(
+        problem=example["problem"],
+        nyaya_solution=json.dumps(example["nyaya_solution"], indent=2)
+    )
+    
+    if use_gpt4:
+        # GPT-4 for highest quality evaluation
+        response = openai.ChatCompletion.create(
+            model="gpt-4-turbo-preview",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.2,  # Low temp for consistent evaluation
+        )
+    else:
+        # Fallback: Use your own fine-tuned evaluator model (Stage 3+)
+        response = local_evaluator_model.generate(prompt)
+    
+    scores = parse_json_response(response)
+    
+    # Decision thresholds
+    if scores["total"] >= 0.85:  # 77/90 or higher
+        return "ACCEPT", scores
+    elif scores["total"] >= 0.70:  # 63-76/90
+        return "MANUAL_REVIEW", scores
+    else:  # < 63/90
+        return "REJECT", scores
+```
+
+**Pass rate target**: 40-60% should ACCEPT, 20-30% should need MANUAL_REVIEW, 10-20% should REJECT.
+
+**Cost**: ~$0.01-0.02 per evaluation with GPT-4. For 500 examples, that's $5-10 total. Completely worth it.
+
+### Tier 3: Expert Manual Review (10-20% strategic sample)
+
+**Purpose**: Calibrate the LLM judge and catch systematic errors
+
+Don't randomly sample. Instead, strategically review:
+
+```python
+def tier3_manual_review_selection(examples_with_scores):
+    """Select which examples need human expert review"""
+    
+    review_queue = []
+    
+    # Category 1: Boundary cases (20% of manual review time)
+    # Examples scoring 0.68-0.72 (near the accept/reject threshold)
+    boundary_cases = [
+        ex for ex in examples_with_scores 
+        if 0.68 <= ex["score"]["total"] <= 0.72
+    ]
+    review_queue.extend(random.sample(boundary_cases, min(10, len(boundary_cases))))
+    
+    # Category 2: High-scoring examples (30% of manual review time)
+    # Validate that high scores are genuinely deserved
+    high_scores = [
+        ex for ex in examples_with_scores 
+        if ex["score"]["total"] >= 0.85
+    ]
+    review_queue.extend(random.sample(high_scores, min(15, len(high_scores))))
+    
+    # Category 3: Specific phase failures (30% of manual review time)
+    # Examples that failed specific Nyaya components
+    for phase in ["pratyaksha", "anumana", "tarka", "hetvabhasa"]:
+        phase_failures = [
+            ex for ex in examples_with_scores 
+            if ex["score"][phase] <= 5  # Low score on specific phase
+        ]
+        review_queue.extend(random.sample(phase_failures, min(5, len(phase_failures))))
+    
+    # Category 4: Problem type coverage (20% of manual review time)
+    # Ensure each problem type (3-var CSP, 4-var CSP, Boolean SAT, etc.) 
+    # has manual validation
+    for problem_type in get_problem_types(examples_with_scores):
+        type_examples = [ex for ex in examples_with_scores if ex["type"] == problem_type]
+        review_queue.extend(random.sample(type_examples, min(3, len(type_examples))))
+    
+    return deduplicate(review_queue)
+```
+
+**Your manual review**: ~50-75 examples out of 500 total. That's 15-20 hours of work instead of 100 hours.
+
+**What you're checking**:
+1. Is GPT-4's scoring calibrated correctly?
+2. Are there systematic errors the LLM judge is missing?
+3. Do high-scoring examples actually demonstrate quality Nyaya reasoning?
+4. Are there patterns in failures that suggest prompt improvements?
+
+### The Feedback Loop
+
+This is the critical piece that makes the hybrid approach work:
+
+```python
+def iterative_synthetic_generation(target_count=500, batch_size=100):
+    """Generate synthetic examples with continuous quality improvement"""
+    
+    accepted = []
+    generation_prompts = load_initial_prompts()
+    
+    while len(accepted) < target_count:
+        print(f"Generation round {len(accepted)//batch_size + 1}")
+        
+        # Generate batch
+        raw_batch = generate_batch(batch_size, generation_prompts)
+        
+        # Tier 1: Structural filtering
+        tier1_passed = [ex for ex in raw_batch if tier1_structural_validation(ex)[0]]
+        print(f"  Tier 1: {len(tier1_passed)}/{batch_size} passed structural checks")
+        
+        # Tier 2: LLM judge scoring
+        tier2_results = [
+            (ex, *tier2_nyaya_quality_scoring(ex)) 
+            for ex in tier1_passed
+        ]
+        
+        tier2_accepted = [ex for ex, decision, _ in tier2_results if decision == "ACCEPT"]
+        tier2_manual = [ex for ex, decision, _ in tier2_results if decision == "MANUAL_REVIEW"]
+        tier2_rejected = [ex for ex, decision, _ in tier2_results if decision == "REJECT"]
+        
+        print(f"  Tier 2: {len(tier2_accepted)} auto-accept, {len(tier2_manual)} manual review, {len(tier2_rejected)} rejected")
+        
+        # Tier 3: Strategic manual review
+        manual_queue = tier3_manual_review_selection(tier2_accepted + tier2_manual)
+        
+        print(f"  Tier 3: Reviewing {len(manual_queue)} examples manually")
+        manually_validated = []
+        for ex in manual_queue:
+            human_decision = manual_review_ui(ex)  # Your review interface
+            if human_decision == "ACCEPT":
+                manually_validated.append(ex)
+                accepted.append(ex)
+        
+        # CRITICAL: Analyze failures and update prompts
+        all_failures = tier2_rejected + [ex for ex in manual_queue if ex not in manually_validated]
+        
+        if all_failures:
+            failure_analysis = analyze_common_errors(all_failures)
+            generation_prompts = update_prompts_based_on_failures(
+                generation_prompts, 
+                failure_analysis
+            )
+            print(f"  Updated generation prompts based on {len(all_failures)} failures")
+            print(f"  Common issues: {failure_analysis['top_issues']}")
+        
+        # Add high-confidence auto-accepts
+        accepted.extend(tier2_accepted[:batch_size - len(manually_validated)])
+        
+        print(f"  Round complete: {len(accepted)}/{target_count} total examples accepted")
+    
+    return accepted[:target_count]
+```
+
+## Cost-Benefit Analysis
+
+**Option A (Manual review all)**:
+- Time: 100 hours
+- Cost: $0
+- Quality: 95%+ if you don't get fatigued
+
+**Option B (Statistical sampling)**:
+- Time: 20 hours
+- Cost: $0
+- Quality: 70-80% (misses subtle errors)
+
+**Option C (Automated only)**:
+- Time: 5 hours setup
+- Cost: $50 (Z3 compute)
+- Quality: 60% (structurally correct but epistemologically wrong)
+
+**Option D (Three-tier hybrid)**:
+- Time: 15-20 hours manual review + 5 hours setup
+- Cost: $100 ($50 Z3 + $10 GPT-4 eval + $40 generation)
+- Quality: 85-90% (high confidence)
+
+**Winner**: Option D gives you 85-90% of Option A's quality at 20% of the time investment.
+
+## Implementation Timeline
+
+**Week 1: Setup**
+- Write Tier 1 validation functions
+- Create GPT-4 evaluation prompt
+- Build manual review UI (simple web form)
+- Set up Z3 autoformalization for CSP/SAT
+
+**Week 2-3: Generate first 100 examples**
+- Run first batch
+- Manually review ~20 examples to calibrate
+- Analyze failures, update generation prompts
+- Run second batch with improved prompts
+
+**Week 4-5: Generate next 200 examples**
+- Should see quality improvement from prompt refinement
+- Manual review load decreases as GPT-4 judge gets better calibrated
+- Most time spent on Tier 3 strategic sampling
+
+**Week 6-7: Generate final 200 examples**
+- Prompts should be well-tuned now
+- Accept rate increases
+- Final validation pass
+
+**Week 8: Quality audit**
+- Manually review 10% random sample of all 500
+- If quality < 85%, iterate on worst examples
+- Document error patterns for Stage 3 GRPO rewards
+
+
+
+**You need Nyaya rigor**: Statistical sampling isn't rigorous enough for epistemic infrastructure. The LLM judge with explicit Nyaya rubrics maintains philosophical integrity.
+
+**You'll need GRPO anyway**: The Tier 2 scoring rubric directly maps to your Stage 3 reward functions. You're building evaluation infrastructure that pays dividends later.
+
+## The Critical Insight
+
+Pure automation can't work for Nyaya because **Nyaya methodology requires philosophical judgment, not just logical consistency**. But LLMs with explicit rubrics CAN make those judgments reliably enough for 85-90% of cases, with human oversight on the edge cases.
+
+This is actually meta-Nyaya: you're using Pramana (GPT-4 as Shabda + your manual review as Pratyaksha) to validate synthetic Pramanas. The three-tier architecture is itself a Nyaya-structured validation methodology.
+
+Start with Option D. If GPT-4 evaluation proves unreliable after the first 100 examples, you can always fall back to Option B. But I predict you'll find that GPT-4, when given your explicit Nyaya rubric, catches 80%+ of the subtle errors that statistical sampling would miss.

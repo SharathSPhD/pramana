@@ -1,0 +1,122 @@
+# Pramana Project: Complete Docker Setup Framework
+
+I've created a comprehensive, production-ready Docker setup script that frames your entire Pramana implementation plan using NVIDIA's official DGX Spark + Unsloth architecture. Here's what this gives you:
+
+## What the Setup Script Does
+
+**Automated Environment Creation** - The script sets up your complete development environment in one command, creating a proper project structure with organized directories for data, models, scripts, results, and configurations. This mirrors professional ML engineering practices and keeps your 6+ month research project manageable.
+
+**Custom Docker Image** - Rather than just using NVIDIA's base image, it builds a Pramana-specific container that includes:
+- Unsloth for efficient fine-tuning
+- Z3 SMT solver for your neuro-symbolic validation
+- All GRPO dependencies for Stage Three
+- Sanskrit transliteration tools for advanced Nyaya text processing
+- Experiment tracking (W&B, TensorBoard)
+- vLLM for optimized inference
+
+**Stage-Based Configuration** - Pre-built YAML configs for Stage Zero (proof of concept with 5 examples) and Stage Three (GRPO with custom Nyaya reward functions). These encode your architectural decisions into reproducible configurations.
+
+**Custom Nyaya Reward Functions** - The GRPO config already defines your five reward components:
+1. Structure completeness (30% weight)
+2. Logical consistency via Z3 (25%)
+3. Hetvabhasa detection (20%)
+4. Pramana appropriateness (15%)
+5. Answer correctness (10%)
+
+You can adjust these weights as you iterate through training.
+
+## Key Architectural Decisions Encoded
+
+**Unified Memory Utilization** - The container setup uses `--shm-size=32g` to take full advantage of DGX Spark's 128GB unified memory architecture. This is critical because you'll need memory for:
+- The model (8B params ≈ 16GB in 4-bit)
+- Training overhead (gradients, optimizer states)
+- Z3 solver processes running validation
+- Synthetic data generation pipelines
+
+**Volume Mounting Strategy** - Your data persists outside the container, so you can:
+- Iterate on Docker image updates without losing work
+- Version control your seed examples with Git
+- Share models and checkpoints between containers
+- Back up critical data independently of the container
+
+**Development vs Production Modes** - Two run scripts:
+- `run_pramana_container.sh` - Interactive development shell
+- `run_jupyter.sh` - Notebook-based exploration with port forwarding
+
+## Integration with Your Implementation Plan
+
+The script directly implements your staged approach:
+
+**Stage Zero Setup** - The config file targets exactly what you need:
+- 5 manual examples
+- Llama 3.1 8B base model (perfect size for your 128GB memory)
+- Format validation for all six Nyaya phases
+- 80/20 train/test split on your tiny dataset
+
+**Stage Three GRPO Framework** - Complete configuration for when you reach RL enhancement:
+- 4 generations per prompt (GRPO requirement)
+- Custom reward functions calling Z3 for validation
+- Appropriate learning rate for RL fine-tuning (5e-6, much lower than supervised)
+- Extended context window (6144 tokens) for complex reasoning chains
+
+**Z3 Integration Points** - The script installs Z3 and creates a structure for validation scripts. You'll implement the autoformalization logic that translates Nyaya arguments to SMT-LIB format, but the infrastructure is ready.
+
+## How to Use This
+
+1. **On your DGX Spark, run the setup:**
+```bash
+bash pramana_docker_setup.sh
+```
+
+This takes 10-15 minutes (Docker build time).
+
+2. **Launch your development environment:**
+```bash
+cd ~/pramana-project
+./run_pramana_container.sh
+```
+
+3. **Validate everything works:**
+```bash
+python scripts/test_unsloth.py
+```
+
+4. **Create your first seed example** in `data/seed_examples/stage_zero/`. Use the JSON schema you defined:
+```json
+{
+  "problem": "...",
+  "nyaya_solution": {
+    "samshaya": "...",
+    "pramana": {...},
+    "pancha_avayava": {...},
+    "tarka": "...",
+    "hetvabhasa": {...},
+    "nirnaya": "..."
+  },
+  "answer": "..."
+}
+```
+
+5. **Run Stage Zero training** once you have 5 examples.
+
+## Critical Advantages of This Approach
+
+**Reproducibility** - Everything is containerized and version-controlled. If something breaks, you can rebuild from scratch. If you want to share your work, others can replicate your exact environment.
+
+**Scalability** - While you're starting with 5 examples, the same infrastructure scales to Stage Two's 500 examples and Stage Three's RL training without architectural changes.
+
+**Integration-Ready** - The container has everything pre-installed. When you implement Z3 validation, you just write Python code - no fighting with dependencies.
+
+**Cost Efficiency** - Since you're using DGX Spark locally, you avoid cloud GPU costs entirely. The one-time $3,999 investment replaces $20K+ in cloud compute over 6 months.
+
+## What This Doesn't Include (But You'll Need)
+
+You still need to implement:
+1. **The actual training scripts** - `scripts/training/stage_zero_finetune.py`, etc.
+2. **Evaluation harness** - Code to test format adherence and compute your metrics
+3. **Z3 autoformalization** - Translation from Nyaya JSON to SMT-LIB
+4. **Synthetic data generation** - LLM prompts for creating examples at scale
+
+But the infrastructure foundation is now solid. You have a professional ML engineering setup ready for a serious research project, not a hacky prototype.
+
+The script embodies your philosophy: systematic preparation before execution, just as Nyaya Darshan demands proper Pramana application before reaching Nirnaya.

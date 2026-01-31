@@ -1,0 +1,13 @@
+stage: 0
+
+model:
+  name: "unsloth/Llama-3.2-3B-Instruct"  # Smallest for proof-of-concept
+
+training:
+  epochs: 5  # More epochs for small dataset
+  batch_size: 1
+  gradient_accumulation_steps: 8
+
+data:
+  train_path: "data/seed_examples/stage_zero"
+  eval_path: "data/seed_examples/stage_zero"

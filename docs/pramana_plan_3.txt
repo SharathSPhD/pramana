@@ -1,0 +1,277 @@
+﻿The Pramana Engine: Architecting Epistemic Rigor in Large Language Models via Navya-Nyaya Cognitive Structures
+1. The Epistemic Crisis in Generative Artificial Intelligence
+The rapid ascent of Large Language Models (LLMs), exemplified by architectures such as GPT-4, Claude 3.5, and the emergent reasoning-focused models like OpenAI’s o1 and DeepSeek-R1, has fundamentally altered the landscape of computational intelligence. These systems demonstrate unprecedented proficiency in natural language generation, code synthesis, and broad-spectrum knowledge retrieval. However, as the deployment of these models transitions from creative assistance to high-stakes decision-making in domains such as jurisprudence, medical diagnostics, and autonomous systems engineering, a critical vulnerability has become increasingly apparent: the "Epistemic Gap."
+The central thesis of this analysis is that current LLM architectures, despite their scale, remain fundamentally probabilistic engines rather than reasoning agents. They operate on the statistical likelihood of token adjacency rather than the logical validity of propositions. This limitation manifests as "hallucination"—a term that anthropomorphizes what is essentially a failure of grounding. Recent empirical studies, most notably the "Illusion of Thinking" research conducted by Apple in October 2024, have quantified this fragility.1 The study revealed that state-of-the-art models, when presented with mathematical reasoning tasks perturbed by irrelevant information (e.g., adding "the user also has a red shirt" to a word problem), exhibited performance collapses of up to 65%. Furthermore, accuracy was shown to degrade inversely with reasoning depth, dropping from 68% to 43% as the number of required logical steps increased.2
+This phenomenon indicates that what appears to be "reasoning" in LLMs is often sophisticated pattern-matching against training distributions. The models lack an intrinsic mechanism for epistemic self-audit; they cannot distinguish between belief (a high-probability string) and knowledge (a justified, true belief). In the parlance of Indian epistemology, they suffer from Avidya (ignorance) masked by Vikalpa (verbal delusion)—constructs that possess linguistic form but lack substantial grounding.
+The "Pramana Engine" initiative proposes a radical restructuring of AI reasoning architectures to address this deficit. It posits that the solution lies not merely in scaling data or parameters, but in imposing a rigorous epistemological scaffolding upon the neural substrate. The ancient Indian school of Nyaya, specifically the Navya-Nyaya (New Logic) tradition developed by Gangesa in the 13th century, provides a formal system uniquely suited to this task.3 Unlike Western formal logic, which historically divorced syntactic validity from semantic truth (culminating in the abstract symbol manipulation of Russell and Whitehead), Nyaya integrates logic (tarka) and epistemology (pramana) into a unified cognitive architecture. It demands that every proposition be rooted in a valid means of knowledge and grounded in concrete examples (dṛṣṭānta).
+By formalizing the six-phase Nyaya reasoning methodology—Samshaya (Doubt), Pramana (Evidence), Pancha Avayava (Five-Member Syllogism), Tarka (Hypothetical Reasoning), Hetvabhasa (Fallacy Detection), and Nirnaya (Conclusion)—as computational objectives, we can engineer an AI system that prioritizes epistemic integrity over conversational fluency. This report outlines the theoretical basis, technical architecture, and implementation roadmap for such a system, leveraging state-of-the-art techniques in Reasoning Trace Distillation 5, Process Reward Models (PRMs) 7, and Neuro-symbolic Verification.9
+________________
+2. The Nyaya-Vaisheshika Cognitive Architecture: A Computational Reinterpretation
+To bridge the gap between ancient philosophy and modern machine learning, one must translate the metaphysical categories of Nyaya into computational constraints. The Nyaya system is not merely a method of debate; it is a "cognitive stack" that defines the requirements for valid information processing.
+2.1 The Six-Phase Reasoning Methodology
+The core operational loop of the Pramana Engine replaces the standard "input-response" paradigm of LLMs with a mandatory, structured cognitive cycle. This cycle enforces a "System 2" thinking process 11, slowing down generation to ensure validation at each stage.
+Phase 1: Samshaya (Doubt Modeling)
+In classical Nyaya, inquiry begins only when there is Samshaya (doubt). A certainty, even if false, stops inquiry. Current LLMs are trained to maximize likelihood, effectively forcing them to be "certain" of the next token. The Pramana Engine must be trained to identify the nature of the query's uncertainty.
+* Computational Implementation: The model must classify the query into specific doubt categories, such as Vipaksha (uncertainty regarding specific properties) or Samana Dharma (ambiguity arising from shared characteristics). This forces the model to define the "Question State Space" explicitly before attempting a solution, preventing premature convergence on high-probability (but potentially incorrect) answers.
+Phase 2: Pramana (Evidence Retrieval and Classification)
+The system must identify the valid sources of knowledge required to resolve the doubt. Nyaya accepts four Pramanas, which map directly to modern information retrieval strategies:
+* Pratyaksha (Perception): In an AI context, this corresponds to direct retrieval from the prompt context or an attached RAG (Retrieval-Augmented Generation) knowledge base. The model must cite "observed" facts.
+* Anumana (Inference): The derivation of new truths from established facts using invariant rules (Vyapti). This is the core reasoning engine.
+* Upamana (Comparison): Reasoning by analogy or structural similarity. This is critical for case-based reasoning and few-shot learning.12
+* Shabda (Testimony): Reliance on authoritative external sources. The model must assess the "trustworthiness" (Aptavakya) of its training data or retrieved documents.14
+Phase 3: Pancha Avayava (The Syllogistic Core)
+Standard Chain-of-Thought (CoT) prompting encourages "step-by-step" thinking but lacks a formal structure, leading to "reasoning drift." Nyaya enforces a five-member syllogism that makes the reasoning trace inherently auditable.
+1. Pratijna (Thesis): The proposition to be proved (e.g., "The server latency is caused by a database lock").
+2. Hetu (Reason): The evidentiary ground (e.g., "Because the logs show high wait times on table X").
+3. Udaharana (Example): The universal rule (Vyapti) supported by a concrete instance (Drishtanta). (e.g., "Wherever there are high wait times without CPU load, there is a lock contention, as seen in the incident last Tuesday"). This requirement for a concrete example prevents abstract hallucinations.14
+4. Upanaya (Application): Mapping the rule to the current case (e.g., "This current incident exhibits high wait times without CPU load").
+5. Nigamana (Conclusion): The final assertion, now validated (e.g., "Therefore, it is a database lock").
+Phase 4: Tarka (Counterfactual Verification)
+Tarka is the process of testing a hypothesis by reducing its opposite to absurdity (Reductio Ad Absurdum).14 If the model posits X, it must ask: "If X were false, what would we observe?" This phase is critical for AI safety. If the model claims "The patient has the flu," Tarka forces it to ask, "If it were the flu, wouldn't there be a fever? There is no fever. Therefore, the flu hypothesis is weak." This acts as an internal adversarial audit.
+Phase 5: Hetvabhasa (Fallacy Detection)
+Nyaya formalizes distinct categories of reasoning errors (Hetvabhasa) that map to common LLM failure modes 16:
+* Savyabhichara (Erratic Reason): A reason that co-occurs with the target but does not cause it (correlation vs. causation). LLMs are prone to this due to their distributional training nature.
+* Viruddha (Contradictory Reason): A reason that actually proves the opposite of the conclusion.
+* Satpratipaksha (Counterbalanced Reason): When equally strong evidence exists for the opposing view.
+* Asiddha (Unproved Reason): When the premise itself is hallucinated or unverified.
+* Badhita (Contradicted Reason): When the conclusion is directly contradicted by a stronger source (e.g., Perception).
+Phase 6: Nirnaya (Ascertainment)
+The final output is generated only if the conclusion survives the Tarka and Hetvabhasa filters. This ensures that the system outputs valid knowledge (Prama) rather than just probable text.
+2.2 Navya-Nyaya as a Structured Intermediate Representation
+The Navya-Nyaya school introduced a technical language to disambiguate Sanskrit, using precise relational terms.4 We propose adopting this schema as a structured Intermediate Representation (IR) for the model's internal thought process, superior to unstructured English.
+* Avacchedaka (Limitor): Specifies the exact scope of a property (e.g., "fire-ness" limits the scope of "fire"). This prevents overgeneralization, a common AI flaw.
+* Nirupaka (Describer): Defines the relationship between an entity and its properties.
+* Adhikarana (Locus): Specifies the physical or logical location of a property.
+By training the model to output its reasoning in a JSON or XML structure that enforces these categories (e.g., <limitor>..., <locus>...), we force the neural network to attend to the precise boundaries of its concepts, reducing ambiguity and semantic drift.19
+________________
+3. Reasoning Trace Distillation and Data Engineering
+The viability of the Pramana Engine depends entirely on the quality of the training data. Standard datasets like GSM8K or Alpaca are insufficient because they lack the rigorous Nyaya structure. We must construct Nyaya-Instruct, a proprietary dataset where every solution rigorously follows the six-phase protocol. As noted in research on reasoning distillation 20, the structure of the reasoning trace is more learnable than the specific content, making strict formatting paramount.
+3.1 The "Nyaya-Instruct" Dataset Construction Pipeline
+We propose a three-stage pipeline to generate the high-volume, high-quality data required for fine-tuning.
+Phase 1: Manual Seed Curation (The Gold Standard)
+The project must begin with the manual creation of 50-100 "perfect" examples. These seeds serve as the few-shot prompts for synthetic generation. They must cover diverse domains to ensure generalization:
+* Constraint Satisfaction: Logic puzzles (e.g., Zebra puzzles) solved via Anumana and Vyapti, explicitly demonstrating the elimination of possibilities through Tarka.
+* Causal Reasoning: Debugging scenarios (software or mechanical) where effects are traced to causes using Seshavat Anumana.
+* Deontic Reasoning: Legal or ethical scenarios applying rules to cases via Upanaya.
+* Epistemic Uncertainty: Cases where the correct answer is explicitly "Insufficient Pramana," teaching the model epistemic humility.
+Phase 2: Synthetic Expansion via Teacher Models
+To scale from 100 seeds to the 10,000+ examples needed for robust fine-tuning, we employ Reasoning Trace Distillation.5 We utilize a frontier model (e.g., GPT-4o or Claude 3.5 Sonnet) as the "Teacher."
+* System Prompt Injection: The Teacher is provided with the manual seeds and a strict System Prompt: "You are a master logician of the Nyaya school. Solve the following problem using the exact JSON format provided in the examples. You must explicitly state the Vyapti (universal rule) in the Udaharana section and perform a Tarka counterfactual check."
+* Source Data: We re-contextualize existing high-quality benchmarks:
+   * LogicBench 21: Contains 25 reasoning patterns that can be rewritten into the Pancha Avayava structure.
+   * ProntoQA 22: Useful for multi-hop deduction chains that map to serial inferences.
+   * RuleTaker 23: Excellent for testing adherence to explicit rules (Vidhi).
+   * GSM8K 24: Math word problems, which provide clear ground truth for verification.
+Phase 3: The "Tarka" Filter (Automated Verification)
+Synthetic data generation is prone to hallucination. To ensure the quality of the Nyaya-Instruct dataset, we introduce a novel Neuro-symbolic Verification step.9
+* Symbolic Translation: For logic and math problems, we parse the generated Hetu (premises) and Pratijna (conclusion) into a symbolic language (First-Order Logic or Z3 constraints).
+* Solver Verification: We use the Z3 SMT Solver 25 to check if the conclusion logically follows from the premises. If Z3 returns UNSAT (contradiction) or fails to prove validity, the synthetic example is discarded.
+* Outcome: This results in a Verified Reasoning Trace dataset, which is significantly higher in quality than standard Chain-of-Thought datasets, as every example has passed a logical consistency check.
+3.2 Dataset Schema
+The data must be stored in a structured format (JSON/XML) to enforce the cognitive architecture.
+Table 1: The Nyaya-Instruct JSON Schema
+Field
+	Description
+	Validation Rule
+	id
+	Unique Identifier
+	UUID
+	question
+	The input query
+	Non-empty string
+	trace.samshaya
+	Doubt classification (e.g., Vipaksha)
+	Must match enum list
+	trace.pramana
+	Evidence type (e.g., Anumana)
+	Must be valid Pramana
+	trace.pancha_avayava.pratijna
+	The Thesis
+	Text
+	trace.pancha_avayava.hetu
+	The Reason
+	Text; must link to pratijna
+	trace.pancha_avayava.udaharana
+	The Example + Vyapti
+	Must contain "Wherever... there is..." structure
+	trace.pancha_avayava.upanaya
+	Application to case
+	Text
+	trace.pancha_avayava.nigamana
+	Conclusion
+	Must match pratijna
+	trace.tarka
+	Counterfactual reasoning
+	Must contain "If not X... then Y"
+	trace.hetvabhasa_check
+	Fallacy scan
+	Must output "None" or fallacy name
+	answer
+	Final concise answer
+	Verified against ground truth
+	________________
+4. The Fine-Tuning Paradigm: From Imitation to Internalization
+To create a model that genuinely reasons using the Nyaya framework, we must move beyond simple Supervised Fine-Tuning (SFT), which often leads to "Reasoning Rigidity" and overfitting to templates.1 We propose a multi-stage training pipeline culminating in Reinforcement Learning (RL).
+4.1 Base Model Selection
+The choice of base model is critical. We recommend starting with a model that already possesses strong latent reasoning capabilities.
+* Primary Recommendation: DeepSeek-R1-Distill-Llama-8B.27 This model has been distilled from the massive DeepSeek-R1, which was trained via RL to generate long reasoning traces. It effectively has a "pre-trained" capability for self-verification and extended thought. Our fine-tuning will "steer" this existing capability into the specific Nyaya structure.
+* Alternative: Qwen 2.5-32B-Instruct.29 Benchmarks indicate Qwen 2.5 outperforms Llama 3.1 in mathematical and coding tasks, making it a robust substrate for logical operations. The 32B size offers a favorable trade-off between reasoning depth and inference cost.
+4.2 Supervised Fine-Tuning (SFT) with Unsloth
+We utilize Unsloth 30 for efficient fine-tuning, enabling the training of large models on consumer-grade hardware (e.g., NVIDIA A100/H100) via QLoRA (4-bit quantization).
+* Completion-Only Loss: We mask the user instructions in the loss calculation. The model is trained only to generate the reasoning trace and the answer. This prevents the model from overfitting to the specific phrasing of the prompts.
+* Hyperparameters:
+   * Learning Rate: 2e-5. A low learning rate is essential to preserve the pre-trained reasoning capabilities of the base model.31
+   * LoRA Rank (r): 64 or 128. Unlike simple style transfer, teaching a new reasoning protocol is a complex task requiring a high rank to update a sufficient number of parameters.32
+   * Epochs: 3-5. Sufficient to burn in the structure without catastrophic forgetting of general knowledge.33
+4.3 Reinforcement Learning: Group Relative Policy Optimization (GRPO)
+SFT alone risks "behavioral cloning," where the model mimics the look of Nyaya logic without understanding the substance. To enforce genuine reasoning, we apply Reinforcement Learning, specifically Group Relative Policy Optimization (GRPO) 34, the algorithm used to train DeepSeek-R1. GRPO removes the need for a separate value model (Critic), reducing computational overhead while effectively optimizing for reasoning quality.
+The Nyaya Reward Function ($R_{total}$)
+We define a composite reward function to guide the RL process:
+
+
+$$R_{total} = R_{format} + R_{validity} + R_{consistency}$$
+1. $R_{format}$ (Structural Reward):
+   * +1.0 if the output strictly parses into the Nyaya JSON/XML schema.
+   * -1.0 if tags are malformed, phases are skipped, or the syllogism order is violated.
+2. $R_{validity}$ (Logical Reward):
+   * Process Reward Model (PRM): We utilize a PRM 7 trained to score individual steps. For example, if the Hetu (Reason) is identified as a logical fallacy (e.g., circular reasoning), the PRM assigns a negative penalty (-0.5), even if the final answer is correct. This penalizes "lucky guesses."
+   * Ground Truth: For math/logic problems with known answers, +1.0 for the correct final Nirnaya.
+3. $R_{consistency}$ (Tarka Reward):
+   * We use the Neuro-symbolic Validator (see Section 5) during training. If the Tarka phase (counterfactual check) correctly identifies a contradiction in a false hypothesis (verified by Z3), the model receives a high reward (+2.0). This strongly incentivizes self-correction.
+By training with GRPO on this reward function, the model learns that adhering to the Nyaya epistemic protocol is the optimal strategy for maximizing reward. This transitions the system from "mimicking reasoning" to "optimizing for valid reasoning."
+________________
+5. Neuro-Symbolic Integration: The Pramana Validator
+To achieve true "Epistemic Sovereignty," the system cannot rely solely on the LLM's internal weights. We introduce the Pramana Validator, a neuro-symbolic module that acts as an external "Epistemic Auditor" using the Z3 SMT Solver.25 This bridges the "Translation Gap" between natural language and formal logic.
+5.1 The Autoformalization Pipeline
+LLMs excel at translation but struggle with rigorous logic execution. Solvers like Z3 are perfect at logic but cannot parse natural language. The Pramana Engine uses the LLM to translate the generated Pancha Avayava components into SMT-LIB code (Z3's input language).
+Example Translation:
+* Natural Language Output:
+   * Pratijna: "Socrates is mortal."
+   * Hetu: "Because Socrates is a man."
+   * Udaharana: "All men are mortal."
+* Autoformalized Z3 Code:
+Python
+from z3 import *
+solver = Solver()
+Object = DeclareSort('Object')
+Man = Function('Man', Object, BoolSort())
+Mortal = Function('Mortal', Object, BoolSort())
+socrates = Const('socrates', Object)
+
+# Udaharana (Universal Rule / Vyapti)
+x = Const('x', Object)
+solver.add(ForAll([x], Implies(Man(x), Mortal(x))))
+
+# Hetu (Specific Fact)
+solver.add(Man(socrates))
+
+# Tarka (Attempt to Negate Thesis)
+solver.push()
+solver.add(Not(Mortal(socrates)))
+
+# Verification
+result = solver.check()
+# If result == unsat, the negation is impossible -> Logic is VALID.
+# If result == sat, the negation is possible -> Logic is INVALID.
+
+5.2 The Runtime Verification Loop
+This validation occurs during inference (test-time), creating a feedback loop:
+   1. Generation: The Nyaya-LLM generates a full reasoning trace.
+   2. Extraction: The Validator extracts the logical core (Pratijna, Hetu, Udaharana).
+   3. Execution: The Z3 code is generated and executed.
+   4. Feedback:
+   * If Z3 returns UNSAT (proving the argument is valid), the answer is released to the user.
+   * If Z3 returns SAT (finding a counter-example), the error is injected back into the LLM's context: "Error: Your reasoning is logically invalid. The rule 'All men are mortal' combined with 'Socrates is a man' does not support the conclusion 'Socrates is immortal'. Please revise the Hetu or Udaharana."
+   5. Self-Correction: The LLM generates a revised trace.
+This "Proof of Thought" pipeline 36 ensures that the model's output is not just linguistically plausible but mathematically sound, effectively closing the epistemic gap for logic-based queries.
+________________
+6. Multi-Agent Coordination via Tarka Shastra Protocols
+Current multi-agent frameworks (e.g., AutoGen, CrewAI) suffer from "cascading hallucinations," where an error by one agent propagates unchecked through the system. We address this by implementing structured debate protocols from the Tarka Shastra (Science of Dialectics) tradition.38
+6.1 The Vada Protocol (Collaborative Truth-Seeking)
+This protocol is designed for cooperative agents working towards a shared goal (e.g., complex software debugging).
+   * Agent A (Proponent): Presents a Pratijna and Hetu.
+   * Agent B (Respondent): Must perform an Anuvada (restatement) to confirm understanding, then audit the Hetu for Vyapti (universal validity).
+   * Interaction: If Agent B finds a flaw, it does not just disagree; it identifies the specific Hetvabhasa (fallacy). Agent A must then revise the Hetu.
+   * Termination: Consensus is reached only when the Nigamana (conclusion) of both agents aligns and passes the Z3 Validator.
+6.2 The Jalpa Protocol (Adversarial Stress-Testing)
+This protocol is used for high-stakes verification (e.g., security audits, legal reasoning).
+   * Objective: Agents are assigned opposing goals (Win/Lose). This utilizes Game Theory concepts 40 where agents are incentivized to find flaws.
+   * Mechanism: Agent A proposes a plan. Agent B acts as the Purvapakshin (Opponent) and attacks the plan using Chala (finding ambiguity) or Jati (futile rejoinders - checking for robustness against edge cases).
+   * Judge (Madhyastha): A third agent (or the Z3 Validator) arbitrates. If Agent B successfully identifies a logical contradiction, Agent A is "defeated" (Nigrahasthana), and the plan is rejected.
+This adversarial structure ensures that reasoning chains are robustly stress-tested before being presented to the user, significantly reducing the probability of accepted hallucinations.
+________________
+7. Implementation Roadmap & Critical Path
+The transformation from concept to "Pramana Engine" requires a phased engineering approach.
+Phase 1: The Syllogistic Reasoner (Weeks 1-4)
+   * Goal: Fine-tune a model to reliably output the 6-phase Nyaya structure.
+   * Actions:
+   * Curate 100 "Gold Standard" seeds.
+   * Generate 10k synthetic examples using GPT-4o and the "Nyaya-Instruct" schema.
+   * Fine-tune DeepSeek-R1-Distill-Llama-8B using Unsloth (QLoRA, rank=64).
+   * Metric: Format Adherence Rate > 95%.
+Phase 2: The Pramana Validator (Weeks 5-8)
+   * Goal: Integrate Z3 for logical verification.
+   * Actions:
+   * Build the Autoformalization prompt/adapter.
+   * Develop the Python runtime wrapper for Z3 execution.
+   * Implement the feedback loop for self-correction.
+   * Metric: Verification Success Rate on LogicBench > 85%.
+Phase 3: The Debate Coordinator (Weeks 9-12)
+   * Goal: Implement Multi-Agent Vada protocol.
+   * Actions:
+   * Set up a multi-agent environment (e.g., using LangGraph).
+   * Define system prompts for "Proponent," "Opponent," and "Judge."
+   * Implement the Hetvabhasa detection classifier.
+   * Metric: Reduction in Cascading Hallucinations vs. standard AutoGen.
+________________
+8. Evaluation and Metrics
+Traditional metrics like BLEU or ROUGE are irrelevant for this system. We define Epistemic Metrics:
+   * Vyapti Validity Score: A human/model-evaluated score (0-1) determining if the Udaharana (example) genuinely supports the universal rule cited.
+   * Fallacy Detection Rate: Performance on the "Logical Fallacy" dataset.41 Can the model correctly classify why an argument is invalid using Hetvabhasa categories?
+   * Trace Verifiability: The percentage of generated reasoning traces that can be successfully parsed into valid SMT-LIB code and verified by Z3. This measures the "logical coherence" of the model's output.
+________________
+9. Conclusion: The Path to Epistemic Sovereignty
+The Pramana Engine represents a fundamental shift in AI development. By marrying the rigorous, millenia-tested epistemological structures of Nyaya logic with the generative power of modern Transformers and the mathematical certainty of Symbolic Solvers, we address the core fragility of current AI systems.
+This project is not merely an academic exploration of "Indian Logic." It is a vital engineering solution to the reliability crisis in Artificial Intelligence. A model that must state its Hetu, ground it in Udaharana, and survive the rigorous audit of Tarka is a model that offers more than just text—it offers justification. This system creates a category-defining technology: an AI that does not just "know," but knows how it knows. This is the future of Trusted AI.
+Works cited
+   1. Cognitive Foundations for Reasoning and Their Manifestation in LLMs - arXiv, accessed December 22, 2025, https://arxiv.org/html/2511.16660v1
+   2. The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity - Apple Machine Learning Research, accessed December 22, 2025, https://machinelearning.apple.com/research/illusion-of-thinking
+   3. The Tattva-chintamani by Gangeśa Upadhyaya by Gangesa | Open Library, accessed December 22, 2025, https://openlibrary.org/books/OL7030743M/The_Tattva-chintamani_by_Ganges%CC%81a_Upadhyaya
+   4. Analytic Philosophy in Early Modern India, accessed December 22, 2025, https://plato.stanford.edu/entries/early-modern-india/
+   5. SuperCorrect: Advancing Small LLM Reasoning with Thought Template Distillation and Self-Correction | OpenReview, accessed December 22, 2025, https://openreview.net/forum?id=PyjZO7oSw2
+   6. Reasoning Trace Distillation - Emergent Mind, accessed December 22, 2025, https://www.emergentmind.com/topics/reasoning-trace-distillation
+   7. Daily Papers - Hugging Face, accessed December 22, 2025, https://huggingface.co/papers?q=Process%20Reward%20Models%20(PRMs)
+   8. Step-Level Reward Models: A Framework for Structured Mathematical Reasoning | by Anna Alexandra Grigoryan, accessed December 22, 2025, https://thegrigorian.medium.com/step-level-reward-models-do-llms-need-natural-language-to-solve-complex-problems-fa6a1f898dfb
+   9. Improving Rule-based Reasoning in LLMs via Neurosymbolic Representations - arXiv, accessed December 22, 2025, https://arxiv.org/html/2502.01657v1
+   10. [2511.04662] VeriCoT: Neuro-symbolic Chain-of-Thought Validation via Logical Consistency Checks - arXiv, accessed December 22, 2025, https://arxiv.org/abs/2511.04662
+   11. Learning to reason with LLMs | OpenAI, accessed December 22, 2025, https://openai.com/index/learning-to-reason-with-llms/
+   12. Ancient Indian Logic as a Theory of Case-Based Reasoning - ResearchGate, accessed December 22, 2025, https://www.researchgate.net/publication/251381865_Ancient_Indian_Logic_as_a_Theory_of_Case-Based_Reasoning
+   13. Large Language Models are Few-Shot Training Example Generators: A Case Study in Fallacy Recognition - ACL Anthology, accessed December 22, 2025, https://aclanthology.org/2024.findings-acl.732.pdf
+   14. Nyaya - Nyāya - Internet Encyclopedia of Philosophy, accessed December 22, 2025, https://iep.utm.edu/nyaya/
+   15. 8. Reductio ad Absurdum – A Concise Introduction to Logic - Milne Publishing, accessed December 22, 2025, https://milnepublishing.geneseo.edu/concise-introduction-to-logic/chapter/8-reductio-ad-absurdum/
+   16. Hetvabhasa Fallacies of Inference in Detail - UGC NET Paper 1 Notes | PDF - Scribd, accessed December 22, 2025, https://www.scribd.com/document/911933709/Hetvabhasa-Fallacies-of-Inference-in-Detail-UGC-NET-Paper-1-Notes
+   17. (F). Fallacy (Hetvābhāsa), accessed December 22, 2025, https://www.wisdomlib.org/hinduism/essay/anumana-in-indian-philosophy/d/doc1085489.html
+   18. (PDF) Representing Knowledge Effectively Using Indian Logic - ResearchGate, accessed December 22, 2025, https://www.researchgate.net/publication/228713114_Representing_Knowledge_Effectively_Using_Indian_Logic
+   19. [PDF] Later Nyāya Logic: Computational Aspects - Semantic Scholar, accessed December 22, 2025, https://www.semanticscholar.org/paper/Later-Ny%C4%81ya-Logic%3A-Computational-Aspects-Kulkarni/4397064d6b9d3574dc8191d35868faa04d907679
+   20. Research spotlight: is long chain-of-thought structure all that matters when it comes to LLM reasoning distillation? - Snorkel AI, accessed December 22, 2025, https://snorkel.ai/blog/research-spotlight-is-long-chain-of-thought-structure-all-that-matters-when-it-comes-to-llm-reasoning-distillation/
+   21. LogicBench: Towards Systematic Evaluation of Logical Reasoning Ability of Large Language Models - GitHub, accessed December 22, 2025, https://github.com/Mihir3009/LogicBench
+   22. arXiv:2210.01240v4 [cs.CL] 2 Mar 2023, accessed December 22, 2025, https://arxiv.org/pdf/2210.01240
+   23. allenai/ruletaker - GitHub, accessed December 22, 2025, https://github.com/allenai/ruletaker
+   24. MR-GSM8K: A Meta-Reasoning Benchmark for Large Language Model Evaluation - arXiv, accessed December 22, 2025, https://arxiv.org/html/2312.17080v4
+   25. Z3 API in Python, accessed December 22, 2025, https://ericpony.github.io/z3py-tutorial/guide-examples.htm
+   26. The Varied Forms of Verification with Z3 - Microsoft Research, accessed December 22, 2025, https://www.microsoft.com/en-us/research/video/the-varied-forms-of-verification-with-z3/
+   27. DeepSeek-R1-Distill-Llama-8B: Efficient Reasoning LLM - Emergent Mind, accessed December 22, 2025, https://www.emergentmind.com/topics/deepseek-r1-distill-llama-8b
+   28. deepseek-ai/DeepSeek-R1 - Hugging Face, accessed December 22, 2025, https://huggingface.co/deepseek-ai/DeepSeek-R1
+   29. Llama 3.1 8B Instruct vs Qwen2.5 32B Instruct - LLM Stats, accessed December 22, 2025, https://llm-stats.com/models/compare/llama-3.1-8b-instruct-vs-qwen-2.5-32b-instruct
+   30. How to Fine-Tune LLMs on RTX GPUs With Unsloth | NVIDIA Blog, accessed December 22, 2025, https://blogs.nvidia.com/blog/rtx-ai-garage-fine-tuning-unsloth-dgx-spark/
+   31. Fine-tuning LLMs Guide | Unsloth Documentation, accessed December 22, 2025, https://docs.unsloth.ai/get-started/fine-tuning-llms-guide
+   32. LoRA Without Regret - Thinking Machines Lab, accessed December 22, 2025, https://thinkingmachines.ai/blog/lora/
+   33. An Empirical Study of Catastrophic Forgetting in Large Language Models During Continual Fine-Tuning | IEEE Journals & Magazine, accessed December 22, 2025, https://ieeexplore.ieee.org/document/11151751/
+   34. Detailed explanation of DeepSeek-R1 method: pure reinforcement learning and self-evolving behavior | by Xupeng Wang | Medium, accessed December 22, 2025, https://medium.com/@marvelous_catawba_otter_200/detailed-explanation-of-deepseek-r1-method-pure-reinforcement-learning-and-self-evolving-behavior-dced3a31e53a
+   35. GRPO using Transformer Reinforcement Learning | by Yugen.ai - Medium, accessed December 22, 2025, https://medium.com/yugen-ai-technology-blog/grpo-using-transformer-reinforcement-learning-791ff4e8bb1d
+   36. Proof of Thought : Neurosymbolic Program Synthesis allows Robust and Interpretable Reasoning - arXiv, accessed December 22, 2025, https://arxiv.org/html/2409.17270v1
+   37. ProofOfThought: LLM-based reasoning using Z3 theorem proving - DEV Community, accessed December 22, 2025, https://dev.to/technoblogger14o3/proofofthought-llm-based-reasoning-using-z3-theorem-proving-1jkh
+   38. Should we be going MAD? A Look at Multi-Agent Debate Strategies for LLMs | InstaDeep, accessed December 22, 2025, https://instadeep.com/research/paper/should-we-be-going-mad-a-look-at-multi-agent-debate-strategies-for-llms/
+   39. Arguing for the Truth? An Inference-Only Study into AI Debate - LessWrong, accessed December 22, 2025, https://www.lesswrong.com/posts/dJ7XFvqh5oWQbB4CJ/arguing-for-the-truth-an-inference-only-study-into-ai-debate
+   40. Game theory - Wikipedia, accessed December 22, 2025, https://en.wikipedia.org/wiki/Game_theory
+   41. tasksource/logical-fallacy · Datasets at Hugging Face, accessed December 22, 2025, https://huggingface.co/datasets/tasksource/logical-fallacy
