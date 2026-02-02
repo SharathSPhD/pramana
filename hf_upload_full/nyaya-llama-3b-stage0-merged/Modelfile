@@ -1,0 +1,7 @@
+FROM /opt/nyaya-llama-3b-stage0-merged
+SYSTEM """
+You are a Nyaya reasoning engine. Follow the exact output format provided.
+"""
+PARAMETER temperature 0
+PARAMETER top_p 1
+PARAMETER num_ctx 1024

@@ -1,0 +1,410 @@
+{
+  "evaluation_timestamp": "2026-02-02T14:11:25.912766",
+  "model_dir": "models/stage_0_corrected",
+  "test_examples": [
+    "pramana-003",
+    "pramana-005",
+    "test-001",
+    "test-002",
+    "test-003",
+    "test-004",
+    "test-005",
+    "test-006",
+    "test-007",
+    "test-008"
+  ],
+  "results": [
+    {
+      "example_id": "pramana-003",
+      "timestamp": "2026-02-02T14:07:30.078940",
+      "problem": "Four friends (Alice, Bob, Carol, David) are comparing their heights. The following information is known:\n\n**Constraints**:\n1. Alice is taller than Bob\n2. Bob is taller than Carol\n3. Carol is taller than David\n4. Alice is taller than Carol\n\n**Question**: What is the complete height ranking from tallest to shortest?\n\n---",
+      "ground_truth": "Ranking: Alice > Bob > Carol > David (Alice is tallest, David is shortest)",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nFour friends (Alice, Bob, Carol, David) are comparing their heights. The following information is known:\n\n**Constraints**:\n1. Alice is taller than Bob\n2. Bob is taller than Carol\n3. Carol is taller than David\n4. Alice is taller than Carol\n\n**Question**: What is the complete height ranking from tallest to shortest?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt about the ranking)\n**Justification**: The given information is incomplete. We need to determine the complete ranking from tallest to shortest.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- None\n\n### Anumana (Inference)\n- From the given information, we can infer the following:\n  1. Alice > Bob\n  2. Bob > Carol\n  3. Carol > David\n  4. Alice > Carol\n  5. Alice > Bob => Alice > Carol => Alice > David\n  6. Bob > Carol => Bob > David\n  7. Carol > David\n\n### Upamana (Comparison)\n- No direct comparison is given between Alice and Bob, but we can infer from the given information that Alice is taller than Carol, who is taller than David. Therefore, Alice is taller than David.\n\n### Shabda (Testimony)\n- None\n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**: Alice is the tallest.\n**Hetu (Reason)**: \n  1. Alice > Bob\n  2. Alice > Carol\n  3. Carol > David\n  4. Alice > Carol => Alice > David\n  5. Bob > Carol => Bob > David\n**Udaharana (Universal + Example)**: All the given statements are universal and can be applied to the given situation.\n**Upanaya (Application)**: \n  1. Alice > Bob\n  2. Alice > Carol\n  3. Carol > David\n  4. Alice > Carol => Alice > David\n  5. Bob > Carol => Bob > David\n**Nigamana (Conclusion)**: Therefore, Alice > Bob > Carol > David.\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**: What if Alice was not taller than Bob?\n**Consequence**: If Alice was not taller than Bob, then Alice would not be taller than Carol, which contradicts the given information. Therefore, Alice must be taller than Bob.\n**Analysis**: The hypothesis leads to a contradiction, so it must be false. Therefore, Alice is taller than Bob.\n**Resolution**: The hypothesis is false, and the original conclusion is correct.\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \n- No fallacy found.\n\nCheck for Viruddha: \n- No fallacy found.\n\nCheck for Asiddha: \n- No fallacy found.\n\nCheck for Satpratipaksha: \n- No fallacy found.\n\nCheck for Badhita: \n- No fallacy found.\n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**: Alice > Bob > Carol > David\n**Justification**: The conclusion is based on the given information and the logical deductions made.\n**Confidence**: High",
+      "output_length": 2307,
+      "parse_success": true,
+      "format_metrics": {
+        "phase_completeness": {
+          "samshaya": true,
+          "pramana": true,
+          "pancha_avayava": true,
+          "tarka": true,
+          "hetvabhasa": true,
+          "nirnaya": true
+        },
+        "num_phases_present": 6,
+        "pramana_completeness": {
+          "pratyaksha": true,
+          "anumana": true,
+          "upamana": true,
+          "shabda": true
+        },
+        "num_pramana_sources": 12,
+        "syllogism_completeness": {
+          "num_syllogisms": 1,
+          "syllogisms_with_all_members": 1
+        }
+      },
+      "content_quality": {
+        "pratyaksha_score": 0.0,
+        "udaharana_valid": false,
+        "tarka_meaningful": true,
+        "hetvabhasa_completeness": 1.0,
+        "overall_score": 0.5
+      },
+      "evaluation": {
+        "overall_passed": true,
+        "final_tier": 1,
+        "total_duration_ms": 0,
+        "tier_results": [
+          {
+            "tier": 1,
+            "passed": true,
+            "score": 1.0,
+            "errors": [],
+            "details": {
+              "validation_errors": 0,
+              "validation_warnings": 0,
+              "is_valid": true
+            }
+          }
+        ]
+      },
+      "ground_truth_match": {
+        "ground_truth": "Ranking: Alice > Bob > Carol > David (Alice is tallest, David is shortest)",
+        "model_answer": "Alice > Bob > Carol > David",
+        "exact_match": false,
+        "normalized_match": false,
+        "semantic_match": false,
+        "semantic_similarity": 0.5,
+        "token_overlap": 0.5
+      },
+      "success": true
+    },
+    {
+      "example_id": "pramana-005",
+      "timestamp": "2026-02-02T14:07:47.999136",
+      "problem": "Consider four logical statements P, Q, R, and S. The following information is known:\n\n**Given Facts**:\n1. If P is true, then Q is true\n2. If Q is true, then R is true\n3. If R is true, then S is true\n4. P is true\n\n**Question**: What are the truth values of P, Q, R, and S?\n\n---",
+      "ground_truth": "All four statements are true: P is true, Q is true, R is true, S is true",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nConsider four logical statements P, Q, R, and S. The following information is known:\n\n**Given Facts**:\n1. If P is true, then Q is true\n2. If Q is true, then R is true\n3. If R is true, then S is true\n4. P is true\n\n**Question**: What are the truth values of P, Q, R, and S?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt about the truth of the conclusion)\n**Justification**: We are given four logical statements P, Q, R, and S, and we need to determine the truth values of P, Q, R, and S. However, we are not given any direct information about the truth values of P, Q, R, and S. We need to use the given information to infer the truth values.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- None\n\n### Anumana (Inference)\n- If P is true, then Q is true (Pratijna: P -> Q)\n- If Q is true, then R is true (Pratijna: Q -> R)\n- If R is true, then S is true (Pratijna: R -> S)\n- P is true (Pratijna: P)\n\n### Upamana (Comparison)\n- None\n\n### Shabda (Testimony)\n- None\n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**: P is true\n**Hetu (Reason)**: P is true (Pratijna: P) and P -> Q (Pratijna: P -> Q)\n**Udaharana (Universal + Example)**: If P is true, then Q is true (Universal: P -> Q) and P is true (Universal: P)\n**Upanaya (Application)**: If P is true, then Q is true (Universal: P -> Q) and P is true (Universal: P) -> Q is true (Universal: Q)\n**Nigamana (Conclusion)**: Q is true\n\n### Syllogism 2: \n**Pratijna (Thesis)**: Q is true\n**Hetu (Reason)**: Q is true (Pratijna: Q) and Q -> R (Pratijna: Q -> R)\n**Udaharana (Universal + Example)**: If Q is true, then R is true (Universal: Q -> R) and Q is true (Universal: Q)\n**Upanaya (Application)**: If Q is true, then R is true (Universal: Q -> R) and Q is true (Universal: Q) -> R is true (Universal: R)\n**Nigamana (Conclusion)**: R is true\n\n### Syllogism 3: \n**Pratijna (Thesis)**: R is true\n**Hetu (Reason)**: R is true (Pratijna: R) and R -> S (Pratijna: R -> S)\n**Udaharana (Universal + Example)**: If R is true, then S is true (Universal: R -> S) and R is true (Universal: R)\n**Upanaya (Application)**: If R is true, then S is true (Universal: R -> S) and R is true (Universal: R) -> S is true (Universal: S)\n**Nigamana (Conclusion)**: S is true\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**: P is false\n**Consequence**: If P is false, then Q is false (Pratijna: P -> Q) and Q is false (Pratijna: Q) and Q -> R (Pratijna: Q -> R) and R is false (Pratijna: R -> S) and S is false (Pratijna: R -> S)\n**Analysis**: If P is false, then Q is false, which means Q is false. If Q is false, then R is false, which means R is false. If R is false, then S is false, which means S is false. However, we are given that P is true, so this hypothesis is false.\n**Resolution**: The hypothesis is false, so P is true.\n\n**Hypothesis**: Q is false\n**Consequence**: If Q is false, then R is false (Pratijna: Q -> R) and R -> S (Pratijna: R -> S) and S is false (Pratijna: R -> S)\n**Analysis**: If Q is false, then R is false, which means R is false. If R is false, then S is false, which means S is false. However, we are given that Q is true, so this hypothesis is false.\n**Resolution**: The hypothesis is false, so Q is true.\n\n**Hypothesis**: R is false\n**Consequence**: If R is false, then S is false (Pratijna: R -> S) and S is false (Pr",
+      "output_length": 3092,
+      "parse_success": false,
+      "parse_error": "Missing required section: Hetvabhasa\\s*.*?",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    },
+    {
+      "example_id": "test-001",
+      "timestamp": "2026-02-02T14:08:15.327827",
+      "problem": "Alice, Bob, and Carol each have one pet: a cat, a dog, or a fish.\n\n**Constraints**:\n1. Alice does not have the dog.\n2. Bob has the cat.\n3. Carol does not have the fish.\n\n**Question**: Who has which pet?\n\n---",
+      "ground_truth": "Alice has the fish, Bob has the cat, Carol has the dog",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nAlice, Bob, and Carol each have one pet: a cat, a dog, or a fish.\n\n**Constraints**:\n1. Alice does not have the dog.\n2. Bob has the cat.\n3. Carol does not have the fish.\n\n**Question**: Who has which pet?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt about the solution)\n**Justification**: We are unsure about the distribution of pets among Alice, Bob, and Carol.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- **Pratyakshas**:\n  - Alice does not have the dog. (Direct statement)\n  - Bob has the cat. (Direct statement)\n  - Carol does not have the fish. (Direct statement)\n- **Pratyakshatva**: These are direct statements from the problem.\n\n### Anumana (Inference)\n- **Anumana**:\n  - If Alice does not have the dog, then she has either the cat or the fish.\n  - If Bob has the cat, then Carol has either the dog or the fish.\n  - If Carol does not have the fish, then she has either the cat or the dog.\n- **Udaharana**:\n  - If Alice has the cat, then Bob has the dog. (Universal: If A has B, then not A has C. Example: If John has the car, then not John has the bike.)\n  - If Bob has the cat, then Carol has the dog. (Universal: If A has B, then not A has C. Example: If John has the car, then not John has the bike.)\n- **Upanaya**:\n  - If Alice has the cat, then Bob has the dog. (Application of universal: If Alice has the cat, then Bob has the dog.)\n  - If Bob has the cat, then Carol has the dog. (Application of universal: If Bob has the cat, then Carol has the dog.)\n- **Nigamana**:\n  - If Alice has the cat, then Bob has the dog. (Conclusion: If Alice has the cat, then Bob has the dog.)\n  - If Bob has the cat, then Carol has the dog. (Conclusion: If Bob has the cat, then Carol has the dog.)\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**: Suppose Alice has the cat.\n**Consequence**: If Alice has the cat, then Bob has the dog. (If Alice has the cat, then Bob has the dog.)\n**Analysis**: This is a valid inference. If Alice has the cat, then Bob has the dog. This is a universal: If A has B, then not A has C. (If Alice has the cat, then Bob has the dog.)\n**Resolution**: Therefore, if Alice has the cat, then Bob has the dog. (Conclusion: If Alice has the cat, then Bob has the dog.)\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: No. This reasoning is savyabhichara (valid) because it follows a universal: If A has B, then not A has C.\nCheck for Viruddha: No. This reasoning is not viruddha (invalid) because it does not violate any universal.\nCheck for Asiddha: No. This reasoning is not asiddha (invalid) because it does not involve any contradictions.\nCheck for Satpratipaksha: No. This reasoning is not satpratipaksha (invalid) because it does not involve any fallacies of affirming the consequent.\nCheck for Badhita: No. This reasoning is not badhita (invalid) because it does not involve any fallacies of denying the consequent.\n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**: Bob has the cat, Carol has the dog.\n**Justification**: We have established that if Alice has the cat, then Bob has the dog. We also know that Alice does not have the cat. Therefore, Bob has the cat. We also know that Carol does not have the fish. We also know that Bob has the cat. Therefore, Carol has the dog.\n**Confidence**: 100%",
+      "output_length": 3091,
+      "parse_success": false,
+      "parse_error": "Missing required section: Pancha Avayava\\s*.*?",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    },
+    {
+      "example_id": "test-002",
+      "timestamp": "2026-02-02T14:08:37.235866",
+      "problem": "Four people (Alex, Ben, Cara, Dana) sit in four numbered seats (1, 2, 3, 4). Each person sits in exactly one seat.\n\n**Constraints**:\n1. Dana sits in seat 1.\n2. Ben sits in seat 2.\n3. Alex does not sit in seat 1.\n4. Cara does not sit in seat 4.\n\n**Question**: Where does each person sit?\n\n---",
+      "ground_truth": "Dana sits in seat 1, Ben sits in seat 2, Cara sits in seat 3, Alex sits in seat 4",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nFour people (Alex, Ben, Cara, Dana) sit in four numbered seats (1, 2, 3, 4). Each person sits in exactly one seat.\n\n**Constraints**:\n1. Dana sits in seat 1.\n2. Ben sits in seat 2.\n3. Alex does not sit in seat 1.\n4. Cara does not sit in seat 4.\n\n**Question**: Where does each person sit?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt about the solution)\n**Justification**: We are unsure about the seating arrangement of the four people (Alex, Ben, Cara, Dana) in the four numbered seats (1, 2, 3, 4). We need to analyze the given constraints to determine the correct seating arrangement.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- Dana sits in seat 1. (Direct statement)\n### Anumana (Inference)\n- Ben sits in seat 2. (Inference from constraint 2)\n- Alex does not sit in seat 1. (Inference from constraint 3)\n- Cara does not sit in seat 4. (Inference from constraint 4)\n### Upamana (Comparison)\n- No other person is mentioned to be in seat 1. (Comparison with Dana's statement)\n- No other person is mentioned to be in seat 2. (Comparison with Ben's statement)\n- No other person is mentioned to be in seat 3. (Comparison with Alex's statement)\n- No other person is mentioned to be in seat 4. (Comparison with Cara's statement)\n### Shabda (Testimony)\n- No other person is mentioned to be in seat 1. (Testimony from Dana's statement)\n- No other person is mentioned to be in seat 2. (Testimony from Ben's statement)\n- No other person is mentioned to be in seat 3. (Testimony from Alex's statement)\n- No other person is mentioned to be in seat 4. (Testimony from Cara's statement)\n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**: The seating arrangement of the four people (Alex, Ben, Cara, Dana) in the four numbered seats (1, 2, 3, 4) is as follows: Alex in seat 3, Ben in seat 2, Cara in seat 1, and Dana in seat 4.\n**Hetu (Reason)**: \n- Dana sits in seat 1. (Pratyaksha)\n- Ben sits in seat 2. (Pratyaksha)\n- Alex does not sit in seat 1. (Pratyaksha)\n- Cara does not sit in seat 4. (Pratyaksha)\n- The four people occupy the four seats. (Pratyaksha)\n**Udaharana (Universal + Example)**: \n- If Dana sits in seat 1, then Ben must sit in seat 2. (Universal: If Dana sits in seat 1, then Ben sits in seat 2. Example: If Dana sits in seat 1, then Ben sits in seat 2.)\n- If Ben sits in seat 2, then Alex cannot sit in seat 1. (Universal: If Ben sits in seat 2, then Alex cannot sit in seat 1. Example: If Ben sits in seat 2, then Alex cannot sit in seat 1.)\n- If Alex does not sit in seat 1, then Cara must sit in seat 4. (Universal: If Alex does not sit in seat 1, then Cara sits in seat 4. Example: If Alex does not sit in seat 1, then Cara sits in seat 4.)\n- If Cara does not sit in seat 4, then Dana must sit in seat 1. (Universal: If Cara does not sit in seat 4, then Dana sits in seat 1. Example: If Cara does not sit in seat 4, then Dana sits in seat 1.)\n**Upanaya (Application)**: \n- Dana sits in seat 1. (Pratyaksha)\n- Ben sits in seat 2. (Pratyaksha)\n- Alex does not sit in seat 1. (Pratyaksha)\n- Cara does not sit in seat 4. (Pratyaksha)\n- The four people occupy the four seats. (Pratyaksha)\n**Nigamana (Conclusion)**: The seating arrangement of the four people (Alex, Ben, Cara, Dana) in the four numbered seats (1, 2, 3, 4) is as follows: Alex in seat 3, Ben in seat 2, Cara in seat 1, and Dana in seat 4.\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**: What if Alex sits in seat 1? (Counterfactual scenario)\n**Consequence**: \n- Dana would sit in seat 2. (Counterfactual consequence)\n- Ben would sit in seat 3. (Counterfactual consequence)\n- Cara would sit in seat 4. (Counterfactual consequence)\n- The four people occupy the four",
+      "output_length": 3441,
+      "parse_success": false,
+      "parse_error": "Missing required field: Analysis",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    },
+    {
+      "example_id": "test-003",
+      "timestamp": "2026-02-02T14:09:04.566149",
+      "problem": "Three students (Liam, Mia, Noah) each receive one colored card: red, blue, or green.\n\n**Constraints**:\n1. Noah has the blue card.\n2. Liam does not have the red card.\n3. Mia does not have the green card.\n\n**Question**: Which color does each student have?\n\n---",
+      "ground_truth": "Liam has the green card, Mia has the red card, Noah has the blue card",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nThree students (Liam, Mia, Noah) each receive one colored card: red, blue, or green.\n\n**Constraints**:\n1. Noah has the blue card.\n2. Liam does not have the red card.\n3. Mia does not have the green card.\n\n**Question**: Which color does each student have?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt about the color of each student)\n**Justification**: We have constraints about the colors of the cards, but we don't know the exact color of each student.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- **Noah has the blue card**: This is a direct statement from the problem.\n- **Liam does not have the red card**: This is a direct statement from the problem.\n- **Mia does not have the green card**: This is a direct statement from the problem.\n\n### Anumana (Inference)\n- **Noah has the blue card**: Since Noah has the blue card, he cannot have the red or green card.\n- **Liam does not have the red card**: Since Liam does not have the red card, he cannot have the blue or green card.\n- **Mia does not have the green card**: Since Mia does not have the green card, she cannot have the blue or red card.\n\n### Upamana (Comparison)\n- **Noah has the blue card**: Since Noah has the blue card, he must have the blue card.\n- **Liam does not have the red card**: Since Liam does not have the red card, he must have the blue or green card.\n- **Mia does not have the green card**: Since Mia does not have the green card, she must have the blue or red card.\n\n### Shabda (Testimony)\n- **Noah has the blue card**: This is a statement from the problem.\n- **Liam does not have the red card**: This is a statement from the problem.\n- **Mia does not have the green card**: This is a statement from the problem.\n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**: Each student has a unique color card.\n**Hetu (Reason)**: We have constraints about the colors of the cards.\n**Udaharana (Universal + Example)**: All students have a unique color card (Noah has the blue card, Liam does not have the red card, Mia does not have the green card).\n**Upanaya (Application)**: Each student has a unique color card (Noah has the blue card, Liam has the green card, Mia has the red card).\n**Nigamana (Conclusion)**: Each student has a unique color card (Noah has the blue card, Liam has the green card, Mia has the red card).\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**: What if Noah had the red card?\n**Consequence**: If Noah had the red card, then Liam would have the blue card and Mia would have the green card. But this contradicts the constraint that Liam does not have the red card.\n**Analysis**: The hypothesis leads to a contradiction, so it is false.\n**Resolution**: Noah does not have the red card.\n\n**Hypothesis**: What if Liam had the red card?\n**Consequence**: If Liam had the red card, then Noah would have the blue card and Mia would have the green card. But this contradicts the constraint that Mia does not have the green card.\n**Analysis**: The hypothesis leads to a contradiction, so it is false.\n**Resolution**: Liam does not have the red card.\n\n**Hypothesis**: What if Mia had the green card?\n**Consequence**: If Mia had the green card, then Noah would have the blue card and Liam would have the red card. But this contradicts the constraint that Noah does not have the red card.\n**Analysis**: The hypothesis leads to a contradiction, so it is false.\n**Resolution**: Mia does not have the green card.\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: No.\nCheck for Viruddha: No.\nCheck for Asiddha: No.\nCheck for Satpratipaksha: No.\nCheck for Badhita: No.\n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**: Liam has the green card, Mia has the red card, and Noah has the blue card.\n**Justification**: We have constraints about the colors of the cards, and each student has a unique color card.\n**Confidence**: 100%",
+      "output_length": 3652,
+      "parse_success": true,
+      "format_metrics": {
+        "phase_completeness": {
+          "samshaya": true,
+          "pramana": true,
+          "pancha_avayava": true,
+          "tarka": true,
+          "hetvabhasa": true,
+          "nirnaya": true
+        },
+        "num_phases_present": 6,
+        "pramana_completeness": {
+          "pratyaksha": true,
+          "anumana": true,
+          "upamana": true,
+          "shabda": true
+        },
+        "num_pramana_sources": 13,
+        "syllogism_completeness": {
+          "num_syllogisms": 1,
+          "syllogisms_with_all_members": 1
+        }
+      },
+      "content_quality": {
+        "pratyaksha_score": 0.0,
+        "udaharana_valid": false,
+        "tarka_meaningful": true,
+        "hetvabhasa_completeness": 1.0,
+        "overall_score": 0.5
+      },
+      "evaluation": {
+        "overall_passed": true,
+        "final_tier": 1,
+        "total_duration_ms": 0,
+        "tier_results": [
+          {
+            "tier": 1,
+            "passed": true,
+            "score": 1.0,
+            "errors": [],
+            "details": {
+              "validation_errors": 0,
+              "validation_warnings": 0,
+              "is_valid": true
+            }
+          }
+        ]
+      },
+      "ground_truth_match": {
+        "ground_truth": "Liam has the green card, Mia has the red card, Noah has the blue card",
+        "model_answer": "Liam has the green card, Mia has the red card, and Noah has the blue card.",
+        "exact_match": false,
+        "normalized_match": false,
+        "semantic_match": true,
+        "semantic_similarity": 1.0,
+        "token_overlap": 1.0
+      },
+      "success": true
+    },
+    {
+      "example_id": "test-004",
+      "timestamp": "2026-02-02T14:09:28.905548",
+      "problem": "Consider three boolean statements P, Q, and R.\n\n**Given Facts**:\n1. If P is true, then Q is true.\n2. If Q is true, then R is true.\n3. Q is true.\n4. P is false.\n\n**Question**: What are the truth values of P, Q, and R?\n\n---",
+      "ground_truth": "P is false, Q is true, R is true",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nConsider three boolean statements P, Q, and R.\n\n**Given Facts**:\n1. If P is true, then Q is true.\n2. If Q is true, then R is true.\n3. Q is true.\n4. P is false.\n\n**Question**: What are the truth values of P, Q, and R?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt about the truth values of P, Q, and R)\n**Justification**: We are given three boolean statements P, Q, and R, and four facts about their relationships. However, we are not given any direct information about the truth values of P, Q, and R. We must use the given facts to infer their truth values.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- None\n\n### Anumana (Inference)\n- From fact 3, we know Q is true.\n- From fact 1, if P is true, then Q is true. Since Q is true, P must also be true (by modus ponens).\n- From fact 4, we know P is false. This contradicts our conclusion from fact 1. Therefore, fact 1 must be false, and P is false.\n- From fact 2, if Q is true, then R is true. Since Q is true, R must also be true (by modus ponens).\n- From fact 4, we know P is false. This does not provide any information about Q or R.\n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**: The truth values of P, Q, and R are P = false, Q = true, and R = true.\n**Hetu (Reason)**:\n- From fact 1, if P is true, then Q is true.\n- From fact 2, if Q is true, then R is true.\n- From fact 3, Q is true.\n- From fact 4, P is false.\n- From fact 2, if Q is true, then R is true.\n- From fact 3, Q is true.\n- Therefore, R is true (by modus ponens).\n- From fact 1, if P is true, then Q is true.\n- From fact 4, P is false.\n- Therefore, Q is false (by modus tollens).\n- From fact 2, if Q is true, then R is true.\n- From fact 3, Q is true.\n- Therefore, R is true (by modus ponens).\n**Udaharana (Universal + Example)**: All syllogisms of the form \"If A, then B\" and \"If B, then C\" imply \"If A, then C\".\n**Upanaya (Application)**: If P is true, then Q is true. If Q is true, then R is true. Therefore, if P is true, then R is true.\n**Nigamana (Conclusion)**: The truth values of P, Q, and R are P = false, Q = true, and R = true.\n**Nigamana (Conclusion)**: The truth values of P, Q, and R are P = false, Q = true, and R = true.\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**: Suppose P is true.\n**Consequence**: If P is true, then Q is true (by fact 1). If Q is true, then R is true (by fact 2). Therefore, if P is true, then R is true.\n**Analysis**: This is a valid syllogism. The conclusion follows logically from the premises.\n**Resolution**: Therefore, if P is true, then R is true.\n**Hypothesis**: Suppose Q is true.\n**Consequence**: If Q is true, then R is true (by fact 2). Therefore, R is true (by modus ponens).\n**Analysis**: This is a valid syllogism. The conclusion follows logically from the premises.\n**Resolution**: Therefore, R is true.\n**Hypothesis**: Suppose P is false.\n**Consequence**: P is false (by hypothesis). Q is true (by fact 3). If Q is true, then R is true (by fact 2). Therefore, R is true (by modus ponens).\n**Analysis**: This is a valid syllogism. The conclusion follows logically from the premises.\n**Resolution**: Therefore, R is true.\n**Hypothesis**: Suppose R is true.\n**Consequence**: R is true (by hypothesis). Q is true (by fact 3). If Q is true, then R is true (by fact 2). Therefore, R is true (by modus ponens).\n**Analysis**: This is a valid syllogism. The conclusion follows logically from the premises.\n**Resolution**: Therefore, R is true.\n**Hypothesis**: Suppose P is true.\n**Consequence**: P is true (by hypothesis). Q is true (by fact 1). If Q is true,",
+      "output_length": 3402,
+      "parse_success": false,
+      "parse_error": "Missing required section: Hetvabhasa\\s*.*?",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    },
+    {
+      "example_id": "test-005",
+      "timestamp": "2026-02-02T14:09:56.131458",
+      "problem": "Consider two boolean statements A and B.\n\n**Given Facts**:\n1. If A is true, then B is true.\n2. If B is true, then A is true.\n3. A is false.\n\n**Question**: What are the truth values of A and B?\n\n---",
+      "ground_truth": "A is false, B is false",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nConsider two boolean statements A and B.\n\n**Given Facts**:\n1. If A is true, then B is true.\n2. If B is true, then A is true.\n3. A is false.\n\n**Question**: What are the truth values of A and B?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt about the truth values of A and B)\n**Justification**: We are given two boolean statements A and B, and three facts: If A is true, then B is true; If B is true, then A is true; and A is false. We need to determine the truth values of A and B.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- None\n\n### Anumana (Inference)\n- From fact 1: If A is true, then B is true. Since A is false, B cannot be true. (Valid: modus tollens)\n- From fact 2: If B is true, then A is true. Since A is false, B cannot be true. (Valid: modus tollens)\n- From fact 3: A is false. (Given)\n\n### Upamana (Comparison)\n- No direct comparison is possible.\n\n### Shabda (Testimony)\n- None\n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**: A and B are both false.\n**Hetu (Reason)**: From fact 1: If A is true, then B is true. Since A is false, B cannot be true. (Valid: modus tollens)\n**Udaharana (Universal + Example)**: If A is true, then B is true; if A is false, then B is false.\n**Upanaya (Application)**: If A is true, then B is true. If A is false, then B is false. Since A is false, B must be false.\n**Nigamana (Conclusion)**: Therefore, A and B are both false.\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**: Suppose A is true. Then B must be true.\n**Consequence**: If B is true, then A is true. But we know A is false. This leads to a contradiction.\n**Analysis**: If A is true, then B must be true. But we know A is false. This means B cannot be true. Therefore, A must be false.\n**Resolution**: A is false. Therefore, B must be false.\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: No\nCheck for Viruddha: No\nCheck for Asiddha: No\nCheck for Satpratipaksha: No\nCheck for Badhita: No\n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**: A is false, B is false.\n**Justification**: From the five-member syllogism, we conclude that A and B are both false.\n**Confidence**: High (100%)",
+      "output_length": 2002,
+      "parse_success": true,
+      "format_metrics": {
+        "phase_completeness": {
+          "samshaya": true,
+          "pramana": true,
+          "pancha_avayava": true,
+          "tarka": true,
+          "hetvabhasa": true,
+          "nirnaya": true
+        },
+        "num_phases_present": 6,
+        "pramana_completeness": {
+          "pratyaksha": true,
+          "anumana": true,
+          "upamana": true,
+          "shabda": true
+        },
+        "num_pramana_sources": 7,
+        "syllogism_completeness": {
+          "num_syllogisms": 1,
+          "syllogisms_with_all_members": 1
+        }
+      },
+      "content_quality": {
+        "pratyaksha_score": 0.0,
+        "udaharana_valid": false,
+        "tarka_meaningful": true,
+        "hetvabhasa_completeness": 1.0,
+        "overall_score": 0.5
+      },
+      "evaluation": {
+        "overall_passed": true,
+        "final_tier": 1,
+        "total_duration_ms": 0,
+        "tier_results": [
+          {
+            "tier": 1,
+            "passed": true,
+            "score": 1.0,
+            "errors": [],
+            "details": {
+              "validation_errors": 0,
+              "validation_warnings": 0,
+              "is_valid": true
+            }
+          }
+        ]
+      },
+      "ground_truth_match": {
+        "ground_truth": "A is false, B is false",
+        "model_answer": "A is false, B is false.",
+        "exact_match": false,
+        "normalized_match": true,
+        "semantic_match": true,
+        "semantic_similarity": 1.0,
+        "token_overlap": 1.0
+      },
+      "success": true
+    },
+    {
+      "example_id": "test-006",
+      "timestamp": "2026-02-02T14:10:11.838019",
+      "problem": "Three students (Maya, Nikhil, Priya) each belong to exactly one club: Math, Science, or Art.\n\n**Constraints**:\n1. Maya is in the Math club.\n2. Nikhil is not in the Art club.\n3. Priya is not in the Science club.\n\n**Question**: Which club does each student belong to?\n\n---",
+      "ground_truth": "Maya is in Math, Nikhil is in Science, Priya is in Art",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nThree students (Maya, Nikhil, Priya) each belong to exactly one club: Math, Science, or Art.\n\n**Constraints**:\n1. Maya is in the Math club.\n2. Nikhil is not in the Art club.\n3. Priya is not in the Science club.\n\n**Question**: Which club does each student belong to?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt of the Existence of the Truth)\n**Justification**: We are uncertain about the club assignments of Maya, Nikhil, and Priya.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- Maya is in the Math club. (Direct statement)\n- Nikhil is not in the Art club. (Direct statement)\n- Priya is not in the Science club. (Direct statement)\n\n### Anumana (Inference)\n- Since Maya is in the Math club, she cannot be in the Science or Art club. (Inference from direct statement)\n- Since Nikhil is not in the Art club, he must be in either the Math or Science club. (Inference from direct statement)\n- Since Priya is not in the Science club, she must be in either the Math or Art club. (Inference from direct statement)\n\n### Upamana (Comparison)\n- We can compare the possible club assignments for Maya, Nikhil, and Priya to see which combination satisfies all the constraints. (Comparison of possible assignments)\n\n### Shabda (Testimony)\n- We have direct statements from the problem that provide information about the club assignments. (Testimony from problem statement)\n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**: Maya is in the Math club, Nikhil is in the Science club, and Priya is in the Art club.\n**Hetu (Reason)**: \n- Maya is in the Math club. (Pratyaksha)\n- Nikhil is not in the Art club. (Pratyaksha)\n- Priya is not in the Science club. (Pratyaksha)\n- Maya is not in the Science club. (Inference from Pratyaksha)\n- Nikhil is in the Math club. (Inference from Pratyaksha and Inference)\n- Priya is in the Art club. (Inference from Pratyaksha and Inference)\n**Udaharana (Universal + Example)**: \n- All three students must be in one of the three clubs: Math, Science, or Art.\n- Each student is in exactly one club.\n**Upanaya (Application)**: \n- Maya is in the Math club. (Application of Pratyaksha)\n- Nikhil is in the Science club. (Application of Pratyaksha and Inference)\n- Priya is in the Art club. (Application of Pratyaksha and Inference)\n**Nigamana (Conclusion)**: \n- Maya is in the Math club.\n- Nikhil is in the Science club.\n- Priya is in the Art club.\n**Nigamana (Conclusion)**: \n- The club assignments satisfy all the constraints.\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**: \n- What if Maya is not in the Math club?\n- What if Nikhil is in the Art club?\n- What if Priya is in the Science club?\n**Consequence**:\n- If Maya is not in the Math club, she must be in either the Science or Art club. (Inference from Pratyaksha)\n- If Nikhil is in the Art club, he must be in either the Math or Science club. (Inference from Pratyaksha)\n- If Priya is in the Science club, she must be in either the Math or Art club. (Inference from Pratyaksha)\n**Analysis**:\n- If Maya is not in the Math club, she cannot be in the Science club. (Inference from Pratyaksha)\n- If Nikhil is in the Art club, he cannot be in the Science club. (Inference from Pratyaksha)\n- If Priya is in the Science club, she cannot be in the Math club. (Inference from Pratyaksha)\n**Resolution**:\n- The original club assignments satisfy all the constraints.\n- The alternative assignments do not satisfy all the constraints.\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \n- No. The club assignments are mutually exclusive.\nCheck for Viruddha: \n- No. The club assignments do not contradict each other.\nCheck for Asiddha: \n- No. The club assignments are not empty.\nCheck for Satpratipaksha: \n- No. The club assignments are not all true at the same time.\nCheck for Badhita: \n- No. The club assignments are not all false at the same time.\n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**: \n- Maya is in the Math club.\n- Nikhil is in the Science club.\n- Priya is in the Art club.\n**Justification**:",
+      "output_length": 3799,
+      "parse_success": false,
+      "parse_error": "Missing required field: Justification",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    },
+    {
+      "example_id": "test-007",
+      "timestamp": "2026-02-02T14:10:38.989722",
+      "problem": "Three shelves (A, B, C) each hold one book: History, Math, or Physics.\n\n**Constraints**:\n1. Shelf B has the History book.\n2. Shelf A does not have the Physics book.\n3. Shelf C does not have the Math book.\n\n**Question**: Which book is on each shelf?\n\n---",
+      "ground_truth": "Shelf A has the Math book, Shelf B has the History book, Shelf C has the Physics book",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nThree shelves (A, B, C) each hold one book: History, Math, or Physics.\n\n**Constraints**:\n1. Shelf B has the History book.\n2. Shelf A does not have the Physics book.\n3. Shelf C does not have the Math book.\n\n**Question**: Which book is on each shelf?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt about the arrangement of books on shelves)\n**Justification**: We have constraints about the books on each shelf, but we don't know the exact arrangement.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- **Pratyaksha**: We know the constraints about each shelf.\n- **Pratyaksha**: We know the books on each shelf.\n\n### Anumana (Inference)\n- **Anumana**: If Shelf B has the History book, and Shelf A does not have the Physics book, and Shelf C does not have the Math book, then we can infer the arrangement of books on each shelf.\n- **Anumana**: If Shelf B has the History book, and Shelf A does not have the Physics book, and Shelf C does not have the Math book, then we can infer the arrangement of books on each shelf.\n\n### Upamana (Comparison)\n- **Upamana**: This problem is similar to a classic puzzle, where we have constraints about the arrangement of objects in a room.\n- **Upamana**: We can use the same reasoning to solve this problem as we would solve a similar puzzle.\n\n### Shabda (Testimony)\n- **Shabda**: The constraints about each shelf are given in the problem statement.\n- **Shabda**: The constraints about each shelf are given in the problem statement.\n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**: The arrangement of books on each shelf is as follows: Shelf A has the Math book, Shelf B has the History book, and Shelf C has the Physics book.\n**Hetu (Reason)**:\n- **Hetu**: If Shelf B has the History book, and Shelf A does not have the Physics book, and Shelf C does not have the Math book, then we can infer the arrangement of books on each shelf.\n- **Hetu**: If Shelf B has the History book, and Shelf A does not have the Physics book, and Shelf C does not have the Math book, then we can infer the arrangement of books on each shelf.\n- **Hetu**: If Shelf B has the History book, and Shelf A does not have the Physics book, and Shelf C does not have the Math book, then we can infer the arrangement of books on each shelf.\n- **Hetu**: If Shelf B has the History book, and Shelf A does not have the Physics book, and Shelf C does not have the Math book, then we can infer the arrangement of books on each shelf.\n- **Hetu**: If Shelf B has the History book, and Shelf A does not have the Physics book, and Shelf C does not have the Math book, then we can infer the arrangement of books on each shelf.\n**Udaharana (Universal + Example)**: This problem is similar to a classic puzzle, where we have constraints about the arrangement of objects in a room.\n**Udaharana (Universal + Example)**: We can use the same reasoning to solve this problem as we would solve a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to this problem as we would apply to a similar puzzle.\n**Upanaya (Application)**: We can apply the same reasoning to",
+      "output_length": 4267,
+      "parse_success": false,
+      "parse_error": "Pancha Avayava section must contain at least one syllogism",
+      "evaluation": {
+        "overall_passed": false,
+        "final_tier": 0,
+        "total_duration_ms": 0,
+        "tier_results": []
+      },
+      "success": true
+    },
+    {
+      "example_id": "test-008",
+      "timestamp": "2026-02-02T14:11:06.158055",
+      "problem": "Consider the following statements:\n\n**Given Facts**:\n1. If it rains, then the ground is wet.\n2. If the ground is wet, then the match is canceled.\n3. If the match is canceled, then the stadium is empty.\n4. It is raining.\n\n**Question**: What can we conclude about the ground, the match, and the stadium?\n\n---",
+      "ground_truth": "It is raining, the ground is wet, the match is canceled, the stadium is empty",
+      "prompt": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\nToday Date: 02 Feb 2026\n\nYou are a Nyaya reasoning engine. Follow the exact output format provided.<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n### Problem:\nConsider the following statements:\n\n**Given Facts**:\n1. If it rains, then the ground is wet.\n2. If the ground is wet, then the match is canceled.\n3. If the match is canceled, then the stadium is empty.\n4. It is raining.\n\n**Question**: What can we conclude about the ground, the match, and the stadium?\n\n---\n\n### Instructions:\nYou MUST follow the exact markdown structure below. Do NOT add \"Phase\" labels or alternative headings. Use the exact headers and field labels shown.\n\nRequired section order:\n1) ## Samshaya (Doubt Analysis)\n2) ## Pramana (Sources of Knowledge)\n3) ## Pancha Avayava (5-Member Syllogism)\n4) ## Tarka (Counterfactual Reasoning)\n5) ## Hetvabhasa (Fallacy Check)\n6) ## Nirnaya (Ascertainment)\n\nCRITICAL:\n- Your response MUST start with: \"## Samshaya (Doubt Analysis)\"\n- Copy the template exactly and fill in every field.\n- Do not add any text before the first header or after the final field.\n\n\n\n### Template:\n## Samshaya (Doubt Analysis)\n**Doubt Type**:\n**Justification**:\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- \n### Anumana (Inference)\n- \n### Upamana (Comparison)\n- \n### Shabda (Testimony)\n- \n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**:\n**Hetu (Reason)**:\n**Udaharana (Universal + Example)**:\n**Upanaya (Application)**:\n**Nigamana (Conclusion)**:\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**:\n**Consequence**:\n**Analysis**:\n**Resolution**:\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: \nCheck for Viruddha: \nCheck for Asiddha: \nCheck for Satpratipaksha: \nCheck for Badhita: \n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**:\n**Justification**:\n**Confidence**:\n\n\n### Nyaya Reasoning:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+      "generated_output": "## Samshaya (Doubt Analysis)\n**Doubt Type**: Samshaya (Doubt about the conclusion)\n**Justification**: We are unsure about the conclusion that the stadium is empty.\n\n---\n\n## Pramana (Sources of Knowledge)\n### Pratyaksha (Direct Perception)\n- **Ground is wet**: We have direct perception of the ground being wet because it is raining.\n\n### Anumana (Inference)\n- **Match canceled**: If the ground is wet, then the match is canceled (Pratjna: \"If the ground is wet, then the match is canceled\"). We infer the match is canceled because the ground is wet.\n\n### Upamana (Comparison)\n- **Stadium empty**: If the match is canceled, then the stadium is empty (Pratjna: \"If the match is canceled, then the stadium is empty\"). We compare the situation to a known fact: if a match is canceled, the stadium is empty.\n\n### Shabda (Testimony)\n- **Rain**: We have testimony that it is raining (Pratjna: \"If it rains, then the ground is wet\").\n\n---\n\n## Pancha Avayava (5-Member Syllogism)\n### Syllogism 1: \n**Pratijna (Thesis)**: The stadium is empty.\n**Hetu (Reason)**: The match is canceled (Pratjna: \"If the match is canceled, then the stadium is empty\"). The ground is wet (Pratjna: \"If it rains, then the ground is wet\"). The ground is wet (Pratjna: \"If it rains, then the ground is wet\").\n**Udaharana (Universal + Example)**: If it rains, then the ground is wet. If the ground is wet, then the match is canceled. If the match is canceled, then the stadium is empty.\n**Upanaya (Application)**: If it rains, then the ground is wet. The ground is wet. Therefore, the match is canceled. The match is canceled. Therefore, the stadium is empty.\n**Nigamana (Conclusion)**: The stadium is empty.\n\n---\n\n## Tarka (Counterfactual Reasoning)\n**Hypothesis**: The ground is not wet.\n**Consequence**: If the ground is not wet, then it is not raining. If it is not raining, then the match is not canceled. If the match is not canceled, then the stadium is not empty.\n**Analysis**: If the ground is not wet, then it is not raining. If it is not raining, then the match is not canceled. If the match is not canceled, then the stadium is not empty. Therefore, if the ground is not wet, then the stadium is not empty.\n**Resolution**: The ground is wet. Therefore, the stadium is empty.\n\n---\n\n## Hetvabhasa (Fallacy Check)\nCheck for Savyabhichara: No fallacy.\nCheck for Viruddha: No fallacy.\nCheck for Asiddha: No fallacy.\nCheck for Satpratipaksha: No fallacy.\nCheck for Badhita: No fallacy.\n\n---\n\n## Nirnaya (Ascertainment)\n**Final Answer**: The stadium is empty.\n**Justification**: We have a valid syllogism: If it rains, then the ground is wet. If the ground is wet, then the match is canceled. If the match is canceled, then the stadium is empty. We have direct perception of the ground being wet because it is raining. Therefore, we can conclude that the stadium is empty.\n**Confidence**: High",
+      "output_length": 2865,
+      "parse_success": true,
+      "format_metrics": {
+        "phase_completeness": {
+          "samshaya": true,
+          "pramana": true,
+          "pancha_avayava": true,
+          "tarka": true,
+          "hetvabhasa": true,
+          "nirnaya": true
+        },
+        "num_phases_present": 6,
+        "pramana_completeness": {
+          "pratyaksha": true,
+          "anumana": true,
+          "upamana": true,
+          "shabda": true
+        },
+        "num_pramana_sources": 5,
+        "syllogism_completeness": {
+          "num_syllogisms": 1,
+          "syllogisms_with_all_members": 1
+        }
+      },
+      "content_quality": {
+        "pratyaksha_score": 0.0,
+        "udaharana_valid": false,
+        "tarka_meaningful": false,
+        "hetvabhasa_completeness": 1.0,
+        "overall_score": 0.25
+      },
+      "evaluation": {
+        "overall_passed": true,
+        "final_tier": 1,
+        "total_duration_ms": 0,
+        "tier_results": [
+          {
+            "tier": 1,
+            "passed": true,
+            "score": 1.0,
+            "errors": [],
+            "details": {
+              "validation_errors": 0,
+              "validation_warnings": 0,
+              "is_valid": true
+            }
+          }
+        ]
+      },
+      "ground_truth_match": {
+        "ground_truth": "It is raining, the ground is wet, the match is canceled, the stadium is empty",
+        "model_answer": "The stadium is empty.",
+        "exact_match": false,
+        "normalized_match": false,
+        "semantic_match": false,
+        "semantic_similarity": 0.4,
+        "token_overlap": 0.4
+      },
+      "success": true
+    }
+  ],
+  "summary": {
+    "format_adherence": {
+      "rate": 0.4,
+      "confidence_interval_95": [
+        0.16817758120350967,
+        0.6873304525498135
+      ]
+    },
+    "answer_correctness": {
+      "semantic_match": 0.5,
+      "confidence_interval_95": [
+        0.15003570882017148,
+        0.8499642911798285
+      ]
+    }
+  }
+}

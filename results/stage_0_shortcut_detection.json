@@ -1,0 +1,382 @@
+{
+  "timestamp": "2026-02-02T13:59:24.875895",
+  "validation_dir": "data/validation/stage_zero",
+  "model_dir": "models/stage_0_corrected",
+  "base_model": "unsloth/Llama-3.2-3B-Instruct-bnb-4bit",
+  "results": [
+    {
+      "example_id": "pramana-003",
+      "ground_truth": "Ranking: Alice > Bob > Carol > David (Alice is tallest, David is shortest)",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "Check for Satpr",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "Alice > Bob > Carol > David",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.5,
+            "token_overlap": 0.5
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Confidence**: High",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "pramana-005",
+      "ground_truth": "All four statements are true: P is true, Q is true, R is true, S is true",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "**Nigamana (Conclusion)**:",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "S: true",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.2,
+            "token_overlap": 0.2
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Confidence**: High",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "test-001",
+      "ground_truth": "Alice has the fish, Bob has the cat, Carol has the dog",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "**Hypothesis**: What if Alice",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.125,
+            "token_overlap": 0.125
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "- Carol: dog",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.25,
+            "token_overlap": 0.25
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Confidence**: 50%",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "test-002",
+      "ground_truth": "Dana sits in seat 1, Ben sits in seat 2, Cara sits in seat 3, Alex sits in seat 4",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "- Cara does not sit in seat 4.",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.36363636363636365,
+            "token_overlap": 0.36363636363636365
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "- Dana sits in seat 1.",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.45454545454545453,
+            "token_overlap": 0.45454545454545453
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Analysis**: This contradicts the given constraint that Dana sits in",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.2727272727272727,
+            "token_overlap": 0.2727272727272727
+          }
+        }
+      }
+    },
+    {
+      "example_id": "test-003",
+      "ground_truth": "Liam has the green card, Mia has the red card, Noah has the blue card",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "**Nigamana (Conclusion",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "- Noah has the blue card.",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.5555555555555556,
+            "token_overlap": 0.5555555555555556
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Confidence**: High",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "test-004",
+      "ground_truth": "P is false, Q is true, R is true",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "**Udaharana (Universal + Example)**: All syllog",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "R: True",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.3333333333333333,
+            "token_overlap": 0.3333333333333333
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Confidence**: High.",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "test-005",
+      "ground_truth": "A is false, B is false",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "Check for Savy",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "Therefore, both A and B are false.",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": true,
+            "semantic_similarity": 0.75,
+            "token_overlap": 0.75
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Confidence**: High.",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "test-006",
+      "ground_truth": "Maya is in Math, Nikhil is in Science, Priya is in Art",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "**Analysis**: If Maya is not in the Math club, then she must be in either the Science club",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.625,
+            "token_overlap": 0.625
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "Priya - Art",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.25,
+            "token_overlap": 0.25
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Confidence**: High",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "test-007",
+      "ground_truth": "Shelf A has the Math book, Shelf B has the History book, Shelf C has the Physics book",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "**Consequence**: If the arrangement",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.1,
+            "token_overlap": 0.1
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "- Shelf C: Physics",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.3,
+            "token_overlap": 0.3
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Udaharana (Universal",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        }
+      }
+    },
+    {
+      "example_id": "test-008",
+      "ground_truth": "It is raining, the ground is wet, the match is canceled, the stadium is empty",
+      "conditions": {
+        "nyaya_tuned_with_instructions": {
+          "answer": "### Syllogism 1:",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        },
+        "nyaya_tuned_without_instructions": {
+          "answer": "The ground is wet, the match is canceled, and the stadium is empty.",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": true,
+            "semantic_similarity": 0.8,
+            "token_overlap": 0.8
+          }
+        },
+        "base_model_with_instructions": {
+          "answer": "**Confidence**: High",
+          "scores": {
+            "exact_match": false,
+            "normalized_match": false,
+            "semantic_match": false,
+            "semantic_similarity": 0.0,
+            "token_overlap": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "nyaya_tuned_with_instructions": {
+      "semantic_accuracy": 0.0,
+      "total_examples": 10
+    },
+    "nyaya_tuned_without_instructions": {
+      "semantic_accuracy": 0.2,
+      "total_examples": 10
+    },
+    "base_model_with_instructions": {
+      "semantic_accuracy": 0.0,
+      "total_examples": 10
+    }
+  }
+}

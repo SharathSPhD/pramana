@@ -1,3 +1,15 @@
-"""LLM infrastructure: Judge client for GPT-4 evaluation."""
+"""LLM infrastructure: Judge clients for external providers."""
 
-__all__: list[str] = []
+from pramana.infrastructure.llm.client import (
+    AnthropicLLMClient,
+    LLMClientError,
+    OpenAILLMClient,
+    create_llm_client,
+)
+
+__all__ = [
+    "AnthropicLLMClient",
+    "LLMClientError",
+    "OpenAILLMClient",
+    "create_llm_client",
+]

@@ -12,9 +12,6 @@ Evaluates the fine-tuned Stage 0 model on held-out test examples by:
 7. Saving results to results/stage_0_evaluation.json
 """
 
-# IMPORTANT: Import unsloth first for optimizations
-from unsloth import FastLanguageModel
-
 import json
 import logging
 import os
@@ -26,7 +23,14 @@ from typing import Any
 
 from pramana.application.data.parser import MarkdownParser, ParseError, ValidationError
 from pramana.application.evaluation.handlers import Tier1StructuralHandler
+from pramana.application.evaluation.llm_judge import Tier2LLMJudgeHandler
 from pramana.application.evaluation.pipeline import EvaluationPipeline
+from pramana.application.evaluation.content_quality import ContentQualityValidator
+from pramana.application.evaluation.scoring import score_answers, wilson_interval
+from pramana.application.evaluation.model_loader import should_use_unsloth
+from pramana.application.evaluation.z3_handler import Tier3Z3VerifierHandler
+from pramana.config.settings import PramanaSettings
+from pramana.infrastructure.llm import LLMClientError, create_llm_client
 
 # Configure logging
 logging.basicConfig(
@@ -37,7 +41,9 @@ logger = logging.getLogger(__name__)
 
 # Configuration
 MODEL_DIR = os.getenv("MODEL_DIR", "models/stage_0")
-SEED_EXAMPLES_DIR = "data/seed_examples/stage_zero"
+VALIDATION_DIR = os.getenv("VALIDATION_DIR", "data/validation/stage_zero")
+BASE_MODEL_NAME_CPU = os.getenv("BASE_MODEL_NAME_CPU", "unsloth/Llama-3.2-3B-Instruct")
+EVAL_TIERS = os.getenv("EVAL_TIERS", "1")
 RESULTS_DIR = "results"
 RESULTS_FILE = os.getenv("RESULTS_FILE", "results/stage_0_evaluation.json")
 
@@ -160,7 +166,7 @@ def format_chat_text(
     return f"{user_prompt}{assistant_response}"
 
 # Test examples to evaluate (held-out from training)
-TEST_EXAMPLE_IDS = ["pramana-003", "pramana-005"]
+TEST_EXAMPLE_IDS_ENV = os.getenv("TEST_EXAMPLE_IDS")
 
 # Generation parameters
 MAX_NEW_TOKENS = 1024
@@ -168,6 +174,7 @@ TEMPERATURE = 0.0
 TOP_P = 1.0
 TOP_K = 0
 DO_SAMPLE = False
+SEMANTIC_THRESHOLD = float(os.getenv("SEMANTIC_THRESHOLD", "0.7"))
 
 
 def extract_problem_from_markdown(content: str) -> str:
@@ -234,25 +241,52 @@ def load_model(model_dir: str):
     
     logger.info(f"Loading model from {model_dir}...")
     
+    # Check for HuggingFace token
+    hf_token = os.getenv("HF_TOKEN") or os.getenv("HUGGINGFACE_HUB_TOKEN")
+    prefer_unsloth = os.getenv("USE_UNSLOTH", "1") == "1"
+
+    torch_available = False
+    has_gpu = False
     try:
-        # Check for HuggingFace token
-        hf_token = os.getenv("HF_TOKEN") or os.getenv("HUGGINGFACE_HUB_TOKEN")
-        
-        # Load model with LoRA adapters
-        model, tokenizer = FastLanguageModel.from_pretrained(
-            model_name=str(model_path.absolute()),
-            max_seq_length=4096,
-            dtype=None,  # Auto-detect
-            load_in_4bit=True,  # Use 4-bit quantization
-            token=hf_token,
+        import torch
+
+        torch_available = True
+        has_gpu = torch.cuda.is_available()
+    except Exception:
+        pass
+
+    if should_use_unsloth(
+        prefer_unsloth=prefer_unsloth, torch_available=torch_available, has_gpu=has_gpu
+    ):
+        try:
+            from unsloth import FastLanguageModel
+
+            model, tokenizer = FastLanguageModel.from_pretrained(
+                model_name=str(model_path.absolute()),
+                max_seq_length=4096,
+                dtype=None,  # Auto-detect
+                load_in_4bit=True,  # Use 4-bit quantization
+                token=hf_token,
+            )
+            FastLanguageModel.for_inference(model)
+            logger.info("✓ Model loaded successfully (Unsloth)")
+            return model, tokenizer
+        except Exception:
+            pass
+
+    # CPU / transformers fallback
+    try:
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        from peft import PeftModel
+
+        base_model = AutoModelForCausalLM.from_pretrained(
+            BASE_MODEL_NAME_CPU, device_map="cpu", torch_dtype="auto", token=hf_token
         )
-        
-        # Enable inference mode
-        FastLanguageModel.for_inference(model)
-        
-        logger.info("✓ Model loaded successfully")
+        tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_NAME_CPU, token=hf_token)
+        model = PeftModel.from_pretrained(base_model, str(model_path.absolute()))
+        model.eval()
+        logger.info("✓ Model loaded successfully (Transformers + PEFT)")
         return model, tokenizer
-        
     except Exception as e:
         raise RuntimeError(f"Failed to load model: {e}") from e
 
@@ -303,6 +337,18 @@ def load_test_example(example_id: str, seed_dir: str) -> tuple[str, dict[str, An
         example_dict = {"id": example_id}
     
     return markdown_content, example_dict
+
+
+def list_validation_ids(seed_dir: str) -> list[str]:
+    """Derive example IDs from validation directory filenames."""
+    ids: list[str] = []
+    for path in sorted(Path(seed_dir).glob("*.md")):
+        stem_parts = path.stem.split("-")
+        if len(stem_parts) >= 2:
+            ids.append("-".join(stem_parts[:2]))
+        else:
+            ids.append(path.stem)
+    return ids
 
 
 def generate_output(
@@ -503,6 +549,17 @@ def evaluate_example(
             # Calculate format metrics
             format_metrics = calculate_format_metrics(parsed_output)
             result["format_metrics"] = format_metrics
+
+            # Content quality metrics
+            content_validator = ContentQualityValidator()
+            content_quality = content_validator.validate(parsed_output)
+            result["content_quality"] = {
+                "pratyaksha_score": content_quality.pratyaksha_score,
+                "udaharana_valid": content_quality.udaharana_valid,
+                "tarka_meaningful": content_quality.tarka_meaningful,
+                "hetvabhasa_completeness": content_quality.hetvabhasa_completeness,
+                "overall_score": content_quality.overall_score,
+            }
             
             # Run evaluation pipeline
             pipeline_result = evaluation_pipeline.evaluate(parsed_output, generated_output)
@@ -522,15 +579,21 @@ def evaluate_example(
                 ],
             }
             
-            # Compare to ground truth (simple string matching for now)
+            # Compare to ground truth with semantic scoring
             ground_truth = example_metadata.get("ground_truth", "")
             if ground_truth:
                 # Extract answer from Nirnaya section
                 nirnaya_answer = parsed_output.nirnaya.answer if parsed_output.nirnaya else ""
+                answer_scores = score_answers(
+                    predicted=nirnaya_answer,
+                    ground_truth=ground_truth,
+                    threshold=SEMANTIC_THRESHOLD,
+                    use_embeddings=True,
+                )
                 result["ground_truth_match"] = {
                     "ground_truth": ground_truth,
                     "model_answer": nirnaya_answer,
-                    "exact_match": ground_truth.lower().strip() == nirnaya_answer.lower().strip(),
+                    **answer_scores,
                 }
             
         except (ParseError, ValidationError) as e:
@@ -666,6 +729,53 @@ def print_evaluation_report(results: list[dict[str, Any]]) -> None:
         ) / len(parseable)
         print(f"Average Syllogisms: {avg_syllogisms:.1f}")
 
+        semantic_matches = [
+            r.get("ground_truth_match", {}).get("semantic_match")
+            for r in parseable
+            if r.get("ground_truth_match") is not None
+        ]
+        semantic_rate = (
+            sum(1 for m in semantic_matches if m) / len(semantic_matches)
+            if semantic_matches
+            else 0.0
+        )
+        print(f"Semantic Match Rate: {semantic_rate:.2%}")
+
+
+def parse_eval_tiers(value: str) -> list[int]:
+    """Parse evaluation tiers from environment."""
+    if not value:
+        return [1]
+    if value.strip().lower() == "all":
+        return [1, 2, 3]
+    tiers = []
+    for item in value.split(","):
+        item = item.strip()
+        if not item:
+            continue
+        try:
+            tier_num = int(item)
+        except ValueError:
+            continue
+        if tier_num in (1, 2, 3):
+            tiers.append(tier_num)
+    return tiers or [1]
+
+
+def pearson_correlation(xs: list[float], ys: list[float]) -> float | None:
+    """Compute Pearson correlation; returns None if undefined."""
+    if len(xs) < 2 or len(xs) != len(ys):
+        return None
+    mean_x = sum(xs) / len(xs)
+    mean_y = sum(ys) / len(ys)
+    cov = sum((x - mean_x) * (y - mean_y) for x, y in zip(xs, ys, strict=True))
+    var_x = sum((x - mean_x) ** 2 for x in xs)
+    var_y = sum((y - mean_y) ** 2 for y in ys)
+    denom = (var_x * var_y) ** 0.5
+    if denom == 0:
+        return None
+    return cov / denom
+
 
 def main() -> None:
     """Main evaluation function."""
@@ -686,21 +796,44 @@ def main() -> None:
         )
     
     # Check seed examples directory exists
-    seed_path = Path(SEED_EXAMPLES_DIR)
+    seed_path = Path(VALIDATION_DIR)
     if not seed_path.exists():
-        raise FileNotFoundError(f"Seed examples directory not found: {SEED_EXAMPLES_DIR}")
+        raise FileNotFoundError(f"Validation directory not found: {VALIDATION_DIR}")
     
     # Load model
     model, tokenizer = load_model(MODEL_DIR)
     
     # Initialize parser and evaluation pipeline
     parser = MarkdownParser()
-    tier1_handler = Tier1StructuralHandler()
-    evaluation_pipeline = EvaluationPipeline(handlers=[tier1_handler])
+    tiers_to_run = parse_eval_tiers(EVAL_TIERS)
+    handlers = []
+    if 1 in tiers_to_run:
+        handlers.append(Tier1StructuralHandler())
+    if 2 in tiers_to_run:
+        try:
+            llm_client = create_llm_client(PramanaSettings())
+            handlers.append(Tier2LLMJudgeHandler(llm_client=llm_client))
+        except LLMClientError as exc:
+            logger.warning("Tier 2 judge unavailable: %s", exc)
+    if 3 in tiers_to_run:
+        handlers.append(Tier3Z3VerifierHandler())
+    if not handlers:
+        raise RuntimeError("No valid evaluation tiers configured.")
+    evaluation_pipeline = EvaluationPipeline(handlers=handlers)
     
+    # Determine validation examples
+    if TEST_EXAMPLE_IDS_ENV:
+        test_example_ids = [
+            example_id.strip()
+            for example_id in TEST_EXAMPLE_IDS_ENV.split(",")
+            if example_id.strip()
+        ]
+    else:
+        test_example_ids = list_validation_ids(VALIDATION_DIR)
+
     # Evaluate each test example
     results = []
-    for example_id in TEST_EXAMPLE_IDS:
+    for example_id in test_example_ids:
         try:
             result = evaluate_example(
                 example_id=example_id,
@@ -708,7 +841,7 @@ def main() -> None:
                 tokenizer=tokenizer,
                 parser=parser,
                 evaluation_pipeline=evaluation_pipeline,
-                seed_dir=SEED_EXAMPLES_DIR,
+                seed_dir=VALIDATION_DIR,
             )
             results.append(result)
         except Exception as e:
@@ -727,9 +860,57 @@ def main() -> None:
     output_data = {
         "evaluation_timestamp": datetime.now().isoformat(),
         "model_dir": MODEL_DIR,
-        "test_examples": TEST_EXAMPLE_IDS,
+        "test_examples": test_example_ids,
         "results": results,
     }
+
+    # Summary metrics with confidence intervals
+    parseable = [r for r in results if r.get("parse_success")]
+    format_full = [
+        r
+        for r in parseable
+        if r.get("format_metrics", {}).get("num_phases_present") == 6
+    ]
+    format_rate = len(format_full) / len(results) if results else 0.0
+    format_ci = wilson_interval(successes=len(format_full), total=len(results))
+
+    semantic_matches = [
+        r.get("ground_truth_match", {}).get("semantic_match")
+        for r in parseable
+        if r.get("ground_truth_match") is not None
+    ]
+    semantic_successes = sum(1 for m in semantic_matches if m)
+    semantic_total = len(semantic_matches)
+    semantic_rate = semantic_successes / semantic_total if semantic_total else 0.0
+    semantic_ci = wilson_interval(successes=semantic_successes, total=semantic_total)
+
+    output_data["summary"] = {
+        "format_adherence": {
+            "rate": format_rate,
+            "confidence_interval_95": list(format_ci),
+        },
+        "answer_correctness": {
+            "semantic_match": semantic_rate,
+            "confidence_interval_95": list(semantic_ci),
+        },
+    }
+
+    # Structure-accuracy correlation (phase completeness vs semantic similarity)
+    structure_scores: list[float] = []
+    accuracy_scores: list[float] = []
+    for result in results:
+        format_metrics = result.get("format_metrics", {})
+        ground_truth_match = result.get("ground_truth_match", {})
+        if not format_metrics or not ground_truth_match:
+            continue
+        if ground_truth_match.get("semantic_similarity") is None:
+            continue
+        structure_scores.append(format_metrics.get("num_phases_present", 0) / 6)
+        accuracy_scores.append(ground_truth_match.get("semantic_similarity", 0.0))
+
+    output_data["summary"]["structure_accuracy_correlation"] = pearson_correlation(
+        structure_scores, accuracy_scores
+    )
     
     with results_file.open("w", encoding="utf-8") as f:
         json.dump(output_data, f, indent=2, ensure_ascii=False)

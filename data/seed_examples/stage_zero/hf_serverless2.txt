@@ -1,0 +1,43 @@
+**Yes, creating Inference Endpoints will charge your payment method**. Inference Endpoints are **NOT the same as Serverless API** - they are completely different services with different pricing models. [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+
+## Key Distinction
+
+**Serverless Inference API** (free tier available):
+- Uses Hugging Face's shared infrastructure [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_hub_serverless_inference_api)
+- Free tier: Rate-limited but no charges [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_hub_serverless_inference_api)
+- PRO: $9/month subscription includes higher limits [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_hub_serverless_inference_api)
+- **Your models are NOT available on serverless** (the 404 errors confirm this) [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_hub_serverless_inference_api)
+
+**Inference Endpoints** (always paid):
+- Dedicated infrastructure running YOUR model 24/7 [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+- Billed per hour based on GPU instance type [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+- Example pricing: A10G small instance = ~$0.60-1.00/hour = ~$432-720/month [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+- **This is what you tried to create** - and yes, it requires payment [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+
+## What Happened in Your Code
+
+The error `Payment method required for namespace qbz506` means:
+- You attempted to create **paid Inference Endpoints** [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+- HF blocked it because you haven't added a credit card [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+- If you add payment and create those endpoints, **you will be charged hourly** [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+
+## Your Actual Options
+
+Since your models (`unsloth/llama-3.2-3b-instruct` and `qbz506/nyaya-llama-3b-stage0-full`) are **not available on the Serverless API** (404 errors):
+
+**Option 1: Space Hardware (recommended for demo)**
+- Use **ZeroGPU** (free with PRO subscription ~$9/month with student discount) [huggingface](https://huggingface.co/docs/hub/en/spaces-zerogpu)
+- Load models directly in your Space code [huggingface](https://huggingface.co/docs/hub/en/spaces-zerogpu)
+- No per-hour GPU charges beyond the PRO subscription [huggingface](https://huggingface.co/docs/hub/en/spaces-zerogpu)
+
+**Option 2: Paid Endpoints**
+- Create dedicated endpoints (~$500-700/month for two instances) [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+- Only worth it for production with consistent high traffic [huggingface](https://huggingface.co/learn/cookbook/en/enterprise_dedicated_endpoints)
+
+**Option 3: CPU Basic (free but very slow)**
+- Load models on CPU in your Space [huggingface](https://huggingface.co/docs/hub/en/spaces-overview)
+- Completely free but inference will be extremely slow [huggingface](https://huggingface.co/docs/hub/en/spaces-overview)
+
+## Recommendation
+
+**Do NOT create Inference Endpoints unless you need production-grade availability and have budget**. For your demo, use **ZeroGPU Space** instead - it's designed exactly for this use case and costs only the PRO subscription (~$8-9/month, less with student discount). [huggingface](https://huggingface.co/docs/hub/en/spaces-zerogpu)

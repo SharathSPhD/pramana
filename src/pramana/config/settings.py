@@ -46,6 +46,33 @@ class PramanaSettings(BaseSettings):
         validation_alias="OPENAI_API_KEY",
         description="OpenAI API key for LLM judge",
     )
+    anthropic_api_key: str | None = Field(
+        default=None,
+        validation_alias="ANTHROPIC_API_KEY",
+        description="Anthropic API key for LLM judge",
+    )
+    llm_provider: str = Field(
+        default="openai",
+        description="LLM provider for judge (openai or anthropic)",
+    )
+    openai_judge_model: str = Field(
+        default="gpt-4o-mini",
+        description="OpenAI model for LLM judge scoring",
+    )
+    anthropic_judge_model: str = Field(
+        default="claude-3-5-sonnet-20241022",
+        description="Anthropic model for LLM judge scoring",
+    )
+    llm_max_tokens: int = Field(
+        default=512,
+        ge=1,
+        description="Maximum tokens for LLM judge responses",
+    )
+    llm_timeout_seconds: float = Field(
+        default=60.0,
+        ge=1,
+        description="Timeout in seconds for LLM judge requests",
+    )
 
     @field_validator("data_dir", "models_dir", mode="before")
     @classmethod

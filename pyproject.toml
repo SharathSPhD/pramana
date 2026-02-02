@@ -33,6 +33,8 @@ ml = [
     "accelerate>=0.27",
     "trl>=0.8",
     "unsloth",
+    "peft>=0.18.1",
+    "sentence-transformers>=5.2.2",
     "wandb>=0.16",
     "tensorboard>=2.16",
     "huggingface-hub>=0.20",

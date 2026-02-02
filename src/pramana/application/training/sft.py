@@ -6,6 +6,7 @@ from datasets import Dataset, load_dataset
 from transformers import TrainingArguments
 
 from pramana.application.training.base import BaseTrainer, TrainingResult
+from pramana.application.training.callbacks import NyayaMetricsCallback
 from pramana.config.loader import StageConfig
 from pramana.infrastructure.ml.unsloth_adapter import UnslothAdapter
 from pramana.infrastructure.storage.checkpoint_repository import (
@@ -140,6 +141,22 @@ class SupervisedFineTuningTrainer(BaseTrainer):
 
         return {"text": text}
 
+    def _build_validation_prompt(self) -> str | None:
+        """Build a prompt for generating validation samples."""
+        if self.eval_dataset is None or len(self.eval_dataset) == 0:
+            return None
+        sample_text = self.eval_dataset[0].get("text", "")
+        if not sample_text:
+            return None
+        if "### Instruction:" in sample_text:
+            instruction = sample_text.split("### Instruction:")[1].split(
+                "### Response:"
+            )[0]
+            instruction = instruction.strip()
+        else:
+            instruction = sample_text.strip()
+        return f"### Instruction:\n{instruction}\n\n### Response:\n"
+
     def _train(self) -> TrainingResult:
         """Run SFT training loop via HuggingFace Trainer.
 
@@ -197,6 +214,17 @@ class SupervisedFineTuningTrainer(BaseTrainer):
         )
 
         # Create SFT trainer
+        callbacks = []
+        validation_prompt = self._build_validation_prompt()
+        if validation_prompt:
+            callbacks.append(
+                NyayaMetricsCallback(
+                    tokenizer=self.tokenizer,
+                    prompt=validation_prompt,
+                    max_new_tokens=min(512, config.data.max_length),
+                )
+            )
+
         self.trainer = SFTTrainer(
             model=self.model,
             tokenizer=self.tokenizer,
@@ -205,6 +233,7 @@ class SupervisedFineTuningTrainer(BaseTrainer):
             dataset_text_field="text",
             max_seq_length=config.data.max_length,
             args=training_args,
+            callbacks=callbacks,
         )
 
         # Train

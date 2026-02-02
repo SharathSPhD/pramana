@@ -14,6 +14,7 @@ from pramana.application.evaluation.pipeline import (
     PipelineResult,
 )
 from pramana.application.evaluation.results import TierResult
+from pramana.application.evaluation.z3_handler import Tier3Z3VerifierHandler
 
 __all__: list[str] = [
     "EvaluationHandler",
@@ -23,5 +24,6 @@ __all__: list[str] = [
     "PipelineResult",
     "Tier1StructuralHandler",
     "Tier2LLMJudgeHandler",
+    "Tier3Z3VerifierHandler",
     "TierResult",
 ]

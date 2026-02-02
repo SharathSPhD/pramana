@@ -6,10 +6,12 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from pramana.application.evaluation.handlers import (
-    Tier1StructuralHandler,
-)
+from pramana.application.evaluation.handlers import Tier1StructuralHandler
+from pramana.application.evaluation.llm_judge import Tier2LLMJudgeHandler
 from pramana.application.evaluation.pipeline import EvaluationPipeline
+from pramana.application.evaluation.z3_handler import Tier3Z3VerifierHandler
+from pramana.config.settings import PramanaSettings
+from pramana.infrastructure.llm import LLMClientError, create_llm_client
 
 console = Console()
 
@@ -58,14 +60,15 @@ def evaluate_model(
     if 1 in tiers_to_run:
         handlers.append(Tier1StructuralHandler())
     if 2 in tiers_to_run:
-        # TODO: Initialize LLM client for Tier 2
-        # For now, skip Tier 2 if LLM client is not available
-        console.print("[yellow]Warning: Tier 2 (LLM judge) requires LLM client configuration[/yellow]")
-        console.print("[yellow]Skipping Tier 2 evaluation[/yellow]")
-        # handlers.append(Tier2LLMJudgeHandler(llm_client=...))
+        try:
+            settings = PramanaSettings()
+            llm_client = create_llm_client(settings)
+            handlers.append(Tier2LLMJudgeHandler(llm_client=llm_client))
+        except LLMClientError as exc:
+            console.print(f"[yellow]Warning: {exc}[/yellow]")
+            console.print("[yellow]Skipping Tier 2 evaluation[/yellow]")
     if 3 in tiers_to_run:
-        # TODO: Add Tier3ManualHandler when implemented
-        console.print("[yellow]Warning: Tier 3 (manual review) not yet implemented[/yellow]")
+        handlers.append(Tier3Z3VerifierHandler())
 
     if not handlers:
         console.print("[red]Error: No valid evaluation handlers configured[/red]")
