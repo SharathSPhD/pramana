@@ -124,3 +124,19 @@ Training examples must follow strict JSON schema with required fields for each N
 This project addresses the "epistemic gap" in LLMs demonstrated by Apple's October 2024 research showing 65% performance degradation when irrelevant context is added. Unlike Western formal logic (divorced from epistemology), Navya-Nyaya integrates logic and epistemology, requiring grounding in concrete examples (dṛṣṭānta) and explicit universal rules (vyapti).
 
 The hypothesis: Teaching LLMs a formal epistemological framework through fine-tuning creates better systematic reasoning than generic chain-of-thought, comparable to frontier models like o1/Claude extended thinking but based on explicit methodology rather than opaque RL.
+
+## Process Runbooks
+
+Detailed operational runbooks live in `docs/`:
+- `docs/process_docker_runtime.md`
+- `docs/process_model_merge_quantize.md`
+- `docs/process_hf_space_ops.md`
+- `docs/process_operational_notes.md`
+
+## Reports
+
+Comprehensive stage reports:
+- `docs/stage_0_comprehensive_report.md`
+- `docs/stage_1_comprehensive_report.md`
+- `docs/stage_1_paper_appendix.md`
+- `docs/stage_1_plan_review.md`

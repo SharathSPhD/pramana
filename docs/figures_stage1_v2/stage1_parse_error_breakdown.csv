@@ -1,0 +1,6 @@
+error,count
+Missing required field: Justification,1
+Missing required section: Hetvabhasa\s*.*?,2
+Invalid doubt type: vipratipatti_samshaya,1
+Invalid doubt type: pramana_dharma,1
+Missing required section: Nirnaya\s*.*?,1
