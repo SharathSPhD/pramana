@@ -1,0 +1,46 @@
+To make W&B part of your fine-tuning process rather than a post-hoc comparison tool, you need to integrate W&B logging directly into your training code so metrics are tracked in real-time as your model trains. This involves initializing a W&B run at the start of training and adding `wandb.log()` calls inside your training loop to capture metrics like loss and accuracy at each step or epoch. [docs.wandb](https://docs.wandb.ai/models/sweeps/add-w-and-b-to-your-code)
+
+## Basic Integration Steps
+
+The core integration requires three main components in your training script: [blog.paperspace](https://blog.paperspace.com/weights-biases-with-gradient/)
+
+1. **Initialize W&B** - At the beginning of your script, call `wandb.init(project="your-project-name", config=hyperparameters)` to start a run and pass your hyperparameters [docs.wandb](https://docs.wandb.ai/models/sweeps/add-w-and-b-to-your-code)
+2. **Log metrics during training** - Inside your training loop, add `wandb.log({"train/loss": loss, "train/accuracy": accuracy})` after each batch or epoch to send metrics in real-time [theaisummer](https://theaisummer.com/weights-and-biases-tutorial/)
+3. **Finish the run** - Call `wandb.finish()` at the end of training to mark the run as complete [docs.wandb](https://docs.wandb.ai/models/sweeps/add-w-and-b-to-your-code)
+
+## Example Training Loop Integration
+
+Here's how you integrate W&B into a typical PyTorch training loop: [theaisummer](https://theaisummer.com/weights-and-biases-tutorial/)
+
+```python
+import wandb
+
+# Initialize run with config
+wandb.init(project="fine-tuning", config={
+    "learning_rate": 0.001,
+    "epochs": 10,
+    "batch_size": 32
+})
+
+for epoch in range(config.epochs):
+    for i, (inputs, labels) in enumerate(trainloader):
+        # Your training code
+        optimizer.zero_grad()
+        outputs = model(inputs)
+        loss = criterion(outputs, labels)
+        loss.backward()
+        optimizer.step()
+        
+        # Log training metrics
+        wandb.log({"train/loss": loss.item()})
+    
+    # Log validation metrics at end of epoch
+    val_loss, val_acc = validate(model, val_loader)
+    wandb.log({"val/loss": val_loss, "val/accuracy": val_acc, "epoch": epoch})
+
+wandb.finish()
+```
+
+## Real-Time Monitoring Benefits
+
+With this integration, metrics appear in the W&B dashboard immediately as training progresses, allowing you to monitor training loss curves, spot overfitting early, and compare multiple fine-tuning experiments side-by-side in real-time. W&B's recent performance improvements enable logging of up to one million metrics per second with minimal overhead, ensuring the tracking doesn't slow down your training. You can also use `wandb.watch(model)` to automatically log gradients and model parameters during training, and set `log_model="all"` to save model checkpoints as artifacts throughout the process. [wandb](https://wandb.ai/mostafaibrahim17/ml-articles/reports/Fine-Tuning-ChatGPT-for-Text-Generation-With-W-B--Vmlldzo1NDE5MjYw)

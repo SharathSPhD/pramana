@@ -1,0 +1,26 @@
+[
+  {
+    "condition": "format_temp0",
+    "format_rate": 0.0,
+    "semantic_rate": 0.3,
+    "avg_output_tokens": 129.0
+  },
+  {
+    "condition": "format_temp07",
+    "format_rate": 0.0,
+    "semantic_rate": 0.1,
+    "avg_output_tokens": 129.0
+  },
+  {
+    "condition": "noformat_temp0",
+    "format_rate": 0.0,
+    "semantic_rate": 0.0,
+    "avg_output_tokens": 128.8
+  },
+  {
+    "condition": "noformat_temp07",
+    "format_rate": 0.0,
+    "semantic_rate": 0.1,
+    "avg_output_tokens": 125.6
+  }
+]

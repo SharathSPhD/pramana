@@ -91,6 +91,119 @@ Artifacts (LaTeX-ready + plot):
 - LaTeX: `docs/figures_stage1_v2/stage1_base_vs_tuned_metrics.tex`
 - Plot: `docs/figures_stage1_v2/stage1_base_vs_tuned_metrics.png`
 
+## F) Stage 0 (Corrected) Loss Curves and Plots
+
+Artifacts (generated from `models/stage_0_corrected/*/trainer_state.json`):
+- Train loss CSV: `docs/figures_stage0_v2/stage0_train_loss.csv`
+- Eval loss CSV: `docs/figures_stage0_v2/stage0_eval_loss.csv`
+- Train loss plot: `docs/figures_stage0_v2/stage0_train_loss.png`
+- Eval loss plot: `docs/figures_stage0_v2/stage0_eval_loss.png`
+- Train vs eval overlay (step): `docs/figures_stage0_v2/stage0_train_eval_overlay_step.png`
+- Train vs eval overlay (epoch): `docs/figures_stage0_v2/stage0_train_eval_overlay_epoch.png`
+- Train loss vs epoch: `docs/figures_stage0_v2/stage0_train_loss_epoch.png`
+- Eval loss vs epoch: `docs/figures_stage0_v2/stage0_eval_loss_epoch.png`
+
+Stage 0 train loss summary:
+- Points: 12
+- Min loss: 0.7617429733276367
+- Max loss: 1.237787628173828
+- Final loss: 0.7617429733276367
+
+Stage 0 eval loss summary:
+- Points: 3
+- Min eval loss: 0.6909153461456299
+- Max eval loss: 0.8631030321121216
+- Final eval loss: 0.6909153461456299
+
+Loss summary table (LaTeX-ready):
+- CSV: `docs/figures_stage0_v2/stage0_loss_summary.csv`
+- LaTeX: `docs/figures_stage0_v2/stage0_loss_summary.tex`
+
+## G) Stage 0 Evaluation Summary (Final Validation)
+
+Evaluation file: `results/stage_0_final_validation.json`
+
+Summary:
+- Total examples: 10
+- Format adherence rate: 0.4
+- Semantic correctness rate: 0.5
+
+Parse error breakdown (LaTeX-ready):
+- Plot: `docs/figures_stage0_v2/stage0_parse_error_breakdown.png`
+- CSV: `docs/figures_stage0_v2/stage0_parse_error_breakdown.csv`
+- LaTeX: `docs/figures_stage0_v2/stage0_parse_error_breakdown.tex`
+
+Output length distribution:
+- Plot: `docs/figures_stage0_v2/stage0_output_length_hist.png`
+
+Evaluation summary table (LaTeX-ready):
+- LaTeX: `docs/figures_stage0_v2/stage0_eval_summary.tex`
+
+## H) Stage 0 Base vs Tuned Comparison (Weights & Biases)
+
+Configuration:
+- Validation set: `data/validation/stage_zero` (10 examples)
+- Max new tokens: 256
+- Embedding similarity disabled (`PRAMANA_DISABLE_EMBEDDINGS=1`)
+
+W&B runs:
+- Base: `https://wandb.ai/qbz506-technektar/pramana-stage0-comparison/runs/5bsxb1j9`
+- Tuned: `https://wandb.ai/qbz506-technektar/pramana-stage0-comparison/runs/2yrqn5i0`
+
+Metrics summary (from CSV):
+- Base: format_rate 0.0, semantic_rate 0.0, avg_similarity 0.185, avg_output_length 875.3
+- Tuned: format_rate 0.0, semantic_rate 0.2, avg_similarity 0.37442, avg_output_length 860.4
+
+Artifacts (LaTeX-ready + plot):
+- CSV: `docs/figures_stage0_v2/stage0_base_vs_tuned_metrics.csv`
+- JSON: `docs/figures_stage0_v2/stage0_base_vs_tuned_metrics.json`
+- LaTeX: `docs/figures_stage0_v2/stage0_base_vs_tuned_metrics.tex`
+- Plot: `docs/figures_stage0_v2/stage0_base_vs_tuned_metrics.png`
+
+## I) Combined Stage Summary
+
+Combined metrics (Stage 0 corrected + Stage 1):
+- CSV: `docs/figures_combined_v1/stage_combined_metrics.csv`
+- LaTeX: `docs/figures_combined_v1/stage_combined_metrics.tex`
+- Plot: `docs/figures_combined_v1/stage_combined_metrics.png`
+
+Key values:
+- Stage 0 (corrected): format_rate 0.4, semantic_rate 0.5, avg_output_length 3191.8
+- Stage 1: format_rate 0.4, semantic_rate 1.0, avg_output_length 3255.2
+
+## J) Representative Example Tables (Stage 0 + Stage 1 + Cross-Stage)
+
+Stage 0 representative examples (3 examples):
+- JSON: `docs/figures_examples_v1/stage0_representative_examples.json`
+- CSV: `docs/figures_examples_v1/stage0_representative_examples.csv`
+- LaTeX: `docs/figures_examples_v1/stage0_representative_examples.tex`
+
+Stage 1 representative examples (3 examples):
+- JSON: `docs/figures_examples_v1/stage1_representative_examples.json`
+- CSV: `docs/figures_examples_v1/stage1_representative_examples.csv`
+- LaTeX: `docs/figures_examples_v1/stage1_representative_examples.tex`
+
+Cross-stage tuned vs tuned comparison (same 3 examples):
+- JSON: `docs/figures_examples_v1/cross_stage_representative_examples.json`
+- CSV: `docs/figures_examples_v1/cross_stage_representative_examples.csv`
+- LaTeX: `docs/figures_examples_v1/cross_stage_representative_examples.tex`
+
+## K) Cross-Stage Ablation (Format + Decoding)
+
+Stage 0 ablation summary (format on/off × temperature 0/0.7):
+- JSON: `docs/figures_ablation_v1/stage0_ablation_summary.json`
+- CSV: `docs/figures_ablation_v1/stage0_ablation_summary.csv`
+- LaTeX: `docs/figures_ablation_v1/stage0_ablation_summary.tex`
+- Plot: `docs/figures_ablation_v1/stage0_ablation_summary.png`
+- Per-example details: `docs/figures_ablation_v1/stage0_ablation_details.json`
+
+Stage 1 ablation summary (format on/off × temperature 0/0.7):
+- JSON: `docs/figures_ablation_v1/stage1_ablation_summary.json`
+- CSV: `docs/figures_ablation_v1/stage1_ablation_summary.csv`
+- LaTeX: `docs/figures_ablation_v1/stage1_ablation_summary.tex`
+- Plot: `docs/figures_ablation_v1/stage1_ablation_summary.png`
+- Per-example details: `docs/figures_ablation_v1/stage1_ablation_details.json`
+
 ### D2) Per-example outputs
 
 #### pramana-003

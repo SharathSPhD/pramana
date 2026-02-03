@@ -1,0 +1,230 @@
+{
+  "summaries": [
+    {
+      "label": "base",
+      "format_rate": 0.0,
+      "semantic_rate": 0.0,
+      "avg_similarity": 0.185,
+      "avg_token_overlap": 0.185,
+      "avg_output_length": 875.3,
+      "total": 10,
+      "max_new_tokens": 256
+    },
+    {
+      "label": "tuned",
+      "format_rate": 0.0,
+      "semantic_rate": 0.2,
+      "avg_similarity": 0.37441919191919193,
+      "avg_token_overlap": 0.37441919191919193,
+      "avg_output_length": 860.4,
+      "total": 10,
+      "max_new_tokens": 256
+    }
+  ],
+  "results": {
+    "base": [
+      {
+        "example_id": "pramana-003",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: are_the_given_statements_consistent_with_each_other?",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.0,
+        "token_overlap": 0.0,
+        "output_length": 955
+      },
+      {
+        "example_id": "pramana-005",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: none",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.0,
+        "token_overlap": 0.0,
+        "output_length": 781
+      },
+      {
+        "example_id": "test-001",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: uncertainty_about_the_distribution_of_pets_among_alice,_bob,_and_carol.",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.0,
+        "token_overlap": 0.0,
+        "output_length": 904
+      },
+      {
+        "example_id": "test-002",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: uncertainty_about_the_seating_arrangement.",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.0,
+        "token_overlap": 0.0,
+        "output_length": 825
+      },
+      {
+        "example_id": "test-003",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: lack_of_direct_information_about_the_color_of_mia's_card.",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.0,
+        "token_overlap": 0.0,
+        "output_length": 929
+      },
+      {
+        "example_id": "test-004",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: the_given_statements_seem_to_be_in_a_logical_form,_but_we_need_to_analyze_them_to_understand_the_relationships_between_p,_q,_and_r.",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.5,
+        "token_overlap": 0.5,
+        "output_length": 862
+      },
+      {
+        "example_id": "test-005",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: the_truth_values_of_a_and_b_are_uncertain.",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.5,
+        "token_overlap": 0.5,
+        "output_length": 796
+      },
+      {
+        "example_id": "test-006",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: lack_of_information_about_priya's_club_membership.",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.25,
+        "token_overlap": 0.25,
+        "output_length": 900
+      },
+      {
+        "example_id": "test-007",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: **justification**:_are_the_constraints_sufficient_to_uniquely_determine_the_book_on_each_shelf?",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.3,
+        "token_overlap": 0.3,
+        "output_length": 903
+      },
+      {
+        "example_id": "test-008",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: the_presence_of_uncertainty_in_the_given_statements.",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.3,
+        "token_overlap": 0.3,
+        "output_length": 898
+      }
+    ],
+    "tuned": [
+      {
+        "example_id": "pramana-003",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: **justification**:_none",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.5,
+        "token_overlap": 0.5,
+        "output_length": 840
+      },
+      {
+        "example_id": "pramana-005",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: **justification**:_none",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.3,
+        "token_overlap": 0.3,
+        "output_length": 734
+      },
+      {
+        "example_id": "test-001",
+        "parse_success": false,
+        "parse_error": "Missing required section: Pancha Avayava\\s*.*?",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.125,
+        "token_overlap": 0.125,
+        "output_length": 941
+      },
+      {
+        "example_id": "test-002",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: **justification**:_none",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.36363636363636365,
+        "token_overlap": 0.36363636363636365,
+        "output_length": 830
+      },
+      {
+        "example_id": "test-003",
+        "parse_success": false,
+        "parse_error": "Missing required section: Pancha Avayava\\s*.*?",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.5555555555555556,
+        "token_overlap": 0.5555555555555556,
+        "output_length": 936
+      },
+      {
+        "example_id": "test-004",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: **justification**:_none",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.0,
+        "token_overlap": 0.0,
+        "output_length": 698
+      },
+      {
+        "example_id": "test-005",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: **justification**:_the_problem_involves_two_boolean_statements_a_and_b,_with_given_facts_about_their_relationships._we_need_to_determine_the_truth_values_of_a_and_b.",
+        "format_adherence": 0.0,
+        "semantic_match": true,
+        "semantic_similarity": 1.0,
+        "token_overlap": 1.0,
+        "output_length": 963
+      },
+      {
+        "example_id": "test-006",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: **justification**:_none",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.0,
+        "token_overlap": 0.0,
+        "output_length": 800
+      },
+      {
+        "example_id": "test-007",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: **justification**:_the_problem_statement_provides_constraints_about_the_books_on_each_shelf,_but_it_does_not_explicitly_state_which_book_is_on_each_shelf._we_need_to_use_the_constraints_to_determine_the_arrangement.",
+        "format_adherence": 0.0,
+        "semantic_match": false,
+        "semantic_similarity": 0.1,
+        "token_overlap": 0.1,
+        "output_length": 875
+      },
+      {
+        "example_id": "test-008",
+        "parse_success": false,
+        "parse_error": "Invalid doubt type: **justification**:_the_problem_statement_does_not_explicitly_state_the_relationship_between_the_ground,_the_match,_and_the_stadium._we_need_to_analyze_the_given_statements_to_determine_the_logical_connections.",
+        "format_adherence": 0.0,
+        "semantic_match": true,
+        "semantic_similarity": 0.8,
+        "token_overlap": 0.8,
+        "output_length": 987
+      }
+    ]
+  }
+}

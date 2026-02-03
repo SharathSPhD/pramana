@@ -1,0 +1,20 @@
+[
+  {
+    "example_id": "test-001",
+    "ground_truth": "Alice has the fish, Bob has the cat, Carol has the dog",
+    "stage0_tuned": "[no final answer]",
+    "stage1_tuned": "Alice has the fish, Bob has the cat, and Carol has the dog."
+  },
+  {
+    "example_id": "test-006",
+    "ground_truth": "Maya is in Math, Nikhil is in Science, Priya is in Art",
+    "stage0_tuned": "[no final answer]",
+    "stage1_tuned": "Maya is in the Math club, Nikhil is in the Science club, and Priya is in the Art club."
+  },
+  {
+    "example_id": "test-007",
+    "ground_truth": "Shelf A has the Math book, Shelf B has the History book, Shelf C has the Physics book",
+    "stage0_tuned": "[no final answer]",
+    "stage1_tuned": "Shelf A has the Math book, Shelf B has the History book, and Shelf C has the Physics book."
+  }
+]

@@ -1,0 +1,82 @@
+%% Nyaya 6-Phase Reasoning Flow
+%% Flowchart showing the complete Nyaya methodology with decision points and feedback loops
+
+graph TD
+    START([Problem Input]) --> SAM[Phase 1: Samshaya<br/>Doubt Analysis]
+    
+    SAM --> SAM_DEC{Identify<br/>Uncertainty Type}
+    SAM_DEC --> SAM_OUT[Classify doubt:<br/>- Ambiguity<br/>- Contradiction<br/>- Insufficient Info]
+    
+    SAM_OUT --> PRAM[Phase 2: Pramana<br/>Evidence Sources]
+    
+    PRAM --> PRAM_DEC{Select<br/>Pramana Type}
+    PRAM_DEC -->|Direct| PRAT[Pratyaksha<br/>Direct Perception]
+    PRAM_DEC -->|Inference| ANUM[Anumana<br/>Logical Inference]
+    PRAM_DEC -->|Comparison| UPAM[Upamana<br/>Analogy]
+    PRAM_DEC -->|Testimony| SHAB[Shabda<br/>Authoritative Source]
+    
+    PRAT --> PANCH
+    ANUM --> PANCH
+    UPAM --> PANCH
+    SHAB --> PANCH
+    
+    PANCH[Phase 3: Pancha Avayava<br/>5-Member Syllogism]
+    
+    PANCH --> P1[Pratijna<br/>Thesis Statement]
+    P1 --> P2[Hetu<br/>Reason/Evidence]
+    P2 --> P3[Udaharana<br/>Universal Rule + Example<br/>with Vyapti]
+    P3 --> P4[Upanaya<br/>Application to Case]
+    P4 --> P5[Nigamana<br/>Conclusion]
+    
+    P5 --> TARKA[Phase 4: Tarka<br/>Counterfactual Testing]
+    
+    TARKA --> TARKA_TEST[Assume Opposite<br/>of Conclusion]
+    TARKA_TEST --> TARKA_DERIVE[Derive Logical<br/>Consequences]
+    TARKA_DERIVE --> TARKA_CHECK{Contradiction<br/>Found?}
+    
+    TARKA_CHECK -->|Yes| HETV
+    TARKA_CHECK -->|No| TARKA_FEEDBACK[Revise Reasoning]
+    TARKA_FEEDBACK --> PANCH
+    
+    HETV[Phase 5: Hetvabhasa<br/>Fallacy Detection]
+    
+    HETV --> H1{Check<br/>Savyabhichara?}
+    H1 -->|Found| HETV_FEEDBACK[Correct Fallacy]
+    H1 -->|None| H2{Check<br/>Viruddha?}
+    
+    H2 -->|Found| HETV_FEEDBACK
+    H2 -->|None| H3{Check<br/>Prakaranasama?}
+    
+    H3 -->|Found| HETV_FEEDBACK
+    H3 -->|None| H4{Check<br/>Sadhyasama?}
+    
+    H4 -->|Found| HETV_FEEDBACK
+    H4 -->|None| H5{Check<br/>Kalaatita?}
+    
+    H5 -->|Found| HETV_FEEDBACK
+    H5 -->|None| NIRN
+    
+    HETV_FEEDBACK --> PANCH
+    
+    NIRN[Phase 6: Nirnaya<br/>Ascertainment]
+    
+    NIRN --> NIRN_DEC{Sufficient<br/>Evidence?}
+    NIRN_DEC -->|Yes| DEFINITIVE[Definitive Knowledge<br/>Prama Status]
+    NIRN_DEC -->|No| HUMILITY[Epistemic Humility<br/>Hypothesis Requiring<br/>Verification]
+    
+    DEFINITIVE --> END([Final Answer])
+    HUMILITY --> END
+    
+    %% Styling
+    classDef phaseBox fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+    classDef decision fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    classDef process fill:#f1f8e9,stroke:#558b2f,stroke-width:2px
+    classDef feedback fill:#fce4ec,stroke:#c2185b,stroke-width:2px
+    classDef startEnd fill:#e8eaf6,stroke:#3f51b5,stroke-width:3px
+    
+    class SAM,PRAM,PANCH,TARKA,HETV,NIRN phaseBox
+    class SAM_DEC,PRAM_DEC,TARKA_CHECK,NIRN_DEC,H1,H2,H3,H4,H5 decision
+    class P1,P2,P3,P4,P5,PRAT,ANUM,UPAM,SHAB,SAM_OUT,TARKA_TEST,TARKA_DERIVE process
+    class TARKA_FEEDBACK,HETV_FEEDBACK feedback
+    class START,END startEnd
+    class DEFINITIVE,HUMILITY process

@@ -1,0 +1,32 @@
+[
+  {
+    "example_id": "test-001",
+    "ground_truth": "Alice has the fish, Bob has the cat, Carol has the dog",
+    "base_final": "Carol has the fish.",
+    "tuned_final": "Alice has the fish, Bob has the cat, and Carol has the dog.",
+    "base_parse": false,
+    "tuned_parse": true,
+    "base_semantic": false,
+    "tuned_semantic": true
+  },
+  {
+    "example_id": "test-006",
+    "ground_truth": "Maya is in Math, Nikhil is in Science, Priya is in Art",
+    "base_final": "Maya is in the Math club, Nikhil is in the Science club, and Priya is in the Art club.",
+    "tuned_final": "Maya is in the Math club, Nikhil is in the Science club, and Priya is in the Art club.",
+    "base_parse": false,
+    "tuned_parse": true,
+    "base_semantic": true,
+    "tuned_semantic": true
+  },
+  {
+    "example_id": "test-007",
+    "ground_truth": "Shelf A has the Math book, Shelf B has the History book, Shelf C has the Physics book",
+    "base_final": "The books are arranged as follows: A: ?, B: History, C: ?.",
+    "tuned_final": "Shelf A has the Math book, Shelf B has the History book, and Shelf C has the Physics book.",
+    "base_parse": false,
+    "tuned_parse": true,
+    "base_semantic": false,
+    "tuned_semantic": true
+  }
+]

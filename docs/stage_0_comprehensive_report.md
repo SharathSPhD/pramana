@@ -439,8 +439,11 @@ This demonstrates the model has learned the 6-phase Nyaya structure with appropr
 | `models/stage_0_corrected/` | Corrected model checkpoints (local) |
 | `results/stage_0_evaluation.json` | Initial (failed) evaluation |
 | `results/stage_0_corrected_evaluation_v7.json` | Corrected evaluation |
+| `results/stage_0_final_validation.json` | Final validation (10-example summary + parse errors) |
 | `scripts/train_stage0_corrected.py` | Corrected training script |
 | `scripts/evaluate_stage0.py` | Evaluation script |
+| `docs/figures_stage0_v2/` | Stage 0 loss plots, eval tables, parse errors |
+| `docs/figures_combined_v1/` | Combined Stage 0 + Stage 1 metrics |
 
 ### 13.2 Hugging Face Artifacts
 

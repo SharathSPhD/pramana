@@ -1,0 +1,4 @@
+example_id,ground_truth,base_final,tuned_final,base_parse,tuned_parse,base_semantic,tuned_semantic
+test-001,Alice has the fish  Bob has the cat  Carol has the dog,Carol has the fish.,Alice has the fish  Bob has the cat  and Carol has the dog.,False,True,False,True
+test-006,Maya is in Math  Nikhil is in Science  Priya is in Art,Maya is in the Math club  Nikhil is in the Science club  and Priya is in the Art club.,Maya is in the Math club  Nikhil is in the Science club  and Priya is in the Art club.,False,True,True,True
+test-007,Shelf A has the Math book  Shelf B has the History book  Shelf C has the Physics book,The books are arranged as follows: A: ?  B: History  C: ?.,Shelf A has the Math book  Shelf B has the History book  and Shelf C has the Physics book.,False,True,False,True

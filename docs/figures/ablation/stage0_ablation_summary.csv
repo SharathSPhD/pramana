@@ -1,0 +1,5 @@
+condition,format_rate,semantic_rate,avg_output_tokens
+format_temp0,0.000,0.300,129.0
+format_temp07,0.000,0.100,129.0
+noformat_temp0,0.000,0.000,128.8
+noformat_temp07,0.000,0.100,125.6

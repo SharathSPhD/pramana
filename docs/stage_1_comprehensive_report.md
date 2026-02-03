@@ -220,6 +220,17 @@ Stage 1 reliably answers problems correctly but often violates the strict Nyaya 
 - The model learned the **content** but not the **strict structure**
 - Format instruction strength and/or validation must be tightened in Stage 2
 
+### 5.4 Representative Examples and Cross-Stage Ablation
+
+Representative example tables (base vs tuned) and cross-stage tuned comparisons:
+- Stage 0 (3 examples): `docs/figures_examples_v1/stage0_representative_examples.csv`
+- Stage 1 (3 examples): `docs/figures_examples_v1/stage1_representative_examples.csv`
+- Cross-stage tuned vs tuned: `docs/figures_examples_v1/cross_stage_representative_examples.csv`
+
+Cross-stage ablation results (format prompting × decoding temperature):
+- Stage 0 summary: `docs/figures_ablation_v1/stage0_ablation_summary.csv`
+- Stage 1 summary: `docs/figures_ablation_v1/stage1_ablation_summary.csv`
+
 ---
 
 ## 6) Model Artifacts and Publishing
@@ -492,3 +503,25 @@ Comprehensive numeric inputs/outputs and plots are in:
 - `docs/figures_stage1_v2/stage1_base_vs_tuned_metrics.json`
 - `docs/figures_stage1_v2/stage1_base_vs_tuned_metrics.tex`
 - `docs/figures_stage1_v2/stage1_base_vs_tuned_metrics.png`
+- `docs/figures_stage0_v2/stage0_train_loss.csv`
+- `docs/figures_stage0_v2/stage0_eval_loss.csv`
+- `docs/figures_stage0_v2/stage0_train_loss.png`
+- `docs/figures_stage0_v2/stage0_eval_loss.png`
+- `docs/figures_stage0_v2/stage0_train_eval_overlay_step.png`
+- `docs/figures_stage0_v2/stage0_train_eval_overlay_epoch.png`
+- `docs/figures_stage0_v2/stage0_train_loss_epoch.png`
+- `docs/figures_stage0_v2/stage0_eval_loss_epoch.png`
+- `docs/figures_stage0_v2/stage0_loss_summary.csv`
+- `docs/figures_stage0_v2/stage0_loss_summary.tex`
+- `docs/figures_stage0_v2/stage0_parse_error_breakdown.png`
+- `docs/figures_stage0_v2/stage0_parse_error_breakdown.csv`
+- `docs/figures_stage0_v2/stage0_parse_error_breakdown.tex`
+- `docs/figures_stage0_v2/stage0_eval_summary.tex`
+- `docs/figures_stage0_v2/stage0_output_length_hist.png`
+- `docs/figures_stage0_v2/stage0_base_vs_tuned_metrics.csv`
+- `docs/figures_stage0_v2/stage0_base_vs_tuned_metrics.json`
+- `docs/figures_stage0_v2/stage0_base_vs_tuned_metrics.tex`
+- `docs/figures_stage0_v2/stage0_base_vs_tuned_metrics.png`
+- `docs/figures_combined_v1/stage_combined_metrics.csv`
+- `docs/figures_combined_v1/stage_combined_metrics.tex`
+- `docs/figures_combined_v1/stage_combined_metrics.png`

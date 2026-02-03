@@ -1,0 +1,283 @@
+W&B can cover the whole tuning workflow: live monitoring, automated hyperparameter search, and post‑hoc comparison/validation. Below is a practical, end‑to‑end way to wire it in.
+
+***
+
+## 1. Monitoring: make every run a W&B run
+
+### 1.1. Basic pattern in your training script
+
+At the top of your script:
+
+```python
+import wandb
+
+wandb.init(
+    project="my-llm-finetune",
+    config={
+        "lr": 3e-5,
+        "batch_size": 16,
+        "epochs": 3,
+        "weight_decay": 0.01,
+        "model_name": "base-llm",
+    },
+)
+config = wandb.config
+```
+
+In your training loop:
+
+```python
+for epoch in range(config.epochs):
+    model.train()
+    for step, batch in enumerate(train_loader):
+        loss = training_step(batch)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        wandb.log({
+            "train/loss": loss.item(),
+            "train/step": step,
+            "epoch": epoch,
+        })
+
+    val_loss, val_acc = evaluate(model, val_loader)
+    wandb.log({
+        "val/loss": val_loss,
+        "val/accuracy": val_acc,
+        "epoch": epoch,
+    })
+```
+
+At the end:
+
+```python
+wandb.finish()
+```
+
+This gives you:
+
+- live curves for loss/accuracy
+- a config snapshot (hyperparameters, dataset IDs, model name)
+- system metrics (GPU/CPU/memory) automatically if enabled [wandb](https://wandb.ai/lavanyashukla/visualize-predictions/reports/Dashboard-Track-and-compare-experiments-visualize-results--VmlldzoyMTI4NjY)
+
+You can also log:
+
+- gradients / parameters: `wandb.watch(model, log="all")`
+- sample predictions, tables, images, etc.
+
+***
+
+## 2. Hyperparameter tuning with Sweeps
+
+Sweeps turn hyperparameter tuning into a first‑class feature, not an afterthought.
+
+### 2.1. Define what to search (sweep config)
+
+Option A – Python dict (SDK): [docs.wandb](https://docs.wandb.ai/models/sweeps/initialize-sweeps)
+
+```python
+sweep_config = {
+    "method": "random",  # or "grid", "bayes"
+    "metric": {"name": "val/loss", "goal": "minimize"},
+    "parameters": {
+        "lr": {"min": 1e-5, "max": 5e-4},
+        "batch_size": {"values": [8, 16, 32]},
+        "weight_decay": {"values": [0.0, 0.01, 0.05]},
+        "epochs": {"values": [3, 5]},
+    },
+}
+```
+
+Option B – YAML file for CLI: [docs.wandb](https://docs.wandb.ai/models/sweeps/add-w-and-b-to-your-code)
+
+```yaml
+# sweep.yaml
+program: train.py
+method: bayes
+metric:
+  name: val/loss
+  goal: minimize
+parameters:
+  lr:
+    min: 0.00001
+    max: 0.0005
+  batch_size:
+    values: [8, 16, 32]
+  weight_decay:
+    values: [0.0, 0.01, 0.05]
+  epochs:
+    values: [3, 5]
+```
+
+Key points:
+
+- `method`: `grid`, `random`, or `bayes` (Bayesian optimization) [docs.wandb](https://docs.wandb.ai/models/tutorials/sweeps)
+- `metric.name`: must match exactly what you log with `wandb.log(...)`
+- `parameters`: each hyperparameter has `values` or a distribution (e.g. `min`/`max`)
+
+### 2.2. Make your training code sweep‑aware
+
+Your training function must read values from `wandb.config` instead of hard‑coding them. [docs.wandb](https://docs.wandb.ai/models/tutorials/sweeps)
+
+```python
+import wandb
+
+def train():
+    with wandb.init() as run:
+        config = run.config
+        model = build_model(
+            model_name=config.get("model_name", "base-llm"),
+            weight_decay=config.weight_decay,
+        )
+        optimizer = build_optimizer(model, lr=config.lr)
+
+        for epoch in range(config.epochs):
+            train_one_epoch(model, optimizer, train_loader, epoch, config)
+            val_loss, val_acc = evaluate(model, val_loader)
+            run.log({
+                "val/loss": val_loss,
+                "val/accuracy": val_acc,
+                "epoch": epoch,
+            })
+```
+
+Note: the metric used in `sweep_config["metric"]["name"]` must be logged flat (not nested inside a dict). [docs.wandb](https://docs.wandb.ai/models/sweeps/add-w-and-b-to-your-code)
+
+### 2.3. Start the sweep
+
+SDK way: [docs.wandb](https://docs.wandb.ai/models/sweeps/initialize-sweeps)
+
+```python
+sweep_id = wandb.sweep(sweep=sweep_config, project="my-llm-finetune")
+
+# launch agents (can run on 1 or many machines)
+wandb.agent(sweep_id, function=train, count=50)
+```
+
+CLI way with YAML: [docs.wandb](https://docs.wandb.ai/models/sweeps)
+
+```bash
+wandb sweep --project my-llm-finetune sweep.yaml
+# returns something like: user/project/abc123
+
+wandb agent --count 50 user/my-llm-finetune/abc123
+```
+
+- Each agent process runs `train()` once per set of hyperparameters.
+- You can run multiple agents on different GPUs/machines; the sweep controller coordinates them. [handbook.eng.kempnerinstitute.harvard](https://handbook.eng.kempnerinstitute.harvard.edu/s5_ai_scaling_and_engineering/experiment_management/wandb_sweeps.html)
+
+Result: you get a project full of runs, each with its own config and metrics, and W&B will tell you which configuration minimized/ maximized your chosen metric. [wandb](https://wandb.ai/wandb_fc/articles/reports/Running-Hyperparameter-Sweeps-to-Pick-the-Best-Model--Vmlldzo1NDQ0OTIy)
+
+***
+
+## 3. Post‑hoc comparison & validation
+
+### 3.1. Compare runs by hyperparameters and metrics
+
+In the W&B project UI you can:
+
+- use the **Run table** to sort by `val/loss` or any metric and see the corresponding hyperparameters [wandb](https://wandb.ai/lavanyashukla/visualize-predictions/reports/Dashboard-Track-and-compare-experiments-visualize-results--VmlldzoyMTI4NjY)
+- group/run filters by:
+  - `job_type` (e.g. `"train"`, `"eval"`)
+  - model name (base vs tuned)
+  - dataset id / version
+- add a **Run Comparer** panel to view configs and metrics across runs side‑by‑side [docs.wandb](https://docs.wandb.ai/models/app/features/panels/run-comparer)
+
+Run Comparer:
+
+- shows 1 column per run, up to 10 runs at a time
+- lets you hide identical values to focus on differences
+- lets you search within configs/metadata to understand what changed [docs.wandb](https://docs.wandb.ai/models/app/features/panels/run-comparer)
+
+### 3.2. Separate training vs evaluation runs
+
+Best practice for post‑hoc validation:
+
+- training runs: `job_type="train"` (logging training/validation during fine‑tuning)
+- evaluation runs: `job_type="eval"` (fixed model, new dataset, only eval metrics)
+
+For evaluation scripts:
+
+```python
+with wandb.init(
+    project="my-llm-finetune",
+    job_type="eval",
+    config={"model_checkpoint": ckpt_path, "eval_dataset": "my_eval_v1"},
+) as run:
+    metrics = evaluate_model(model, eval_loader)
+    wandb.log(metrics)
+```
+
+Then in the UI you can:
+
+- filter `job_type == "eval"` and compare models purely on evaluation metrics
+- link eval runs back to the training run that produced the checkpoint (via config or artifacts)
+
+### 3.3. Model‑ and dataset‑centric evaluation (Weave / Evaluation Playground)
+
+For LLMs and agents, W&B’s **Evaluation Playground** lets you:
+
+- pick previously saved models (base and tuned)
+- attach an evaluation dataset
+- define scoring (including LLM‑as‑judge scorers)
+- run an evaluation and inspect per‑example results, latency, token usage, and scores [docs.wandb](https://docs.wandb.ai/weave/guides/tools/evaluation_playground)
+
+This is code‑light and useful for structured A/B tests of base vs tuned models.
+
+***
+
+## 4. Metrics design: what to log
+
+To get useful tuning and post‑hoc comparison, design your metrics carefully.
+
+Typical metrics to log:
+
+- **Training**:
+  - `train/loss`, `train/accuracy` (or task‑specific metrics)
+  - learning rate, grad norm
+  - time per step, examples per second
+- **Validation / Dev**:
+  - `val/loss`, `val/accuracy` or F1 / BLEU / ROUGE, etc.
+  - early‑stopping metrics
+- **LLM‑specific**:
+  - reward model score
+  - human feedback score
+  - LLM‑judge score (e.g. correctness, style, safety) [docs.wandb](https://docs.wandb.ai/weave/guides/tools/evaluation_playground)
+- **System**:
+  - GPU utilization, memory, CPU, I/O (W&B can auto‑capture these) [lambda](https://lambda.ai/blog/weights-and-bias-gpu-cpu-utilization)
+
+Ensure that:
+
+- the metric you want to optimize in sweeps (e.g. `val/loss` or `val/accuracy`) is:
+  - logged consistently every run
+  - has stable semantics (same dataset, same split)
+- metrics names are consistent so dashboards and sweeps are reliable
+
+***
+
+## 5. Concrete “base vs tuned” workflow
+
+Putting it all together in your scenario:
+
+1. **Base model baseline**
+   - run an evaluation script on the base model
+   - `job_type="eval"`, log metrics like `eval/accuracy`, `eval/llm_score`
+2. **Fine‑tuning with monitoring**
+   - train script uses `wandb.init` + `wandb.log` as above
+   - log configs (lr, batch size, dataset id) & metrics (train/val)
+3. **Hyperparameter search**
+   - define a sweep on key hyperparameters (lr, batch size, warmup steps)
+   - run `wandb.agent` across GPUs to explore config space
+   - use sweep dashboard to pick top‑k runs by `val/loss` or `val/metric`
+4. **Post‑hoc evaluation**
+   - for top‑k tuned checkpoints, run standardized eval scripts (same dataset as base)
+   - log results as eval runs (job_type="eval") and compare against base in Run Comparer
+   - optionally use Evaluation Playground for LLM‑judge‑based comparisons [docs.wandb](https://docs.wandb.ai/weave/guides/tools/evaluation_playground)
+5. **Reporting**
+   - build a W&B report combining:
+     - sweep summary (hyperparameters vs metric plots) [wandb](https://wandb.ai/wandb_fc/articles/reports/Running-Hyperparameter-Sweeps-to-Pick-the-Best-Model--Vmlldzo1NDQ0OTIy)
+     - run comparer tables (base vs tuned)
+     - example‑level error analysis (tables, predictions)
+
+That way W&B is involved at every step: during training, during automated hyperparameter tuning, and during structured, post‑hoc comparison of base and tuned models.
