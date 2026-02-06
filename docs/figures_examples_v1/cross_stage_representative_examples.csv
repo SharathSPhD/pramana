@@ -1,4 +1,0 @@
-example_id,ground_truth,stage0_tuned,stage1_tuned
-test-001,Alice has the fish  Bob has the cat  Carol has the dog,[no final answer],Alice has the fish  Bob has the cat  and Carol has the dog.
-test-006,Maya is in Math  Nikhil is in Science  Priya is in Art,[no final answer],Maya is in the Math club  Nikhil is in the Science club  and Priya is in the Art club.
-test-007,Shelf A has the Math book  Shelf B has the History book  Shelf C has the Physics book,[no final answer],Shelf A has the Math book  Shelf B has the History book  and Shelf C has the Physics book.

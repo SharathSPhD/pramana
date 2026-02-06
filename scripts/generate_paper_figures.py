@@ -12,27 +12,27 @@ import matplotlib
 from pathlib import Path
 import numpy as np
 
-# Set matplotlib to use PDF backend and configure for publication quality
+# Set matplotlib to use PDF backend and configure for NeurIPS publication quality
 matplotlib.use('PDF')
 plt.rcParams.update({
-    'font.size': 10,
+    'font.size': 9,  # Base font size (8-10pt range)
     'font.family': 'sans-serif',
     'font.sans-serif': ['DejaVu Sans', 'Arial', 'Helvetica', 'Liberation Sans'],
-    'axes.labelsize': 10,
-    'axes.titlesize': 11,
-    'xtick.labelsize': 9,
-    'ytick.labelsize': 9,
-    'legend.fontsize': 9,
-    'figure.titlesize': 12,
+    'axes.labelsize': 10,  # Axis labels: 9-10pt
+    'axes.titlesize': 10,  # Titles: 10pt
+    'xtick.labelsize': 8,  # Tick labels: 8pt
+    'ytick.labelsize': 8,  # Tick labels: 8pt
+    'legend.fontsize': 9,  # Legend: 9pt
+    'figure.titlesize': 10,
     'text.usetex': False,  # Set to True if LaTeX is installed
     'figure.dpi': 300,
     'savefig.dpi': 300,
     'savefig.bbox': 'tight',
     'savefig.pad_inches': 0.1,
-    'axes.linewidth': 0.8,
-    'grid.linewidth': 0.5,
-    'lines.linewidth': 1.5,
-    'patch.linewidth': 0.5,
+    'axes.linewidth': 1.0,  # Thicker axes
+    'grid.linewidth': 0.3,  # Lighter gridlines
+    'lines.linewidth': 2.0,  # Thicker lines (was 1.5)
+    'patch.linewidth': 0.8,  # Thicker bar edges
 })
 
 # Color-blind friendly palette (from ColorBrewer)
@@ -51,7 +51,7 @@ COLORS = {
 
 # Base directories
 BASE_DIR = Path(__file__).parent.parent
-FIGURES_DIR = BASE_DIR / 'docs' / 'paper' / 'figures'
+FIGURES_DIR = BASE_DIR / 'docs' / 'paper_v2' / 'figures'
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
 # Source directories
@@ -69,23 +69,24 @@ def generate_loss_curves_stage0():
     train_df = pd.read_csv(STAGE0_DIR / 'stage0_train_loss.csv')
     eval_df = pd.read_csv(STAGE0_DIR / 'stage0_eval_loss.csv')
     
-    # Create figure
-    fig, ax = plt.subplots(figsize=(3.3, 2.5))  # Single column width
+    # Create figure - Single column: 3.3" width, 2.5-3" height
+    fig, ax = plt.subplots(figsize=(3.3, 2.5), dpi=300)
     
-    # Plot training loss
+    # Plot training loss - thicker lines, larger markers
     ax.plot(train_df['epoch'], train_df['loss'], 
-            color=COLORS['blue'], label='Training Loss', linewidth=1.5)
+            color=COLORS['blue'], label='Training Loss', linewidth=2.0, marker='o', markersize=5)
     
     # Plot evaluation loss
     ax.plot(eval_df['epoch'], eval_df['eval_loss'], 
-            color=COLORS['orange'], label='Validation Loss', linewidth=1.5, 
-            marker='o', markersize=4)
+            color=COLORS['orange'], label='Validation Loss', linewidth=2.0, 
+            marker='s', markersize=5)
     
-    ax.set_xlabel('Epoch')
-    ax.set_ylabel('Loss')
-    ax.set_title('Stage 0 Training Progress')
-    ax.legend(loc='upper right', frameon=True, fancybox=False)
-    ax.grid(True, alpha=0.3, linestyle='--')
+    ax.set_xlabel('Epoch', fontsize=10)
+    ax.set_ylabel('Loss', fontsize=10)
+    ax.set_title('Stage 0 Training Progress', fontsize=10)
+    ax.tick_params(labelsize=8)
+    ax.legend(loc='upper right', frameon=True, fancybox=False, fontsize=9, framealpha=0.9)
+    ax.grid(True, alpha=0.2, linestyle='--', linewidth=0.3)  # Lighter gridlines
     ax.set_xlim(left=0)
     
     plt.tight_layout()
@@ -93,7 +94,7 @@ def generate_loss_curves_stage0():
     plt.savefig(output_path, format='pdf', dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"  Saved: {output_path}")
+    print(f"  Saved: {output_path} (Size: 3.3\" × 2.5\")")
     return output_path
 
 
@@ -105,23 +106,24 @@ def generate_loss_curves_stage1():
     train_df = pd.read_csv(STAGE1_DIR / 'stage1_train_loss.csv')
     eval_df = pd.read_csv(STAGE1_DIR / 'stage1_eval_loss.csv')
     
-    # Create figure
-    fig, ax = plt.subplots(figsize=(3.3, 2.5))  # Single column width
+    # Create figure - Single column: 3.3" width, 2.5-3" height
+    fig, ax = plt.subplots(figsize=(3.3, 2.5), dpi=300)
     
-    # Plot training loss
+    # Plot training loss - thicker lines, larger markers
     ax.plot(train_df['epoch'], train_df['loss'], 
-            color=COLORS['blue'], label='Training Loss', linewidth=1.5)
+            color=COLORS['blue'], label='Training Loss', linewidth=2.0, marker='o', markersize=5)
     
     # Plot evaluation loss
     ax.plot(eval_df['epoch'], eval_df['eval_loss'], 
-            color=COLORS['orange'], label='Validation Loss', linewidth=1.5,
-            marker='o', markersize=4)
+            color=COLORS['orange'], label='Validation Loss', linewidth=2.0,
+            marker='s', markersize=5)
     
-    ax.set_xlabel('Epoch')
-    ax.set_ylabel('Loss')
-    ax.set_title('Stage 1 Training Progress')
-    ax.legend(loc='upper right', frameon=True, fancybox=False)
-    ax.grid(True, alpha=0.3, linestyle='--')
+    ax.set_xlabel('Epoch', fontsize=10)
+    ax.set_ylabel('Loss', fontsize=10)
+    ax.set_title('Stage 1 Training Progress', fontsize=10)
+    ax.tick_params(labelsize=8)
+    ax.legend(loc='upper right', frameon=True, fancybox=False, fontsize=9, framealpha=0.9)
+    ax.grid(True, alpha=0.2, linestyle='--', linewidth=0.3)  # Lighter gridlines
     ax.set_xlim(left=0)
     
     plt.tight_layout()
@@ -129,7 +131,7 @@ def generate_loss_curves_stage1():
     plt.savefig(output_path, format='pdf', dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"  Saved: {output_path}")
+    print(f"  Saved: {output_path} (Size: 3.3\" × 2.5\")")
     return output_path
 
 
@@ -151,42 +153,44 @@ def generate_ablation_stage0():
         format_rates.append(item['format_rate'])
         semantic_rates.append(item['semantic_rate'])
     
-    # Create figure with subplots
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 2.5))  # Double column width
+    # Create figure with subplots - Double column: 6.8" width, 3-4" height
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 3.0), dpi=300)
     
     x_pos = np.arange(len(conditions))
     width = 0.35
     
     # Format adherence rates
     bars1 = ax1.bar(x_pos - width/2, format_rates, width, 
-                    label='Format Adherence', color=COLORS['blue'], alpha=0.8)
-    ax1.set_xlabel('Condition')
-    ax1.set_ylabel('Rate')
-    ax1.set_title('Format Adherence Rate')
+                    label='Format Adherence', color=COLORS['blue'], alpha=0.8, edgecolor='black', linewidth=0.8)
+    ax1.set_xlabel('Condition', fontsize=10)
+    ax1.set_ylabel('Rate', fontsize=10)
+    ax1.set_title('Format Adherence Rate', fontsize=10)
     ax1.set_xticks(x_pos)
-    ax1.set_xticklabels(conditions, rotation=45, ha='right')
+    ax1.set_xticklabels(conditions, rotation=45, ha='right', fontsize=8)
+    ax1.tick_params(labelsize=8)
     ax1.set_ylim([0, 1.0])
-    ax1.grid(True, alpha=0.3, linestyle='--', axis='y')
-    ax1.legend()
+    ax1.grid(True, alpha=0.2, linestyle='--', axis='y', linewidth=0.3)
+    ax1.legend(fontsize=9, framealpha=0.9)
     
     # Semantic correctness rates
     bars2 = ax2.bar(x_pos - width/2, semantic_rates, width,
-                    label='Semantic Correctness', color=COLORS['green'], alpha=0.8)
-    ax2.set_xlabel('Condition')
-    ax2.set_ylabel('Rate')
-    ax2.set_title('Semantic Correctness Rate')
+                    label='Semantic Correctness', color=COLORS['green'], alpha=0.8, edgecolor='black', linewidth=0.8)
+    ax2.set_xlabel('Condition', fontsize=10)
+    ax2.set_ylabel('Rate', fontsize=10)
+    ax2.set_title('Semantic Correctness Rate', fontsize=10)
     ax2.set_xticks(x_pos)
-    ax2.set_xticklabels(conditions, rotation=45, ha='right')
+    ax2.set_xticklabels(conditions, rotation=45, ha='right', fontsize=8)
+    ax2.tick_params(labelsize=8)
     ax2.set_ylim([0, 1.0])
-    ax2.grid(True, alpha=0.3, linestyle='--', axis='y')
-    ax2.legend()
+    ax2.grid(True, alpha=0.2, linestyle='--', axis='y', linewidth=0.3)
+    ax2.legend(fontsize=9, framealpha=0.9)
     
     plt.tight_layout()
     output_path = FIGURES_DIR / 'stage0_ablation.pdf'
     plt.savefig(output_path, format='pdf', dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"  Saved: {output_path}")
+    print(f"  Saved: {output_path} (Size: 6.8\" × 3.0\")")
     return output_path
 
 
@@ -208,42 +212,44 @@ def generate_ablation_stage1():
         format_rates.append(item['format_rate'])
         semantic_rates.append(item['semantic_rate'])
     
-    # Create figure with subplots
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 2.5))  # Double column width
+    # Create figure with subplots - Double column: 6.8" width, 3-4" height
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 3.0), dpi=300)
     
     x_pos = np.arange(len(conditions))
     width = 0.35
     
     # Format adherence rates
     bars1 = ax1.bar(x_pos - width/2, format_rates, width,
-                    label='Format Adherence', color=COLORS['blue'], alpha=0.8)
-    ax1.set_xlabel('Condition')
-    ax1.set_ylabel('Rate')
-    ax1.set_title('Format Adherence Rate')
+                    label='Format Adherence', color=COLORS['blue'], alpha=0.8, edgecolor='black', linewidth=0.8)
+    ax1.set_xlabel('Condition', fontsize=10)
+    ax1.set_ylabel('Rate', fontsize=10)
+    ax1.set_title('Format Adherence Rate', fontsize=10)
     ax1.set_xticks(x_pos)
-    ax1.set_xticklabels(conditions, rotation=45, ha='right')
+    ax1.set_xticklabels(conditions, rotation=45, ha='right', fontsize=8)
+    ax1.tick_params(labelsize=8)
     ax1.set_ylim([0, 1.0])
-    ax1.grid(True, alpha=0.3, linestyle='--', axis='y')
-    ax1.legend()
+    ax1.grid(True, alpha=0.2, linestyle='--', axis='y', linewidth=0.3)
+    ax1.legend(fontsize=9, framealpha=0.9)
     
     # Semantic correctness rates
     bars2 = ax2.bar(x_pos - width/2, semantic_rates, width,
-                    label='Semantic Correctness', color=COLORS['green'], alpha=0.8)
-    ax2.set_xlabel('Condition')
-    ax2.set_ylabel('Rate')
-    ax2.set_title('Semantic Correctness Rate')
+                    label='Semantic Correctness', color=COLORS['green'], alpha=0.8, edgecolor='black', linewidth=0.8)
+    ax2.set_xlabel('Condition', fontsize=10)
+    ax2.set_ylabel('Rate', fontsize=10)
+    ax2.set_title('Semantic Correctness Rate', fontsize=10)
     ax2.set_xticks(x_pos)
-    ax2.set_xticklabels(conditions, rotation=45, ha='right')
+    ax2.set_xticklabels(conditions, rotation=45, ha='right', fontsize=8)
+    ax2.tick_params(labelsize=8)
     ax2.set_ylim([0, 1.0])
-    ax2.grid(True, alpha=0.3, linestyle='--', axis='y')
-    ax2.legend()
+    ax2.grid(True, alpha=0.2, linestyle='--', axis='y', linewidth=0.3)
+    ax2.legend(fontsize=9, framealpha=0.9)
     
     plt.tight_layout()
     output_path = FIGURES_DIR / 'stage1_ablation.pdf'
     plt.savefig(output_path, format='pdf', dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"  Saved: {output_path}")
+    print(f"  Saved: {output_path} (Size: 6.8\" × 3.0\")")
     return output_path
 
 
@@ -254,8 +260,8 @@ def generate_cross_stage_comparison():
     # Load data
     df = pd.read_csv(COMBINED_DIR / 'stage_combined_metrics.csv')
     
-    # Create figure
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 2.5))  # Double column width
+    # Create figure - Double column: 6.8" width, 3-4" height
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(6.8, 3.0), dpi=300)
     
     stages = df['stage'].values
     format_rates = df['format_rate'].values
@@ -266,44 +272,46 @@ def generate_cross_stage_comparison():
     
     # Format adherence comparison
     bars1 = ax1.bar(x_pos, format_rates, width, 
-                    color=[COLORS['blue'], COLORS['green']], alpha=0.8)
-    ax1.set_xlabel('Stage')
-    ax1.set_ylabel('Format Adherence Rate')
-    ax1.set_title('Format Adherence Across Stages')
+                    color=[COLORS['blue'], COLORS['green']], alpha=0.8, edgecolor='black', linewidth=0.8)
+    ax1.set_xlabel('Stage', fontsize=10)
+    ax1.set_ylabel('Format Adherence Rate', fontsize=10)
+    ax1.set_title('Format Adherence Across Stages', fontsize=10)
     ax1.set_xticks(x_pos)
-    ax1.set_xticklabels(stages)
+    ax1.set_xticklabels(stages, fontsize=8)
+    ax1.tick_params(labelsize=8)
     ax1.set_ylim([0, 1.0])
-    ax1.grid(True, alpha=0.3, linestyle='--', axis='y')
+    ax1.grid(True, alpha=0.2, linestyle='--', axis='y', linewidth=0.3)
     
     # Add value labels on bars
     for i, (bar, val) in enumerate(zip(bars1, format_rates)):
         height = bar.get_height()
         ax1.text(bar.get_x() + bar.get_width()/2., height,
-                f'{val:.1f}', ha='center', va='bottom', fontsize=9)
+                f'{val:.2f}', ha='center', va='bottom', fontsize=8)
     
     # Semantic correctness comparison
     bars2 = ax2.bar(x_pos, semantic_rates, width,
-                    color=[COLORS['blue'], COLORS['green']], alpha=0.8)
-    ax2.set_xlabel('Stage')
-    ax2.set_ylabel('Semantic Correctness Rate')
-    ax2.set_title('Semantic Correctness Across Stages')
+                    color=[COLORS['blue'], COLORS['green']], alpha=0.8, edgecolor='black', linewidth=0.8)
+    ax2.set_xlabel('Stage', fontsize=10)
+    ax2.set_ylabel('Semantic Correctness Rate', fontsize=10)
+    ax2.set_title('Semantic Correctness Across Stages', fontsize=10)
     ax2.set_xticks(x_pos)
-    ax2.set_xticklabels(stages)
+    ax2.set_xticklabels(stages, fontsize=8)
+    ax2.tick_params(labelsize=8)
     ax2.set_ylim([0, 1.0])
-    ax2.grid(True, alpha=0.3, linestyle='--', axis='y')
+    ax2.grid(True, alpha=0.2, linestyle='--', axis='y', linewidth=0.3)
     
     # Add value labels on bars
     for i, (bar, val) in enumerate(zip(bars2, semantic_rates)):
         height = bar.get_height()
         ax2.text(bar.get_x() + bar.get_width()/2., height,
-                f'{val:.1f}', ha='center', va='bottom', fontsize=9)
+                f'{val:.2f}', ha='center', va='bottom', fontsize=8)
     
     plt.tight_layout()
     output_path = FIGURES_DIR / 'cross_stage_metrics.pdf'
     plt.savefig(output_path, format='pdf', dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"  Saved: {output_path}")
+    print(f"  Saved: {output_path} (Size: 6.8\" × 3.0\")")
     return output_path
 
 
@@ -331,8 +339,8 @@ def generate_parse_errors():
     # Get unique error types
     error_types = error_summary['error_clean'].unique()
     
-    # Create figure
-    fig, ax = plt.subplots(figsize=(6.8, 3.0))  # Double column width
+    # Create figure - Double column: 6.8" width, 3-4" height
+    fig, ax = plt.subplots(figsize=(6.8, 3.5), dpi=300)
     
     x_pos = np.arange(len(error_types))
     width = 0.35
@@ -349,24 +357,25 @@ def generate_parse_errors():
         stage1_counts.append(stage1_val)
     
     bars1 = ax.bar(x_pos - width/2, stage0_counts, width,
-                   label='Stage 0', color=COLORS['blue'], alpha=0.8)
+                   label='Stage 0', color=COLORS['blue'], alpha=0.8, edgecolor='black', linewidth=0.8)
     bars2 = ax.bar(x_pos + width/2, stage1_counts, width,
-                   label='Stage 1', color=COLORS['orange'], alpha=0.8)
+                   label='Stage 1', color=COLORS['orange'], alpha=0.8, edgecolor='black', linewidth=0.8)
     
-    ax.set_xlabel('Error Type')
-    ax.set_ylabel('Count')
-    ax.set_title('Parse Error Distribution')
+    ax.set_xlabel('Error Type', fontsize=10)
+    ax.set_ylabel('Count', fontsize=10)
+    ax.set_title('Parse Error Distribution', fontsize=10)
     ax.set_xticks(x_pos)
-    ax.set_xticklabels(error_types, rotation=45, ha='right')
-    ax.legend()
-    ax.grid(True, alpha=0.3, linestyle='--', axis='y')
+    ax.set_xticklabels(error_types, rotation=45, ha='right', fontsize=8)
+    ax.tick_params(labelsize=8)
+    ax.legend(fontsize=9, framealpha=0.9)
+    ax.grid(True, alpha=0.2, linestyle='--', axis='y', linewidth=0.3)
     
     plt.tight_layout()
     output_path = FIGURES_DIR / 'parse_errors.pdf'
     plt.savefig(output_path, format='pdf', dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"  Saved: {output_path}")
+    print(f"  Saved: {output_path} (Size: 6.8\" × 3.5\")")
     return output_path
 
 
@@ -414,19 +423,41 @@ def main():
     print("=" * 60)
     print(f"\nOutput directory: {FIGURES_DIR}\n")
     
+    # Figure size mapping
+    figure_sizes = {
+        'stage0_loss_curves.pdf': '3.3" × 2.5" (Single column)',
+        'stage1_loss_curves.pdf': '3.3" × 2.5" (Single column)',
+        'stage0_ablation.pdf': '6.8" × 3.0" (Double column)',
+        'stage1_ablation.pdf': '6.8" × 3.0" (Double column)',
+        'cross_stage_metrics.pdf': '6.8" × 3.0" (Double column)',
+        'parse_errors.pdf': '6.8" × 3.5" (Double column)',
+    }
+    
     for filename, description in generated_files:
         filepath = FIGURES_DIR / filename
         if filepath.exists():
             size_kb = filepath.stat().st_size / 1024
+            fig_size = figure_sizes.get(filename, 'Unknown')
             print(f"✓ {filename}")
             print(f"  Path: {filepath}")
             print(f"  Description: {description}")
-            print(f"  Size: {size_kb:.1f} KB\n")
+            print(f"  Size: {size_kb:.1f} KB")
+            print(f"  Dimensions: {fig_size}")
+            print(f"  DPI: 300 (publication quality)\n")
         else:
             print(f"✗ {filename} - FILE NOT FOUND\n")
     
     print("=" * 60)
     print("All figures generated successfully!")
+    print("=" * 60)
+    print("\nNeurIPS Formatting Applied:")
+    print("  • Single column plots: 3.3\" width")
+    print("  • Double column plots: 6.8\" width")
+    print("  • Font sizes: 8-10pt (readable when printed)")
+    print("  • Line width: 2.0 (thicker, more visible)")
+    print("  • Marker size: 5 (larger data points)")
+    print("  • Gridlines: lighter (alpha=0.2)")
+    print("  • DPI: 300 (publication quality)")
     print("=" * 60)
 
 

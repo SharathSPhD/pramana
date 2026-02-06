@@ -87,6 +87,9 @@ data/validation/*.md
 data/validation/*.json
 !data/**/.gitkeep
 
+# Docs (keep local, exclude from repo)
+docs/
+
 # Logs
 logs/
 *.log
