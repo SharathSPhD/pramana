@@ -141,6 +141,122 @@ STAGE_CONFIGS = {
     ),
 }
 
+# Per-stage Ollama model names for base and tuned variants.
+# Base models are pulled from the Ollama registry;
+# tuned models are created from project GGUF files via setup_ollama_models.sh.
+OLLAMA_MODEL_MAP = {
+    "Stage 0": {
+        "base": "llama3.2:3b-instruct-q4_K_M",
+        "tuned": "nyaya-llama-3b-stage0",
+        "tuned_gguf_url": "https://huggingface.co/qbz506/nyaya-llama-3b-stage0-full/resolve/main/nyaya-llama-3b-stage0-merged-q4.gguf",
+    },
+    "Stage 1": {
+        "base": "deepseek-r1:8b-llama-distill-q4_K_M",
+        "tuned": "nyaya-deepseek-8b-stage1",
+        "tuned_gguf_url": None,  # GGUF not yet available; must be built from safetensors first
+    },
+}
+
+
+def setup_ollama_stage(stage: str = "Stage 0", base_url: str = "http://localhost:11434") -> dict:
+    """Set up Ollama models for a given stage — pulls base, creates tuned.
+    
+    Can be called directly from a notebook cell.  Works on Colab and local.
+    
+    Returns dict {"base": model_name, "tuned": model_name_or_None}.
+    """
+    import shutil, time
+    
+    stage_map = OLLAMA_MODEL_MAP.get(stage)
+    if stage_map is None:
+        raise ValueError(f"Unknown stage: {stage}. Choose from {list(OLLAMA_MODEL_MAP)}")
+    
+    result = {"base": None, "tuned": None}
+    
+    # ---------- Ensure Ollama is installed + running ----------
+    if not shutil.which("ollama"):
+        print("Installing Ollama...")
+        subprocess.run("apt-get update -qq && apt-get install -y -qq zstd curl >/dev/null 2>&1",
+                       shell=True, capture_output=True)
+        subprocess.run("curl -fsSL https://ollama.com/install.sh | sh",
+                       shell=True, capture_output=True)
+        print("  Ollama installed")
+    
+    try:
+        import requests as _req
+        _req.get(f"{base_url}/api/tags", timeout=2)
+    except Exception:
+        print("Starting Ollama server...")
+        subprocess.Popen(
+            ["ollama", "serve"],
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            env={**os.environ, "OLLAMA_HOST": "0.0.0.0"},
+        )
+        time.sleep(3)
+    
+    def _model_exists(name):
+        try:
+            import requests as _req
+            resp = _req.get(f"{base_url}/api/tags", timeout=5)
+            return any(name in m["name"] for m in resp.json().get("models", []))
+        except Exception:
+            return False
+    
+    # ---------- Base model: pull from Ollama registry ----------
+    base_tag = stage_map["base"]
+    if _model_exists(base_tag):
+        print(f"✓ Base model already available: {base_tag}")
+    else:
+        print(f"Pulling base model: {base_tag} (may take a few minutes)...")
+        subprocess.run(["ollama", "pull", base_tag], check=True)
+        print(f"✓ Base model pulled: {base_tag}")
+    result["base"] = base_tag
+    
+    # ---------- Tuned model: download GGUF + create ----------
+    tuned_tag = stage_map["tuned"]
+    gguf_url = stage_map.get("tuned_gguf_url")
+    
+    if _model_exists(tuned_tag):
+        print(f"✓ Tuned model already available: {tuned_tag}")
+        result["tuned"] = tuned_tag
+    elif gguf_url:
+        # Download GGUF and import via Modelfile
+        gguf_path = f"/tmp/{tuned_tag}.gguf"
+        if not os.path.exists(gguf_path):
+            print(f"Downloading tuned model GGUF...")
+            subprocess.run(["curl", "-fSL", "-o", gguf_path, gguf_url], check=True)
+            print("  Download complete")
+        
+        modelfile = f'''FROM {gguf_path}
+SYSTEM """
+You are a Nyaya reasoning engine. Follow the exact output format provided.
+Use the exact section headers:
+## Samshaya (Doubt Analysis)
+## Pramana (Sources of Knowledge)
+## Pancha Avayava (5-Member Syllogism)
+## Tarka (Counterfactual Reasoning)
+## Hetvabhasa (Fallacy Check)
+## Nirnaya (Ascertainment)
+"""
+PARAMETER temperature 0
+PARAMETER num_ctx 4096
+'''
+        modelfile_path = "/tmp/Modelfile"
+        with open(modelfile_path, "w") as f:
+            f.write(modelfile)
+        
+        print(f"Creating Ollama model '{tuned_tag}'...")
+        subprocess.run(["ollama", "create", tuned_tag, "-f", modelfile_path], check=True)
+        print(f"✓ Tuned model created: {tuned_tag}")
+        result["tuned"] = tuned_tag
+    else:
+        print(f"⚠ Tuned model GGUF not available for {stage}.")
+        print(f"  The tuned model '{tuned_tag}' must be built from safetensors first.")
+        print(f"  Comparison will use base model only for the tuned slot.")
+        result["tuned"] = None
+    
+    return result
+
 def build_user_prompt(problem: str) -> str:
     """Build the user-visible prompt with format requirements."""
     return f"""### Problem:
@@ -417,7 +533,7 @@ class OllamaBackend:
         top_p: float = 1.0,
         top_k: int = 0,
     ) -> str:
-        """Generate text using Ollama API."""
+        """Generate text using Ollama API (streaming to avoid timeouts)."""
         params = normalize_generation_params(max_new_tokens, temperature, top_p, top_k)
         
         full_prompt = f"{system_prompt}\n\n{prompt}" if system_prompt else prompt
@@ -425,7 +541,7 @@ class OllamaBackend:
         payload = {
             "model": self.model_name,
             "prompt": full_prompt,
-            "stream": False,
+            "stream": True,
             "options": {
                 "num_predict": params["max_new_tokens"],
                 "temperature": params["temperature"],
@@ -435,14 +551,26 @@ class OllamaBackend:
         }
         
         try:
+            # Use streaming to prevent read-timeout on long generations.
+            # With stream=True, Ollama sends tokens incrementally so the
+            # HTTP connection never goes idle.
             response = self.requests.post(
                 f"{self.base_url}/api/generate",
                 json=payload,
-                timeout=300,
+                timeout=(30, 600),  # (connect_timeout, read_timeout)
+                stream=True,
             )
             response.raise_for_status()
-            result = response.json()
-            return result.get("response", "")
+            
+            full_response = []
+            for line in response.iter_lines():
+                if line:
+                    chunk = json.loads(line)
+                    full_response.append(chunk.get("response", ""))
+                    if chunk.get("done", False):
+                        break
+            
+            return "".join(full_response)
         except self.requests.exceptions.RequestException as e:
             raise RuntimeError(f"Ollama API request failed: {e}") from e
 
