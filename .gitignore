@@ -90,6 +90,9 @@ data/validation/*.json
 # Docs (keep local, exclude from repo)
 docs/
 
+# Scripts (local only, not in public mirror)
+scripts/mirror_pramana.sh
+
 # Logs
 logs/
 *.log
