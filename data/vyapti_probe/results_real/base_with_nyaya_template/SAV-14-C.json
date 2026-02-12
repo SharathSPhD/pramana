@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\nLet's analyze the problem using the **Nyaya methodology** to determine if the clerk's rule is correct.\n\n---\n\n### **1. Samshaya (Doubt Analysis)**\n\nThe clerk observes that all Heavy packages cost $15 to ship. However, we need to verify this based on the given data.\n\n---\n\n### **2. Pramana (Sources of Knowledge)**\n\nThe shipping costs provided are:\n\n- **Heavy, Domestic**: $15\n- **Heavy, International**: $15\n- **Light, Domestic**: $8\n- **Light, International**: $12\n\nFrom this, it appears that **all Heavy packages**, regardless of destination, cost $15. There are no instances of Heavy packages costing differently.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**\n\nThe syllogism is structured as follows:\n\n1. **Major Premise**: All Heavy packages cost $15.\n2. **Minor Premise**: All the given Heavy packages cost $15.\n3. **Conclusion**: Therefore, the rule is correct.\n\nThis syllogism holds because the minor premise aligns with the major premise.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**\n\nLet's consider if there's any scenario where the rule might not hold:\n\n- If a Heavy package were to cost something other than $15, the rule would be invalid.\n- However, based on the data provided, there are no such cases.\n\nThus, the counterfactual reasoning supports the clerk's rule.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**\n\nWe need to ensure the rule isn't based on any logical fallacies:\n\n- **Affirming the Negative**: The clerk is not denying any Heavy package costs $15; they are asserting it.\n- **Denying the Affirmative**: There's no evidence to suggest any Heavy package costs differently.\n- **Fourfold Figure**: The classification is straightforward (Heavy vs. Light, Domestic vs. International).\n\nThe rule does not fall into any logical fallacies.\n\n---\n\n### **6. Nirnaya (Ascertainment)**\n\nBased on the analysis:\n\n- **All Heavy packages in the data cost $15.**\n- **There are no exceptions or counterexamples.**\n\nTherefore, the clerk's rule is **correct**.\n\n---\n\n### **Final Answer**\n\n\\boxed{\\text{The rule is correct.}}",
+  "response_length": 2047,
+  "generation_time_ms": 36363,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all Heavy packages cost $15."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Samshaya (Doubt Analysis)**\n\nThe clerk observes that all Heavy packages cost $15 to ship. However, we need to verify this based on the given data"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14-C: Heavy \u2192 $15 \u2014 holds\n",
+        "problem_id": "SAV-14-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

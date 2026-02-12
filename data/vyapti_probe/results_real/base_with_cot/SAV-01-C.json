@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-01-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Alright, so I have this problem about six employees working in two departments: Engineering and Marketing. The company has a policy that if an employee is promoted, they must have a certain number of years of experience. The exact details are a bit fuzzy, but I think the key point is that the policy applies to all employees without exception. \n\nFirst, I need to figure out what the policy actually says. The problem mentions that the policy states that if an employee is promoted, they must have a certain number of years of experience. But it doesn't specify how many years. Hmm, that's a bit confusing. Maybe the number is given elsewhere, but I don't recall it. Wait, no, the problem is about the policy itself, not the specifics of the number of years. So perhaps the main issue is whether the policy applies to all employees or if there's an exception.\n\nThe question is asking whether the policy applies to all employees without exception. So, I need to think about whether there's any rule that says promotions must have a certain number of years, and whether this applies to everyone. If the policy says something like \"all promotions require at least X years of experience,\" then that would apply to everyone. But if there's an exception, like maybe for certain positions or departments, then it wouldn't apply to everyone.\n\nLooking at the departments mentioned: Engineering and Marketing. Maybe the policy applies differently to each department. For example, maybe in Engineering, promotions require 5 years, and in Marketing, they require 3 years. Or perhaps one department requires more experience than the other. But the problem doesn't specify that. It just says the policy is about having a certain number of years of experience for promotions.\n\nWait, the problem is about whether the policy applies to all employees without exception. So, if the policy says that promotions require, say, 5 years, but then allows for exceptions in certain cases, like if someone has exceptional performance, they can be promoted with less. But the problem doesn't mention that. It just says the policy is that promotions require a certain number of years. So, perhaps the policy is a blanket statement that promotions require X years, without any exceptions.\n\nBut then, the employees are split into two departments. Maybe the policy applies differently in each department. For example, maybe in Engineering, promotions require 5 years, and in Marketing, they require 3 years. If that's the case, then the policy isn't uniform across all employees, because it depends on the department. So, in that case, the policy would have exceptions based on department.\n\nAlternatively, maybe the policy applies to all employees, regardless of department, but the departments have different requirements. But that would mean the policy is not a single rule, but rather a rule that each department can apply differently, which would mean the policy isn't universal.\n\nWait, the problem says the company has the following policy: \"If an employee is promoted, they must have a certain number of years of experience.\" So, it's a single policy, but it's applied across departments. So, does that mean that all promotions, regardless of department, must meet the same experience requirement? Or can departments set their own requirements?\n\nIf the policy is that all promotions must have a certain number of years, say 5 years, then that applies to everyone. But if the policy allows departments to set their own requirements, then it's not a universal rule.\n\nBut the problem is asking whether the policy applies to all employees without exception. So, if the policy is that promotions require a certain number of years, but departments can have exceptions, then the policy isn't applied uniformly. Therefore, the answer would be no, the policy doesn't apply to all employees without exception because departments might have different requirements.\n\nAlternatively, if the policy is that promotions require a certain number of years, and this applies to all employees regardless of department, then the answer would be yes, it applies to all without exception.\n\nBut the problem doesn't specify whether the departments have different requirements or not. It just mentions that the employees are split into two departments and the policy is about promotions requiring a certain number of years.\n\nSo, perhaps the key is that the policy is a general rule, but it's not specified whether it's applied uniformly. Since the departments are mentioned, it's possible that the policy might have exceptions based on department. Therefore, the answer would be that the policy does not apply to all employees without exception because departments might have different promotion requirements.\n\nWait, but the problem is about whether the policy applies to all employees without exception. So, if the policy is that promotions require a certain number of years, but it's not specified whether this applies to all departments, then we can't assume it does. Therefore, the policy might have exceptions based on departments, so the answer is no.\n\nAlternatively, if the policy is that promotions require a certain number of years, and this applies to all employees, regardless of department, then the answer is yes.\n\nBut since the problem mentions two departments, it's more likely that the policy might have exceptions based on departments, meaning the policy isn't universal.\n\nWait, but the policy is stated as a single rule: \"If an employee is promoted, they must have a certain number of years of experience.\" It doesn't mention departments. So, perhaps the policy is applied uniformly across all departments, meaning all promotions must meet the same experience requirement, regardless of department. In that case, the policy applies to all employees without exception.\n\nBut then, why are the departments mentioned? Maybe the departments have different requirements, but the policy is that promotions must have a certain number of years, but departments can set their own requirements. So, the policy is a minimum, but departments can have higher requirements.\n\nWait, the problem doesn't specify whether the departments can set their own requirements or not. It just says the policy is that promotions require a certain number of years. So, perhaps the policy is that promotions must have at least X years, but departments can set higher requirements, but not lower.\n\nBut again, the problem is about whether the policy applies to all employees without exception. So, if the policy is that promotions require a certain number of years, and it's a rule that applies to all, then yes, it applies without exception. If the policy allows departments to have exceptions, then no.\n\nSince the problem doesn't specify that departments can have exceptions, perhaps we can assume that the policy is a universal rule, applying to all employees, regardless of department.\n\nBut I'm not entirely sure. The mention of departments might imply that the policy could have exceptions based on departments, but without specific information, we can't be certain.\n\nWait, the problem is about the policy as stated, not about whether it's enforced differently. The policy is: \"If an employee is promoted, they must have a certain number of years of experience.\" It doesn't mention departments, so perhaps it's a universal rule that applies to all employees, including those in both departments.\n\nTherefore, the answer would be yes, the policy applies to all employees without exception.\n\nBut I'm a bit confused because the departments are mentioned. Maybe the policy applies differently in each department, but since the policy is stated as a single rule, it's more likely that it applies to all.\n\nSo, after thinking through it, I believe the policy applies to all employees without exception because it's a single rule requiring a certain number of years for promotions, regardless of department.\n</think>\n\nThe company's policy states that any employee promoted must have a certain number of years of experience. This policy is not limited by department; it applies uniformly to all employees, including those in both Engineering and Marketing. Therefore, the policy applies to all employees without exception.\n\nAnswer: Yes, the policy applies to all employees without exception.",
+  "response_length": 8318,
+  "generation_time_ms": 116480,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Gita must work remotely."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Maybe the number is given elsewhere, but I don't recall it. Wait, no, the problem is about the policy itself, not the specifics of the number of years"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-01-C: Gita can be non-remote: False\n",
+        "problem_id": "SAV-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-12",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef analyze_medical_study():\n    # Phase 1: Samshaya (Doubt Analysis)\n    # We have doubt about the representative's claim\n    # The study shows that not all treated patients recovered\n    \n    # Phase 2: Pramana (Sources of Knowledge)\n    # The study data is our source of knowledge\n    # 8 patients in total\n    # 5 recovered after Treatment T\n    # 1 did not recover after Treatment T\n    # 3 recovered without Treatment T\n    \n    # Phase 3: Pancha Avayava (5-Member Syllogism)\n    # Syllogism: All treated patients recovered\n    # Premise 1: All treated patients received Treatment T\n    # Premise 2: All patients who received Treatment T recovered\n    # Conclusion: All treated patients recovered\n    \n    # Phase 4: Tarka (Counterfactual Reasoning)\n    # Suppose Treatment T does not guarantee recovery\n    # Then there exists at least one treated patient who did not recover\n    # But in our data, only Patient 4 did not recover\n    # Therefore, Treatment T guarantees recovery for treated patients\n    \n    # Phase 5: Hetvabhasa (Fallacy Check)\n    # We check for common fallacies:\n    # - Unrepresentative sample: Not applicable\n    # - Confirmation bias: We considered all data\n    # - Selection bias: All patients are included\n    # - Survivorship bias: Not applicable\n    # - Exclusion bias: All treated patients are considered\n    \n    # Phase 6: Nirnaya (Ascertainment)\n    # After thorough analysis, the claim is VALID\n    # Treatment T guarantees recovery for all patients who received it\n    \n    return \"The claim is VALID\"\n```\n\n### Solution Explanation:\nThe study shows that out of 8 patients with Condition X, 5 recovered after receiving Treatment T, and 1 did not recover. Patient 4 is the only treated patient who did not recover. This suggests that Treatment T works for all patients who received it. The representative's claim is valid because all treated patients in the study recovered, except for Patient 4, who did not receive Treatment T. Therefore, Treatment T guarantees recovery for patients with Condition X who are treated.",
+  "response_length": 2092,
+  "generation_time_ms": 34793,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"CondX \u2227 TreatT \u2192 Recovery\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "---\n\n### Solution Code:\n```python\ndef analyze_medical_study():\n    # Phase 1: Samshaya (Doubt Analysis)\n    # We have doubt about the representative's claim\n    # The study shows that not all treated "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-12: 'CondX \u2227 TreatT \u2192 Recovery' holds: False\n",
+        "problem_id": "SAV-12"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

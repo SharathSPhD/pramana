@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-01-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\n# Nyaya methodology applied to determine if Object X is Concept A and has Property B.\n# This code generates a structured analysis and final answer.\n\ndef nyaya_analysis(molecular_weight):\n    # Phase 1: Samshaya (Doubt Analysis)\n    # Generate doubts about the definitions and properties\n    doubts = [\n        \"Is the definition of Concept A accurate?\",\n        \"Does Property B require a specific threshold?\",\n        \"Is the molecular weight measurement reliable?\",\n        \"Could there be alternative interpretations of the definitions?\"\n    ]\n    \n    # Phase 2: Pramana (Sources of Knowledge)\n    # Cite authoritative sources for the definitions and properties\n    sources = [\n        \"The textbook defines Concept A as anything with Property B.\",\n        \"The textbook defines Property B as a molecular weight greater than 500 daltons.\"\n    ]\n    \n    # Phase 3: Pancha Avayava (5-Member Syllogism)\n    # Create a syllogism to reason through the problem\n    syllogism = [\n        \"If X has Property B, then X is Concept A.\",\n        \"Object X has Property B (750 > 500).\",\n        \"Therefore, Object X is Concept A.\"\n    ]\n    \n    # Phase 4: Tarka (Counterfactual Reasoning)\n    # Test the reasoning with counterfactuals\n    counterfactuals = [\n        \"If Object X did not have Property B, then it would not be Concept A.\",\n        \"This is true because if Object X's molecular weight were <=500, it would not satisfy the definition of Property B, and thus would not be Concept A.\"\n    ]\n    \n    # Phase 5: Hetvabhasa (Fallacy Check)\n    # Identify and eliminate fallacies\n    fallacies = [\n        \"Affirming the unproven: We do not assume Object X is Concept A without justification.\",\n        \"Denying the unproven: We do not assume Object X is not Concept A without justification.\",\n        \"Equivocation: The term 'Concept A' consistently refers to any object with Property B.\",\n        \"Division: We do not divide Property B into subsets beyond the given definition.\"\n    ]\n    \n    # Phase 6: Nirnaya (Ascertainment)\n    # Conclude the definitive answer\n    conclusion = [\n        \"Based on the textbook definitions and Object X's molecular weight, Object X has Property B and is therefore Concept A.\"\n    ]\n    \n    return {\n        \"doubts\": doubts,\n        \"sources\": sources,\n        \"syllogism\": syllogism,\n        \"counterfactuals\": counterfactuals,\n        \"fallacies\": fallacies,\n        \"conclusion\": conclusion\n    }\n}\n\n# Example usage:\n# molecular_weight = 750\n# result = nyaya_analysis(molecular_weight)\n# print(result)\n```\n\n### Analysis:\nThe textbook defines Concept A as anything with Property B, and Property B is a molecular weight greater than 500. Object X has a molecular weight of 750, which is greater than 500. Using the Nyaya methodology, we systematically analyze doubt, establish sources of knowledge, construct a syllogism, test counterfactuals, check for fallacies, and conclude that Object X has Property B and is Concept A.\n\n---\n\n### Final Answer:\n**Yes, Object X has property B and is Concept A.**",
+  "response_length": 3077,
+  "generation_time_ms": 51602,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, X has property B and is Concept A."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "\"\n    ]\n    \n    # Phase 3: Pancha Avayava (5-Member Syllogism)\n    # Create a syllogism to reason through the problem\n    syllogism = [\n        \"If X has Property B, then X is Concept A.\",\n        \"O"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-01-C: Can X lack B? False\nSAD-01-C: Yes \u2014 X has B (MW 750 > 500)\n",
+        "problem_id": "SAD-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

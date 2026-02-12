@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-15-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "### Solution:\n\n## Step 1: Samshaya (Doubt Analysis)\nWe need to identify the doubts or uncertainties in the given data. In this case, we have a specific rule from the handbook that states a Monday meeting is sufficient for project completion on time. However, we also have specific instances where having a Monday meeting does not guarantee project completion on time.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe have two sources of knowledge:\n1. The data from past schedules, which shows that having a Monday meeting along with other meetings does guarantee project completion on time.\n2. The handbook's rule, which states that a Monday meeting is sufficient for project completion on time.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe will construct a 5-member syllogism to analyze the situation:\n1. All instances where M=true, T=true, W=true, R=true, F=true are true.\n2. All instances where M=true guarantee project completion on time.\n3. All instances where M=true, T=true guarantee project completion on time.\n4. All instances where M=true, W=true guarantee project completion on time.\n5. All instances where M=true guarantee project completion on time.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider the counterfactual scenario where the handbook's rule is not true. In this case, we have the instance where T=true, W=true, M=false, and the project is NOT completed on time. This instance contradicts the handbook's rule.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check if there are any fallacies in the reasoning. In this case, we have a specific instance where having a Monday meeting does not guarantee project completion on time. This instance is not a fallacy, but it does contradict the handbook's rule.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, we can conclude that the handbook's rule \"A Monday meeting is sufficient to ensure project completion on time\" is not valid. The specific instance where T=true, W=true, M=false, and the project is NOT completed on time contradicts the rule.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 2083,
+  "generation_time_ms": 18383,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, \"M \u2192 on time\" is valid in data."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All instances where M=true, T=true, W=true, R=true, F=true are true"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-15-C: M \u2192 on time \u2014 holds\n",
+        "problem_id": "SAV-15-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

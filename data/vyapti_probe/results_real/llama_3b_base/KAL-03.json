@@ -1,0 +1,71 @@
+{
+  "problem_id": "KAL-03",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "Yes/No\n(You can use a simple \"Yes\" or \"No\" answer)\n\n## Step 1: Determine the current library book limit for the summer session.\nThe university policy states that during the summer session, students may check out up to 2 library books simultaneously.\n\n## Step 2: Calculate the number of books Student A already has checked out.\nStudent A already has 2 books checked out.\n\n## Step 3: Determine if Student A can check out a third book based on the current library book limit for the summer session.\nSince Student A already has 2 books checked out and the limit for the summer session is 2 books, Student A cannot check out a third book.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 668,
+  "generation_time_ms": 5890,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot check out 3rd book."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-03: Can check out 3rd? False\n",
+        "problem_id": "KAL-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.8,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.8,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

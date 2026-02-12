@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-10",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Steps:\n\n---\n\n### 1. Samshaya (Doubt Analysis)\n**What is the question?**  \nDoes every product from the Supplier reach the Retailer in exactly 9 days through all routes?\n\n**Doubts:**\n- Is the delivery time consistent across all routes?\n- Are there any dependencies or delays that affect the total delivery time?\n- Does the claim account for all possible routes?\n\n**Analysis:**  \nEach route has 3 steps, each taking 3 days. However, the last route includes a Warehouse step with a longer delivery time (7 days instead of 3). This introduces a variation in the total delivery time. The manager's claim assumes all routes have the same total delivery time, which may not hold true.\n\n---\n\n### 2. Pramana (Sources of Knowledge)\n**What is the question?**  \nDoes every product from the Supplier reach the Retailer in exactly 9 days through all routes?\n\n**Sources of Knowledge:**  \n- Each route has 3 steps, each taking 3 days.\n- The last route has an additional step (Warehouse \u2192 Retailer) taking 7 days.\n- The claim assumes all routes take 9 days, but the last route takes longer.\n\n**Justification:**  \nThe claim is based on the assumption that all routes have the same delivery time, which is not the case. The last route takes longer due to the extended delivery time from Warehouse to Retailer.\n\n---\n\n### 3. Pancha Avayava (5-Member Syllogism)\n**What is the question?**  \nDoes every product from the Supplier reach the Retailer in exactly 9 days through all routes?\n\n**Syllogism Structure:**  \n**Pratijna (Thesis):** Every product from the Supplier reaches the Retailer in exactly 9 days through all routes.  \n**Heti (Reason):** Each route has 3 steps, each taking 3 days.  \n**Udaharana (Example):** The first three routes each take 9 days.  \n**Savyaya (Comparison):** The last route takes longer due to the Warehouse step.  \n**Nigamana (Conclusion):** The claim is invalid because not all routes take exactly 9 days.\n\n**Justification:**  \nThe syllogism demonstrates that while the first three routes take 9 days, the last route takes longer, making the manager's claim invalid.\n\n---\n\n### 4. Tarka (Counterfactual Reasoning)\n**What is the question?**  \nDoes every product from the Supplier reach the Retailer in exactly 9 days through all routes?\n\n**Counterfactual:**  \nAssume every product from the Supplier reaches the Retailer in exactly 9 days through all routes.  \n**Pratyabhijna (Counterfactual Conclusion):** This would imply that all routes have the same delivery time.  \n**Viparyaya (Contradiction):** However, the last route has a different delivery time (10 days).  \n**Pratyabhijna (Conclusion):** Therefore, the original claim is invalid.\n\n**Justification:**  \nThe counterfactual reasoning shows that the claim leads to a contradiction when considering the last route's longer delivery time.\n\n---\n\n### 5. Hetvabhasa (Fallacy Check)\n**What is the question?**  \nDoes every product from the Supplier reach the Retailer in exactly 9 days through all routes?\n\n**Fallacies Checked:**  \n- **Drishti (Visualization):** Assuming all routes have the same delivery time.  \n- **Avayava (Syllogism):** Misapplying the syllogistic structure to conclude all routes take 9 days.  \n- **Tarka (Counterfactual):** Incorrectly assuming all routes have the same delivery time.  \n\n**Fallacy Identification:**  \nThe manager commits Drishti and Avayava fallacies by assuming all routes have the same delivery time without verifying the last route's extended delivery time.\n\n---\n\n### 6. Nirnaya (Ascertainment)\n**Final Answer:**  \nThe manager's claim is **invalid** because the last route takes longer than 9 days (10 days in total), making it impossible for every product from the Supplier to reach the Retailer in exactly 9 days through all routes.\n\n**Justification:**  \nThe last route includes a Warehouse step with a delivery time of 7 days, resulting in a total delivery time of 10 days. This variation means the claim does not hold for all routes.\n\n---\n\n### Final Answer\nThe manager's claim is **invalid** because the last route takes 10 days in total, not 9 days.",
+  "response_length": 4067,
+  "generation_time_ms": 69671,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, not all routes take 9 days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The manager's claim assumes all routes have the same total delivery time, which may not hold true"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-10: All routes 9 days? False\n",
+        "problem_id": "SAV-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

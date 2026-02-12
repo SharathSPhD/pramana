@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-07-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\n# Define the Boolean variables\nP = True\nQ = False\nR = True\n\n# Calculate the output\nOUT = (P and Q) or R\n\n# Output the result\nprint(\"OUT:\", OUT)\n```\n\n### Explanation\n1. **Samshaya (Doubt Analysis):** We start by understanding the problem. We have three Boolean variables P, Q, R, and the output OUT is defined by the logical expression (P AND Q) OR R. Given P is true, Q is false, and R is true, we need to compute the value of OUT.\n\n2. **Pramana (Sources of Knowledge):** The values of P, Q, and R are provided as true, false, and true respectively. These are our known facts.\n\n3. **Pancha Avayava (5-Member Syllogism):** We apply the five-step syllogistic reasoning to evaluate the expression. First, evaluate the inner expression (P AND Q). Since P is true and Q is false, (P AND Q) evaluates to false. Then, we take this result and OR it with R. Since R is true, the final result is true.\n\n4. **Tarka (Counterfactual Reasoning):** We consider what would happen if R were false. If R is false, then (P AND Q) OR R becomes (false) OR false, which evaluates to false. This shows that changing R affects the output.\n\n5. **Hetvabhasa (Fallacy Check):** We check for any logical fallacies. In this case, the expression is a straightforward AND followed by an OR, which is a common logical structure and free from fallacies.\n\n6. **Nirnaya (Ascertainment):** After evaluating all steps, we conclude that OUT is true and that changing R would change the output.\n```\n\n### Final Answer\n1. The value of OUT is **True**.\n2. Yes, changing R to false would cause OUT to change to **False**.\n```",
+  "response_length": 1610,
+  "generation_time_ms": 31099,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "OUT=true; changing R to false DOES change OUT to false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Nirnaya (Ascertainment):** After evaluating all steps, we conclude that OUT is true and that changing R would change the output"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-07-C: OUT can be false? False\nPRA-07-C: R matters \u2014 OUT changes when R=F: False == False\n",
+        "problem_id": "PRA-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

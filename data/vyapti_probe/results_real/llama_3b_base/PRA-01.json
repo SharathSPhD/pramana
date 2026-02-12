@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-01",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Analyze the given constraints\nWe are given the following constraints:\n1. Amit sits in position 1.\n2. Bela sits immediately to the right of Amit.\n3. Dev prefers coffee over tea.\n4. Charu sits in position 5.\n5. Ela does not sit in position 1.\n\n## Step 2: Determine the position of Bela\nSince Amit sits in position 1 and Bela sits immediately to the right of Amit, Bela must sit in position 2.\n\n## Step 3: Determine the position of Dev\nThere is no direct information about Dev's position, but we know that Dev prefers coffee over tea. However, this information is not sufficient to determine Dev's position.\n\n## Step 4: Determine the position of Charu\nCharu sits in position 5.\n\n## Step 5: Determine the position of Ela\nSince Ela does not sit in position 1 and position 5 is occupied by Charu, Ela must sit in one of the remaining positions (2, 3, or 4).\n\n## Step 6: Analyze the remaining positions\nWe know that Bela sits in position 2. If Dev sits in position 3, then Ela would be left with position 4. However, we cannot determine Dev's position with certainty. If Dev sits in position 4, then Ela would be left with position 3. But we know that Bela sits in position 2, so Dev cannot sit in position 4. Therefore, Dev must sit in position 3, and Ela must sit in position 4.\n\nThe final answer is: $\\boxed{4}$",
+  "response_length": 1318,
+  "generation_time_ms": 13415,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot determine Ela's exact position (3 or 4)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "If Dev sits in position 3, then Ela would be left with position 4. However, we cannot determine Dev's position with certainty. If Dev sits in position 4, then Ela would be left with position 3. But we"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-01: Ela can be 3: True, Ela can be 4: True\n",
+        "problem_id": "PRA-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "prakaranasama",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: prakaranasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "prakaranasama",
+  "hetvabhasa_used_fallback": true
+}

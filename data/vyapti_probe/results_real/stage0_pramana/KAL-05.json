@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-05",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "### Step 1: Samshaya (Doubt Analysis)\nTo analyze the problem, we must identify the relevant information and the potential doubts. The problem involves determining whether Building Z complies with the current building code. The relevant information includes:\n\n- Building Z was constructed in 2023.\n- The original code (2015) requires a minimum ceiling height of 8 feet.\n- The amendment (2022) requires a minimum ceiling height of 9 feet for buildings constructed after 2020.\n- Building Z has 8.5-foot ceilings.\n\nThe potential doubts are:\n\n- Does the building inspector correctly apply the building code?\n- Are there any ambiguities in the building code?\n- Is the information provided sufficient to make a determination?\n\n### Step 2: Pramana (Sources of Knowledge)\nThe sources of knowledge for this problem are:\n\n- The original building code (2015).\n- The amendment to the building code (2022).\n- The building inspector's interpretation of the building code.\n- The information provided about Building Z (constructed in 2023, 8.5-foot ceilings).\n\nThe pramanas are the original building code, the amendment, and the building inspector's interpretation. The information about Building Z is a fact, but it is not a pramana.\n\n### Step 3: Pancha Avayava (5-Member Syllogism)\nTo determine whether Building Z complies with the current building code, we can construct a 5-member syllogism using the following premises:\n\nPremise 1: All buildings constructed after 2020 must have a minimum ceiling height of 9 feet (amendment).\nPremise 2: Building Z was constructed in 2023 (fact).\nPremise 3: All residential buildings must have a minimum ceiling height of 8 feet (original code).\nPremise 4: Building Z is a residential building (fact).\nPremise 5: All residential buildings must have a minimum ceiling height of 8 feet (original code).\n\nThe conclusion is:\n\nConclusion: Building Z does not comply with the current building code because it was constructed after 2020 and has a ceiling height of 8.5 feet, which is greater than the minimum required by the original code.\n\n### Step 4: Tarka (Counterfactual Reasoning)\nTo test the conclusion, we can consider counterfactual scenarios:\n\n- What if the building inspector had incorrectly applied the building code?\n- What if the information about Building Z was incorrect?\n- What if the amendment had not been implemented?\n\nIn each case, the conclusion would be unaffected because the building inspector's interpretation and the information about Building Z are independent of the counterfactual scenarios.\n\n### Step 5: Hetvabhasa (Fallacy Check)\nTo check for fallacies, we can analyze the argument:\n\n- The argument is a 5-member syllogism with clear premises and a logical conclusion.\n- The premises are based on the building code and the facts about Building Z.\n- The conclusion is based on the premises and is logically sound.\n\nThere are no fallacies in the argument.\n\n### Step 6: Nirnaya (Ascertainment)\nBased on the analysis, the final answer is:\n\nBuilding Z does not comply with the current building code because it was constructed after 2020 and has a ceiling height of 8.5 feet, which is greater than the minimum required by the original code.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 3215,
+  "generation_time_ms": 27648,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Building Z does not comply."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "### Step 3: Pancha Avayava (5-Member Syllogism)\nTo determine whether Building Z complies with the current building code, we can construct a 5-member syllogism using the following premises:\n\nPremise 1:"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-05: Building Z compliant? False\n",
+        "problem_id": "KAL-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

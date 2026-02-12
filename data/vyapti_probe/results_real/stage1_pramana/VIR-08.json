@@ -1,0 +1,72 @@
+{
+  "problem_id": "VIR-08",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    doubt = {\n        'pratyaksha': 'No direct sensory evidence (e.g., thermometer reading) is provided.',\n        'anumana': 'We infer the heater is on based on the rule, but we don't know the current temp.',\n        'pratyaksha': 'No direct sensory evidence (e.g., thermometer reading) is provided.',\n        'anumana': 'We infer the temperature is below 60F based on the rule, but we don't know if the heater is on.'\n    }\n    \n    # Pramana: Sources of Knowledge\n    sources = {\n        'senses': 'No direct sensory evidence (e.g., thermometer reading) is provided.',\n        'testimony': 'The rule states: temp < 60 \u2192 heater ON',\n        'rules': 'The rule is a conditional statement: if temp < 60, then heater is on'\n    }\n    \n    # Pancha Avayava: 5-Member Syllogism\n    syllogism = {\n        'pratyaksha': 'No direct sensory evidence (e.g., thermometer reading) is provided.',\n        'pratyaksha': 'Heater is currently on (given)',\n        'anumana': 'We infer the heater is on based on the rule, but we don't know the current temp.',\n        'tarka': 'If the heater were off, then temp >=60, but heater is on, so temp <60',\n        'nigamana': 'Therefore, temp <60'\n    }\n    \n    # Tarka: Counterfactual Reasoning\n    counterfactuals = [\n        {\n            'hypothesis': 'Heater is on',\n            'conclusion': 'Temp <60',\n            'reasoning': 'If heater were off, then temp >=60, but heater is on, so temp <60'\n        },\n        {\n            'hypothesis': 'Temp >=60',\n            'conclusion': 'Heater is off',\n            'reasoning': 'If temp >=60, then heater is off, but heater is on, so temp <60'\n        }\n    ]\n    \n    # Hetvabhasa: Fallacy Check\n    fallacies = {\n        'akhandaka': 'No circular reasoning',\n        'dhireshana': 'No assumption by elimination',\n        'pratyabhijna': 'No inverse syllogism',\n        'savyabhichara': 'No infinite regress',\n        'hetvabhasa': 'No fallacy detected'\n    }\n    \n    # Nirnaya: Ascertainment\n    conclusion = {\n        'fact': 'Heater is on (given)',\n        'rule': 'If temp <60, then heater is on',\n        'conclusion': 'Temp <60'\n    }\n    \n    return conclusion\n\nsolve()\n```\n\n### Explanation:\nThe solution systematically applies the Nyaya methodology to analyze the problem. It starts by identifying the doubt and sources of knowledge, then constructs a syllogism, performs counterfactual reasoning, checks for fallacies, and finally ascertains the conclusion. The final answer is that the temperature is below 60\u00b0F.",
+  "response_length": 2585,
+  "generation_time_ms": 49336,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude temp < 60."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "',\n        'testimony': 'The rule states: temp < 60 \u2192 heater ON',\n        'rules': 'The rule is a conditional statement: if temp < 60, then heater is on'\n    }\n    \n    # Pancha Avayava: 5-Member Syll"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-08: Can temp be \u226560? True\n",
+        "problem_id": "VIR-08"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.8,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.8,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response uses deductive language on viruddha-type problem",
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

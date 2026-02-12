@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-08-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "The final answer should be a single word or phrase that answers the question.\n\n### Solution:\n\n## Step 1: Samshaya (Doubt Analysis)\nWe need to identify the doubts or uncertainties in the given clues. The problem is clear, but we need to analyze the logical implications of each clue.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe need to identify the sources of knowledge for each clue. Clue 1 is a statement of fact. Clue 2 is a conditional statement. Clue 3 is a statement of fact. Clue 4 is a conditional statement. Clue 5 is a statement of fact.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe need to construct a 5-member syllogism using the clues. Let's denote \"window\" as W and \"door\" as D.\n\n1. W \u2192 M (If the thief entered through the window, muddy footprints would be on the windowsill.)\n2. \u223cM (There are no muddy footprints on the windowsill.)\n3. D \u2192 S (If the thief entered through the door, the lock would show scratch marks.)\n4. S (The lock shows scratch marks.)\n\nWe can now construct the syllogism:\n\n1. W \u2192 M\n2. \u223cM\n3. D \u2192 S\n4. S\n\u2234 D (By modus tollens, if S is true and D \u2192 S, then D is true.)\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider the counterfactuals for each possible solution. Let's consider the counterfactuals for W and D:\n\nCounterfactuals:\n\n* W: If the thief did not enter through the window, then there would be no muddy footprints on the windowsill.\n* D: If the thief did not enter through the door, then the lock would not show scratch marks.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies in the reasoning. There are no fallacies in the reasoning.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the 5-member syllogism, we can conclude that the thief entered through the door.\n\nThe final answer is: $\\boxed{door}$",
+  "response_length": 1784,
+  "generation_time_ms": 18904,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Through the door."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "S\n\u2234 D (By modus tollens, if S is true and D \u2192 S, then D is true.)\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider the counterfactuals for each possible solution"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-08-C: Can it NOT be door? False\nPRA-08-C: Answer = Door\n",
+        "problem_id": "PRA-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

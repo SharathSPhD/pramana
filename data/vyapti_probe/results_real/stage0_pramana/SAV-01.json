@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAV-01",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** The format of the answer should be \"Yes\" or \"No\" only.\n\n---\n\n### Solution:\n**Phase 1: Samshaya (Doubt Analysis)**\n\nTo analyze this problem, we must first identify the source of doubt. In this case, the doubt is whether Gita must work remotely based on the given information. The question arises because we do not have explicit information about Gita's work arrangement.\n\n**Phase 2: Pramana (Sources of Knowledge)**\n\nThe sources of knowledge in this problem are the statements about the work arrangements of the other employees. These statements provide indirect information about Gita's work arrangement. We can infer Gita's work arrangement by analyzing the statements.\n\n**Phase 3: Pancha Avayava (5-Member Syllogism)**\n\nWe will construct a 5-member syllogism to analyze the information.\n\n**Member 1:** All employees in Engineering work remotely (except Chetan, who works on-site).\n**Member 2:** Gita is assigned to Engineering.\n**Member 3:** All employees in Engineering work remotely (except Chetan).\n**Member 4:** Chetan is the only employee in Engineering who works on-site.\n**Member 5:** Therefore, Gita must work remotely.\n\n**Phase 4: Tarka (Counterfactual Reasoning)**\n\nTo check the validity of our reasoning, we will consider counterfactual scenarios.\n\n*   If Gita worked on-site, then Chetan would not work on-site, which is not possible.\n*   If Gita worked remotely, then Chetan would work remotely, which is possible.\n\nOur reasoning is valid.\n\n**Phase 5: Hetvabhasa (Fallacy Check)**\n\nWe will check for fallacies in our reasoning.\n\n*   There are no fallacies in our reasoning.\n\n**Phase 6: Nirnaya (Ascertainment)**\n\nBased on our analysis, we conclude that Gita must work remotely.\n\n**Final Answer:** Yes",
+  "response_length": 1725,
+  "generation_time_ms": 16137,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Gita is NOT forced to work remotely."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "**Member 1:** All employees in Engineering work remotely (except Chetan, who works on-site)"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-01: Checking vy\u0101pti 'Engineering \u2192 Remote' ===\nVy\u0101pti holds: False\nGita can be non-remote: True\n",
+        "problem_id": "SAV-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

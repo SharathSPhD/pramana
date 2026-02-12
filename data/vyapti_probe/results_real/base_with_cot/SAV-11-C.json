@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this problem about a library catalog system with three tags: [Recommended], [Available], and [New Arrival]. There are six books listed, each with different combinations of these tags. The librarian says, \"All our recommended books are available.\" I need to figure out if this statement is true.\n\nFirst, I should probably list out all the books and their tags to get a clear picture.\n\n1. \"Algorithms\" \u2014 [Recommended], [Available], [New Arrival]\n2. \"Bioinformatics\" \u2014 [Recommended], [Available], [New Arrival]\n3. \"Compilers\" \u2014 [Recommended], [Available]\n4. \"Databases\" \u2014 [Recommended], [Available], [New Arrival]\n5. \"Encryption\" \u2014 [Recommended], [Available], [New Arrival]\n6. \"Fractals\" \u2014 [Available], [New Arrival]\n\nSo, the librarian is making a statement about all recommended books being available. To verify this, I need to check every book that's marked as [Recommended] and see if it's also marked as [Available].\n\nLooking at the list:\n\n- \"Algorithms\" is [Recommended] and [Available] \u2014 so that's good.\n- \"Bioinformatics\" is [Recommended] and [Available] \u2014 also good.\n- \"Compilers\" is [Recommended] and [Available] \u2014 still good.\n- \"Databases\" is [Recommended] and [Available] \u2014 that's fine too.\n- \"Encryption\" is [Recommended] and [Available] \u2014 yes.\n- \"Fractals\" is only [Available] and [New Arrival], but not [Recommended], so it's not relevant here.\n\nWait, so all the books that are recommended are also available. There's no book that's recommended but not available. That seems to support the librarian's statement.\n\nBut let me double-check to make sure I didn't miss anything. Maybe I should look for any exceptions or books that might be recommended but not available. From the list, all the books with [Recommended] also have [Available]. So, there's no counterexample here.\n\nIs there any universal rule that applies? Well, sometimes in logic problems, if a statement is made about all members of a category, you need to check that none of them are exceptions. In this case, the category is \"Recommended books,\" and each one is available. So, the statement holds.\n\nI think I'm confident that the librarian's statement is true because every recommended book is indeed available.\n</think>\n\nThe librarian's statement is true. All books marked as [Recommended] are also marked as [Available]. There are no recommended books that are not available.\n\n**Answer:** The statement is true. All recommended books are available.",
+  "response_length": 2443,
+  "generation_time_ms": 40849,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Recommended \u2286 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The librarian says, \"All our recommended books are available"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11-C: Recommended \u2286 Available \u2014 holds\n",
+        "problem_id": "SAV-11-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

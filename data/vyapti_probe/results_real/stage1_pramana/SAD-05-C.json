@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAD-05-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution:\n\n### 1. Samshaya (Doubt Analysis)\n**Question:** What is the value of f(4) based on the recursive formula?\n\n**Doubt Analysis:**\n- The function f is defined recursively.\n- f(1) is given as 1.\n- For n > 1, f(n) = f(n-1) + n.\n- We need to compute f(4).\n\n**Uncertainties:**\n- Verify the recursive formula is correctly applied.\n- Ensure each step follows logically from the previous one.\n\n### 2. Pramana (Sources of Knowledge)\n**Sources:**\n- The recursive formula is provided.\n- Base case f(1) = 1 is given.\n- Recursive step f(n) = f(n-1) + n for n > 1.\n\n**Justification:**\n- The recursive definition is clear and unambiguous.\n- The base case provides an anchor for computation.\n\n**Confidence:**\n- The formula is explicit and directly applicable.\n- Each recursive step builds on the prior value.\n\n### 3. Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:**\n1. **Pratyaksha** (Direct Perception): f(1) = 1 is given.\n2. **Anumana** (Inference): For n > 1, f(n) = f(n-1) + n.\n3. **Drishti** (Vision): Apply the recursive formula to compute f(4).\n4. **Sama** (Comparison): Compare each step with the previous one.\n5. **Pratyabhijna** (Recognition): Confirm the final value through verification.\n\n**Syllogism:**\n1. **Pratyaksha** - f(1) = 1.\n2. **Anumana** - For n > 1, f(n) = f(n-1) + n.\n3. **Drishti** - f(2) = f(1) + 2 = 1 + 2 = 3.\n4. **Sama** - f(3) = f(2) + 3 = 3 + 3 = 6.\n5. **Pratyabhijna** - f(4) = f(3) + 4 = 6 + 4 = 10.\n\n**Justification:**\n- Each step follows directly from the previous one.\n- The recursive formula is consistently applied.\n- The computation is verified through each recursive step.\n\n### 4. Tarka (Counterfactual Reasoning)\n**Counterfactual Analysis:**\n- Assume f(4) \u2260 10.\n- Then, either the recursive formula is misapplied or an arithmetic error occurs.\n- Recheck each step:\n  - f(1) = 1 (given).\n  - f(2) = f(1) + 2 = 1 + 2 = 3.\n  - f(3) = f(2) + 3 = 3 + 3 = 6.\n  - f(4) = f(3) + 4 = 6 + 4 = 10.\n- The counterfactual leads to inconsistency, confirming f(4) = 10.\n\n**Confidence:**\n- The counterfactual test confirms the consistency of the result.\n- No arithmetic or logical errors are detected.\n\n### 5. Hetvabhasa (Fallacy Check)\n**Fallacy Analysis:**\n- **Savyabhichara** (Circular Reasoning): No circularity in the computation.\n- **Hetvabhasa Sthiti** (Fallacy in Assumptions): No fallacies in the assumptions.\n- **Viruddha** (Contradiction): No contradictions in the steps.\n- **Asiddha** (Unsupportable): No unsupported steps.\n- **Satpratipaksha** (Verification): The result is verified through each step.\n\n**Conclusion:**\n- The reasoning is free from fallacies.\n- The computation is logically valid and consistent.\n\n### 6. Nirnaya (Ascertainment)\n**Final Ascertainment:**\n- Through systematic application of the recursive formula:\n  - f(1) = 1\n  - f(2) = f(1) + 2 = 3\n  - f(3) = f(2) + 3 = 6\n  - f(4) = f(3) + 4 = 10\n- The result is verified through multiple reasoning steps and counterfactual testing.\n- The final answer is confirmed as f(4) = 10.\n\n**Confidence:**\n- The result is derived through multiple verifiable steps.\n- The counterfactual test confirms the validity of the result.\n- The reasoning is consistent and free from fallacies.",
+  "response_length": 3189,
+  "generation_time_ms": 73005,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "f(4) = 10."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-05-C: f(4) = 10\n",
+        "problem_id": "SAD-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

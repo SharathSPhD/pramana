@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-05-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    set_a = {'p', 'q', 'r', 's', 't'}\n    set_b = {'q', 'r', 'u', 'v'}\n    intersection = set_a & set_b\n    return list(intersection)\n```\n\n### Solution Explanation:\n1. **Samshaya (Doubt Analysis)**: We need to identify which students are eligible for the scholarship. This requires determining the intersection of the two sets.\n2. **Pramana (Sources of Knowledge)**: The information provided directly gives us the membership of each set.\n3. **Pancha Avayava (5-Member Syllogism)**: We use the syllogism to determine the intersection.\n4. **Tarka (Counterfactual Reasoning)**: We consider what happens if a student is not in both sets and conclude they are not eligible.\n5. **Hetvabhasa (Fallacy Check)**: We ensure our reasoning avoids circular reasoning and other fallacies.\n6. **Nirnaya (Ascertainment)**: Through systematic analysis, we conclude the eligible students are q and r.\n\nThe final answer is the intersection of Set A and Set B, which are students q and r.\n```\n\n### Final Answer:\nThe students eligible for the athletics scholarship are \\boxed{\\{q, r\\}}.\n---\n\n### Step-by-Step Explanation:\n1. **Identify the Sets**: \n   - Set A (Sports Players) = {p, q, r, s, t}\n   - Set B (Honor Roll Students) = {q, r, u, v}\n\n2. **Understand the Policy**:\n   - Students must be in **both** Set A and Set B to be eligible.\n\n3. **Find the Intersection**:\n   - The intersection of Set A and Set B contains students who are in both sets.\n   - Comparing the two sets: q and r are common members.\n\n4. **List the Eligible Students**:\n   - The eligible students are q and r.\n\n5. **Verify**:\n   - Ensure no other students are mistakenly included by checking each member of the intersection against both sets.\n\n6. **Final Answer**:\n   - The students eligible for the athletics scholarship are q and r.\n\n```python\ndef solve():\n    set_a = {'p', 'q', 'r', 's', 't'}\n    set_b = {'q', 'r', 'u', 'v'}\n    eligible = set_a & set_b\n    return list(eligible)\n```",
+  "response_length": 1989,
+  "generation_time_ms": 38596,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "{q, r} eligible for scholarship."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-05-C: Can pq avoid scholarship? False\nVIR-05-C: Eligible: pq, pr\n",
+        "problem_id": "VIR-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

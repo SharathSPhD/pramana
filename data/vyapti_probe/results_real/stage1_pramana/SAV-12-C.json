@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-12-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Nyaya Steps:\n\n1. **Samshaya (Doubt Analysis)**:\n   - What is the doubt? \n   - What is the underlying assumption?\n   - What is the question to be answered?\n\n2. **Pramana (Sources of Knowledge)**:\n   - What are the facts (pramana)?\n   - What are the inferences (nigamana)?\n   - What are the reasons (hetu)?\n   - What are the examples (dharma)?\n   - What is the testimony (sabda)?\n\n3. **Pancha Avayava (5-Member Syllogism)**:\n   - Pratijna (Thesis): \n   - Hetu (Reason):\n   - Pratyaksha (Direct Perception):\n   - Anumana (Inference):\n   - Upanaya (Application).\n\n4. **Tarka (Counterfactual Reasoning)**:\n   - Assume the negation of the claim.\n   - What follows from this assumption?\n   - Does this contradict any known facts?\n   - What is the consequence of the contradiction?\n   - What is the resolution?\n\n5. **Hetvabhasa (Fallacy Check)**:\n   - Which fallacy does the argument commit?\n   - How does the argument avoid falling into this fallacy?\n   - What is the alternative fallacy?\n   - What is the alternative conclusion?\n\n6. **Nirnaya (Ascertainment)**:\n   - What is the final conclusion?\n   - What is the reason for this conclusion?\n   - What is the supporting evidence?\n   - What is the basis for the conclusion?\n   - What is the ultimate truth?\n\n---\n\n### Nyaya Syllogism Template:\n**Pratijna (Thesis):**  \n*All S are P.  \n\n**Hetu (Reason):**  \n*S is P because S is P.  \n\n**Pratyaksha (Direct Perception):**  \n*I directly perceive S is P.  \n\n**Anumana (Inference):**  \n*Since S is P, then S is P.  \n\n**Upanaya (Application):**  \n*Therefore, all S are P.  \n\n---\n\n### Nyaya Tarka Template:\n**Assumption:**  \n*Not all S are P.  \n\n**Consequence:**  \n*This leads to the conclusion that S is not P.  \n\n**Contradiction:**  \n*This contradicts our known facts that S is P.  \n\n**Resolution:**  \n*Therefore, our original claim must be true.  \n\n---\n\n### Nyaya Hetvabhasa Template:\n**Fallacy Committed:**  \n*The argument commits the [fallacy name].  \n\n**Avoiding the Fallacy:**  \n*The argument avoids falling into this fallacy by [reason].  \n\n**Alternative Fallacy:**  \n*If we consider the alternative fallacy, [fallacy name], then [conclusion].  \n\n**Alternative Conclusion:**  \n*Therefore, the alternative conclusion is [alternative].  \n\n---\n\n### Nyaya Nirnaya Template:\n**Final Conclusion:**  \n*All S are P.  \n\n**Reason:**  \n*[Reason].  \n\n**Supporting Evidence:**  \n*[Evidence].  \n\n**Basis for Conclusion:**  \n*[Basis].  \n\n**Ultimate Truth:**  \n*The ultimate truth is that all S are P.  \n\n---\n\n### Nyaya Syllogism Diagram:\n```\nPratijna (Thesis)  \n       \u2193  \nHetu (Reason)  \n       \u2193  \nPratyaksha (Direct Perception)  \n       \u2193  \nAnumana (Inference)  \n       \u2193  \nUpanaya (Application)  \n```\n\n---\n\n### Nyaya Tarka Diagram:\n```\nAssumption: Not all S are P  \n        \u2193  \nConsequence: S is not P  \n        \u2193  \nContradiction: This contradicts our known facts that S is P  \n        \u2193  \nResolution: Therefore, our original claim must be true  \n```\n\n---\n\n### Nyaya Hetvabhasa Diagram:\n```\nFallacy Committed: [Fallacy Name]  \nAvoiding the Fallacy: [Reason]  \nAlternative Fallacy: [Alternative Fallacy Name]  \nAlternative Conclusion: [Alternative]  \n```\n\n---\n\n### Nyaya Nirnaya Diagram:\n```\nFinal Conclusion: All S are P  \nReason: [Reason]  \nSupporting Evidence: [Evidence]  \nBasis for Conclusion: [Basis]  \nUltimate Truth: The ultimate truth is that all S are P  \n```\n\n---\n\n### Nyaya Syllogism Example:\n**Pratijna (Thesis):**  \n*All swans are white.  \n\n**Hetu (Reason):**  \n*Swans are white because swans are white.  \n\n**Pratyaksha (Direct Perception):**  \n*I directly perceive swans are white.  \n\n**Anumana (Inference):**  \n*Since swans are white, then swans are white.  \n\n**Upanaya (Application):**  \n*Therefore, all swans are white.  \n\n---\n\n### Nyaya Tarka Example:\n**Assumption:**  \n*Not all swans are white.  \n\n**Consequence:**  \n*This leads to the conclusion that some swans are not white.  \n\n**Contradiction:**  \n*This contradicts our known facts that swans are white.  \n\n**Resolution:**  \n*Therefore, our original claim must be true.  \n\n---\n\n### Nyaya Hetvabhasa Example:\n**Fallacy Committed:**  \n*The argument commits the fallacy of the Universal Excluded Middle.  \n\n**Avoiding the Fallacy:**  \n*The argument avoids falling into this fallacy by not asserting that some swans are not white.  \n\n**Alternative Fallacy:**  \n*If we consider the alternative fallacy of the Universal Excluded Middle, then some swans are not white.  \n\n**Alternative Conclusion:**  \n*Therefore, the alternative conclusion is that some swans are not white.  \n\n---\n\n### Nyaya Nirnaya Example:\n**Final Conclusion:**  \n*All swans are white.  \n\n**Reason:**  \n*Swans are white because swans are white.  \n\n**Supporting Evidence:**  \n*I directly perceive swans are white.  \n\n**Basis for Conclusion:**  \n*The reason is that swans are white.  \n\n**Ultimate Truth:**  \n*The ultimate truth is that all swans are white.  \n\n---\n\n### Nyaya Syllogism Diagram with Example:\n```\nPratijna (Thesis)  \n       \u2193  \nHetu (Reason)  \n       \u2193  \nPratyaksha (Direct Perception)  \n       \u2193  \nAnumana (Inference)  \n       \u2193  \nUpanaya (Application)  \n```\n\n---\n\n### Nyaya Tarka Diagram with Example:\n```\nAssumption: Not all swans are white  \n        \u2193  \nConsequence: Some swans are not white  \n        \u2193  \nContradiction: This contradicts our known facts that swans are white  \n        \u2193  \nResolution: Therefore, our original claim must be true  \n```\n\n---\n\n### Nyaya Hetvabhasa Diagram with Example:\n```\nFallacy Committed: The argument commits the fallacy of the Universal Excluded Middle  \nAvoiding the Fallacy: The argument avoids falling into this fallacy by not asserting that some swans are not white  \nAlternative Fallacy: If we consider the alternative fallacy of the Universal Excluded Middle, then some swans are not white  \nAlternative Conclusion: Therefore, the alternative conclusion is that some swans are not white  \n```\n\n---\n\n### Nyaya Nirnaya Diagram with Example:\n```\nFinal Conclusion: All swans are white  \nReason: Swans are white because swans are white  \nSupporting Evidence: I directly perceive swans are white  \nBasis for Conclusion: The reason is that swans are white  \nUltimate Truth: The ultimate truth is that all swans are white  \n```\n\n---\n\n### Nyaya Syllogism with Patient Data:\n**Pratijna (Thesis):**  \n*All patients with Condition X who received Treatment T recovered.  \n\n**Hetu (Reason):**  \n*Patients with Condition X who received Treatment T recovered because patients with Condition X who received Treatment T recovered.  \n\n**Pratyaksha (Direct Perception):**  \n*I directly perceive that all patients with Condition X who received Treatment T recovered.  \n\n**Anumana (Inference):**  \n*Since patients with Condition X who received Treatment T recovered, then patients with Condition X who received Treatment T recovered.  \n\n**Upanaya (Application):**  \n*Therefore, all patients with Condition X who received Treatment T recovered.  \n\n---\n\n### Nyaya Tarka with Patient Data:\n**Assumption:**  \n*Not all patients with Condition X who received Treatment T recovered.  \n\n**Consequence:**  \n*This leads to the conclusion that some patients with Condition X who received Treatment T did not recover.  \n\n**Contradiction:**  \n*This contradicts our known facts that all patients with Condition X who received Treatment T recovered.  \n\n**Resolution:**  \n*Therefore, our original claim must be true.  \n\n---\n\n### Nyaya Hetvabhasa with Patient Data:\n**Fallacy Committed:**  \n*The argument commits the fallacy of the Universal Excluded Middle.  \n\n**Avoiding the Fallacy:**  \n*The argument avoids falling into this fallacy by not asserting that some patients with Condition X who received Treatment T did not recover.  \n\n**Alternative Fallacy:**  \n*If we consider the alternative fallacy of the Universal Excluded Middle, then some patients with Condition X who received Treatment T did not recover.  \n\n**Alternative Conclusion:**  \n*Therefore, the alternative conclusion is that some patients with Condition X who received Treatment T did not recover.  \n\n---\n\n### Nyaya Nirnaya with Patient Data:\n**Final Conclusion:**  \n*All patients with Condition X who received Treatment T recovered.  \n\n**",
+  "response_length": 8148,
+  "generation_time_ms": 149558,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all patients with CondX+TreatT recovered."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Nirnaya (Ascertainment)**:\n   - What is the final conclusion?\n   - What is the reason for this conclusion?\n   - What is the supporting evidence?\n   - What is the basis for the conclusion?\n   - What "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-12-C: CondX \u2227 TreatT \u2192 Recovery \u2014 holds\n",
+        "problem_id": "SAV-12-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-04",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Methodology Steps:\n\n---\n\n### 1. Samshaya (Doubt Analysis)\n**Problem Statement:**  \nAn advisor claims: \"Every student who is in both Philosophy and Mathematics is also enrolled in the Logic course.\"\n\n**Doubt Type:**  \nThis is a universal affirmative statement (\"All X are Y\"). The doubt arises if we find even one X that is Y but not Z (or vice versa). The Samshaya phase identifies the nature of the doubt.\n\n**Analysis:**  \nWe need to verify if every student common to both P (Philosophy) and M (Mathematics) is also in L (Logic course enrollees).\n\n**Doubt:**  \nIs the advisor's claim true? Are all common students in L?\n\n**Answer:**  \nSamshaya: Universal affirmative with doubt (Tarka Samshaya). We must verify each common student.\n\n---\n\n### 2. Pramana (Sources of Knowledge)\n**Sources:**  \n- P: {Mira, Neel, Omar, Priya, Qasim, Riya}\n- M: {Mira, Neel, Omar, Priya, Sana}\n- L: {Mira, Neel, Omar, Priya, Tara}\n\n**Pramana:**  \nThe advisor's claim is based on the provided sets. We rely on these sets as the source of truth.\n\n**Answer:**  \nPramana: The sets P, M, and L are the sources of knowledge.\n\n---\n\n### 3. Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:**  \n1. Pratijna (Thesis): The advisor's claim: Every student who is in both P and M is also in L.\n2. Hetu (Reason): The common students in P and M are Mira, Neel, Omar, Priya.\n3. Upanaya (Application): Check each common student:\n   - Mira: In L? Yes.\n   - Neel: In L? Yes.\n   - Omar: In L? Yes.\n   - Priya: In L? Yes.\n4. Prasanga (Comparison): All common students are in L.\n5. Nirnaya (Ascertainment): The claim is true.\n\n**Answer:**  \nPancha Avayava: The syllogism confirms the advisor's claim is true.\n\n---\n\n### 4. Tarka (Counterfactual Reasoning)\n**Counterfactual:**  \nAssume the opposite: \"There exists a student who is in both P and M but not in L.\"\n\n**Analysis:**  \nCheck if any common student is missing from L.\n\n**Counterfactual Check:**  \n- Common students: Mira, Neel, Omar, Priya.\n- L contains all four: Mira, Neel, Omar, Priya, Tara.\n- No student is missing.\n\n**Conclusion:**  \nThe counterfactual does not hold; the original claim is true.\n\n**Answer:**  \nTarka: The counterfactual fails, confirming the claim is true.\n\n---\n\n### 5. Hetvabhasa (Fallacy Check)\n**Fallacy Identification:**  \n- Akhandha: No fallacy in syllogism structure.\n- Sadhyasama: No fallacy in premises.\n- Viruddha: No contradictory premises.\n- Asiddha: No uncertain premises.\n\n**Fallacy Check:**  \nAll premises are valid and consistent. No fallacies present.\n\n**Answer:**  \nHetvabhasa: No fallacies; the syllogism is valid.\n\n---\n\n### 6. Nirnaya (Ascertainment)\n**Final Conclusion:**  \nEvery student common to both P and M is also in L. The claim is true.\n\n**Answer:**  \nNirnaya: The advisor's claim is definitively true.\n\n---\n\n### Final Answer:\nThe advisor's claim is true based on the provided data. Every student enrolled in both Philosophy and Mathematics is also enrolled in the Logic course.",
+  "response_length": 2963,
+  "generation_time_ms": 59939,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, P\u2229M \u2288 L."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "\"\n\n**Doubt Type:**  \nThis is a universal affirmative statement (\"All X are Y\")"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-04: Counterexample exists (Qasim): True\n",
+        "problem_id": "SAV-04"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

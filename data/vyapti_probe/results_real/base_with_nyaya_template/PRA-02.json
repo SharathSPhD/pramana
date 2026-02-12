@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-02",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # Premise 1: All surgeons have completed a residency program.\n    # Premise 2: Dr. Kapoor is a surgeon.\n    # Premise 3: The hospital cafeteria serves vegetarian meals on Fridays.\n    # Premise 4: All residents of the hospital housing complex drive sedans.\n    \n    # Pramana: Sources of Knowledge\n    # All information is from reliable sources within the hospital.\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # We need to find a syllogism that connects the premises to a conclusion.\n    \n    # Tarka: Counterfactual Reasoning\n    # Consider if any premises could be false or if there's a hidden assumption.\n    \n    # Hetvabhasa: Fallacy Check\n    # Ensure no logical fallacies are present in the reasoning.\n    \n    # Nirnaya: Ascertainment\n    # Based on the above steps, determine the conclusion.\n    \n    # Conclusion: Dr. Kapoor is a vegetarian.\n    return \"Dr. Kapoor is a vegetarian.\"\n```\nOkay, so I have this logic problem to solve using the Nyaya methodology. Let me try to break it down step by step. \n\nFirst, the problem gives me four premises:\n\n1. All surgeons in this hospital have completed a residency program.\n2. Dr. Kapoor is a surgeon in this hospital.\n3. The hospital cafeteria serves vegetarian meals on Fridays.\n4. All residents of the hospital housing complex drive sedans.\n\nAnd the question is, what can we validly conclude about Dr. Kapoor?\n\nHmm, I need to apply the six phases of Nyaya to figure this out. Let me go through each phase one by one.\n\n**Samshaya (Doubt Analysis):** I need to identify what doubts exist based on the premises. So, looking at each premise, do they present any doubts? \n\nPremise 1: All surgeons have completed residency. If someone is a surgeon, they must have done residency. So, if Dr. Kapoor is a surgeon, he must have completed residency. No doubt here.\n\nPremise 2: Dr. Kapoor is a surgeon. This is a fact, so no doubt.\n\nPremise 3: The cafeteria serves vegetarian meals on Fridays. That's a specific fact, so no doubt.\n\nPremise 4: All residents drive sedans. So, if someone is a resident, they drive a sedan. But wait, Dr. Kapoor is a surgeon, not necessarily a resident. Or is he? Wait, the hospital has a housing complex for residents. Are surgeons considered residents? Hmm, that's a point of doubt. Are all surgeons residents? The first premise says all surgeons have completed residency, which suggests they are part of the resident community. So, if Dr. Kapoor is a surgeon, he is a resident, and thus by premise 4, he drives a sedan. But wait, premise 4 says all residents drive sedans. So, if Dr. Kapoor is a resident, he must drive a sedan. But how does that connect to vegetarian meals?\n\nWait, maybe I'm jumping too far. Let me think again. The cafeteria serves vegetarian meals on Fridays. So, if someone is a resident, they eat there on Fridays. But do surgeons eat there? Maybe, but I don't know. Alternatively, perhaps the hospital staff or residents eat there. So, if Dr. Kapoor is a resident, he would eat at the cafeteria on Fridays, which serves vegetarian meals. Therefore, he would eat vegetarian on Fridays. But the question is, can we conclude that Dr. Kapoor is a vegetarian?\n\nWait, that might be a stretch. Because just because he eats at the cafeteria on Fridays, which serves vegetarian, it doesn't necessarily mean he eats vegetarian every day. Unless the hospital only serves vegetarian on Fridays, and he eats there, but maybe he eats elsewhere on other days. So, perhaps we can't conclude he's a vegetarian overall.\n\nAlternatively, maybe the hospital only serves vegetarian on Fridays, so if he eats there, he eats vegetarian on that day. But that doesn't mean he's a vegetarian overall. So, maybe the conclusion is that he eats vegetarian on Fridays, but not necessarily all the time.\n\nBut wait, the problem is asking what can we conclude about Dr. Kapoor. So, perhaps the conclusion is that he is a vegetarian because he eats at the cafeteria on Fridays, which serves vegetarian. But that might be a fallacy because he might not eat there every day.\n\nWait, but the premises don't specify where Dr. Kapoor eats. They just say the cafeteria serves vegetarian on Fridays. So, maybe the cafeteria is the only place he eats, but that's not stated. So, I'm not sure.\n\nAlternatively, maybe there's another angle. Let me think about the premises again.\n\nPremise 1: All surgeons have completed residency. So, Dr. Kapoor is a resident.\n\nPremise 4: All residents drive sedans. So, Dr. Kapoor drives a sedan.\n\nBut how does that connect to vegetarian meals? Maybe the connection is through the cafeteria. If he is a resident, he might eat at the cafeteria on Fridays, which is vegetarian. So, perhaps he eats vegetarian on Fridays, but that doesn't make him a vegetarian overall.\n\nAlternatively, maybe the hospital only serves vegetarian on Fridays, so if he eats there, he eats vegetarian on that day, but not necessarily all the time.\n\nWait, but the problem is to find a conclusion about Dr. Kapoor. So, perhaps the conclusion is that he is a vegetarian because he eats at the cafeteria on Fridays, which serves vegetarian. But that might be a mistake because he might not eat there every day.\n\nAlternatively, maybe the hospital only serves vegetarian on Fridays, so if he is a resident, he must eat there on Fridays, hence he eats vegetarian on that day. But that doesn't make him a vegetarian.\n\nHmm, maybe I'm overcomplicating. Let me try to structure this as a syllogism.\n\nA syllogism has a major premise, a minor premise, and a conclusion.\n\nSo, let's see:\n\nMajor premise: All residents eat at the cafeteria on Fridays.\n\nMinor premise: The cafeteria serves vegetarian meals on Fridays.\n\nConclusion: Therefore, all residents eat vegetarian on Fridays.\n\nBut wait, is that a valid syllogism? Because the major premise says all residents eat at the cafeteria on Fridays, and the minor premise says the cafeteria serves vegetarian. So, yes, the conclusion would be that all residents eat vegetarian on Fridays.\n\nBut do we know that Dr. Kapoor is a resident? Yes, because he's a surgeon, and all surgeons have completed residency, so he's a resident.\n\nTherefore, Dr. Kapoor is a resident, so he eats at the cafeteria on Fridays, which serves vegetarian. Therefore, he eats vegetarian on Fridays.\n\nBut the question is, can we conclude that he is a vegetarian? Because being vegetarian means he doesn't eat meat on any day, not just Fridays.\n\nSo, unless we know that he only eats at the cafeteria, which serves vegetarian on Fridays, and perhaps other days he eats elsewhere, but we don't know. So, we can't conclude he's a vegetarian overall.\n\nWait, but maybe the hospital only serves vegetarian on Fridays, and he eats there, so he eats vegetarian on that day, but not necessarily all the time.\n\nAlternatively, maybe the hospital serves only vegetarian on Fridays, and he eats there, so he eats vegetarian on Fridays, but maybe he's not vegetarian otherwise.\n\nSo, perhaps the conclusion is that Dr. Kapoor eats vegetarian on Fridays, but not necessarily a vegetarian overall.\n\nBut the problem is asking what can we conclude about Dr. Kapoor. So, maybe the conclusion is that he is a vegetarian because he eats at the cafeteria on Fridays, which serves vegetarian.\n\nBut that might be a mistake because he might not eat there every day.\n\nAlternatively, maybe the hospital only serves vegetarian on Fridays, so if he eats there, he eats vegetarian on that day, but not necessarily all the time.\n\nWait, but the problem is to find a valid conclusion. So, perhaps the conclusion is that Dr. Kapoor is a vegetarian because he eats at the cafeteria on Fridays, which serves vegetarian.\n\nBut I'm not sure if that's a valid conclusion.\n\nAlternatively, maybe the conclusion is that Dr. Kapoor drives a sedan because he's a resident, but that's not related to vegetarianism.\n\nWait, perhaps the connection is through the cafeteria. So, if he's a resident, he eats there on Fridays, which are vegetarian. Therefore, he must eat vegetarian on Fridays, but that doesn't make him a vegetarian.\n\nSo, maybe the conclusion is that Dr. Kapoor eats vegetarian on Fridays, but not necessarily a vegetarian.\n\nBut the problem is asking what can we conclude about Dr. Kapoor. So, perhaps the answer is that he is a vegetarian because he eats at the cafeteria on Fridays, which serves vegetarian.\n\nBut I'm not sure if that's a valid conclusion because it's only on Fridays.\n\nAlternatively, maybe the hospital serves vegetarian only on Fridays, so if he eats there, he eats vegetarian on that day, but not necessarily all the time.\n\nHmm, this is confusing. Let me try to structure it.\n\nPremise 3: The hospital cafeteria serves vegetarian meals on Fridays.\n\nPremise 4: All residents drive sedans.\n\nPremise 1: All surgeons have completed residency, so Dr. Kapoor is a resident.\n\nTherefore, Dr. Kapoor is a resident, so he drives a sedan. But how does that connect to vegetarian meals?\n\nWait, maybe the connection is that as a resident, he eats at the cafeteria on Fridays, which serves vegetarian. So, he eats vegetarian on Fridays.\n\nBut can we conclude he's a vegetarian? No, because he might eat meat on other days.\n\nAlternatively, maybe the hospital only serves vegetarian",
+  "response_length": 9302,
+  "generation_time_ms": 151708,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Dr. Kapoor completed a residency program (only valid conclusion)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "### Solution Code\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # Premise 1: All surgeons have completed a residency program"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-02: Can Kapoor NOT have completed residency? False\nPRA-02: Kapoor completed residency (premises 3,4 irrelevant)\n",
+        "problem_id": "PRA-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

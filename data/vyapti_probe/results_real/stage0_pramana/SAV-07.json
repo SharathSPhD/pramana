@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-07",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "```python\n# Final answer will be in the format: \"The final answer is: [answer]\"\n```\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nThe researcher proposes a rule about the reaction of compounds containing element X. We need to analyze the data to determine if this rule is valid.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe data is based on the reactions of six compounds: \u03b1, \u03b2, \u03b3, \u03b4, \u03b5, and \u03b6. We can use this data to evaluate the rule.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe will construct a 5-member syllogism to evaluate the rule:\n\n1. All compounds containing element X undergo the reaction. (Hypothesis)\n2. Compound \u03b1 contains element X and undergoes the reaction. (Premise 1)\n3. Compound \u03b2 contains element X and undergoes the reaction. (Premise 2)\n4. Compound \u03b3 contains element X but does not undergo the reaction. (Premise 3)\n5. Compound \u03b6 does not contain element X and does not undergo the reaction. (Premise 4)\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe will use counterfactual reasoning to test the hypothesis:\n\n- What if \u03b3 did not contain element X? Would it undergo the reaction? No, it does not. (Counterfactual 1)\n- What if \u03b6 contained element X? Would it undergo the reaction? No, it does not. (Counterfactual 2)\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe will check for fallacies in the reasoning:\n\n- No fallacies are apparent.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, we can conclude that the rule is not valid. The presence of \u03b3 and \u03b6 in the data contradicts the hypothesis.\n\nThe final answer is: The final answer is: $\\boxed{No}$",
+  "response_length": 1593,
+  "generation_time_ms": 16214,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"contains X \u2192 reacts\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "All compounds containing element X undergo the reaction. (Hypothesis)\n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-07: Checking 'contains X \u2192 reacts' ===\nCounterexample exists (gamma): True\nChecking refined 'contains X \u2227 acidic \u2192 reacts':\nRefined vy\u0101pti consistent: True\n",
+        "problem_id": "SAV-07"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

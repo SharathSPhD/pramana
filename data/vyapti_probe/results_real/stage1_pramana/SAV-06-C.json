@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-06-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # We have specific information about each dog and a general assessment.\n    # The family is unsure if Rex fits the pattern.\n    \n    # Pramana: Sources of Knowledge\n    # 1. The specific records: Each dog's behavior is explicitly stated.\n    # 2. The breed assessment: All Labradors are friendly to children.\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # 1. Pratyaksha: Direct observation: Each Labradors' record says they are friendly.\n    # 2. Anumana: Inference: All Labradors are friendly (clinic's statement).\n    # 3. Samjana: Conception: The term \"Labrador\" refers to a specific breed.\n    # 4. Pratyabhijna: Recognition: The family can recognize Rex as a Labrador.\n    # 5. Upamana: Comparison: No exceptions found in the records.\n    \n    # Tarka: Counterfactual Reasoning\n    # Assume the contrary: If all Labradors are not friendly, then the records are wrong.\n    # But the records explicitly state each dog is friendly, leading to contradiction.\n    \n    # Hetvabhasa: Fallacy Check\n    # No fallacies detected. The reasoning is valid.\n    \n    # Nirnaya: Ascertainment\n    # The veterinarian can confidently state that all Labradors are friendly.\n    \n    # Final Answer\n    return \"Yes, the veterinarian can validly assure the family that all Labradors from their clinic are friendly to children.\"\n```\n\n### Explanation:\nThe problem involves determining if all Labradors from the clinic are friendly to children based on specific records and a general breed assessment. Using the Nyaya methodology, we analyze the doubt, identify sources of knowledge, construct a syllogism, perform counterfactual reasoning, check for fallacies, and finally ascertain the conclusion. The reasoning confirms that the veterinarian can confidently make the assurance.",
+  "response_length": 1850,
+  "generation_time_ms": 31589,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Yes, all Labradors are friendly."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The breed assessment: All Labradors are friendly to children"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-06-C: Duke can be unfriendly? False\n",
+        "problem_id": "SAV-06-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

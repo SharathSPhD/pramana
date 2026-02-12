@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-02",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "The best answer is No.",
+  "response_length": 22,
+  "generation_time_ms": 276,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "No, Species H is NOT necessarily echolocating."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-02: Checking vy\u0101pti 'Nocturnal \u2192 Echolocation' ===\nH can lack echolocation: True\n",
+        "problem_id": "SAV-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

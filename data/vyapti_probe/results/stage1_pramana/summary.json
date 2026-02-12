@@ -1,0 +1,63 @@
+{
+  "model": "stage1_pramana",
+  "total": 100,
+  "correct": 71,
+  "accuracy": 0.71,
+  "probe_accuracy": 0.66,
+  "control_accuracy": 0.76,
+  "by_category": {
+    "savyabhichara": {
+      "total": 30,
+      "correct": 22,
+      "probe_correct": 8,
+      "probe_total": 15,
+      "control_correct": 14,
+      "control_total": 15
+    },
+    "viruddha": {
+      "total": 20,
+      "correct": 16,
+      "probe_correct": 9,
+      "probe_total": 10,
+      "control_correct": 7,
+      "control_total": 10
+    },
+    "prakaranasama": {
+      "total": 20,
+      "correct": 13,
+      "probe_correct": 7,
+      "probe_total": 10,
+      "control_correct": 6,
+      "control_total": 10
+    },
+    "sadhyasama": {
+      "total": 20,
+      "correct": 12,
+      "probe_correct": 6,
+      "probe_total": 10,
+      "control_correct": 6,
+      "control_total": 10
+    },
+    "kalatita": {
+      "total": 10,
+      "correct": 8,
+      "probe_correct": 3,
+      "probe_total": 5,
+      "control_correct": 5,
+      "control_total": 5
+    }
+  },
+  "tier_averages": {
+    "tier_1": 0.71,
+    "tier_2": 0.71,
+    "tier_3": 0.71,
+    "tier_4": 1.0,
+    "tier_5": 0.9239999999999995
+  },
+  "hetvabhasa_distribution": {
+    "savyabhichara": 23,
+    "viruddha": 1,
+    "sadhyasama": 4,
+    "kalatita": 1
+  }
+}

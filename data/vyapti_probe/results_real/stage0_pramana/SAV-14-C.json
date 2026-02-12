@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAV-14-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "---\n\n### Solution:\n\n**Phase 1: Samshaya (Doubt Analysis)**\nThe problem involves analyzing a rule proposed by a clerk regarding shipping costs for packages. The rule states that all Heavy packages cost $15 to ship. We need to verify if this rule is correct based on the given data.\n\n**Phase 2: Pramana (Sources of Knowledge)**\nThe data provided includes the shipping costs for all eight packages. We can use this data to analyze the rule.\n\n**Phase 3: Pancha Avayava (5-Member Syllogism)**\nWe will construct a 5-member syllogism to analyze the rule:\n\n1. All Heavy packages have the same shipping cost ($15).\n2. All packages have the same shipping cost ($15).\n3. If all packages have the same shipping cost, then all Heavy packages have the same shipping cost ($15).\n4. All Heavy packages have the same shipping cost ($15).\n5. Therefore, the rule \"All Heavy packages cost $15 to ship\" is correct.\n\n**Phase 4: Tarka (Counterfactual Reasoning)**\nWe need to consider counterfactual scenarios to test the rule:\n\n- What if Package 1 was not Heavy? Would the rule still hold? (No, it would not)\n- What if Package 7 was not Light? Would the rule still hold? (No, it would not)\n- What if the shipping cost for Heavy packages was not $15? Would the rule still hold? (No, it would not)\n\n**Phase 5: Hetvabhasa (Fallacy Check)**\nWe need to check if the rule is a fallacy:\n\n- The rule is not a universal affirmative (e.g., \"All packages are Heavy\").\n- The rule is not a universal negative (e.g., \"No packages are Heavy\").\n- The rule is not a disjunctive syllogism (e.g., \"Either package is Heavy or package is not Heavy\").\n- The rule is not a false dilemma (e.g., \"Either package is Heavy or package is not Heavy\").\n\nThe rule is a universal affirmative, and it is not a fallacy.\n\n**Phase 6: Nirnaya (Ascertainment)**\nBased on the analysis, we conclude that the rule \"All Heavy packages cost $15 to ship\" is correct.\n\n**Final Answer:**\nThe final answer is: $\\boxed{Yes}$\n\nThe rule is correct because all Heavy packages have the same shipping cost ($15), and the data supports this rule. The counterfactual scenarios and fallacy check confirm that the rule is valid. Therefore, the rule \"All Heavy packages cost $15 to ship\" is correct based on the data.",
+  "response_length": 2236,
+  "generation_time_ms": 21813,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all Heavy packages cost $15."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "The rule states that all Heavy packages cost $15 to ship. We need to verify if this rule is correct based on the given data"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14-C: Heavy \u2192 $15 \u2014 holds\n",
+        "problem_id": "SAV-14-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

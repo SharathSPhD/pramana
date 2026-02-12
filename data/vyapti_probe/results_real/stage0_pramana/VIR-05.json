@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-05",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** The answer should be in the format of a set of students.\n\n## Step 1: Samshaya (Doubt Analysis)\nWe need to identify the elements of the problem and understand the policy. The policy states that students who play sports AND are NOT on the honor roll must attend study hall. We have two sets: A (students who play sports) = {p, q, r, s, t} and B (students who are on the honor roll) = {q, r, u, v}. We need to find the intersection of A and the complement of B to determine which students must attend study hall.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe have the following sources of knowledge:\n- Set A = Students who play sports = {p, q, r, s, t}\n- Set B = Students who are on the honor roll = {q, r, u, v}\n- The policy states: \"Students who play sports AND are NOT on the honor roll must attend study hall.\"\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe will use the 5-member syllogism to analyze the problem:\n1. All students who play sports are in set A.\n2. All students who are on the honor roll are in set B.\n3. Students who play sports AND are NOT on the honor roll must attend study hall.\n4. We need to find the intersection of A and the complement of B (A \u2229 B') to determine which students must attend study hall.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe will use counterfactual reasoning to analyze the problem:\n- If a student plays sports AND is NOT on the honor roll, then they must attend study hall.\n- We need to find the students who satisfy this condition.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe will check for fallacies in our reasoning:\n- We have not assumed any information that is not given.\n- We have not used any fallacious reasoning.\n\n## Step 6: Nirnaya (Ascertainment)\nWe will use the 5-member syllogism to determine which students must attend study hall:\n1. A \u2229 B' = {p, s, t} (students who play sports AND are NOT on the honor roll)\n2. Therefore, the students who must attend study hall are {p, s, t}.\n\nThe final answer is: $\\boxed{\\{p, s, t\\}}$",
+  "response_length": 1997,
+  "generation_time_ms": 20542,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "{p, s, t} must attend study hall."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "All students who play sports are in set A"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-05: Can pa avoid study_hall? False\nVIR-05: Must attend: pa, ps, pt (A\u2229B')\n",
+        "problem_id": "VIR-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

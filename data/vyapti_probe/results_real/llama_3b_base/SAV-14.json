@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Identify the rule proposed by the clerk\nThe clerk proposes that all Heavy packages cost $15 to ship.\n\n## Step 2: Check if the rule applies to all Heavy packages\nWe need to verify if the rule applies to all Heavy packages, including those that cost $25 to ship.\n\n## Step 3: Check if the rule applies to Package 6\nPackage 6 is a Heavy package that costs $25 to ship. Since the rule states that all Heavy packages cost $15 to ship, the rule does not apply to Package 6.\n\n## Step 4: Check if the rule applies to Package 6\nSince Package 6 is a Heavy package that costs $25 to ship, the rule does not apply to it.\n\n## Step 5: Conclusion\nThe rule proposed by the clerk is incorrect because it does not apply to all Heavy packages, specifically those that cost $25 to ship.\n\nThe final answer is: $\\boxed{0}$",
+  "response_length": 810,
+  "generation_time_ms": 7704,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"Heavy \u2192 $15\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14: 'Heavy \u2192 $15' holds: False\n",
+        "problem_id": "SAV-14"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

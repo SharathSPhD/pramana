@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-08-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef schedule_tasks(tasks, slots):\n    # Assign tasks to slots ensuring the order constraints\n    # tasks: list of task names (T1, T2, T3)\n    # slots: list of slot names (Morning, Afternoon, Evening)\n    # Returns a dictionary with task: slot assignments\n    # Example usage: schedule_tasks(['T1', 'T2', 'T3'], ['Morning', 'Afternoon', 'Evening'])\n    # Returns: {'T1': 'Morning', 'T2': 'Afternoon', 'T3': 'Evening'}\n    \n    # Assign each task to a slot, ensuring the order constraints\n    # We need to find a permutation of slots where T1 < T2 < T3\n    # So, the order of slots must be such that the first slot is for T1, the second for T2, the third for T3\n    \n    # We can represent the order constraints as a directed graph\n    # T1 -> T2 -> T3\n    # So, the slot assignments must satisfy slot1 < slot2 < slot3\n    \n    # The possible slot orders are:\n    # Morning -> Afternoon -> Evening\n    # Morning -> Evening -> Afternoon (invalid, since Afternoon comes before Evening)\n    # Afternoon -> Morning -> Evening (invalid, since Morning comes before Afternoon)\n    # Afternoon -> Evening -> Morning (invalid)\n    # Evening -> Morning -> Afternoon (invalid)\n    # Evening -> Afternoon -> Morning (invalid)\n    \n    # The only valid order is Morning -> Afternoon -> Evening\n    \n    # Therefore, assign T1 to Morning, T2 to Afternoon, T3 to Evening\n    \n    assignments = {}\n    assignments['T1'] = 'Morning'\n    assignments['T2'] = 'Afternoon'\n    assignments['T3'] = 'Evening'\n    return assignments\n```\n\n### Explanation:\nThe solution assigns each task to a slot while respecting the temporal constraints. By recognizing that the only valid slot order is Morning \u2192 Afternoon \u2192 Evening, the tasks are assigned accordingly. This ensures T1 is scheduled before T2, and T2 before T3, fulfilling all constraints.",
+  "response_length": 1848,
+  "generation_time_ms": 33171,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "T1=Morning, T2=Afternoon, T3=Evening."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-08-C: T1=1, T2=2, T3=3\n",
+        "problem_id": "SAD-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

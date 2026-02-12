@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I have this problem about a company's vacation policy, and I need to figure out how many vacation days Employee #4472 gets. Let me try to break it down step by step.\n\nFirst, the policy manual has three rules, listed in order of priority. The later rules override the earlier ones. That means if there's a conflict, the rule that comes later takes precedence. So, the order is:\n\n1. General Rule (Section 1): All employees get 15 vacation days per year.\n2. Department Override (Section 3): Engineering department employees get 20 vacation days.\n3. Individual Exception (Section 5): Employee #4472, who is in the Engineering department, gets 10 days because of probation.\n\nWait, so the last rule is the most specific and overrides the others. Let me think about how these apply.\n\nEmployee #4472 is in the Engineering department. So, first, the General Rule says all employees get 15 days. But then, the Department Override says Engineering employees get 20 days. So, the Department Override overrides the General Rule for Engineering employees. That makes sense because it's a later rule.\n\nBut then, there's the Individual Exception for this specific employee. It says they get 10 days due to probation. So, does this override the Department Override? Since it's a later rule, yes, it should take precedence.\n\nLet me visualize this:\n\n- General Rule: 15 days for everyone.\n- Department Override: 20 days for Engineering employees.\n- Individual Exception: 10 days for Employee #4472.\n\nSo, the hierarchy is: Individual Exception > Department Override > General Rule.\n\nTherefore, Employee #4472 is in Engineering, so normally they'd get 20 days. But because of the Individual Exception, they only get 10 days. The later rules override the earlier ones, so the most specific rule applies.\n\nI think that's how it works. So, the answer should be 10 vacation days for Employee #4472.\n</think>\n\nThe company's vacation policy is structured with three rules, each overriding the previous ones if there's a conflict. Employee #4472 is in the Engineering department, so the Department Override applies, granting them 20 days. However, the Individual Exception specifically overrides this, giving them only 10 vacation days due to their probationary period.\n\n**Answer:** Employee #4472 receives 10 vacation days.",
+  "response_length": 2304,
+  "generation_time_ms": 35990,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "10 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": false,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01: Vacation days for #4472: 10\n",
+        "problem_id": "KAL-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-05-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "Please use the following format: \"The final answer is: $\\boxed{[answer]}$\"\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nWe need to identify the unknowns and the given information. The unknown is the lab where Ravi works, and the given information includes the labs where Priya, Qadir, and Sita work, as well as the fact that Lab-South has exactly two researchers.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe sources of knowledge are the statements provided. We can use these statements to derive conclusions.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can construct a syllogism using the given information.\n\nLet's analyze the information:\n- Priya works in Lab-North.\n- Qadir works in Lab-South.\n- Sita works in Lab-North.\n- Lab-South has exactly two researchers.\n\nSince Lab-South has exactly two researchers, and Qadir works in Lab-South, the other researcher in Lab-South must be Ravi.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider the counterfactuals. If Ravi worked in Lab-North, then Lab-South would have only one researcher, which contradicts the given information.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies. There are no fallacies in the given information.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, we can conclude that Ravi works in Lab-South.\n\nThe final answer is: $\\boxed{Lab-South}$",
+  "response_length": 1374,
+  "generation_time_ms": 13662,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Ravi works in Lab-South."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "If Ravi worked in Lab-North, then Lab-South would have only one researcher, which contradicts the given information.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-05-C: Ravi = South: 1 == 1\n",
+        "problem_id": "PRA-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-02-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Solution:**\n\nWe need to determine whether Product P is rejected based on the given conditions.\n\n**Given:**\n- The product is rejected if it is **NOT** the case that **BOTH** Test-A **AND** Test-B **pass**.\n- Product P has **FAILED** **BOTH** Test-A **AND** Test-B.\n\n**Analysis:**\n1. **Original Statement:**  \n   Rejected \u2194 \u00ac(Test-A \u2227 Test-B)\n\n2. **Product P's Condition:**  \n   Product P has failed both Test-A and Test-B.  \n   This means **Test-A is NOT passed** **AND** **Test-B is NOT passed**.  \n   In logical terms: \u00acTest-A \u2227 \u00acTest-B\n\n3. **Evaluate the Rejection Condition:**  \n   The rejection condition is:  \n   \u00ac(Test-A \u2227 Test-B)  \n   Which is equivalent to:  \n   \u00acTest-A \u2228 \u00acTest-B (De Morgan's Law)\n\n4. **Compare with Product P's Condition:**  \n   Product P's condition: \u00acTest-A \u2227 \u00acTest-B  \n   Rejection condition: \u00acTest-A \u2228 \u00acTest-B\n\n   Since **\u00acTest-A \u2227 \u00acTest-B** implies **\u00acTest-A \u2228 \u00acTest-B**, Product P satisfies the rejection condition.\n\n**Conclusion:**  \nProduct P is **rejected** because it failed both tests, which means it does not satisfy the requirement that both tests must pass for the product to be accepted.\n\n\\boxed{\\text{Yes, Product P is rejected.}}",
+  "response_length": 1189,
+  "generation_time_ms": 23082,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, rejected."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-02-C: Can product NOT be rejected? False\n",
+        "problem_id": "VIR-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

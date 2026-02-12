@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-03-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\nclass Solution:\n    def __init__(self):\n        self.description = \"Every student who scored above 90 on the test received a scholarship.\"\n        self.hypothesis = \"Student Y scored 95 on the test.\"\n        self.conclusion = \"We can conclude that Student Y received a scholarship.\"\n        self.reasoning = [\n            \"Samshaya: We have a clear statement about scoring above 90 leading to a scholarship.\",\n            \"Pramana: The test score is known to be 95.\",\n            \"Pancha Avayava: If a student scores above 90, they receive a scholarship. Student Y scored 95. Therefore, Student Y received a scholarship.\",\n            \"Tarka: Suppose Student Y did not receive a scholarship. Then Student Y's score must be 90 or below, which contradicts the known score of 95.\",\n            \"Hetvabhasa: No fallacies are present in the reasoning.\",\n            \"Nirnaya: The conclusion is valid and certain.\"\n        ]\n```\n\n### Solution HTML:\n```html\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Nyaya Methodology Solution</title>\n</head>\n>\n<body>\n    <h1>Solution Using Nyaya Methodology</h1>\n    <h2>Samshaya (Doubt Analysis)</h2>\n    <p>Samshaya: We have a clear statement about scoring above 90 leading to a scholarship.</p>\n    \n    <h2>Pramana (Sources of Knowledge)</h2>\n    <p>Pramana: The test score is known to be 95.</p>\n    \n    <h2>Pancha Avayava (5-Member Syllogism)</h2>\n    <p>If a student scores above 90, they receive a scholarship. Student Y scored 95. Therefore, Student Y received a scholarship.</p>\n    \n    <h2>Tarka (Counterfactual Reasoning)</h2>\n    <p>Suppose Student Y did not receive a scholarship. Then Student Y's score must be 90 or below, which contradicts the known score of 95.</p>\n    \n    <h2>Hetvabhasa (Fallacy Check)</h2>\n    <p>No fallacies are present in the reasoning.</p>\n    \n    <h2>Nirnaya (Ascertainment)</h2>\n    <p>The conclusion is valid and certain.</p>\n</body>\n</html>\n</>\n```\n\n### Solution PDF:\n```pdf\n%PDF-1.4\n%\u00e4\u00fc \u00e4\u00f6\u00ef \u00e7\u00f4 \u00e7\u00f4 \u00fc \u00e4\u00f6\u00ef \u00e7\u00f4 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\n% \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc \u00e7\u00f2 \u00e7\u00f2 \u00e7\u00f2 \u00f1\u00fc\"\n</script>\n```\n\n### Solution Image:\n```python\nclass SolutionImage:\n    def __init__(self):\n        self.title = \"Nyaya Methodology Solution\"\n        self.description = \"Every student who scored above 90 on the test received a scholarship. Student Y scored 95 on the test. We can conclude that Student Y received a scholarship.\"\n        self.steps = [\n            \"1. **Samshaya (Doubt Analysis)**: We have a clear statement about scoring above 90 leading to a scholarship.\",\n            \"2. **Pramana (Sources of Knowledge)**: The test score is known to be 95.\",\n            \"3. **Pancha Avayava (5-Member Syllogism)**: If",
+  "response_length": 4385,
+  "generation_time_ms": 149232,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Student Y received scholarship."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-03-C: Can student NOT have scholarship? False\n",
+        "problem_id": "VIR-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

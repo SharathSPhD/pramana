@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-02-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Answer:** Dr. Kapoor has completed a residency program.\n**Explanation:** This is a classic example of a syllogism, a form of deductive reasoning. The premises provide information about the general characteristics of surgeons in the hospital, and the conclusion is drawn from these premises using logical rules.\n\nThe argument follows this structure:\n1. All surgeons in this hospital have completed a residency program.\n2. Dr. Kapoor is a surgeon in this hospital.\n\u2234 Dr. Kapoor has completed a residency program.\n\nThe conclusion is valid because it follows logically from the premises. If all surgeons in the hospital have completed a residency program, and Dr. Kapoor is a surgeon in the hospital, then it is logically certain that Dr. Kapoor has completed a residency program.\n\nThis type of argument is an example of a categorical syllogism, which involves drawing conclusions from general statements about categories of things. In this case, the categories are \"surgeons\" and \"residency programs.\" The argument is valid because it uses logical rules to draw a conclusion from the premises, rather than relying on personal opinion or anecdotal evidence.",
+  "response_length": 1155,
+  "generation_time_ms": 8698,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Dr. Kapoor completed a residency program."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All surgeons in this hospital have completed a residency program"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-02-C: Can Kapoor NOT have completed residency? False\n",
+        "problem_id": "PRA-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

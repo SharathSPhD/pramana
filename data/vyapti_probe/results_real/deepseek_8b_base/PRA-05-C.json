@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-05-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I've got this problem here about four researchers: Priya, Qadir, Ravi, and Sita. Each of them works in one of two labs: Lab-North or Lab-South. The problem gives me some information, and I need to figure out which lab Ravi works in. Let me try to break this down step by step.\n\nFirst, let's list out the information given:\n\n1. Priya works in Lab-North.\n2. Qadir works in Lab-South.\n3. Sita works in Lab-North.\n4. Lab-South has exactly two researchers.\n\nSo, we have four researchers, each assigned to either Lab-North or Lab-South. Two of them are already assigned: Priya and Sita to Lab-North, and Qadir to Lab-South. Now, the fourth researcher is Ravi, and we need to determine which lab he's in.\n\nLet me start by noting down the known assignments:\n\n- Lab-North: Priya, Sita\n- Lab-South: Qadir\n\nNow, we know that Lab-South has exactly two researchers. Since Qadir is already in Lab-South, that means there must be one more person in Lab-South. The remaining researcher is Ravi. Therefore, Ravi must be in Lab-South to make the total number of researchers in Lab-South equal to two.\n\nWait, hold on. Let me make sure I'm not making a mistake here. So, if Lab-South has exactly two researchers, and Qadir is one, then Ravi must be the other. That would mean Ravi is in Lab-South. But let me double-check.\n\nAlternatively, maybe I'm miscounting. Let's see: there are four researchers in total. If two are in Lab-North (Priya and Sita), and one is in Lab-South (Qadir), that accounts for three researchers. So, the fourth researcher, Ravi, must be in the other lab, which is Lab-South, to make Lab-South have two researchers. Yes, that makes sense.\n\nSo, if Lab-South needs two researchers, and Qadir is already there, Ravi must be the second one. Therefore, Ravi works in Lab-South.\n\nWait, but let me think again. Sometimes, these logic puzzles can be tricky. Is there another way to interpret the information? For example, could Ravi be in Lab-North, making Lab-North have three researchers, and Lab-South have one? But the problem specifically says that Lab-South has exactly two researchers. So, that can't be the case because if Ravi is in Lab-North, Lab-South would only have Qadir, which is one researcher, not two.\n\nTherefore, Ravi must be in Lab-South to satisfy the condition that Lab-South has exactly two researchers. So, the answer should be that Ravi works in Lab-South.\n\nI think that's solid. Let me just recap:\n\n- Known assignments: Priya (Lab-North), Qadir (Lab-South), Sita (Lab-North).\n- Total researchers: 4.\n- Lab-South needs two researchers, so with Qadir already there, Ravi must be the second.\n\nYep, that checks out. I don't see any other possibilities that fit the given information.\n</think>\n\nRavi works in Lab-South.\n\n**Step-by-Step Explanation:**\n\n1. **Identify the given information:**\n   - Priya is in Lab-North.\n   - Qadir is in Lab-South.\n   - Sita is in Lab-North.\n   - Lab-South has exactly two researchers.\n\n2. **Assign the known researchers:**\n   - Lab-North: Priya, Sita.\n   - Lab-South: Qadir.\n\n3. **Determine the number of researchers in each lab:**\n   - Lab-North has 2 researchers.\n   - Lab-South has 1 researcher (Qadir).\n\n4. **Use the information that Lab-South has exactly two researchers:**\n   - Since Lab-South currently has only Qadir, one more researcher is needed there.\n\n5. **Identify the remaining researcher:**\n   - The only researcher left is Ravi.\n\n6. **Assign Ravi to Lab-South:**\n   - To satisfy the condition, Ravi must be in Lab-South.\n\n**Answer:** Ravi works in Lab-South.",
+  "response_length": 3534,
+  "generation_time_ms": 67518,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Ravi works in Lab-South."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "So, if Lab-South has exactly two researchers, and Qadir is one, then Ravi must be the other. That would mean Ravi is in Lab-South. But let me double-check.\n\nAlternatively, maybe I'm miscounting"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-05-C: Ravi = South: 1 == 1\n",
+        "problem_id": "PRA-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

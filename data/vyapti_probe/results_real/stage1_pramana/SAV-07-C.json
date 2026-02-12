@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-07-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # No doubt, the question is clear.\n    \n    # Pramana: Sources of Knowledge\n    # The given data is the source of knowledge.\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # 1. Pratyaksha: Direct Observation: All compounds containing X react.\n    # 2. Anumana: Inference: All acidic compounds react.\n    # 3. Pratyaksha: Direct Observation: Compound \u03b6 does not contain X.\n    # 4. Anumana: Inference: If a compound does not contain X, it does not react.\n    # 5. Samvaya: Connection: Therefore, the rule is valid.\n    \n    # Tarka: Counterfactual Reasoning\n    # Suppose the rule is false. Then there exists a compound containing X that does not react.\n    # But all compounds containing X react. This leads to contradiction.\n    \n    # Hetvabhasa: Fallacy Check\n    # No fallacies detected.\n    \n    # Nirnaya: Ascertainment\n    # The rule is valid.\n    \n    # Final Answer\n    return \"The rule is valid.\"\n```\n\n### Explanation:\nThe solution follows the Nyaya methodology to systematically analyze and validate the proposed rule. Each phase checks a different aspect of the reasoning to ensure the rule's validity. The final conclusion is that the rule is indeed correct based on the given data.",
+  "response_length": 1280,
+  "generation_time_ms": 23217,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, \"contains X \u2192 reacts\" holds in data."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "# But all compounds containing X react. This leads to contradiction"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-07-C: \u03b3 can fail to react? False\n",
+        "problem_id": "SAV-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\nLet's analyze the problem step by step using the **Nyaya** methodology.\n\n---\n\n### **1. Samshaya (Doubt Analysis)**\n\nWe have three friends: **Jun**, **Kira**, and **Lev**. Each of them orders a different dish: **pasta**, **sushi**, or **salad**.\n\nThe given information is:\n1. **Jun does not order pasta.**\n2. **The restaurant has won three Michelin stars.**\n3. **Kira orders sushi.**\n4. **The restaurant's interior features exposed brick walls.**\n\n**Doubt:** What dish does Lev order?\n\n---\n\n### **2. Pramana (Sources of Knowledge)**\n\nWe rely on the given information as our source of knowledge:\n- **Jun** \u2192 Does not order pasta.\n- **Kira** \u2192 Orders sushi.\n- **Lev** \u2192 Dish to be determined.\n\nThe restaurant's Michelin stars and interior details are provided but do not directly influence the dish selection.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**\n\nA syllogism is a form of logical reasoning with five parts:\n1. **Major premise:** All restaurants with Michelin stars serve pasta, sushi, or salad.\n2. **Minor premise:** This restaurant has Michelin stars and has exposed brick walls.\n3. **Middle term:** Michelin stars \u2192 pasta, sushi, or salad.\n4. **Conclusion:** Therefore, this restaurant serves pasta, sushi, or salad.\n\nHowever, this syllogism doesn't directly help us determine Lev's dish.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**\n\nLet's consider counterfactuals:\n- **If Jun didn't order pasta, then someone else must have ordered it.**\n- **If Kira ordered sushi, then Lev cannot order sushi (since all dishes are different).**\n\nFrom this, we infer that:\n- **Lev cannot order sushi** (since Kira already did).\n- **Lev must order either pasta or salad.**\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**\n\nWe need to check for fallacies:\n- **Affirming the opposite:** No fallacies are evident in the reasoning.\n- **Denying the opposite:** No relevant denial is present.\n\n---\n\n### **6. Nirnaya (Ascertainment)**\n\nBased on the above analysis:\n- **Kira orders sushi.**\n- **Jun does not order pasta.**\n- **Lev must order the remaining dish, which is pasta or salad.**\n\nSince all dishes are different and Jun cannot order pasta, Lev must order **salad**.\n\n---\n\n### **Final Answer:**\n\n\\boxed{\\text{salad}}",
+  "response_length": 2226,
+  "generation_time_ms": 41959,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Lev orders pasta."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "**\n- **If Kira ordered sushi, then Lev cannot order sushi (since all dishes are different)"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10: Lev = Pasta (aesthetic info irrelevant)\n",
+        "problem_id": "PRA-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

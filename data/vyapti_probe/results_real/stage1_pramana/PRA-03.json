@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-03",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\nWhat is the question? What are the facts? What is the doubt?\n\n**Question:** What is the value of Q when X is true, Y is true, Z is false?\n\n**Facts:**\n- X is true\n- Y is true\n- Z is false\n\n**Doubt:** The value of Q is unknown. We need to determine whether Q is true or false.\n\n### Phase 2: Pramana (Sources of Knowledge)\nWhat are the sources of knowledge? Are they reliable?\n\n**Sources:**\n1. The logical rules provided in the problem.\n2. The truth values of X, Y, Z.\n\n**Reliability:**\n- The logical rules are given as the operational definition of the circuit. They are reliable.\n- The truth values of X, Y, Z are provided as facts. They are reliable.\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\nConstruct a syllogism using the 5 members.\n\n**Pratijna (Thesis):** Q is true.\n\n**Hetu (Reason):** Because when X is true and Y is true, Q is true (Rule 1). Since X is true and Y is true, Rule 1 applies, making Q true.\n\n**Udaharana (Example):** For example, if X is true and Y is true, then Q is true (Rule 1). Since X is true and Y is true, Q is true.\n\n**Upamana (Comparison):** This is comparable to Rule 1. When X and Y are both true, Q is true. Since X and Y are both true, Q is true.\n\n**Nigamana (Inference):** Therefore, Q is true.\n\n### Phase 4: Tarka (Counterfactual Reasoning)\nAssume the opposite and check for contradiction.\n\n**Assumption:** Q is false.\n\n**Check:** If Q is false, then:\n\n- Rule 1: X \u2227 Y \u2192 Q is true. But Q is false, which contradicts Rule 1.\n\nTherefore, Q cannot be false. Q must be true.\n\n### Phase 5: Hetvabhasa (Fallacy Check)\nCheck for logical fallacies.\n\n**Fallacy 1:** Affirming the antecedent. If X and Y are true, Q is true. Since X and Y are true, Q is true.\n\n**Fallacy 2:** Denying the antecedent. If X and Y are not both true, Q is false. Since X and Y are both true, we don't deny the antecedent.\n\n**Fallacy 3:** Equivocation. No terms are equivocal.\n\n**Fallacy 4:** Begging the question. No question is begged.\n\n**Fallacy 5:** Conjunction fallacy. No conjunction fallacies.\n\nNo fallacies present.\n\n### Phase 6: Nirnaya (Ascertainment)\nFinal conclusion after eliminating doubt.\n\n**Final Answer:** Q is true.\n### Phase 7: Final Answer\n**Q:** True\n**Justification:** When X is true and Y is true, Rule 1 states that Q is true. Since X and Y are both true, Q must be true. No contradictions arise when assuming Q is true. No fallacies are present in the reasoning. Therefore, Q is definitely true.\n### Phase 8: Markdown Output\n```markdown\n## Final Answer\n\n**Q:** True\n\n**Justification:**\nWhen X is true and Y is true, Rule 1 states that Q is true. Since X and Y are both true, Q must be true. No contradictions arise when assuming Q is true. No fallacies are present in the reasoning. Therefore, Q is definitely true.\n```\n```",
+  "response_length": 2799,
+  "generation_time_ms": 57024,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Q = true."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "**Udaharana (Example):** For example, if X is true and Y is true, then Q is true (Rule 1). Since X is true and Y is true, Q is true.\n\n**Upamana (Comparison):** This is comparable to Rule 1"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-03: Can Q be false? False\n",
+        "problem_id": "PRA-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

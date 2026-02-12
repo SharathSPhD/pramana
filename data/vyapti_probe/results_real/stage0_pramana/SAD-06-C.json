@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-06-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** This problem is a classic example of applying the Nyaya methodology to a real-world scenario.\n\n## Step 1: Samshaya (Doubt Analysis)\nTo begin, we must identify any doubts or uncertainties regarding the problem. In this case, our doubt is whether Object Q's surface temperature of 1200\u00b0C is indeed above 1000\u00b0C, which is the defining characteristic of Feature-P.\n\n## Step 2: Pramana (Sources of Knowledge)\nNext, we must identify the sources of knowledge that support our understanding of the problem. The problem statement provides us with two pieces of information:\n- Rule 1: \"An object is classified as Type-X if it has Feature-P.\"\n- Rule 2: \"Feature-P is defined as having a surface temperature above 1000\u00b0C.\"\nThese rules are our primary sources of knowledge.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nNow, we construct a 5-member syllogism to reason about the classification of Object Q.\n1. All objects with Feature-P are classified as Type-X (Rule 1).\n2. Object Q has Feature-P (surface temperature above 1000\u00b0C).\n3. All objects with Feature-P have a surface temperature above 1000\u00b0C (Rule 2).\n4. Object Q has a surface temperature above 1000\u00b0C.\n5. Therefore, Object Q is classified as Type-X.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nTo further validate our reasoning, we consider counterfactual scenarios:\n- What if Object Q's surface temperature were below 1000\u00b0C? Would it still be classified as Type-X?\n- No, according to Rule 1, an object must have Feature-P to be classified as Type-X. If Object Q did not have Feature-P, it would not be classified as Type-X.\n- Therefore, our reasoning is sound.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe must check for fallacies in our reasoning:\n- Our reasoning is free from fallacies such as affirming the consequent (Rule 1 implies Rule 2, but not vice versa).\n- Our reasoning is also free from fallacies such as denying the antecedent (we do not deny that Object Q has Feature-P, we only consider the definition of Feature-P).\n\n## Step 6: Nirnaya (Ascertainment)\nFinally, we arrive at our final answer:\nBased on our analysis, we conclude that Object Q is indeed classified as Type-X.\n\nThe final answer is: $\\boxed{Yes}$",
+  "response_length": 2188,
+  "generation_time_ms": 20689,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Q is Type-X."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All objects with Feature-P are classified as Type-X (Rule 1)"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-06-C: Can Q lack type_x? False\nSAD-06-C: Yes \u2014 valid classification\n",
+        "problem_id": "SAD-06-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: sadhyasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": true
+}

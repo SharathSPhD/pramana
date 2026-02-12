@@ -1,0 +1,71 @@
+{
+  "problem_id": "KAL-04-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "The answer is No.\nThe reason is that the system's access control log only records actions taken on specific dates, and the system's revocation of access to Server X on Mar 15 does not imply that the system had previously granted access to Server X on February 1. The system's revocation of access only indicates that the system had previously granted access to Server X on Jan 1, and that the access was revoked on Mar 15. It does not imply that the system had granted access to Server X on February 1. Therefore, the system should not have granted User A access to Server X on February 1.",
+  "response_length": 589,
+  "generation_time_ms": 4961,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, access granted on Feb 1."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-04-C: Has access on Feb 1? True\n",
+        "problem_id": "KAL-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

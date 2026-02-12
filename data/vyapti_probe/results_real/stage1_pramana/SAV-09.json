@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-09",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef analyze_security_system():\n    # Samshaya: Doubt Analysis\n    # Identify the doubt and its reasons\n    doubt = \"Is the alarm triggered only when sensor A is triggered?\"\n    \n    # Pramana: Sources of Knowledge\n    # List all events and their outcomes\n    events = [\n        (\"A\", \"triggered\", \"B\", \"triggered\", \"C\", \"not triggered\", \"D\", \"not triggered\", \"Alarm sounded\"),\n        (\"A\", \"triggered\", \"B\", \"not triggered\", \"C\", \"triggered\", \"D\", \"not triggered\", \"Alarm sounded\"),\n        (\"A\", \"triggered\", \"B\", \"not triggered\", \"C\", \"not triggered\", \"D\", \"not triggered\", \"Alarm sounded\"),\n        (\"A\", \"triggered\", \"B\", \"not triggered\", \"C\", \"not triggered\", \"D\", \"not triggered\", \"Alarm did NOT sound\"),\n        (\"B\", \"triggered\", \"C\", \"triggered\", \"A\", \"not triggered\", \"D\", \"not triggered\", \"Alarm sounded\")\n    ]\n    \n    # Extract outcomes based on sensor triggers\n    outcomes = {}\n    for event in events:\n        triggered = [event[i] == \"triggered\" for i in range(8)]\n        outcomes[tuple(triggered)] = event[8]\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # General syllogism template: All X are Y; All Z are Y; All W are Y; All V are Y; Therefore, All T are Y\n    syllogism = (\n        \"All A-triggered events trigger the alarm\",\n        \"All B-triggered events trigger the alarm\",\n        \"All C-triggered events trigger the alarm\",\n        \"All D-triggered events trigger the alarm\",\n        \"All events trigger the alarm\",\n        \"Therefore, the alarm sounds whenever sensor A is triggered\"\n    )\n    \n    # Tarka: Counterfactual Reasoning\n    # Assume the opposite and check consistency\n    if not claim:\n        # If the alarm does not sound whenever A is triggered\n        # Check if any event where A is triggered but alarm did not sound\n        for event in events:\n            a_triggered = event[0] == \"triggered\"\n            alarm_sounded = event[8] == \"Alarm sounded\"\n            if a_triggered and not alarm_sounded:\n                return \"The claim is invalid because in Event 4, A is triggered but the alarm did not sound.\"\n    \n    # Hetvabhasa: Fallacy Check\n    # Check for common fallacies\n    fallacies = [\n        (\"Affirming the antecedent\", \"If A is triggered, the alarm sounds\"),\n        (\"Denying the consequent\", \"If the alarm sounds, A is triggered\"),\n        (\"Conjunction fallacy\", \"A and B together trigger the alarm\")\n    ]\n    \n    # Nirnaya: Ascertainment\n    # Final conclusion\n    return \"The security company's claim is valid based on the log.\"\n\nanalyze_security_system()\n```\n\n### Explanation:\nThe code systematically applies the Nyaya methodology to analyze the security system's claim. It starts by identifying the doubt, then examines the events to gather knowledge. Using a syllogistic structure, it builds the argument that whenever sensor A is triggered, the alarm sounds. Counterfactual reasoning checks if the claim holds in all scenarios, and fallacy checks ensure the logic is sound. The final conclusion validates the security company's claim.",
+  "response_length": 3051,
+  "generation_time_ms": 54192,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"A triggered \u2192 alarm\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "---\n\n### Solution Code:\n```python\ndef analyze_security_system():\n    # Samshaya: Doubt Analysis\n    # Identify the doubt and its reasons\n    doubt = \"Is the alarm triggered only when sensor A is trigg"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-09: Vy\u0101pti 'A\u2192alarm' holds: False\n",
+        "problem_id": "SAV-09"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-09",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef analyze_chocolate_and_left_handedness():\n    # Data for each subject\n    subjects = [\n        {\"name\": \"A\", \"left\": True, \"chocolate\": True},\n        {\"name\": \"B\", \"left\": False, \"chocolate\": True},\n        {\"name\": \"C\", \"data\": True, \"chocolate\": False},\n        {\"name\": \"D\", \"left\": False, \"chocolate\": False},\n        {\"name\": \"E\", \"left\": True, \"chocolate\": True},\n        {\"name\": \"F\", \"name\": \"F\", \"left\": False, \"chocolate\": False}\n    ]\n    \n    # Phase 1: Samshaya (Doubt Analysis)\n    # No uncertainty; data is complete\n    doubt = \"No doubt\"\n    \n    # Phase 2: Pramana (Sources of Knowledge)\n    # The data is the source of knowledge\n    pramana = \"Data\"\n    \n    # Phase 3: Pancha Avayava (5-Member Syllogism)\n    # This is a universal syllogism. We need to find a common property.\n    # We look for the middle term (chocolate) and the major and minor terms.\n    # The major term is the predicate (left-handed implies chocolate)\n    # The minor term is the subject (chocolate)\n    # The middle term is the common property (left-handed)\n    # The conclusion is the universal negative (not all left-handed people like chocolate)\n    # Since we have both left-handed people who like chocolate and those who don't,\n    # the middle term is not the entire predicate, so the syllogism is invalid.\n    # Therefore, we cannot conclude anything about the universal rule.\n    syllogism = \"No valid syllogism\"\n    \n    # Phase 4: Tarka (Counterfactual Reasoning)\n    # Assume the opposite: all left-handed people like chocolate.\n    # Then, subject C (left-handed and does not like chocolate) would violate this.\n    # Therefore, the assumption is false, supporting the original conclusion.\n    tarka = \"Counterfactual reasoning supports the conclusion\"\n    \n    # Phase 5: Hetvabhasa (Fallacy Check)\n    # This is a fallacy. We are not considering all cases.\n    # The syllogism is based on a partial observation, not a universal rule.\n    fallacy = \"Affirming the contrary without universal premises\"\n    \n    # Phase 6: Nirnaya (Ascertainment)\n    # Based on the data, being left-handed does not tell us anything about chocolate.\n    # There are left-handed people who like chocolate and those who don't.\n    # Therefore, we cannot establish a universal rule.\n    conclusion = \"No conclusion can be drawn\"\n    \n    return {\n        \"Samshaya\": doubt,\n        \"Pramana\": pramana,\n        \"Pancha Avayava\": syllogism,\n        \"Tarka\": tarka,\n        \"Hetvabhasa\": fallacy,\n        \"Nirnaya\": conclusion\n    }\n\nanalyze_chocolate_and_left_handedness()\n```\n\n### Explanation:\nThe problem is analyzed using the Nyaya methodology. The data shows that some left-handed individuals like chocolate while others do not. This prevents us from drawing a universal conclusion about the relationship between left-handedness and chocolate preference. The analysis identifies fallacies and uses counterfactual reasoning to validate the conclusion that no definitive relationship can be established.",
+  "response_length": 3024,
+  "generation_time_ms": 54208,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, handedness doesn't reliably predict chocolate preference."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "# Therefore, we cannot conclude anything about the universal rule"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-09: No vy\u0101pti \u2014 handedness does not predict chocolate\n",
+        "problem_id": "PRA-09"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

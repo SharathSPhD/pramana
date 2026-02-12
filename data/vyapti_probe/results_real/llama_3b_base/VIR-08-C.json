@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-08-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "Yes\nNo\n\nExplanation:\nThe rule states the heater turns on if the temperature drops below 60\u00b0F. Since the current temperature is 55\u00b0F, which is below 60\u00b0F, we can conclude the heater is on. The rule is satisfied, and the heater is on. Therefore, the answer is Yes.",
+  "response_length": 262,
+  "generation_time_ms": 2489,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Yes, heater is ON."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-08-C: Can heater be OFF? False\n",
+        "problem_id": "VIR-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

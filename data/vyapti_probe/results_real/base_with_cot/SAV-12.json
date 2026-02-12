@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-12",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I need to figure out if Treatment T guarantees recovery for patients with Condition X based on the given data. Let me start by looking at the patients one by one.\n\nPatient 1 through 5 all received Treatment T and recovered. That's five patients who got better. Patient 8 didn't receive Treatment T but still recovered. Hmm, so does that mean Treatment T isn't the only way to recover? But the pharmaceutical rep is saying that Treatment T guarantees recovery. So I need to check if every patient who got Treatment T recovered.\n\nLooking at the data, Patients 1 to 5 and 7 all got Treatment T and recovered. Patient 4 is the only one who got Treatment T but didn't recover. So that's a counterexample. If the claim is that Treatment T guarantees recovery, then every patient who received it should have recovered. But Patient 4 didn't, so the claim isn't valid. I should make sure there aren't any other exceptions, but in this data, Patient 4 is the only one who didn't recover after Treatment T. So yes, the claim isn't supported by the data.\n</think>\n\nBased on the provided data, the claim that Treatment T guarantees recovery for all patients with Condition X is not valid. This is because there exists at least one patient (Patient 4) who received Treatment T but did not recover. Therefore, the claim is not universally supported by the study data.\n\n**Answer:** The claim is not valid because Patient 4, who received Treatment T, did not recover.",
+  "response_length": 1459,
+  "generation_time_ms": 23082,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"CondX \u2227 TreatT \u2192 Recovery\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Patient 1 through 5 all received Treatment T and recovered. That's five patients who got better. Patient 8 didn't receive Treatment T but still recovered. Hmm, so does that mean Treatment T isn't the "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-12: 'CondX \u2227 TreatT \u2192 Recovery' holds: False\n",
+        "problem_id": "SAV-12"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

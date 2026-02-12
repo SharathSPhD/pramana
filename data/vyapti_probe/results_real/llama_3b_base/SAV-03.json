@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-03",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "The final answer is: $\\boxed{No}$\n\nExplanation: The hypothesis is invalid because Test 4 shows that when S1 is ON and S2 is OFF, the light is OFF, not ON. This contradicts the hypothesis. Therefore, the hypothesis cannot be confirmed based on the test results provided. The hypothesis is not valid because it does not account for all possible combinations of switch settings that result in the light being ON or OFF. For example, Test 3 shows that when S1 is ON and S3 is ON, the light is ON, even though S2 is OFF. This suggests that S2 is not a necessary condition for the light to be ON. Therefore, the hypothesis is not valid because it oversimplifies the relationship between the switches and the light. A more accurate hypothesis would be: \"Whenever S1 is ON, the light is ON, unless S2 is OFF and S3 is OFF.\" This revised hypothesis accounts for all the test results and is therefore a more accurate description of the relationship between the switches and the light.",
+  "response_length": 974,
+  "generation_time_ms": 8215,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "No, \"S1=ON \u2192 Light=ON\" is NOT valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "The hypothesis is not valid because it does not account for all possible combinations of switch settings that result in the light being ON or OFF. For example, Test 3 shows that when S1 is ON and S3 i"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-03: Vy\u0101pti 'S1\u2192Light' holds: False\n",
+        "problem_id": "SAV-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

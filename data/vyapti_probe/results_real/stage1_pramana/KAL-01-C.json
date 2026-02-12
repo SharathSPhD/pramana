@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Nyaya Steps:\n\n### Step 1: Samshaya (Doubt Analysis)\n**Question:** How many vacation days does Employee #5501 receive?\n\n**Doubts:**\n1. Which rule applies?\n2. Are there any exceptions?\n3. How do probationary periods affect the calculation?\n\n**Doubts List:** [Rule Application, Exception Handling, Probationary Period Impact]\n\n### Step 2: Pramana (Sources of Knowledge)\n**Justification:**\n1. General Rule: All employees receive 15 vacation days per year.\n2. Department Override: Engineering employees receive 20 vacation days per year.\n3. Individual Exception: Employee #4472 (Engineering) receives 10 vacation days due to probationary period.\n4. Employee #5501 is an Engineering employee and non-probationary.\n\n**Sources:** [General Rule, Department Override, Individual Exception, Employee Status]\n\n### Step 3: Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:**\n1. Pratijna (Thesis): How many vacation days does Employee #5501 receive?\n2. Hetu (Reason): Employee #5501 is a non-probationary Engineering employee.\n3. Upanaya (Application): Department Override applies to Engineering employees, granting 20 days.\n4. Udaya (Establishment): 20 days are granted to non-probationary Engineering employees.\n5. Nigamana (Conclusion): Employee #5501 receives 20 vacation days.\n\n**Syllogism:** [Pratijna, Hetu, Upanaya, Udaya, Nigamana]\n\n### Step 4: Tarka (Counterfactual Reasoning)\n**Counterfactuals:**\n1. If the General Rule applied alone, Employee #5501 would receive 15 days.\n2. If the Department Override didn't apply, Employee #5501 would receive 15 days.\n3. If the Individual Exception applied, Employee #5501 would receive 10 days.\n4. The Department Override applies to Engineering employees, overriding the General Rule.\n5. The Individual Exception doesn't apply to Employee #5501.\n\n**Counterfactuals:** [General Rule, Department Override, Individual Exception, Employee Status]\n\n### Step 5: Hetvabhasa (Fallacy Check)\n**Fallacy Check:**\n1. **Akanga (Universalization):** The Department Override applies to all Engineering employees, not just some.\n2. **Pratyabhijna (Particularization):** The Individual Exception applies only to Employee #4472.\n3. **Viruddha (Contradiction):** There's no contradiction in the rules.\n4. **Savyabhichara (Circular Reasoning):** No circular reasoning involved.\n5. **Hetvabhasa (Fallacy of Conjunction):** No fallacies in the reasoning.\n\n**Fallacy Check:** [Universalization, Particularization, Contradiction, Circular Reasoning, Fallacy of Conjunction]\n\n### Step 6: Nirnaya (Ascertainment)\n**Final Ascertainment:**\n1. The Department Override rule takes precedence over the General Rule for Engineering employees.\n2. The Individual Exception applies only to Employee #4472 and not to other employees.\n3. Employee #5501 is a non-probationary Engineering employee.\n4. The Department Override rule grants 20 vacation days to all non-probationary Engineering employees.\n5. The Individual Exception does not apply to Employee #5501.\n6. Therefore, Employee #5501 receives 20 vacation days.\n\n**Final Answer:** Employee #5501 receives 20 vacation days.\n### Nyaya Final Answer\n**Final Answer:** \\boxed{20}",
+  "response_length": 3140,
+  "generation_time_ms": 56083,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "20 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01-C: Vacation days for #5501: 20\n",
+        "problem_id": "KAL-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-06",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "The best answer is No. I can explain why. Step 1: Analyze the given statements.\nFrom statement 1, we know that all members of the chess club can play chess.\nFrom statement 2, we know that Rishi is a member of the chess club.\nFrom statement 3, we know that Rishi owns a bicycle.\nFrom statement 4, we know that all bicycle owners live within 5 km of the campus.\n\nStep 2: Look for any statements that directly relate to Rishi's location.\nThere is no statement that directly relates to Rishi's location, such as \"Rishi lives within 5 km of the campus\".\n\nStep 3: Use logical reasoning to determine if we can conclude that Rishi lives within 5 km of the campus.\nWe can conclude that Rishi lives within 5 km of the campus if we can find a statement that links Rishi's ownership of a bicycle to his location. However, statement 4 only links bicycle ownership to location, not Rishi specifically.\n\nStep 4: Consider the possibility of other members of the chess club owning bicycles.\nThere is no information about other members of the chess club owning bicycles. Therefore, we cannot conclude that Rishi lives within 5 km of the campus based on the given statements.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 1191,
+  "generation_time_ms": 10565,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Rishi lives within 5km (via premises 3+4)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": false,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-06: Can Rishi be outside 5km? False\nPRA-06: Rishi within 5km (premises 1+2 are red herring)\n",
+        "problem_id": "PRA-06"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "prakaranasama",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: prakaranasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "prakaranasama",
+  "hetvabhasa_used_fallback": true
+}

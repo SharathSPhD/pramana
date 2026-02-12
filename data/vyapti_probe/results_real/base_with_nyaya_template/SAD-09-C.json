@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-09-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Nyaya Steps:\n\n1. **Samshaya (Doubt Analysis):**  \n   The researcher has a doubt whether the survey methodology M is reliable. They seek confirmation from external peer review.\n\n2. **Pramana (Sources of Knowledge):**  \n   The evidence provided includes a survey conducted using M, and three independent research groups who evaluated M and found it accurate. The sources are the survey itself and the evaluations by the research groups.\n\n3. **Pancha Avayava (5-Member Syllogism):**  \n   The argument can be structured as:\n   - **Major Premise:** All methodologies that are evaluated by independent research groups and produce accurate results are reliable.\n   - **Minor Premise:** Methodology M was evaluated by three independent research groups and produces accurate results.\n   - **Conclusion:** Therefore, M is reliable.\n\n4. **Tarka (Counterfactual Reasoning):**  \n   Considering counterfactuals: What if the research groups had biases? What if their evaluations were flawed? If that were the case, the conclusion might not hold. However, since the groups are independent and their conclusions are consistent, the counterfactual doesn't significantly weaken the argument.\n\n5. **Hetvabhasa (Fallacy Check):**  \n   Checking for fallacies: The argument uses a syllogism, which is a common logical structure. There's no clear indication of a fallacy like appeal to authority or confirmation bias in the reasoning.\n\n6. **Nirnaya (Ascertainment):**  \n   After evaluating all aspects, the argument seems logically valid. The evidence supports the conclusion, and no significant flaws are found.\n</think>\n\nThe argument presented by the researcher is logically valid based on the Nyaya methodology analysis. Here's the breakdown:\n\n1. **Samshaya (Doubt Analysis):**  \n   The researcher questions the reliability of their survey methodology M and seeks external validation.\n\n2. **Pramana (Sources of Knowledge):**  \n   The evidence consists of the survey conducted using M and evaluations by three independent research groups who found M accurate.\n\n3. **Pancha Avayava (5-Member Syllogism):**  \n   The argument is structured with a major premise about reliable methodologies, a minor premise about M's evaluation, leading to the conclusion that M is reliable.\n\n4. **Tarka (Counterfactual Reasoning):**  \n   Considering possible biases or flaws in the research groups doesn't significantly weaken the conclusion, as their independence supports the validity.\n\n5. **Hetvabhasa (Fallacy Check):**  \n   The argument avoids fallacies like appeal to authority, using a logical syllogism instead.\n\n6. **Nirnaya (Ascertainment):**  \n   After thorough analysis, the argument is deemed valid with no significant flaws.\n\n**Final Answer:** The argument is logically valid.",
+  "response_length": 2753,
+  "generation_time_ms": 43349,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, argument is valid (non-circular)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Pancha Avayava (5-Member Syllogism):**  \n   The argument can be structured as:\n   - **Major Premise:** All methodologies that are evaluated by independent research groups and produce accurate result"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-09-C: Yes \u2014 non-circular validation\n",
+        "problem_id": "SAD-09-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

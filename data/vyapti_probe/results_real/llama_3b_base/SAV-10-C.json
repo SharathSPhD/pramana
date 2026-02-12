@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-10-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Understand the given supply chain network and the claim\nThe supply chain network consists of multiple paths from the Supplier to the Retailer, each with a delivery time of 3 days at each step. The manager claims that any product from the Supplier reaches the Retailer in exactly 9 days.\n\n## Step 2: Analyze the claim\nTo determine if the claim is valid, we need to consider the delivery time for each path. Since the delivery time is the same for each step (3 days), the total delivery time for each path will be the same.\n\n## Step 3: Calculate the total delivery time for each path\nFor each path, the total delivery time is the sum of the delivery times for each step. Since there are 3 steps with a delivery time of 3 days each, the total delivery time for each path is 3 + 3 + 3 = 9 days.\n\n## Step 4: Determine the validity of the claim\nSince the total delivery time for each path is 9 days, the manager's claim is valid for all routes.\n\nThe final answer is: $\\boxed{9}$",
+  "response_length": 983,
+  "generation_time_ms": 9044,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all routes take 9 days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "## Step 4: Determine the validity of the claim\nSince the total delivery time for each path is 9 days, the manager's claim is valid for all routes"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-10-C: All routes 9 days: 9 == 9\n",
+        "problem_id": "SAV-10-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

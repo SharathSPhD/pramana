@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-04-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I'm trying to figure out if Dana, who is User Y, is authorized to access the database. The problem gives me two rules about the access control. Let me break them down.\n\nFirst rule: \"User X is authorized if User X appears in the authorized users list.\" That seems pretty straightforward. It's a direct condition\u2014just check if the user is on the list. So, if someone's name is there, they're authorized.\n\nSecond rule: The authorized users list is maintained by the security team and currently contains Alice, Bob, and Charlie. So, right now, only those three are on the list.\n\nNow, Dana is a new employee who's requesting access. The question is, is she authorized? Well, according to the first rule, she needs to be on the list. The list right now has Alice, Bob, and Charlie. There's no mention of Dana being on that list. So, unless there's some other rule or exception that allows her access without being on the list, she wouldn't be authorized.\n\nWait, but maybe I should think about whether there are any other factors. The problem doesn't mention any exceptions or other rules. It just gives two specific rules. So, unless the security team adds her to the list, she isn't authorized. There's no indication that they've done that or that there's a different method for authorization.\n\nI don't see any exceptions or alternative conditions. The first rule is a universal rule\u2014any user must be on the list to be authorized. So, unless Dana is on that list, she's not authorized. Since she's a new employee and hasn't been added yet, she isn't on the list.\n\nSo, putting it all together, Dana isn't authorized because she's not in the current authorized users list. The security team would need to add her before she gains access.\n</think>\n\nDana is not authorized because she does not appear in the current authorized users list, which only includes Alice, Bob, and Charlie. The rules state that authorization is solely based on being listed, with no exceptions mentioned. Therefore, Dana cannot access the database until she is added to the list. \n\n**Answer:** Dana is not authorized.",
+  "response_length": 2094,
+  "generation_time_ms": 32788,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Dana is not authorized."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "So, putting it all together, Dana isn't authorized because she's not in the current authorized users list"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-04-C: Is Dana on list? False\nSAD-04-C: No \u2014 Dana not authorized\n",
+        "problem_id": "SAD-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

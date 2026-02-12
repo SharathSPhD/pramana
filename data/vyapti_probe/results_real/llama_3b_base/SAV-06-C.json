@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-06-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Answer:** No, the veterinarian cannot validly assure the family that Labradors from their clinic are friendly to children.\n\n**Explanation:**\n\nThe veterinarian's records show that all the dogs listed are friendly to children, and the clinic's breed assessment states that all Labradors evaluated at this clinic are confirmed friendly to children. However, this does not provide any information about the behavior of Labradors from other clinics or the behavior of individual Labradors outside of this clinic.\n\nThe records only provide evidence about the behavior of the specific dogs listed (Max, Bella, Rocky, Duke, Luna, Coco, and Buddy) and the breed assessment only provides information about the breed as a whole at this specific clinic. There is no evidence to suggest that the behavior of Labradors from this clinic is representative of all Labradors or that the behavior of individual Labradors outside of this clinic is the same as the behavior of Labradors from this clinic.\n\nTherefore, the veterinarian cannot validly assure the family that Labradors from their clinic are friendly to children. The family should consider adopting Rex, but they should also research and ask about the temperament of Labradors from other clinics and the behavior of individual Labradors outside of this clinic.",
+  "response_length": 1304,
+  "generation_time_ms": 9830,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all Labradors are friendly."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Explanation:**\n\nThe veterinarian's records show that all the dogs listed are friendly to children, and the clinic's breed assessment states that all Labradors evaluated at this clinic are confirmed "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-06-C: Duke can be unfriendly? False\n",
+        "problem_id": "SAV-06-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

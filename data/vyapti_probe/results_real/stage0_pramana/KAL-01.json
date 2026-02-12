@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "### Step 1: Samshaya (Doubt Analysis)\nTo analyze the problem, we need to identify potential sources of doubt. In this case, the main doubt is whether the Individual Exception (Section 5) overrides the Department Override (Section 3) or the General Rule (Section 1).\n\n### Step 2: Pramana (Sources of Knowledge)\nWe have three sources of knowledge:\n- General Rule (Section 1): \"All employees receive 15 vacation days per year.\"\n- Department Override (Section 3): \"Engineering department employees receive 20 vacation days per year.\"\n- Individual Exception (Section 5): \"Employee #4472 (who is in the Engineering department) receives 10 vacation days per year due to a probationary period.\"\n\n### Step 3: Pancha Avayava (5-Member Syllogism)\nWe will construct a 5-member syllogism to determine the correct answer.\n\n**Member 1:** All employees receive 15 vacation days per year (General Rule).\n**Member 2:** Employee #4472 is in the Engineering department (Department Override).\n**Member 3:** Engineering department employees receive 20 vacation days per year (Department Override).\n**Member 4:** Employee #4472 receives 10 vacation days per year due to a probationary period (Individual Exception).\n**Member 5:** If Employee #4472 is in the Engineering department, then Employee #4472 receives 20 vacation days per year (from Member 2 and 3).\n\n**Syllogism:** \n1. All employees receive 15 vacation days per year (General Rule).\n2. Employee #4472 is in the Engineering department (Department Override).\n3. If Employee #4472 is in the Engineering department, then Employee #4472 receives 20 vacation days per year (from Member 2 and 3).\n4. Employee #4472 receives 10 vacation days per year due to a probationary period (Individual Exception).\n5. Therefore, Employee #4472 receives 10 vacation days per year (from Member 4 and the conclusion of Member 3).\n\n### Step 4: Tarka (Counterfactual Reasoning)\nWe will test the conclusion by considering alternative scenarios:\n- If the Individual Exception did not override the Department Override, then Employee #4472 would receive 20 vacation days per year (from Member 2 and 3).\n- However, the Individual Exception states that Employee #4472 receives 10 vacation days per year due to a probationary period.\n- Therefore, the Individual Exception does override the Department Override.\n\n### Step 5: Hetvabhasa (Fallacy Check)\nWe will check for fallacies in the reasoning:\n- There are no fallacies in the reasoning.\n\n### Step 6: Nirnaya (Ascertainment)\nBased on the analysis, we conclude that Employee #4472 receives 10 vacation days per year due to a probationary period.\n\nThe final answer is: $\\boxed{10}$",
+  "response_length": 2638,
+  "generation_time_ms": 23834,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "10 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Member 5:** If Employee #4472 is in the Engineering department, then Employee #4472 receives 20 vacation days per year (from Member 2 and 3).\n\n**Syllogism:** \n1"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01: Vacation days for #4472: 10\n",
+        "problem_id": "KAL-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

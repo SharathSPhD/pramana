@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-06-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "The correct answer is (a).\nHere's the explanation:\nThe statement \"All the lights in Room A are on\" is a universal affirmative statement, which means that it asserts the truth of a universal property (in this case, the property of being on) for all members of a set (in this case, the set of all lights in Room A).\nThe only way for this statement to be true is if every single light in Room A is indeed on. Therefore, it is not possible for any light in Room A to be off.\nThis means that statement (b) \"No lights in Room A are off\" MUST be true.\nHowever, it is not necessary for at least one light in Room A to be on, since the statement only asserts that all lights are on, not that there is at least one light on.\nTherefore, statement (a) \"At least one light in Room A is on\" is not necessarily true.\nThe correct answer is (b).",
+  "response_length": 828,
+  "generation_time_ms": 7629,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "(c) Both \u2014 at least one on AND none off."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Here's the explanation:\nThe statement \"All the lights in Room A are on\" is a universal affirmative statement, which means that it asserts the truth of a universal property (in this case, the property "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-06-C: Can any light be off? False\nVIR-06-C: All on \u2192 at least one on AND none off\n",
+        "problem_id": "VIR-06-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

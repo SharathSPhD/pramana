@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-09-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Do not use any external resources.**\n\n### Solution:\n\n**Phase 1: Samshaya (Doubt Analysis)**\n\nThe problem states that if a client case is classified as high-priority, then a senior partner is assigned. However, Case #247 does NOT have a senior partner assigned. We need to analyze whether this information is sufficient to conclude that Case #247 is NOT classified as high-priority.\n\n**Phase 2: Pramana (Sources of Knowledge)**\n\nThe information provided is based on the law firm's policy. This policy is a reliable source of knowledge, as it is likely to be a well-established and widely accepted rule within the firm.\n\n**Phase 3: Pancha Avayava (5-Member Syllogism)**\n\nLet's construct a 5-member syllogism to analyze the situation:\n\n1. If a client case is classified as high-priority, then a senior partner is assigned. (All High-Priority Cases \u2192 Senior Partner Assigned)\n2. Case #247 is NOT classified as high-priority. (Case #247 \u2260 High-Priority)\n3. All high-priority cases have a senior partner assigned. (All High-Priority Cases \u2192 Senior Partner Assigned)\n4. Case #247 does NOT have a senior partner assigned. (Case #247 \u2260 Senior Partner Assigned)\n5. Therefore, Case #247 is NOT classified as high-priority. (Case #247 \u2192 \u00acHigh-Priority)\n\n**Phase 4: Tarka (Counterfactual Reasoning)**\n\nWe can test the validity of our conclusion by considering counterfactual scenarios:\n\n* If Case #247 were classified as high-priority, then a senior partner should be assigned. However, Case #247 does NOT have a senior partner assigned. This contradicts our assumption, so Case #247 cannot be classified as high-priority.\n* If Case #247 were NOT classified as high-priority, then a senior partner should NOT be assigned. However, Case #247 does NOT have a senior partner assigned. This is consistent with our conclusion, so Case #247 is indeed NOT classified as high-priority.\n\n**Phase 5: Hetvabhasa (Fallacy Check)**\n\nWe need to check for fallacies in our reasoning:\n\n* No fallacies are apparent in our reasoning.\n* We have not assumed any additional information beyond what is provided in the problem statement.\n\n**Phase 6: Nirnaya (Ascertainment)**\n\nBased on our analysis, we can conclude that:\n\nCase #247 is NOT classified as high-priority.\n\n**Final Answer:**\n\nCase #247 is NOT classified as high-priority.",
+  "response_length": 2300,
+  "generation_time_ms": 20864,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Case #247 is NOT high-priority."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All high-priority cases have a senior partner assigned"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-09-C: Can case be high priority? False\n",
+        "problem_id": "VIR-09-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

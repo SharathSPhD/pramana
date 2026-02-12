@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-05-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "---\n\n## Step 1: Samshaya (Doubt Analysis)\nThe problem involves a recursive formula, which means each term is defined in terms of the previous term. We need to ensure that we apply the formula correctly and avoid any potential errors.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe given formula is:\n- f(1) = 1\n- f(n) = f(n-1) + n for n > 1\n\nWe have two sources of knowledge: the initial condition (f(1) = 1) and the recursive formula (f(n) = f(n-1) + n). We will use these to calculate f(4).\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nTo calculate f(4), we will apply the recursive formula step by step:\n\n1. Calculate f(2) using f(1) and the recursive formula.\n2. Calculate f(3) using f(2) and the recursive formula.\n3. Calculate f(4) using f(3) and the recursive formula.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nLet's perform the calculations:\n\n1. f(2) = f(1) + 2 = 1 + 2 = 3\n2. f(3) = f(2) + 3 = 3 + 3 = 6\n3. f(4) = f(3) + 4 = 6 + 4 = 10\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe have checked our calculations and ensured that we applied the recursive formula correctly. There are no fallacies in our reasoning.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our calculations, we conclude that f(4) = 10.\n\nThe final answer is: $\\boxed{10}$",
+  "response_length": 1249,
+  "generation_time_ms": 15424,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "f(4) = 10."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-05-C: f(4) = 10\n",
+        "problem_id": "SAD-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,71 @@
+{
+  "problem_id": "KAL-05",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis):**\nWhat is the question? When was Building Z constructed and what are its ceiling dimensions? The inspector needs to determine if the building meets the current code.\n\n**2. Pramana (Sources of Knowledge):**\n- Original Code (2015): Minimum ceiling height for residential buildings is 8 feet.\n- Amendment (2022): After 2020, minimum ceiling height is 9 feet. Pre-2020 buildings are grandfathered under the original code.\n- Building Z: Constructed in 2023, 8.5-foot ceilings.\n\n**3. Pancha Avayava (5-Member Syllogism):**\n**Pratijna (Thesis):** Building Z complies with the current building code.\n**Heti (Reason):** It was constructed after 2020 and meets the minimum ceiling height.\n**Udaharana (Example):** Any post-2020 building with at least 9 feet ceilings complies.\n**Upanaya (Application):** Building Z has 8.5 feet ceilings, which is above 8 feet but below 9 feet.\n**Nigamana (Conclusion):** Therefore, it complies because it meets the 2022 amendment's requirement.\n\n**4. Tarka (Counterfactual Reasoning):**\nIf Building Z had been constructed before 2020, it would have been grandfathered under the original code. But it was built in 2023, so the amendment applies.\n\n**5. Hetvabhasa (Fallacy Check):**\nNo fallacies detected. The reasoning follows logically without circularity or bias.\n\n**6. Nirnaya (Ascertainment):**\nBuilding Z complies with the current building code because it was constructed after 2020 and has a ceiling height meeting the 2022 amendment.\n\n---\n\n### Final Answer:\n**Building Z complies with the current building code.**",
+  "response_length": 1601,
+  "generation_time_ms": 29252,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Building Z does not comply."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-05: Building Z compliant? False\n",
+        "problem_id": "KAL-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption",
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

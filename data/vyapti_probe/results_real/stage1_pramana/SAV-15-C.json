@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAV-15-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Phases:\n\n**1. Samshaya (Doubt Analysis):**\nWe are asked whether having a Monday meeting guarantees project completion on time. The initial data shows that in 5 weeks with a Monday meeting, the project was completed on time, but in week 6, without a Monday meeting, it was not completed. The question is whether the presence of a Monday meeting is a sufficient condition for project completion.\n\n**2. Pramana (Sources of Knowledge):**\nThe sources of knowledge are:\n- Direct observation of the six weeks.\n- The handbook stating that a Monday meeting is sufficient for project completion.\n\n**3. Pancha Avayava (5-Member Syllogism):**\nWe construct a syllogism based on the given data and the handbook.\n\n**4. Tarka (Counterfactual Reasoning):**\nWe test the validity by considering counterfactuals.\n\n**5. Hetvabhasa (Fallacy Check):**\nWe check for logical fallacies in the reasoning.\n\n**6. Nirnaya (Ascertainment):**\nWe conclude whether the Monday meeting is a sufficient condition.\n\n---\n\n### Analysis:\n\n**1. Samshaya (Doubt Analysis):**\nThe question is whether the presence of a Monday meeting is a sufficient condition for project completion. We need to determine if every occurrence of a Monday meeting leads to project completion.\n\n**2. Pramana (Sources of Knowledge):**\n- Empirical data: 5 weeks with Monday meeting \u2192 project completed \u2713; 1 week without Monday meeting \u2192 project not completed \u2717.\n- Handbook: \"A Monday meeting is sufficient to ensure project completion on time.\"\n\n**3. Pancha Avayava (5-Member Syllogism):**\n**Pratijna (Thesis):** Having a Monday meeting guarantees the project will be completed on time.\n**Hetu (Reason):** In all weeks where a Monday meeting occurred, the project was completed on time. The handbook states that a Monday meeting is a sufficient condition.\n**Udaharana (Example):** Week 1: M=true, T=true \u2192 \u2713\n**Upanaya (Application):** Week 6: M=false, T=true, W=true \u2192 \u2717\n**Nigamana (Inference):** Since every Monday meeting resulted in project completion and the handbook confirms that a Monday meeting is sufficient, the conclusion follows.\n**Pratyaksha (Direct Perception):** The empirical data supports the thesis.\n\n**4. Tarka (Counterfactual Reasoning):**\nSuppose a Monday meeting does not guarantee project completion. Then, there would be at least one week where a Monday meeting occurred but the project was not completed. However, our data shows that every Monday meeting resulted in completion. Therefore, the counterfactual leads to contradiction, confirming the validity.\n\n**5. Hetvabhasa (Fallacy Check):**\nWe check for logical fallacies:\n- **Ekaikantaka (Unilateral):** The conclusion is based on all cases where M=true, not selectively.\n- **Viruddha (Contradictory):** No evidence contradicts the conclusion.\n- **Asiddha (Unsupportable):** The empirical data and handbook both support the conclusion.\n- **Savyabhichara (Circular Reasoning):** No circularity in reasoning.\n- **Tadkalakshana (Definition-based):** The conclusion is based on the definition provided by the handbook.\n\n**6. Nirnaya (Ascertainment):**\nAfter thorough analysis, the conclusion is valid. The empirical data and the handbook together establish that a Monday meeting is a sufficient condition for project completion on time.\n\n---\n\n### Final Answer:\n**Yes**, the conclusion \"Having a Monday meeting guarantees the project will be completed on time\" is valid.",
+  "response_length": 3392,
+  "generation_time_ms": 57010,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, \"M \u2192 on time\" is valid in data."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Hetu (Reason):** In all weeks where a Monday meeting occurred, the project was completed on time. The handbook states that a Monday meeting is a sufficient condition"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-15-C: M \u2192 on time \u2014 holds\n",
+        "problem_id": "SAV-15-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption",
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

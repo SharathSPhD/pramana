@@ -1,0 +1,64 @@
+{
+  "model": "deepseek_8b_base",
+  "total": 100,
+  "correct": 32,
+  "accuracy": 0.32,
+  "probe_accuracy": 0.28,
+  "control_accuracy": 0.36,
+  "by_category": {
+    "savyabhichara": {
+      "total": 30,
+      "correct": 0,
+      "probe_correct": 0,
+      "probe_total": 15,
+      "control_correct": 0,
+      "control_total": 15
+    },
+    "viruddha": {
+      "total": 20,
+      "correct": 9,
+      "probe_correct": 5,
+      "probe_total": 10,
+      "control_correct": 4,
+      "control_total": 10
+    },
+    "prakaranasama": {
+      "total": 20,
+      "correct": 15,
+      "probe_correct": 6,
+      "probe_total": 10,
+      "control_correct": 9,
+      "control_total": 10
+    },
+    "sadhyasama": {
+      "total": 20,
+      "correct": 4,
+      "probe_correct": 1,
+      "probe_total": 10,
+      "control_correct": 3,
+      "control_total": 10
+    },
+    "kalatita": {
+      "total": 10,
+      "correct": 4,
+      "probe_correct": 2,
+      "probe_total": 5,
+      "control_correct": 2,
+      "control_total": 5
+    }
+  },
+  "tier_averages": {
+    "tier_1": 0.32,
+    "tier_2": 0.0,
+    "tier_3": 0.64,
+    "tier_4": 1.0,
+    "tier_5": 0.7120000000000002
+  },
+  "hetvabhasa_distribution": {
+    "kalatita": 11,
+    "savyabhichara": 31,
+    "prakaranasama": 3,
+    "sadhyasama": 11,
+    "viruddha": 12
+  }
+}

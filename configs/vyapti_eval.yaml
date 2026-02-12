@@ -1,0 +1,43 @@
+# Vyapti Probe Benchmark evaluation configuration
+benchmark_path: data/vyapti_probe/problems.json
+solutions_path: data/vyapti_probe/solutions.json
+z3_encodings_path: data/vyapti_probe/z3_encodings/
+
+results_path: data/vyapti_probe/results_real/
+
+# Model evaluation order: optimized for memory reuse
+# DeepSeek-8B loaded once, reused for 3 configs (base, cot, template)
+# Then Llama-3B loaded for 2 configs (base, stage0)
+# Stage 1 uses its own merged model
+models:
+  deepseek_8b_base:
+    type: transformers
+    model_id: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+    prompt_style: direct
+  base_with_cot:
+    type: transformers
+    model_id: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+    prompt_style: chain_of_thought
+  base_with_nyaya_template:
+    type: transformers
+    model_id: deepseek-ai/DeepSeek-R1-Distill-Llama-8B
+    prompt_style: nyaya_template
+  stage1_pramana:
+    type: transformers
+    model_id: qbz506/nyaya-deepseek-8b-stage1-full
+    prompt_style: nyaya_template
+  llama_3b_base:
+    type: transformers
+    model_id: unsloth/Llama-3.2-3B-Instruct
+    prompt_style: direct
+  stage0_pramana:
+    type: transformers
+    model_id: qbz506/nyaya-llama-3b-stage0-full
+    prompt_style: nyaya_template
+
+generation:
+  max_new_tokens: 2048
+  temperature: 0.5
+  top_p: 0.75
+  top_k: 5
+  seed: 42

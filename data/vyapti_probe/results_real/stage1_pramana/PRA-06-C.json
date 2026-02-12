@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-06-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Solution:\n\n**1. Samshaya (Doubt Analysis)**  \n*What is known?*  \n- Rishi owns a bicycle.  \n- All bicycle owners live within 5 km of the campus.  \n*What is in doubt?*  \n- Does Rishi live within 5 km of the campus?  \n\n**2. Pramana (Sources of Knowledge)**  \n*Sources of Knowledge:*  \n- The statement \"All bicycle owners live within 5 km of the campus\" is a general rule.  \n- Rishi is a specific bicycle owner.  \n*Justification:*  \n- The rule applies to all bicycle owners, including Rishi.  \n\n**3. Pancha Avayava (5-Member Syllogism)**  \n**Thesis**: Rishi lives within 5 km of the campus.  \n**Reasoning**:  \n1. **Pratyaksha** (Direct Perception): Rishi owns a bicycle.  \n2. **Anumana** (Inference): All bicycle owners live within 5 km of the campus.  \n3. **Upanaya** (Application): Since Rishi is a bicycle owner, he must live within 5 km.  \n4. **Prasanga** (Comparison): If all bicycle owners live within 5 km, then Rishi does too.  \n5. **Nigamana** (Conclusion): Therefore, Rishi lives within 5 km.  \n\n**4. Tarka (Counterfactual Reasoning)**  \n*Counterfactuals Examined:*  \n- If Rishi did not own a bicycle, then he would not be subject to the rule.  \n- If the rule did not apply to all bicycle owners, then Rishi might not live within 5 km.  \n*Justification:*  \n- Rishi owns a bicycle, making him subject to the rule.  \n- The rule applies universally to all bicycle owners, ensuring Rishi's proximity.  \n\n**5. Hetvabhasa (Fallacy Check)**  \n*Fallacies Checked:*  \n- **Ekaikantaka** (One-sidedness): No bias is introduced in the reasoning.  \n- **Dristi** (Vision): No misleading evidence is presented.  \n- **Asiddhatva** (Universalization): The rule is correctly applied to Rishi.  \n*Justification:*  \n- The reasoning is logical and free from fallacies.  \n\n**6. Nirnaya (Ascertainment)**  \n*Final Determination:*  \n- Rishi lives within 5 km of the campus.  \n\n---\n\n### Final Answer:\n**Yes, Rishi lives within 5 km of the campus.**",
+  "response_length": 1944,
+  "generation_time_ms": 39573,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Rishi lives within 5km."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Pramana (Sources of Knowledge)**  \n*Sources of Knowledge:*  \n- The statement \"All bicycle owners live within 5 km of the campus\" is a general rule"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-06-C: Can Rishi be outside 5km? False\n",
+        "problem_id": "PRA-06-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

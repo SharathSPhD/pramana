@@ -1,0 +1,47 @@
+{
+  "total_failures": 416,
+  "classified_count": 416,
+  "unclassified_count": 0,
+  "coverage_pct": 100.0,
+  "distribution": {
+    "kalatita": 57,
+    "savyabhichara": 188,
+    "prakaranasama": 18,
+    "sadhyasama": 79,
+    "viruddha": 74
+  },
+  "by_ground_truth": {
+    "kalatita": {
+      "kalatita": 33,
+      "savyabhichara": 8,
+      "sadhyasama": 1
+    },
+    "prakaranasama": {
+      "prakaranasama": 18,
+      "savyabhichara": 17,
+      "kalatita": 1,
+      "sadhyasama": 1
+    },
+    "sadhyasama": {
+      "sadhyasama": 65,
+      "kalatita": 13,
+      "savyabhichara": 17,
+      "viruddha": 1
+    },
+    "savyabhichara": {
+      "savyabhichara": 139,
+      "viruddha": 6,
+      "kalatita": 10,
+      "sadhyasama": 11
+    },
+    "viruddha": {
+      "viruddha": 67,
+      "savyabhichara": 7,
+      "sadhyasama": 1
+    }
+  },
+  "predictive_accuracy": 77.40384615384616,
+  "strict_predictive_accuracy": 66.66666666666666,
+  "fallback_count": 134,
+  "ambiguous_count": 0
+}

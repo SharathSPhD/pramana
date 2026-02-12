@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\n# Define the possible dishes each person can order\npasta = ['Jun', 'Kira', 'Lev']\nsushi = ['Kira', 'Lev']\nsalad = ['Jun', 'Lev']\n\n# Define who can't order what\npasta_exclusion = {'Jun'}\nsushi_exclusion = {'Lev'}\nsalad_exclusion = {'Kira'}\n\n# Determine each person's dish based on the given conditions\n# Jun can't order pasta, so he must order salad or sushi\n# Kira orders sushi, so she doesn't order pasta or salad\n# Lev can't order salad, so he must order pasta or sushi\n\n# Assign based on the remaining options\njun = 'salad'  # Because Kira has taken sushi, and Lev can't take salad\nkira = 'sushi'\nlev = 'pasta'  # Because Lev can't take salad and sushi is taken by Kira\n```\n\n### Solution Code Explanation\nThe code defines possible dishes each person can order and who cannot order certain dishes based on the given conditions. It then assigns each person a dish by eliminating the impossible options step by step. The final assignments are made based on the remaining choices, ensuring each person gets a unique dish.\n```\n\n### Analysis\nLet's break down the problem step by step using the Nyaya methodology.\n\n1. **Samshaya (Doubt Analysis):**  \n   We start by listing all possibilities. Each friend can order pasta, sushi, or salad, but each must choose a different dish. So, the initial possibilities are:\n   - Jun: pasta, sushi, salad\n   - Kira: pasta, sushi, salad\n   - Lev: pasta, sushi, salad\n\n2. **Pramana (Sources of Knowledge):**  \n   We look at the given information:\n   - Jun does not order pasta. (Source: Problem statement)\n   - Kira orders sushi. (Source: Problem statement)\n   - Lev does not order salad. (Source: Problem statement)\n\n3. **Pancha Avayava (5-Member Syllogism):**  \n   We construct a syllogism with five premises:\n   - Premise 1: Jun does not order pasta.\n   - Premise 2: Kira orders sushi.\n   - Premise 3: Lev does not order salad.\n   - Premise 4: Each person orders a different dish.\n   - Premise 5: There are three dishes and three people.\n\n   From this, we can infer that:\n   - Since Kira orders sushi, neither Jun nor Lev can order sushi.\n   - Jun cannot order pasta, so he must order salad or sushi. But sushi is taken, so Jun must order salad.\n   - Lev cannot order salad, so he must order pasta or sushi. Since sushi is taken, Lev must order pasta.\n\n4. **Tarka (Counterfactual Reasoning):**  \n   We consider counterfactuals to ensure our conclusions hold:\n   - If Jun could order pasta, but he can't, so he must order salad.\n   - If Kira didn't order sushi, but she does, so others adjust accordingly.\n   - If Lev could order salad, but he can't, so he must order pasta.\n\n5. **Hetvabhasa (Fallacy Check):**  \n   We check for logical fallacies:\n   - No fallacies detected in the reasoning. Each step follows logically without contradiction.\n\n6. **Nirnaya (Ascertainment):**  \n   After thorough analysis, we conclude:\n   - Jun orders salad.\n   - Kira orders sushi.\n   - Lev orders pasta.\n\n### Final Answer\n- **Jun** orders **salad**.\n- **Kira** orders **sushi**.\n- **Lev** orders **pasta**.\n```\n\n### Solution Code\n```python\n# Define the possible dishes each person can order\npasta = ['Jun', 'Kira', 'Lev']\nsushi = ['Kira', 'Lev']\nsalad = ['Jun', 'Lev']\n\n# Define who can't order what\npasta_exclusion = {'Jun'}\nsushi_exclusion = {'Lev'}\nsalad_exclusion = {'Kira'}\n\n# Determine each person's dish based on the given conditions\n# Jun can't order pasta, so he must order salad or sushi\n# Kira orders sushi, so she doesn't order pasta or salad\n# Lev can't order salad, so he must order pasta or sushi\n\n# Assign based on the remaining options\njun = 'salad'  # Because Kira has taken sushi, and Lev can't take salad\nkira = 'sushi'\nlev = 'pasta'  # Because Lev can't take salad and sushi is taken by Kira\n```\n\n### Solution Code Explanation\nThe code defines possible dishes each person can order and who cannot order certain dishes based on the given conditions. It then assigns each person a dish by eliminating the impossible options step by step. The final assignments are made based on the remaining choices, ensuring each person gets a unique dish.\n```",
+  "response_length": 4112,
+  "generation_time_ms": 78243,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Kira=sushi, Lev=pasta, Jun=salad."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Samshaya (Doubt Analysis):**  \n   We start by listing all possibilities. Each friend can order pasta, sushi, or salad, but each must choose a different dish"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10-C: Lev=pasta, Jun=salad\n",
+        "problem_id": "PRA-10-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

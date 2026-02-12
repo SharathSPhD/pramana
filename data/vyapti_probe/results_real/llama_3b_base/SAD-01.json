@@ -1,0 +1,72 @@
+{
+  "problem_id": "SAD-01",
+  "category": "sadhyasama",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "The answer is: No.\nHere's the explanation:\n- Object X has property B because it is defined as having property B.\n- Property B is the characteristic feature of Concept A, but Object X is not Concept A.\n- Therefore, Object X does not have property B.\nThe key to this question is to recognize that the definitions of the terms are circular, and that they are used to define each other. The definitions are not independent, and they cannot be used to determine the existence or properties of Object X.\nThis question is a classic example of a \"self-referential paradox,\" which is a type of paradox that involves a statement that refers to itself in a way that creates a logical contradiction. In this case, the definitions of the terms create a paradox because they are used to define each other, rather than providing independent information about Object X. This type of paradox can be challenging to resolve, and it requires careful consideration of the definitions and the logical structure of the argument.",
+  "response_length": 1005,
+  "generation_time_ms": 7663,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot determine."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-01: B can be True: True, B can be False: True\n",
+        "problem_id": "SAD-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response mentions circular/assumption",
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

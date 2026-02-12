@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-02",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Phase 1: Samshaya (Doubt Analysis)\n**Question:** What do we know about Dr. Kapoor?\n\n**Doubts:**\n1. Is Dr. Kapoor a surgeon?\n2. Is Dr. Kapoor a resident?\n3. Does Dr. Kapoor drive a sedan?\n\n**Analysis:**\n- Premise 1: All surgeons have completed a residency. This links surgeons and residents.\n- Premise 2: Dr. Kapoor is a surgeon. So, Dr. Kapoor must be a resident.\n- Premise 4: All residents drive sedans. So, Dr. Kapoor drives a sedan.\n\n**Resolution:**\n- Dr. Kapoor is a resident and drives a sedan.\n### Phase 2: Pramana (Sources of Knowledge)\n**Sources:**\n1. Premise 1: All surgeons are residents.\n2. Premise 2: Dr. Kapoor is a surgeon.\n3. Premise 4: All residents drive sedans.\n\n**Justification:**\n- Premise 1 is a general rule about surgeons.\n- Premise 2 is a specific fact about Dr. Kapoor.\n- Premise 4 is a general rule about residents.\n\n**Conclusion:**\n- The premises are the sources of our knowledge.\n### Phase 3: Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:**\n1. Pratijna (Thesis): Dr. Kapoor is a resident.\n2. Hetu (Reason): All surgeons are residents (Premise 1) and Dr. Kapoor is a surgeon (Premise 2).\n3. Udaharana (Example): All surgeons are residents (example: Dr. Smith is a surgeon, therefore Dr. Smith is a resident).\n4. Prasanga (Comparison): Dr. Kapoor is a surgeon, so Dr. Kapoor is a resident.\n5. Nigamana (Conclusion): Therefore, Dr. Kapoor is a resident.\n\n**Proof:**\n- From Premise 1 and 2, by universal syllogism, Dr. Kapoor is a resident.\n\n**Conclusion:**\n- Dr. Kapoor is a resident.\n### Phase 4: Tarka (Counterfactual Reasoning)\n**Counterfactuals:**\n1. If Dr. Kapoor were not a resident, he couldn't be a surgeon. (Premise 1)\n2. If Dr. Kapoor were not a surgeon, we wouldn't know he is a resident. (Premise 2)\n3. If Dr. Kapoor did not drive a sedan, he wouldn't be a resident. (Premise 4)\n\n**Analysis:**\n- If Dr. Kapoor weren't a resident, he couldn't be a surgeon (Premise 1). So, Dr. Kapoor must be a resident.\n- If Dr. Kapoor weren't a surgeon, we wouldn't know he is a resident (Premise 2). But we know he is a surgeon, so he must be a resident.\n- If Dr. Kapoor didn't drive a sedan, he wouldn't be a resident (Premise 4). But he is a resident, so he must drive a sedan.\n\n**Conclusion:**\n- All premises are necessary for the conclusions.\n### Phase 5: Hetvabhasa (Fallacy Check)\n**Fallacies Checked:**\n1. Akhandaka: Dr. Kapoor is a resident because all surgeons are residents. (Valid)\n2. Viruddha: No premises contradict each other. (Valid)\n3. Sadhyasama: No fallacy of assuming the conclusion. (Valid)\n4. Hetu-kutva: No fallacy of incorrect reason. (Valid)\n5. Matlabha: No fallacy of incorrect premises. (Valid)\n\n**Conclusion:**\n- No fallacies detected.\n### Phase 6: Nirnaya (Ascertainment)\n**Final Knowledge:**\n- Dr. Kapoor is a resident.\n- Dr. Kapoor drives a sedan.\n\n**Justification:**\n- From Premise 1 and 2, Dr. Kapoor is a resident.\n- From Premise 4, all residents drive sedans, so Dr. Kapoor drives a sedan.\n\n**Conclusion:**\n- We can validly conclude that Dr. Kapoor is a resident and drives a sedan.\n---\n\n### Final Answer\nWe can validly conclude that Dr. Kapoor is a resident and drives a sedan.",
+  "response_length": 3156,
+  "generation_time_ms": 65330,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Dr. Kapoor completed a residency program (only valid conclusion)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "Kapoor drive a sedan?\n\n**Analysis:**\n- Premise 1: All surgeons have completed a residency"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-02: Can Kapoor NOT have completed residency? False\nPRA-02: Kapoor completed residency (premises 3,4 irrelevant)\n",
+        "problem_id": "PRA-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

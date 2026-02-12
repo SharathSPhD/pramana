@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-03",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "Do not use any external resources.\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nWe have a conditional statement: \"Every student who scored above 90 on the test received a scholarship.\" We also know that Student Y received a scholarship. We need to analyze if we can conclude that Student Y scored above 90 on the test.\n\n## Step 2: Pramana (Sources of Knowledge)\nOur knowledge is based on the conditional statement and the fact that Student Y received a scholarship. We do not have any additional information about Student Y's test score.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can construct a 5-member syllogism:\n1. All students who scored above 90 received a scholarship.\n2. Student Y received a scholarship.\n3. Therefore, Student Y must have scored above 90.\n4. But we cannot conclude that Student Y scored above 90.\n5. Therefore, we cannot conclude that Student Y received a scholarship.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe can consider counterfactual scenarios:\n- What if Student Y scored exactly 90? They would still receive a scholarship.\n- What if Student Y scored below 90? They would not receive a scholarship.\nSince we know that Student Y received a scholarship, we cannot conclude that they scored above 90.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies:\n- The conditional statement is a universal conditional.\n- The conclusion is a particular conclusion.\n- The argument is valid.\n\n## Step 6: Nirnaya (Ascertainment)\nWe have analyzed the problem using the 6-phase Nyaya methodology. Based on our analysis, we cannot conclude that Student Y scored above 90 on the test.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 1669,
+  "generation_time_ms": 15121,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude scored above 90."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": false,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-03: Can student NOT have scored above 90? True\n",
+        "problem_id": "VIR-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

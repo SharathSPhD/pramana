@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-10",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\ndef analyze_supply_chain_claim():\n    # Samshaya: Doubt Analysis\n    # The manager claims that any product from the Supplier reaches the Retailer in exactly 9 days.\n    # But let's see the different routes and their delivery times.\n\n    # Pramana: Sources of Knowledge\n    # The delivery times for each step are given:\n    # - Supplier \u2192 Factory A \u2192 Distributor \u2192 Retailer: 3 days each step (3 steps \u00d7 3 days = 9 days)\n    # - Supplier \u2192 Factory B \u2192 Distributor \u2192 Retailer: same as above\n    # - Supplier \u2192 Factory C \u2192 Distributor \u2192 Retailer: same as above\n    # - Supplier \u2192 Factory D \u2192 Warehouse \u2192 Retailer: 3 days each step except Warehouse \u2192 Retailer takes 7 days\n    # So, for the D route, total delivery time is 3 + 3 + 7 = 13 days.\n\n    # Pancha Avayava: 5-Member Syllogism\n    # Let's consider the different routes:\n    # 1. Route 1: 3 steps \u00d7 3 days = 9 days\n    # 2. Route 2: same as Route 1\n    # 3. Route 3: same as Route 1\n    # 4. Route 4: 3 + 3 + 7 = 13 days\n\n    # Tarka: Counterfactual Reasoning\n    # Suppose all routes take exactly 9 days. Then, for Route 4, the delivery time would be 9 days.\n    # But in reality, Route 4 takes 13 days. Therefore, the manager's claim is incorrect.\n\n    # Hetvabhasa: Fallacy Check\n    # The manager is committing a fallacy by assuming all routes have the same delivery time without considering the variation in the last step.\n\n    # Nirnaya: Ascertainment\n    # Therefore, the claim is invalid because Route 4 takes longer than 9 days.\n\n    return \"The manager's claim is invalid.\"\n```\n### Explanation\nThe manager's claim that all products reach the Retailer in exactly 9 days is based on the assumption that each route has the same number of steps with the same delivery times. However, the fourth route has an additional longer delivery time (7 days) in the last step, making the total delivery time 13 days. This contradicts the manager's claim, proving it invalid.\n```\n\n### Final Answer\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n```\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n```\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n```\n\nThe manager's York: The manager's claim is invalid because one of the routes takes longer than 9 days.\n```\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than 9 days.\n\nThe manager's claim is invalid because one of the routes takes longer than",
+  "response_length": 9056,
+  "generation_time_ms": 151790,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, not all routes take 9 days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "# Hetvabhasa: Fallacy Check\n    # The manager is committing a fallacy by assuming all routes have the same delivery time without considering the variation in the last step"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-10: All routes 9 days? False\n",
+        "problem_id": "SAV-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

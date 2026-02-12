@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-02",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "Yes\nNo\n\n## Step 1: Understand the condition for rejection\nThe product is rejected if it is NOT the case that BOTH Test-A passes AND Test-B passes. This can be symbolically represented as Rejected \u2194 \u00ac(Test-A \u2227 Test-B).\n\n## Step 2: Analyze the given information about Product P\nProduct P has passed Test-A but failed Test-B. This means Test-A is true (passed) and Test-B is false (failed).\n\n## Step 3: Apply the condition to Product P\nGiven the condition Rejected \u2194 \u00ac(Test-A \u2227 Test-B), we need to evaluate \u00ac(Test-A \u2227 Test-B) with Test-A being true and Test-B being false.\n\n## Step 4: Evaluate the logical expression\nSince Test-A is true and Test-B is false, the expression Test-A \u2227 Test-B is false because one of the conditions (Test-B being false) is not met. Therefore, \u00ac(Test-A \u2227 Test-B) is true.\n\n## Step 5: Determine if Product P is rejected\nSince \u00ac(Test-A \u2227 Test-B) is true, the condition for rejection is met. Therefore, Product P is rejected.\n\nThe final answer is: $\\boxed{Yes}$",
+  "response_length": 984,
+  "generation_time_ms": 9686,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Product P is rejected."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-02: Can product NOT be rejected? False\n",
+        "problem_id": "VIR-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

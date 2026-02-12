@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-08-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Understand the given information\nWe have seven students studying Physics, Chemistry, or Biology, with specific subjects and passing status for each. The department head's confirmation states that every Physics student passed the exam.\n\n## Step 2: Identify the Physics students\nFrom the given information, the Physics students are Arjun, Chirag, Durga, Fatima, and Gopal.\n\n## Step 3: Analyze the Physics students' passing status\nAll five Physics students are confirmed to have passed the exam by the department head.\n\n## Step 4: Check for consistency\nHowever, we notice that the statement \"Every Physics student passed the exam\" is not consistent with the data. Since there are five Physics students (Arjun, Chirag, Durga, Fatima, and Gopal), the statement should be \"All Physics students passed the exam\" for it to be true. But we only have information about five of them, and the fifth one (Gopal) is not explicitly mentioned as having passed the exam.\n\n## Step 5: Conclusion\nThe department head's confirmation is not consistent with the data, as we do not have information about Gopal's passing status.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 1150,
+  "generation_time_ms": 9854,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all Physics students passed."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "## Step 3: Analyze the Physics students' passing status\nAll five Physics students are confirmed to have passed the exam by the department head"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-08-C: All Physics students passed \u2014 vy\u0101pti holds\n",
+        "problem_id": "SAV-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

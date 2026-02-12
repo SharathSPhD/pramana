@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this problem about shipping packages, and I need to figure out if the clerk's rule is correct. Let me try to break it down step by step.\n\nFirst, let's list out all the packages and their details:\n\n- Package 1: Heavy, Domestic \u2192 $15\n- Package 2: Heavy, Domestic \u2192 $15\n- Package 3: Heavy, International \u2192 $15\n- Package 4: Heavy, International \u2192 $15\n- Package 5: Heavy, Domestic \u2192 $15\n- Package 6: Heavy, International \u2192 $15\n- Package 7: Light, Domestic \u2192 $8\n- Package 8: Light, International \u2192 $12\n\nSo, the clerk says that all Heavy packages cost $15 to ship. I need to check if this is a correct rule based on the data provided.\n\nHmm, let's start by looking at all the Heavy packages. From the list, all the Heavy packages are either Domestic or International, but they all cost $15. So, for Heavy packages, regardless of destination, the cost is $15. That seems consistent.\n\nNow, what about the Light packages? There are two of them:\n\n- Package 7: Light, Domestic \u2192 $8\n- Package 8: Light, International \u2192 $12\n\nSo, for Light packages, the cost depends on the destination. If it's Domestic, it's $8, and if it's International, it's $12. There's no Light package that costs $15, as far as I can see.\n\nWait, but the clerk's rule is only about Heavy packages. So, does the rule say anything about Light packages? No, the rule is specifically about Heavy packages. So, the clerk is not making a claim about Light packages, just Heavy ones.\n\nSo, the question is, is the rule \"All Heavy packages cost $15 to ship\" correct based on the data? Since all Heavy packages in the data do cost $15, regardless of destination, it seems correct. There are no Heavy packages that cost anything other than $15. So, the rule holds true for all Heavy packages in the given data.\n\nBut wait, let me make sure I'm not missing anything. Is there any Heavy package that might have a different cost? Let me go through each package again:\n\n1. Heavy, Domestic \u2192 $15 \u2714\ufe0f\n2. Heavy, Domestic \u2192 $15 \u2714\ufe0f\n3. Heavy, International \u2192 $15 \u2714\ufe0f\n4. Heavy, International \u2192 $15 \u2714\ufe0f\n5. Heavy, Domestic \u2192 $15 \u2714\ufe0f\n6. Heavy, International \u2192 $15 \u2714\ufe0f\n\nYep, all of them are $15. So, the rule is correct as per the data provided.\n\nI don't see any Heavy packages that cost differently, so there's no exception. Therefore, the clerk's rule is correct based on the given data.\n</think>\n\nThe clerk's rule is correct because all Heavy packages listed have a shipping cost of $15, regardless of their destination. There are no exceptions where a Heavy package costs differently. \n\n**Answer:** The rule is correct. All Heavy packages cost $15 to ship.",
+  "response_length": 2601,
+  "generation_time_ms": 47571,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all Heavy packages cost $15."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "First, let's list out all the packages and their details:\n\n- Package 1: Heavy, Domestic \u2192 $15\n- Package 2: Heavy, Domestic \u2192 $15\n- Package 3: Heavy, International \u2192 $15\n- Package 4: Heavy, Internation"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14-C: Heavy \u2192 $15 \u2014 holds\n",
+        "problem_id": "SAV-14-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-07-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Note:** Boolean variables are either true (T) or false (F), and the logical operators AND, OR, and NOT are as follows:\n- AND: T AND T = T, T AND F = F, F AND T = F, F AND F = F\n- OR: T OR T = T, T OR F = T, F OR T = T, F OR F = F\n- NOT: NOT T = F, NOT F = T\n\n## Step 1: Evaluate the initial condition of OUT\nGiven P = true, Q = false, R = true, we can substitute these values into the equation OUT = (P AND Q) OR R to find the initial value of OUT.\n\n## Step 2: Apply the values to the equation\nOUT = (true AND false) OR true\nOUT = (false) OR true\nOUT = false OR true\nOUT = true\n\n## Step 3: Evaluate the change in R\nWe are asked to change R to false and see if OUT changes. So, we substitute R = false into the equation.\n\n## Step 4: Apply the new value to the equation\nOUT = (P AND Q) OR false\nOUT = (true AND false) OR false\nOUT = (false) OR false\nOUT = false OR false\nOUT = false\n\n## Step 5: Determine if OUT changes\nComparing the initial value of OUT (true) to the new value of OUT (false), we see that OUT changes when R is changed to false.\n\nThe final answer is: $\\boxed{false}$",
+  "response_length": 1084,
+  "generation_time_ms": 12586,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "OUT=true; changing R to false DOES change OUT to false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-07-C: OUT can be false? False\nPRA-07-C: R matters \u2014 OUT changes when R=F: False == False\n",
+        "problem_id": "PRA-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

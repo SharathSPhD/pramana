@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAD-07-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### 1. Samshaya (Doubt Analysis)\nThe theorem-proving system raises the question: Is \u221a2 irrational? This is a well-known problem in mathematics, and the proof provided attempts to show that \u221a2 cannot be expressed as a ratio of two integers, hence it is irrational.\n\n### 2. Pramana (Sources of Knowledge)\nThe proof relies on the definitions and properties of rational numbers and integers. Specifically, it uses the fact that if a number is rational, it can be expressed as a ratio of two integers with no common factors. This is a foundational concept in mathematics.\n\n### 3. Pancha Avayava (5-Member Syllogism)\nThe proof follows a logical structure that can be broken down into five key points:\n1. Assume \u221a2 is rational.\n2. Express \u221a2 as a ratio of two integers p and q.\n3. Derive that both p and q must be even.\n4. Conclude that p and q share a common factor, contradicting the initial assumption.\n5. Therefore, \u221a2 is irrational.\n\nThis structure aligns with the syllogistic method, making the argument coherent and logical.\n\n### 4. Tarka (Counterfactual Reasoning)\nThe proof employs counterfactual reasoning by assuming the opposite of what it aims to prove (that \u221a2 is rational) and then demonstrating the resulting contradiction. This is a valid method in logical proofs.\n\n### 5. Hetvabhasa (Fallacy Check)\nThe proof avoids several common fallacies:\n- It correctly assumes the opposite for contradiction without fallaciously assuming the truth.\n- It properly deduces that if both numerator and denominator are even, they share a common factor, which is a valid logical step.\n- It correctly concludes that the initial assumption leads to a contradiction, thereby proving the negation.\n\n### 6. Nirnaya (Ascertainment)\nAfter analyzing each phase, it is clear that the proof is valid and follows logically without any identified fallacies or flaws. The contradiction derived from the assumption that \u221a2 is rational solidifies the irrationality of \u221a2.\n\n### Final Answer\nThe proof is valid and effectively demonstrates that \u221a2 is irrational.",
+  "response_length": 2048,
+  "generation_time_ms": 33062,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, proof of \u221a2 irrational is valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-07-C: Proof valid \u2014 \u221a2 irrational\n",
+        "problem_id": "SAD-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

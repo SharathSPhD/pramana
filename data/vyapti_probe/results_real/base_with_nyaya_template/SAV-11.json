@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n**Solution:**\n\nLet's analyze the problem step-by-step using the 6-phase Nyaya methodology.\n\n---\n\n### **1. Samshaya (Doubt Analysis)**\n\nThe librarian makes a statement:  \n*\"All our recommended books are available.\"*\n\nThe patron has a doubt because one of the recommended books, \"Encryption,\" is marked as \"[NOT Available].\"  \n**Doubt:** Are all recommended books truly available?\n\n---\n\n### **2. Pramana (Sources of Knowledge)**\n\nWe need to verify the tags for each book:\n\n- **\"Algorithms\"**: [Recommended] [Available] [New Arrival]  \n- **\"Bioinformatics\"**: [Recommended] [Available] [New Arrival]  \n- **\"Compilers\"**: [Recommended] [Available]  \n- **\"Databases\"**: [Recommended] [Available] [New Arrival]  \n- **\"Encryption\"**: [Recommended] [NOT Available] [New Arrival]  \n- **\"Fractals\"**: [Available] [New Arrival]  \n\n**Conclusion:** The tags are the primary source of information.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**\n\nA syllogism is a form of logical reasoning with five premises:\n\n1. **All recommended books are available.**  \n   *(Major premise)*  \n2. **\"Encryption\" is a recommended book.**  \n   *(Minor premise 1)*  \n3. **\"Encryption\" is not available.**  \n   *(Minor premise 2)*  \n4. **All recommended books are available.**  \n   *(Conclusion)*  \n5. **Therefore, there is a contradiction.**\n\n**Analysis:**  \nIf all recommended books are available, but \"Encryption\" is not, this leads to a contradiction.  \n**Premise:** If all recommended books are available, then \"Encryption\" must be available.  \n**Conclusion:** There is a contradiction because \"Encryption\" is not available despite being recommended.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**\n\nWe consider the counterfactual:  \n*If \"Encryption\" is not recommended, then it might not be available.*  \n\nBut since \"Encryption\" is indeed recommended, the original statement holds.  \n**Counterfactual Analysis:**  \n- If \"Encryption\" were not recommended, the librarian's statement would still be true.  \n- However, since it is recommended, the contradiction arises.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**\n\nIdentify fallacies in the reasoning:  \n- **Equivocation:** The term \"recommended\" refers to all books, including \"Encryption.\"  \n- **Denial of the Contradiction:** The existence of \"NOT Available\" tags contradicts the statement.  \n\n**Fallacy Check:**  \nThe librarian's statement assumes all recommended books are available, but the tags show otherwise.  \n**Conclusion:** The statement is flawed due to the existence of \"NOT Available.\"\n\n---\n\n### **6. Nirnaya (Ascertainment)**\n\nTo resolve the doubt, we must verify the tags.  \n- **\"Encryption\" is marked as [NOT Available],** which contradicts the librarian's statement.  \n- Therefore, the statement is **false**.\n\n---\n\n**Final Answer:**  \nThe librarian's statement is **false** because \"Encryption\" is a recommended book that is not available.",
+  "response_length": 2896,
+  "generation_time_ms": 51306,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Recommended \u2288 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "Samshaya (Doubt Analysis)**\n\nThe librarian makes a statement:  \n*\"All our recommended books are available"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11: 'Recommended \u2286 Available' holds: False\n",
+        "problem_id": "SAV-11"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

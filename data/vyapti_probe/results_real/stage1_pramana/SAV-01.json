@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-01",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef must_gita_work_remotely():\n    # Samshaya: Doubt Analysis\n    # What do we know? What are we asked to find?\n    # Known facts: 6 employees' department and work location.\n    # Question: Must Gita work remotely?\n\n    # Pramana: Sources of Knowledge\n    # Base facts: The six employees' assignments.\n    # Gita's assignment is to be determined.\n\n    # Pancha Avayava: 5-Member Syllogism\n    # 1. Pratyaksha: Direct perception: All employees in Engineering are in the same department.\n    # 2. Anumana: Inference: If an employee is in Engineering, they are either in Engineering (remote) or on-site.\n    # 3. Pratyaksha: Direct perception: Aarav is in Engineering and works remotely.\n    # 4. Samavyaya: Correlation: All employees in Engineering who work remotely are in the same category.\n    # 5. Upanaya: Comparison: Gita, being a new hire in Engineering, must follow the same pattern.\n\n    # Tarka: Counterfactual Reasoning\n    # Suppose Gita does not work remotely. Then she must work on-site.\n    # But all employees in Engineering who work on-site are male.\n    # Gita is female. Therefore, Gita cannot work on-site. Thus, she must work remotely.\n\n    # Hetvabhasa: Fallacy Check\n    # No fallacies detected in the reasoning.\n\n    # Nirnaya: Ascertainment\n    # Gita must work remotely.\n\n    return True\n```\n\n### Solution Explanation:\n1. **Samshaya (Doubt Analysis):** We know the department and work location of six employees. We need to determine if Gita, a new hire in Engineering, works remotely.\n\n2. **Pramana (Sources of Knowledge):** The information about the six employees is our base knowledge. Gita's assignment is derived from this.\n\n3. **Pancha Avayava (5-Member Syllogism):** \n   - **Pratyaksha (Direct Perception):** All employees in Engineering are in the same department.\n   - **Anumana (Inference):** If an employee is in Engineering, they are either in Engineering (remote) or on-site.\n   - **Pratyaksha:** Aarav is in Engineering and works remotely.\n   - **Samavyaya:** All employees in Engineering who work remotely are in the same category.\n   - **Upanaya:** Gita, being a new hire in Engineering, must follow the same pattern.\n\n4. **Tarka (Counterfactual Reasoning):** Assuming Gita works on-site leads to a contradiction (she would be male), so she must work remotely.\n\n5. **Hetvabhasa (Fallacy Check):** No fallacies are present; the reasoning is valid.\n\n6. **Nirnaya (Ascertainment):** Gita must work remotely.",
+  "response_length": 2477,
+  "generation_time_ms": 46287,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Gita is NOT forced to work remotely."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "Pratyaksha: Direct perception: All employees in Engineering are in the same department"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-01: Checking vy\u0101pti 'Engineering \u2192 Remote' ===\nVy\u0101pti holds: False\nGita can be non-remote: True\n",
+        "problem_id": "SAV-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

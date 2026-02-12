@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-05-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this problem about students and eligibility for an athletics scholarship. Let me try to figure it out step by step.\n\nFirst, let me restate the problem to make sure I understand it. There are two sets, Set A and Set B. Set A consists of students who play sports, and their names are p, q, r, s, t. Set B is the students on the honor roll, and their names are q, r, u, v. The policy says that students who play sports AND are on the honor roll are eligible for the scholarship. So, I need to find out which students are in both Set A and Set B because that's the condition given.\n\nAlright, so Set A is {p, q, r, s, t}. Let me write that down. Set B is {q, r, u, v}. So, I need to find the intersection of these two sets because that's where both conditions are met. The intersection of two sets contains all elements that are common to both sets.\n\nLooking at Set A and Set B, I can see that both have q and r. So, those two students are in both sets. Let me check if there are any others. Set A has p, s, t, which aren't in Set B. Set B has u and v, which aren't in Set A. So, the only common elements are q and r.\n\nWait, let me make sure I'm not missing anything. Sometimes, problems can have tricky parts or exceptions, but in this case, the policy is straightforward: it's an AND condition, so both sets must be true. There's no mention of any exceptions or other conditions, so I don't think there's anything else to consider here.\n\nSo, putting it all together, the students who are eligible for the scholarship are q and r because they are the only ones who play sports and are on the honor roll.\n</think>\n\nThe students eligible for the athletics scholarship are q and r.\n\n**Answer:** The students eligible for the athletics scholarship are {q, r}.",
+  "response_length": 1767,
+  "generation_time_ms": 31058,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "{q, r} eligible for scholarship."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The intersection of two sets contains all elements that are common to both sets"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-05-C: Can pq avoid scholarship? False\nVIR-05-C: Eligible: pq, pr\n",
+        "problem_id": "VIR-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

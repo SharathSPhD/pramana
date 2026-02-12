@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-03-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this logic problem here, and I need to figure out if Student Y received a scholarship based on the given information. Let me try to break it down step by step.\n\nFirst, the problem states: \"Every student who scored above 90 on the test received a scholarship.\" Hmm, that sounds like a conditional statement. In logical terms, it can be written as: If a student scored above 90, then they received a scholarship. So, using symbols, let me denote:\n\nLet S(x) = x is a student.\nLet T(x) = x scored above 90 on the test.\nLet R(x) = x received a scholarship.\n\nSo the statement becomes: For all x, if S(x) and T(x), then R(x). In symbols, \u2200x (S(x) \u2227 T(x) \u2192 R(x)).\n\nNow, we know that Student Y scored 95 on the test. So, let's apply this to Student Y. Since 95 is above 90, T(Y) is true. We need to see if this implies R(Y), meaning Student Y received a scholarship.\n\nIn logic, if the antecedent (the \"if\" part) is true, and the statement is a universal rule without exceptions, then the consequent must also be true. So, if every student who scored above 90 got a scholarship, then any student who scored above 90, including Student Y, must have received one.\n\nBut wait, I should check if there's any possibility that this rule doesn't hold. The problem doesn't mention any exceptions or cases where scoring above 90 doesn't lead to a scholarship. So, I don't think there's a counterexample here. It's a universal statement, meaning it applies to all students without exception.\n\nTherefore, since Student Y scored above 90, they must have received a scholarship. There's no information suggesting otherwise, and the original statement doesn't allow for any exceptions.\n\nSo, putting it all together, yes, we can validly conclude that Student Y received a scholarship.\n</think>\n\nYes, we can validly conclude that Student Y received a scholarship. The given statement is a universal rule without exceptions, meaning any student scoring above 90 automatically receives a scholarship. Since Student Y scored 95, which is above 90, they must have received a scholarship.\n\n**Answer:** Yes, Student Y received a scholarship.",
+  "response_length": 2124,
+  "generation_time_ms": 35859,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Student Y received scholarship."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "So, if every student who scored above 90 got a scholarship, then any student who scored above 90, including Student Y, must have received one"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-03-C: Can student NOT have scholarship? False\n",
+        "problem_id": "VIR-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

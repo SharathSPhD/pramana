@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-06-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef classify_object(object_type, feature, threshold, temperature):\n    \"\"\"\n    Determines if an object is classified as Type-X based on the given rules.\n    \n    Args:\n        object_type: The type to classify (e.g., 'Type-X').\n        feature: The feature to check (e.g., 'Feature-P').\n        threshold: The minimum temperature threshold for the feature.\n        temperature: The measured surface temperature of the object.\n    \n    Returns:\n        bool: True if classified as Type-X, False otherwise.\n    \"\"\"\n    # Check if the object has the feature\n    if feature not in object_type:\n        return False\n    \n    # Check if the feature meets the threshold\n    if temperature < threshold:\n        return False\n    \n    return True\n\n# Example usage:\n# If Object Q has a surface temperature of 1200\u00b0C:\ntemperature = 1200  # Replace with the actual temperature\nobject_type = \"Object Q\"\nfeature = \"Feature-P\"\nthreshold = 1000\n\n# Determine classification\nis_type_x = classify_object(object_type, feature, threshold, temperature)\nprint(\"Object Q is\", 'classified as Type-X' if is_type_x else 'not classified as Type-X')\n```\n\n### Analysis:\n1. **Samshaya (Doubt Analysis)**:\n   - **What is the question?** Determine if Object Q with 1200\u00b0C surface temp is classified as Type-X.\n   - **What do we know?** \n     - Rule 1: Type-X requires Feature-P.\n     - Rule 2: Feature-P is defined as surface temp above 1000\u00b0C.\n     - Object Q's temp is 1200\u00b0C.\n   - **What do we need to confirm?** Whether Object Q has Feature-P and whether its temp meets the threshold.\n\n2. **Pramana (Sources of Knowledge)**:\n   - Rule 1 is a definition from the classification system.\n   - Rule 2 defines Feature-P.\n   - Object Q's temperature is measured as 1200\u00b0C.\n\n3. **Pancha Avayava (5-Member Syllogism)**:\n   - **Pratijna (Thesis)**: Object Q is classified as Type-X.\n   - **Heti (Reason)**: Because it has Feature-P (surface temp >1000\u00b0C).\n   - **Udaharana (Example)**: If an object has surface temp 1200\u00b0C, it meets the threshold.\n   - **Prasanga (Application)**: Since 1200\u00b0C >1000\u00b0C, it qualifies.\n   - **Nigamana (Conclusion)**: Therefore, Object Q is classified as Type-X.\n\n4. **Tarka (Counterfactual Reasoning)**:\n   - Assume the opposite: Object Q is not Type-X.\n   - Then, it either lacks Feature-P or its temp is \u22641000\u00b0C.\n   - But Object Q has temp 1200\u00b0C (>1000\u00b0C) and has Feature-P (by Rule 2).\n   - Therefore, the assumption is false, confirming Object Q is Type-X.\n\n5. **Hetvabhasa (Fallacy Check)**:\n   - **Equivalence Fallacy**: No, we're not equating objects with their features.\n   - **Exclusion Fallacy**: No, we're not excluding objects that meet the criteria.\n   - **Contraposition Fallacy**: No, we're not assuming the opposite and deriving the conclusion.\n\n6. **Nirnaya (Ascertainment)**:\n   - All evidence and reasoning confirm Object Q is classified as Type-X.\n   - No further investigation is needed.\n```\n\n### Final Answer:\nYes, Object Q is classified as Type-X.\n```",
+  "response_length": 3002,
+  "generation_time_ms": 55601,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Q is Type-X."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Nirnaya (Ascertainment)**:\n   - All evidence and reasoning confirm Object Q is classified as Type-X"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-06-C: Can Q lack type_x? False\nSAD-06-C: Yes \u2014 valid classification\n",
+        "problem_id": "SAD-06-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: sadhyasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": true
+}

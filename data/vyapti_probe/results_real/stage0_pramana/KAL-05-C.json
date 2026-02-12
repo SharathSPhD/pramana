@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-05-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "---\n\n### Solution:\n\n**Phase 1: Samshaya (Doubt Analysis)**\nThe problem requires us to determine whether Building W complies with the current building code. We need to analyze the code and the building's construction date to make a decision.\n\n**Phase 2: Pramana (Sources of Knowledge)**\nWe have the following sources of knowledge:\n\n- Original Code (2015): \"All residential buildings must have a minimum ceiling height of 8 feet.\"\n- Amendment (2022): \"All residential buildings constructed after 2020 must have a minimum ceiling height of 9 feet. Buildings constructed before 2020 are grandfathered under the original code.\"\n- Building W's construction date: 2018\n- Building W's ceiling height: 8.5 feet\n\n**Phase 3: Pancha Avayava (5-Member Syllogism)**\nWe can construct the following syllogism:\n\n1. All residential buildings constructed after 2020 must have a minimum ceiling height of 9 feet. (Premise 1)\n2. Building W was constructed in 2018, which is after 2020. (Premise 2)\n3. Therefore, Building W must have a minimum ceiling height of 9 feet. (Conclusion 1)\n4. However, Building W has a ceiling height of 8.5 feet, which is less than 9 feet. (Premise 3)\n5. Therefore, Building W does not comply with the current building code. (Conclusion 2)\n\n**Phase 4: Tarka (Counterfactual Reasoning)**\nWe can consider the following counterfactual scenarios:\n\n- What if Building W was constructed before 2020? Then it would be grandfathered under the original code, and its ceiling height would be 8 feet, which is compliant.\n- What if Building W was constructed after 2020? Then it would be subject to the amendment, and its ceiling height would be 9 feet, which is compliant.\n\nHowever, Building W was constructed in 2018, which is after 2020. Therefore, it is subject to the amendment.\n\n**Phase 5: Hetvabhasa (Fallacy Check)**\nThere are no fallacies in the reasoning process.\n\n**Phase 6: Nirnaya (Ascertainment)**\nBased on the analysis, Building W does not comply with the current building code because its ceiling height is 8.5 feet, which is less than the required 9 feet for buildings constructed after 2020.\n\n**Final Answer:**\nBuilding W does not comply with the current building code.",
+  "response_length": 2182,
+  "generation_time_ms": 20906,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Building W complies."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Phase 2: Pramana (Sources of Knowledge)**\nWe have the following sources of knowledge:\n\n- Original Code (2015): \"All residential buildings must have a minimum ceiling height of 8 feet"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-05-C: Building W compliant? True\n",
+        "problem_id": "KAL-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

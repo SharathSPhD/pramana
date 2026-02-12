@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**Phase 1: Samshaya (Doubt Analysis)**  \n*What is the nature of the clerk's proposal?*  \nThe clerk observes that all Heavy packages cost $15 and proposes this as a rule. However, the shipping costs provided do not explicitly state that all Heavy packages cost $15. The data lists individual costs for each package, and while all Heavy packages listed cost $15, the rule may or may not hold universally. There is a doubt about whether the rule applies to all Heavy packages, not just those observed.\n\n**Phase 2: Pramana (Sources of Knowledge)**  \n*What are the sources of knowledge?*  \nThe shipping costs are provided as:  \n- Package 1: Heavy, Domestic \u2192 $15  \n- Package 2: Heavy, Domestic \u2192 $15  \n- Package 3: Heavy, International \u2192 $15  \n- Package 4: Heavy, International \u2192 $15  \n- Package 5: Heavy, Domestic \u2192 $15  \n- Package 6: Heavy, International \u2192 $15  \n- Package 7: Light, Domestic \u2192 $8  \n- Package 8: Light, International \u2192 $12  \n\nThese individual package costs are the primary source of knowledge. The clerk's rule is inferred from these observations.\n\n**Phase 3: Pancha Avayava (5-Member Syllogism)**  \n*What is the syllogism structure?*  \nThe syllogism follows the five-member structure:  \n1. **Pratyaksha** (Direct Perception): All Heavy packages listed cost $15.  \n2. **Anumana** (Inference): Therefore, all Heavy packages cost $15.  \n3. **Udaharana** (Generalization): Heavy packages are a category; their cost is consistent across all instances.  \n4. **Tarka** (Counterfactual): If any Heavy package did not cost $15, the rule would be false.  \n5. **Nigamana** (Conclusion): The rule is correct as all Heavy packages cost $15.\n\n**Phase 4: Tarka (Counterfactual Reasoning)**  \n*What happens if the rule is false?*  \nIf any Heavy package did not cost $15, the clerk's rule would be incorrect. However, all Heavy packages listed cost $15. Therefore, the rule holds true.\n\n**Phase 5: Hetvabhasa (Fallacy Check)**  \n*What fallacies are present?*  \nThe clerk's reasoning does not exhibit any logical fallacies. The rule is consistent with the data and does not rely on ambiguous or missing information.\n\n**Phase 6: Nirnaya (Ascertainment)**  \n*What is the final conclusion?*  \nThe clerk's rule is correct based on the shipping cost data provided. All Heavy packages cost $15 to ship, as evidenced by the listed costs for each package.\n\n---\n\n### Final Answer:\nThe clerk's rule is correct. All Heavy packages cost $15 to ship.",
+  "response_length": 2459,
+  "generation_time_ms": 45071,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all Heavy packages cost $15."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "---\n\n### Nyaya Analysis:\n\n**Phase 1: Samshaya (Doubt Analysis)**  \n*What is the nature of the clerk's proposal?*  \nThe clerk observes that all Heavy packages cost $15 and proposes this as a rule"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14-C: Heavy \u2192 $15 \u2014 holds\n",
+        "problem_id": "SAV-14-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

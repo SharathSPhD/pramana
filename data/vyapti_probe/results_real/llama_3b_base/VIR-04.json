@@ -1,0 +1,72 @@
+{
+  "problem_id": "VIR-04",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "Yes, we can conclude that Employee Z IS permitted to enter the restricted zone.\nNo, we cannot conclude that Employee Z IS permitted to enter the restricted zone.\n\nThe correct answer is: Yes, we can conclude that Employee Z IS permitted to enter the restricted zone.\nExplanation:\nThe policy states that \"No employee who has not completed the safety training is permitted to enter the restricted zone.\" This is a conditional statement that says \"if an employee has not completed safety training, then the employee is not permitted in the restricted zone.\" Since Employee Z has completed the safety training, the condition \"an employee has not completed safety training\" is not met. Therefore, we can conclude that Employee Z IS permitted to enter the restricted zone.",
+  "response_length": 765,
+  "generation_time_ms": 5629,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude Employee Z is permitted."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "\" This is a conditional statement that says \"if an employee has not completed safety training, then the employee is not permitted in the restricted zone.\" Since Employee Z has completed the safety tra"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-04: Can employee NOT be permitted? True\n",
+        "problem_id": "VIR-04"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

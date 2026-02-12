@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-03",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nWe need to analyze the situation and identify any doubts or uncertainties. In this case, the doubt is whether Student A can check out the third book during the summer session.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe need to identify the sources of knowledge that will help us answer the question. In this case, the source of knowledge is the university policy.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe need to construct a 5-member syllogism to reason about the situation.\n\n### Member 1: \nAll students during summer session may check out up to 2 library books simultaneously (Pramana: University policy).\n\n### Member 2: \nStudent A is a student during summer session (Pramana: Time of semester).\n\n### Member 3: \nStudent A already has 2 books checked out (Pramana: Given information).\n\n### Member 4: \nIf Student A checks out a third book, then Student A will have 3 books checked out (Modus Ponens: If A, then B; A; \u2234 B).\n\n### Member 5: \nThe university policy states that students may check out up to 5 library books simultaneously (Pramana: University policy).\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider what would happen if Student A checks out the third book. If Student A checks out the third book, then Student A will be in violation of the university policy.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for any fallacies in our reasoning. In this case, we need to check if our reasoning is based on a false assumption.\n\n## Step 6: Nirnaya (Ascertainment)\nWe need to make a final decision based on our analysis.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 1649,
+  "generation_time_ms": 15873,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot check out 3rd book."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "### Member 4: \nIf Student A checks out a third book, then Student A will have 3 books checked out (Modus Ponens: If A, then B; A; \u2234 B).\n\n### Member 5: \nThe university policy states that students may c"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-03: Can check out 3rd? False\n",
+        "problem_id": "KAL-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

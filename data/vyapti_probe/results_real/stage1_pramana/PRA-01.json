@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-01",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis)**\n\nWe have five people: Amit, Bela, Charu, Dev, and Ela. Five seats: 1, 2, 3, 4, 5. The constraints are:\n\n1. Amit sits in position 1.\n2. Bela sits immediately to the right of Amit.\n3. Dev prefers coffee over tea.\n4. Charu sits in position 5.\n5. Ela does not sit in position 1.\n\nOur goal is to determine Ela's position.\n\n**2. Pramana (Sources of Knowledge)**\n\nThe constraints are our only source of knowledge. We must use them to deduce Ela's position.\n\n**3. Pancha Avayava (5-Member Syllogism)**\n\n**Thesis (Pratijna):** Ela sits in position 3.\n\n**Purana (Vestige):** The constraints provided.\n\n**Hypothesis (Heti):** If Ela sits in position 3, then the constraints are satisfied.\n\n**Udaharana (Comparison):** Let's compare this arrangement with other possibilities.\n\n**Nigamana (Inference):** Since all constraints are satisfied when Ela is in position 3, this must be the case.\n\n**4. Tarka (Counterfactual Reasoning)**\n\nAssume Ela does not sit in position 3. Then:\n\n- If Ela is not in position 3, where can she be? Positions 2, 4, or 5.\n\nBut position 5 is taken by Charu. So Ela can be in 2 or 4.\n\nIf Ela is in position 2:\n\n- Then Bela must be in position 3 (since Bela sits immediately to the right of Amit).\n\n- Then Dev and Ela remain for positions 4 and 5.\n\nBut Charu is in position 5, so Dev must be in position 4.\n\nBut we have no information about Dev's position, so this is possible.\n\nHowever, we need to check if this arrangement satisfies all constraints.\n\nWait, but if Ela is in position 2, then:\n\n- Positions: 1: Amit, 2: Ela, 3: Bela, 4: Dev, 5: Charu.\n\nThis arrangement satisfies all constraints except Ela does not sit in position 1 (which is true here). So this is a possible arrangement.\n\nBut our thesis is that Ela sits in position 3. So we need to see if this is the only possibility.\n\nAlternatively, if Ela is in position 4:\n\n- Then positions: 1: Amit, 2: Bela, 3: Dev, 4: Ela, 5: Charu.\n\nThis also satisfies all constraints.\n\nSo, if we assume Ela is not in position 3, there are two possible arrangements. Therefore, our thesis that Ela sits in position 3 is the only solution.\n\n**5. Hetvabhasa (Fallacy Check)**\n\nWe have used the principle of elimination to determine the only possible position for Ela. This avoids the fallacy of multiple conclusions.\n\n**6. Nirnaya (Ascertainment)**\n\nAfter applying all Nyaya methodologies, we conclude that Ela sits in position 3.\n---\n\n### Final Answer:\nEla sits in position \\boxed{3}.",
+  "response_length": 2499,
+  "generation_time_ms": 51575,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot determine Ela's exact position (3 or 4)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "**Nigamana (Inference):** Since all constraints are satisfied when Ela is in position 3, this must be the case"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-01: Ela can be 3: True, Ela can be 4: True\n",
+        "problem_id": "PRA-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "prakaranasama",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: prakaranasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "prakaranasama",
+  "hetvabhasa_used_fallback": true
+}

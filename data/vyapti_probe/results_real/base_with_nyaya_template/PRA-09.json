@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-09",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### 1. Samshaya (Doubt Analysis)\n\nWe observe that among the six subjects, those who are left-handed (A, C, E) have varying preferences regarding chocolate. Specifically:\n- **A** (Left-handed) likes chocolate.\n- **C** (Left-handed) does not like chocolate.\n- **E** (Left-handed) likes chocolate.\n\nThis creates a doubt: Does being left-handed correlate with liking chocolate?\n\n### 2. Pramana (Sources of Knowledge)\n\nThe data provides direct information:\n- **Left-handed subjects**: A, C, E\n  - A: Likes chocolate\n  - C: Does not like chocolate\n  - E: Likes chocolate\n- **Non-left-handed subjects**: B, D\n  - B: Likes chocolate\n  - D: Does not like chocolate\n\n### 3. Pancha Avayava (5-Member Syllogism)\n\nTo analyze the relationship, we can construct a syllogism:\n\n- **Major premise**: Left-handed people are likely to like chocolate.\n- **Minor premise**: C is left-handed and does not like chocolate.\n- **Conclusion**: Therefore, being left-handed does not necessarily mean one likes chocolate.\n\n### 4. Tarka (Counterfactual Reasoning)\n\nConsider the counterfactual:\n- If all left-handed people liked chocolate, then C's behavior would contradict this.\n- However, since C is left-handed and dislikes chocolate, the initial premise is false.\n\n### 5. Hetvabhasa (Fallacy Check)\n\nThe fallacy here is the **Unrepresentative Sample** fallacy. Observing a few cases does not provide sufficient evidence for a general conclusion.\n\n### 6. Nirnaya (Ascertainment)\n\nBased on the analysis, there is no conclusive evidence that being left-handed correlates with liking chocolate. The data shows that left-handed individuals have both preferences, making the relationship unclear.\n\n**Final Answer:**  \nNo, being left-handed does not provide sufficient information about whether a person likes chocolate.",
+  "response_length": 1796,
+  "generation_time_ms": 30623,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, handedness doesn't reliably predict chocolate preference."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Tarka (Counterfactual Reasoning)\n\nConsider the counterfactual:\n- If all left-handed people liked chocolate, then C's behavior would contradict this"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-09: No vy\u0101pti \u2014 handedness does not predict chocolate\n",
+        "problem_id": "PRA-09"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "prakaranasama",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: prakaranasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "prakaranasama",
+  "hetvabhasa_used_fallback": true
+}

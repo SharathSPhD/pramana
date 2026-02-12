@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-04-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis):**\nWe need to verify whether every student enrolled in both Philosophy (P) and Mathematics (M) is also enrolled in the Logic course (L). Let's list the students in P and M.\n\n- **Philosophy (P):** Mira, Neel, Omar, Priya, Riya\n- **Mathematics (M):** Mira, Neel, Omar, Priya, Sana\n\nWe observe that Mira, Neel, Omar, and Priya are common to both P and M. Sana is only in M. Riya is only in P.\n\nThe advisor claims that all students in both P and M are also in L. Let's check if this is true.\n\n**2. Pramana (Sources of Knowledge):**\nThe data is provided as facts:\n\n- P = {Mira, Neel, Omar, Priya, Riya}\n- M = {Mira, Neel, Omar, Priya, Sana}\n- L = {Mira, Neel, Omar, Priya, Qasim, Tara}\n\n**3. Pancha Avayava (5-Member Syllogism):**\nWe can structure the syllogism as follows:\n\n**Pratijna (Thesis):** Every student who is in both P and M is also in L.\n\n**Heti (Reason):** Because all students common to P and M are present in L.\n\n**Udaharana (Example):** For example, Mira is in both P and M and is also in L.\n\n**Prasanga (Comparison):** Comparing the sets P \u2229 M and L, we find that P \u2229 M is a subset of L.\n\n**Nigamana (Conclusion):** Therefore, the advisor's claim is true.\n\n**4. Tarka (Counterfactual Reasoning):**\nAssume the opposite: There exists a student in both P and M who is not in L. This would mean that the advisor's claim is false. However, based on the data, no such student exists. Therefore, our original conclusion holds.\n\n**5. Hetvabhasa (Fallacy Check):**\nWe need to check for common fallacies:\n\n- **Akwarda (Incomplete Comparison):** We compare P \u2229 M with L and find that all elements of P \u2229 M are in L. No fallacy here.\n\n- **Drishti (One-Sided Comparison):** The comparison is bidirectional since we verify that all common students are in L and no extra students are present. No fallacy here.\n\n- **Savyabhichara (Circular Reasoning):** The reasoning does not rely on any circular logic. No fallacy here.\n\n- **Hetvabhasa (False Pretension):** No pretension is present. No fallacy here.\n\n**6. Nirnaya (Ascertainment):**\nAll checks confirm the validity of the advisor's claim. Every student common to both P and M is indeed enrolled in L. The claim is true.\n\n---\n\n### Final Answer:\nThe advisor's claim is **true**. Every student enrolled in both Philosophy and Mathematics is also enrolled in the Logic course.",
+  "response_length": 2377,
+  "generation_time_ms": 48768,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, P\u2229M \u2286 L."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The advisor claims that all students in both P and M are also in L"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-04-C: P\u2229M \u2286 L violated? False\n",
+        "problem_id": "SAV-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-01",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n**Solution:**\n\nLet's analyze the problem step-by-step using the Nyaya methodology.\n\n### 1. Samshaya (Doubt Analysis)\nWe have six employees working across two departments: Engineering and Marketing. The information provided is as follows:\n\n- **Aarav**: Engineering, Remote\n- **Bina**: Engineering, Remote\n- **Chetan**: Engineering, On-site\n- **Diya**: Marketing, Remote\n- **Esha**: Engineering, Remote\n- **Farid**: Engineering, Remote\n\n**Question:** Is Gita, the new hire assigned to Engineering, required to work remotely?\n\n### 2. Pramana (Sources of Knowledge)\nThe information provided is based on the known working details of the existing employees. There are no explicit statements or evidence provided that suggest Gita's work arrangement.\n\n### 3. Pancha Avayava (5-Member Syllogism)\nTo determine Gita's work arrangement, we can apply the syllogism method.\n\n**Major Premise:** All employees in the Engineering department who work remotely are assigned to specific roles that do not require on-site presence.\n  \n**Minor Premise:** Aarav, Bina, Esha, and Farid are employees in the Engineering department who work remotely.\n  \n**Conclusion:** Therefore, Gita, being a new hire in Engineering, should follow the same work arrangement as Aarav, Bina, Esha, and Farid, i.e., work remotely.\n\n### 4. Tarka (Counterfactual Reasoning)\nLet's consider if Gita could work on-site. If Gita were to work on-site, she would join Chetan in the Engineering department. However, there is no information suggesting that the department requires additional on-site employees. Thus, working remotely remains the more plausible scenario.\n\n### 5. Hetvabhasa (Fallacy Check)\nWe need to check for any logical fallacies in our reasoning. The argument holds because the premises are consistent, and the syllogism is valid. There are no known contradictions or missing information that would invalidate the conclusion.\n\n### 6. Nirnaya (Ascertainment)\nBased on the analysis, Gita, as a new hire in the Engineering department, should work remotely.\n\n**Final Answer:**  \nGita must work remotely.",
+  "response_length": 2077,
+  "generation_time_ms": 35081,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Gita is NOT forced to work remotely."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "**Major Premise:** All employees in the Engineering department who work remotely are assigned to specific roles that do not require on-site presence"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-01: Checking vy\u0101pti 'Engineering \u2192 Remote' ===\nVy\u0101pti holds: False\nGita can be non-remote: True\n",
+        "problem_id": "SAV-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-05-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Step-by-Step Explanation:\n1. **Samshaya (Doubt Analysis):**\n   - The inspector has a doubt whether Building W complies with the current building code.\n   - The issue revolves around the ceiling height requirement based on the construction year.\n\n2. **Pramana (Sources of Knowledge):**\n   - The original code (2015) requires 8 feet.\n   - The amendment (2022) requires 9 feet for buildings after 2020, with pre-2020 buildings grandfathered under the original code.\n\n3. **Pancha Avayava (5-Member Syllogism):**\n   - **Major Premise:** All buildings constructed after 2020 must have a minimum ceiling height of 9 feet.\n   - **Minor Premise:** Building W was constructed in 2018.\n   - **Conclusion:** Therefore, Building W must have a minimum ceiling height of 9 feet.\n   - However, the amendment states that buildings before 2020 are grandfathered, so the conclusion may not hold.\n\n4. **Tarka (Counterfactual Reasoning):**\n   - Consider if Building W had been constructed after 2020, would it need 9 feet? Yes.\n   - Since it was built in 2018, it's before 2020, so it's grandfathered.\n\n5. **Hetvabhasa (Fallacy Check):**\n   - The inspector might be committing the \"Middle Term Fallacy\" by not considering the grandfather clause.\n   - The amendment introduces a condition (after 2020) that affects the requirement.\n\n6. **Nirnaya (Ascertainment):**\n   - Building W was built in 2018, before 2020.\n   - Therefore, it's grandfathered under the original code, requiring only 8 feet.\n   - The amendment doesn't apply, so the original 8-foot requirement stands.\n\n**Final Answer**\nBuilding W complies with the current building code.\n</think>\n\n**Final Answer:**\nBuilding W complies with the current building code.\n\n**Step-by-Step Explanation:**\n\n1. **Samshaya (Doubt Analysis):**\n   - The inspector is unsure if Building W meets the current code due to the ceiling height requirement based on its construction year.\n\n2. **Pramana (Sources of Knowledge):**\n   - The original 2015 code requires 8-foot ceilings.\n   - The 2022 amendment requires 9-foot ceilings for buildings after 2020, with pre-2020 buildings allowed to have 8-foot ceilings under grandfathering.\n\n3. **Pancha Avayava (5-Member Syllogism):**\n   - **Major Premise:** All post-2020 buildings need 9-foot ceilings.\n   - **Minor Premise:** Building W was built in 2018.\n   - **Conclusion:** It should meet the original 8-foot requirement due to grandfathering.\n\n4. **Tarka (Counterfactual Reasoning):**\n   - If built after 2020, it would need 9 feet. Since it was built in 2018, it's exempt.\n\n5. **Hetvabhasa (Fallacy Check):**\n   - The inspector might overlook the grandfather clause, thinking the newer requirement applies universally.\n\n6. **Nirnaya (Ascertainment):**\n   - Building W was constructed before 2020, thus grandfathered. It meets the original 8-foot requirement.\n\n**Final Answer:**\nBuilding W complies with the current building code.",
+  "response_length": 2901,
+  "generation_time_ms": 53360,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Building W complies."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Pancha Avayava (5-Member Syllogism):**\n   - **Major Premise:** All buildings constructed after 2020 must have a minimum ceiling height of 9 feet"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-05-C: Building W compliant? True\n",
+        "problem_id": "KAL-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

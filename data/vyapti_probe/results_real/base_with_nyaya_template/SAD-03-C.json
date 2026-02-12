@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-03-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\ndef solve():\n    # The Red box contains the key.\n    # The Green box contains the key.\n    # The Red box contains the ring.\n    # If the Red box contains the key, then the Blue box contains the coin.\n    \n    # Let's represent each box as a set of items it contains.\n    red = {'key', 'ring'}\n    green = {'key'}\n    blue = set()\n    # We need to determine what is in the blue box.\n    \n    # From the given statements, we can derive the following:\n    # 1. If Red has key, then Blue has coin.\n    # 2. Green has key.\n    # 3. Red has ring.\n    \n    # Since Green has the key, and Red also has the key, but according to statement 3, Red has the ring.\n    # Now, considering statement 1: If Red has key, then Blue has coin.\n    # Since Red does have the key, this implies Blue must have the coin.\n    # Therefore, Blue contains the coin.\n    \n    return {'blue': 'coin'}\n```\n\n### Solution Code Explanation\nThe function `solve()` uses sets to represent each box's contents. It starts by noting the given information about each box. By analyzing the statements, it deduces that since the Red box contains the key, the Blue box must contain the coin. Therefore, the function returns that the Blue box contains the coin.\n\n### Analysis\n1. **Samshaya (Doubt Analysis):** We are unsure what each box contains beyond the given statements.\n2. **Pramana (Sources of Knowledge):** The statements provided are the sources of knowledge: Red has key and ring, Green has key, and if Red has key, then Blue has coin.\n3. **Pancha Avayava (5-Member Syllogism):** Using the five syllogistic figures to structure the reasoning.\n4. **Tarka (Counterfactual Reasoning):** Considering what would happen if the premises were different.\n5. **Hetvabhasa (Fallacy Check):** Ensuring that the reasoning doesn't fall into logical fallacies.\n6. **Nirnaya (Ascertainment):** Concluding that Blue must contain the coin based on the given premises.\n\nThe final conclusion is that the Blue box contains the coin.\n```\n\n### Final Answer\nThe Blue box contains the coin.\n```python\n{'blue': 'coin'}\n```",
+  "response_length": 2088,
+  "generation_time_ms": 37635,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Green=key, Red=ring, Blue=coin."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "# If the Red box contains the key, then the Blue box contains the coin.\n    \n    # Let's represent each box as a set of items it contains"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-03-C: Green=key, Red=ring, Blue=coin\n  Green=0, Red=2, Blue=1\n",
+        "problem_id": "SAD-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

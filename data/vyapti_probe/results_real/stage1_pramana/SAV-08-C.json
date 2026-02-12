@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-08-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Each student studies exactly one subject: Physics, Chemistry, or Biology.\n    # We need to assign each student to a subject.\n    # The data is given, and we need to check if the department head's confirmation is consistent.\n    # Let's model the problem.\n\n    students = [\n        \"Arjun\", \"Bhavya\", \"Chirag\", \"Durga\", \"Emil\", \"Fatima\", \"Gopal\"\n    ]\n    subjects = [\"Physics\", \"Chemistry\", \"Biology\"]\n\n    # Each student's known subject and exam result (passed)\n    assignments = {\n        \"Arjun\": (\"Physics\", True),\n        \"Bhavya\": (\"Chemistry\", True),\n        \"Chirag\": (\"Physics\", True),\n        \"Durga\": (\"Physics\", True),\n        \"Emil\": (\"Biology\", True),\n        \"Fatima\": (\"Physics\", True),\n        \"Gopal\": (\"Chemistry\", True)\n    }\n\n    # The department head says: \"Every Physics student in this cohort passed the exam.\"\n    # We need to check if this is consistent with the assignments.\n\n    # Check all Physics students: Arjun, Chirag, Durga, Fatima\n    physics_students = [s for s in students if assignments[s][0] == \"Physics\"]\n    physics_students = physics_students[:4]  # Wait, wait, the assignments above have 4 Physics students?\n    # Wait, let's check the assignments:\n    # Arjun: Physics, Chirag: Physics, Durga: Physics, Fatima: Physics. So 4 Physics students.\n\n    # According to the department head, all Physics students passed the exam.\n    # From the assignments, all Physics students have passed (True). So the confirmation is consistent.\n\n    # Therefore, the answer is True.\n\n    return True\n\nsolve()\n```\n\n```python\ndef solve():\n    # Each student studies exactly one subject: Physics, Chemistry, or Biology.\n    # We need to assign each student to a subject.\n    # The data is given, and we need to check if the department head's confirmation is consistent.\n    # Let's model the problem.\n\n    students = [\n        \"Arjun\", \"Bhavya\", \"Chirag\", \"Durga\", \"Emil\", \"Fatima\", \"Gopal\"\n    ]\n    subjects = [\"Physics\", \"Chemistry\", \"Biology\"]\n\n    # Each student's known subject and exam result (passed)\n    assignments = {\n        \"Arjun\": (\"Physics\", True),\n        \"Bhavya\": (\"Chemistry\", True),\n        \"Chirag\": (\"Physics\", True),\n        \"Durga\": (\"Physics\", True),\n        \"Emil\": (\"Biology\", True),\n        \"Fatima\": (\"Physics\", True),\n        \"Gopal\": (\"Chemistry\", True)\n    }\n\n    # The department head says: \"Every Physics student in this cohort passed the exam.\"\n    # We need to check if this is consistent with the assignments.\n\n    # Check all Physics students: Arjun, Chirag, Durga, Fatima\n    physics_students = [s for s in students if assignments[s][0] == \"Physics\"]\n    # According to the assignments, all Physics students have passed the exam.\n    # So the confirmation is consistent.\n\n    return True\n\nsolve()\n```\n\n### Explanation:\n1. **Samshaya (Doubt Analysis)**: We need to verify if every Physics student indeed passed the exam.\n2. **Pramana (Sources of Knowledge)**: The problem provides direct statements about each student's subject and exam result.\n3. **Pancha Avayava (5-Member Syllogism)**: We analyze the structure of the problem using five logical rules.\n4. **Tarka (Counterfactual Reasoning)**: We consider the implications of each student not passing the exam.\n5. **Hetvabhasa (Fallacy Check)**: We ensure our reasoning avoids logical fallacies.\n6. **Nirnaya (Ascertainment)**: We conclude that the department head's confirmation is consistent with the data.",
+  "response_length": 3474,
+  "generation_time_ms": 63343,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all Physics students passed."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "# From the assignments, all Physics students have passed (True)"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-08-C: All Physics students passed \u2014 vy\u0101pti holds\n",
+        "problem_id": "SAV-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

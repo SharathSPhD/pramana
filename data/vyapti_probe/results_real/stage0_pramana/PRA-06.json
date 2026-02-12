@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-06",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "Please use the format specified in the instructions.\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nTo analyze the problem, we need to identify the premises and the conclusion. The premises are:\n1. All members of the chess club can play chess.\n2. Rishi is a member of the chess club.\n3. Rishi owns a bicycle.\n4. All bicycle owners live within 5 km of the campus.\n\nThe conclusion is: Can we conclude that Rishi lives within 5 km of the campus?\n\n## Step 2: Pramana (Sources of Knowledge)\nWe have four sources of knowledge:\n1. All members of the chess club can play chess. (Universal Affirmative)\n2. Rishi is a member of the chess club. (Universal Affirmative)\n3. Rishi owns a bicycle. (Particular Affirmative)\n4. All bicycle owners live within 5 km of the campus. (Universal Affirmative)\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can construct a 5-member syllogism:\n1. All members of the chess club can play chess. (Universal Affirmative)\n2. Rishi is a member of the chess club. (Universal Affirmative)\n3. Rishi owns a bicycle. (Particular Affirmative)\n4. All bicycle owners live within 5 km of the campus. (Universal Affirmative)\n5. Therefore, Rishi lives within 5 km of the campus. (Universal Affirmative)\n\n## Step 4: Tarka (Counterfactual Reasoning)\nTo test the validity of the syllogism, we need to consider counterfactual scenarios:\n- What if Rishi is not a member of the chess club? Then, we cannot conclude that Rishi lives within 5 km of the campus.\n- What if Rishi does not own a bicycle? Then, we cannot conclude that Rishi lives within 5 km of the campus.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies:\n- There is no fallacy in the syllogism.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the 5-member syllogism and the counterfactual reasoning, we can conclude that Rishi lives within 5 km of the campus.\n\nThe final answer is: $\\boxed{Yes}$",
+  "response_length": 1887,
+  "generation_time_ms": 19716,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Rishi lives within 5km (via premises 3+4)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": false,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-06: Can Rishi be outside 5km? False\nPRA-06: Rishi within 5km (premises 1+2 are red herring)\n",
+        "problem_id": "PRA-06"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-09-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Determine the total number of subjects and the number of subjects in each group.\nThere are 6 subjects in total. 3 subjects take Medication X and 3 subjects do not take Medication X.\n\n## Step 2: Determine the number of subjects who improved and the number of subjects who did not improve in each group.\nIn the Medication X group, 3 subjects improved and 0 subjects did not improve. In the no Medication X group, 0 subjects improved and 3 subjects did not improve.\n\n## Step 3: Calculate the proportion of subjects who improved in each group.\nIn the Medication X group, the proportion of subjects who improved is 3/3 = 1. In the no Medication X group, the proportion of subjects who improved is 0/3 = 0.\n\n## Step 4: Compare the proportions of subjects who improved in each group.\nSince the proportion of subjects who improved in the Medication X group (1) is greater than the proportion of subjects who improved in the no Medication X group (0), taking Medication X appears to be associated with symptom improvement.\n\nThe final answer is: $\\boxed{1}$",
+  "response_length": 1058,
+  "generation_time_ms": 9476,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Medication X associated with improvement."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-09-C: Can medication fail to improve? False\nPRA-09-C: Yes \u2014 medication predicts improvement\n",
+        "problem_id": "PRA-09-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

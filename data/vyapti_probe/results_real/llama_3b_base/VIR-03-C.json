@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-03-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Answer:** Yes, we can conclude that Student Y received a scholarship.\n**Explanation:** The given statement is a universal conditional statement, which can be written as \"If a student scored above 90, then the student received a scholarship.\" This statement is true for all students who scored above 90. Since Student Y scored 95, which is above 90, we can conclude that Student Y received a scholarship.\nThis type of argument is called a \"universal instantiation\" argument. It is a valid argument form because it is based on a universal statement and a specific instance. The conclusion follows logically from the premises. In this case, the conclusion is a specific instance of the universal statement. Therefore, we can conclude that Student Y received a scholarship.",
+  "response_length": 771,
+  "generation_time_ms": 5839,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Yes, Student Y received scholarship."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "\" This statement is true for all students who scored above 90. Since Student Y scored 95, which is above 90, we can conclude that Student Y received a scholarship"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-03-C: Can student NOT have scholarship? False\n",
+        "problem_id": "VIR-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

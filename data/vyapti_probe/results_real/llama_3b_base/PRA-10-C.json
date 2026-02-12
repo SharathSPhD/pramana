@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Analyze the given information\nWe are given three pieces of information about the dishes ordered by Jun, Kira, and Lev: Jun does not order pasta, Kira orders sushi, and Lev does not order salad.\n\n## Step 2: Determine the possible dishes for each person\nFrom the information given, we can deduce the following:\n- Jun cannot order pasta, so Jun can order either sushi or salad.\n- Kira has already ordered sushi, so Kira cannot order pasta or salad.\n- Lev cannot order salad, so Lev can order either pasta or sushi.\n\n## Step 3: Apply the process of elimination\nSince Kira has already ordered sushi, and Lev cannot order salad, Lev must order either pasta or sushi. However, since Jun cannot order pasta, Lev must order sushi. This leaves pasta for Jun and salad for Kira.\n\n## Step 4: Confirm the solution\nWe can confirm our solution by checking that it satisfies all the given conditions:\n- Jun does not order pasta (satisfied).\n- Kira orders sushi (satisfied).\n- Lev does not order salad (satisfied).\n\nThe final answer is: $\\boxed{Pasta, Sushi, Salad}$",
+  "response_length": 1060,
+  "generation_time_ms": 9557,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Kira=sushi, Lev=pasta, Jun=salad."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10-C: Lev=pasta, Jun=salad\n",
+        "problem_id": "PRA-10-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-03",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Phases:\n\n**1. Samshaya (Doubt Analysis):**\nWhat is the exact question being asked? What are the possible answers? What are the reasons for doubt?\n\nQuestion: Does the hypothesis \"Whenever S1 is ON, the light is ON\" hold true based on the test results?\n\nPossible Answers:\n- Yes, the hypothesis is valid.\n- No, the hypothesis is invalid.\n\nReasons for Doubt:\n- The hypothesis is a universal statement, but it may not hold for all possible cases beyond the tests.\n- The test results may not cover all scenarios, leaving some possibilities untested.\n- The hypothesis does not account for the combined effect of multiple switches.\n\n**2. Pramana (Sources of Knowledge):**\nWhat are the facts (pramanas) that establish the hypothesis? What are the counterfacts?\n\nFacts:\n- Test 1: S1=ON, S2=ON, S3=ON \u2192 Light ON\n- Test 2: S1=ON, S2=ON, S3=OFF \u2192 Light ON\n- Test 3: S1=ON, S2=OFF, S3=ON \u2192 Light ON\n- Test 4: S1=ON, S2=OFF, S3=OFF \u2192 Light OFF\n- Test 5: S1=OFF, S2=ON, S3=ON \u2192 Light OFF\n\nCounterfacts:\n- If the hypothesis is false, then there exists at least one case where S1 is ON and the light is OFF.\n\n**3. Pancha Avayava (5-Member Syllogism):**\nConstruct a syllogism with five members: major premise, minor premise, conclusion, counterfactual, and counterconclusion.\n\nMajor Premise: Whenever S1 is ON, the light is ON. (Hypothesis)\nMinor Premise: In all tests where S1 is ON, the light is ON. (Test Results)\nConclusion: Therefore, the hypothesis is valid based on the test results.\n\nCounterfactual: Suppose S1 is ON and the light is OFF.\nCounterconclusion: Therefore, the hypothesis is invalid.\n\n**4. Tarka (Counterfactual Reasoning):**\nAssume the hypothesis is false. Then, in some case where S1 is ON, the light must be OFF. But in all test cases where S1 is ON, the light is ON. Therefore, the hypothesis cannot be false.\n\n**5. Hetvabhasa (Fallacy Check):**\nCheck for logical fallacies in the reasoning. Is the conclusion valid?\n\nFallacy Check:\n- The reasoning does not rely on circular logic or ad hoc reasoning.\n- The conclusion follows logically from the premises.\n\n**6. Nirnaya (Ascertainment):**\nBased on the analysis, what is the definitive conclusion?\n\nFinal Answer:\nThe hypothesis is valid based on the test results.\n---\n\n### Answer:\nThe hypothesis is valid based on the test results.",
+  "response_length": 2300,
+  "generation_time_ms": 44342,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"S1=ON \u2192 Light=ON\" is NOT valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "(Hypothesis)\nMinor Premise: In all tests where S1 is ON, the light is ON"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-03: Vy\u0101pti 'S1\u2192Light' holds: False\n",
+        "problem_id": "SAV-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

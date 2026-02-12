@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis)**  \n*What is the question?*  \nThe librarian's statement is true or false?  \n*What do we need to prove?*  \nWe need to verify whether all recommended books are available.\n\n**2. Pramana (Sources of Knowledge)**  \nThe information provided is the authoritative source. The tags for each book are reliable and accurate.\n\n**3. Pancha Avayava (5-Member Syllogism)**  \n**Pratijna (Thesis):** The librarian's statement is true.  \n**Heti (Reason):** All recommended books have the [Available] tag.  \n**Udaharana (Example):** \"Algorithms\" is recommended and available.  \n**Upanaya (Application):** Since all recommended books share the same tags, they are all available.  \n**Nigamana (Conclusion):** Therefore, the librarian's statement is true.\n\n**4. Tarka (Counterfactual Reasoning)**  \nAssume the statement is false: There exists a recommended book that is not available. This leads to a contradiction with the given tags. Hence, the original statement must be true.\n\n**5. Hetvabhasa (Fallacy Check)**  \nNo fallacies are present in the reasoning. The syllogism follows valid logical structure.\n\n**6. Nirnaya (Ascertainment)**  \nThe librarian's statement is true. All recommended books are available.\n\n---\n\n### Final Answer:\nThe librarian's statement is **true**. All recommended books are available.",
+  "response_length": 1347,
+  "generation_time_ms": 23870,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Recommended \u2288 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "Samshaya (Doubt Analysis)**  \n*What is the question?*  \nThe librarian's statement is true or false?  \n*What do we need to prove?*  \nWe need to verify whether all recommended books are available"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11: 'Recommended \u2286 Available' holds: False\n",
+        "problem_id": "SAV-11"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

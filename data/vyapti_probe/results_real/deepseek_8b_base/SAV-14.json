@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I have this problem about shipping packages, and I need to figure out if the clerk's rule is correct. Let me try to break it down step by step.\n\nFirst, let me list out all the packages with their details:\n\n1. Package 1: Heavy, Domestic \u2192 $15\n2. Package 2: Heavy, Domestic \u2192 $15\n3. Package 3: Heavy, International \u2192 $15\n4. Package 4: Heavy, International \u2192 $15\n5. Package 5: Heavy, Domestic \u2192 $15\n6. Package 6: Heavy, International \u2192 $25\n7. Package 7: Light, Domestic \u2192 $8\n8. Package 8: Light, International \u2192 $12\n\nSo, there are 8 packages in total. Each has a weight class (Heavy or Light) and a destination (Domestic or International). The shipping costs vary based on these attributes.\n\nThe clerk says that most Heavy packages cost $15 and wants to create a rule that all Heavy packages cost $15. I need to check if this rule is correct.\n\nHmm, so the question is whether all Heavy packages indeed cost $15. To figure this out, I should look at all the Heavy packages and see if their costs are consistent with the clerk's rule.\n\nLet me list out the Heavy packages:\n\n1. Package 1: Heavy, Domestic \u2192 $15 \u2714\ufe0f\n2. Package 2: Heavy, Domestic \u2192 $15 \u2714\ufe0f\n3. Package 3: Heavy, International \u2192 $15 \u2714\ufe0f\n4. Package 4: Heavy, International \u2192 $15 \u2714\ufe0f\n5. Package 5: Heavy, Domestic \u2192 $15 \u2714\ufe0f\n6. Package 6: Heavy, International \u2192 $25 \u274c\n\nWait, here's a problem. Package 6 is Heavy, International, but it costs $25, not $15. So according to the clerk's rule, all Heavy packages should cost $15, but Package 6 breaks that rule. Therefore, the rule isn't entirely correct because there's at least one Heavy package that doesn't fit.\n\nBut maybe the clerk is considering that the majority of Heavy packages cost $15, so perhaps the rule is an approximation. Let me check how many Heavy packages there are and their costs.\n\nLooking back, the packages are numbered 1 to 8. Let's identify which are Heavy:\n\nPackages 1, 2, 3, 4, 5, 6 are Heavy. That's 6 packages.\n\nSo, out of 6 Heavy packages, 5 cost $15, and 1 costs $25. So, 5 out of 6. So, most of them do cost $15, but not all.\n\nTherefore, the clerk's rule is not entirely correct because it's not true for all Heavy packages. However, maybe the clerk is trying to simplify the process, assuming that Heavy packages are all $15, which might be a common case, but technically, the rule isn't accurate because of Package 6.\n\nAlternatively, perhaps the clerk is considering that the majority cost $15, so it's a reasonable approximation. But in terms of correctness, if the rule is meant to be a strict rule, then it's incorrect because not all Heavy packages cost $15.\n\nWait, let me double-check the costs:\n\n- Packages 1-5: Heavy, Domestic \u2192 $15 each. So that's 5 packages.\n- Packages 3,4: Heavy, International \u2192 $15 each. So that's 2 packages.\n- Package 6: Heavy, International \u2192 $25.\n\nSo, in total, 5 + 2 = 7 Heavy packages? Wait, no, wait. Wait, no, the Heavy packages are 1-6, right? So that's 6 packages.\n\nWait, no, hold on. Let me recount:\n\n1. Package 1: Heavy, Domestic\n2. Package 2: Heavy, Domestic\n3. Package 3: Heavy, International\n4. Package 4: Heavy, International\n5. Package 5: Heavy, Domestic\n6. Package 6: Heavy, International\n\nYes, that's 6 Heavy packages. So, 5 are $15, and 1 is $25. So, 5 out of 6. So, the majority are $15, but not all.\n\nTherefore, the rule that all Heavy packages cost $15 is incorrect because there is at least one Heavy package that doesn't follow this rule.\n\nAlternatively, maybe the clerk is considering that all Heavy packages, regardless of destination, cost $15. But in reality, Package 6 is Heavy and International but costs $25. So, the rule is incorrect.\n\nAlternatively, maybe the clerk is considering that all Heavy packages, regardless of destination, cost $15, but that's not the case because Package 6 is an exception.\n\nAlternatively, perhaps the clerk is grouping all Heavy packages together without considering the destination, but that's not how shipping costs work. The destination affects the cost, so Heavy packages going International might have different costs.\n\nIn this case, the clerk's rule is incorrect because not all Heavy packages cost $15. Specifically, Package 6 is an exception.\n\nTherefore, the answer is that the rule is not correct because there exists at least one Heavy package (Package 6) that costs more than $15.\n</think>\n\nThe clerk's rule that all Heavy packages cost $15 is incorrect because Package 6, which is Heavy and International, costs $25. Therefore, the rule is not accurate for all Heavy packages.\n\n**Answer:** The rule is incorrect because not all Heavy packages cost $15; specifically, Package 6 costs $25.",
+  "response_length": 4628,
+  "generation_time_ms": 86345,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"Heavy \u2192 $15\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The clerk says that most Heavy packages cost $15 and wants to create a rule that all Heavy packages cost $15. I need to check if this rule is correct"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14: 'Heavy \u2192 $15' holds: False\n",
+        "problem_id": "SAV-14"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

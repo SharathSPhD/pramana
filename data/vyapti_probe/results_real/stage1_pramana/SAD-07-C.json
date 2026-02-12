@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAD-07-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef analyze_proofValidity():\n    # Samshaya: Doubt Analysis\n    doubt = \"\"\"\n    Is the proof that \u221a2 is irrational valid?\n    The proof assumes \u221a2 is rational, derives a contradiction, and concludes \u221a2 is irrational.\n    Does this structure make the proof valid?\n    \"\"\"\n    \n    # Pramana: Sources of Knowledge\n    sources = [\n        \"Proof structure: Assume rational, derive contradiction, conclude irrational.\",\n        \"The specific steps of the proof: 1. Assume \u221a2 = p/q, 2. p\u00b2 = 2q\u00b2, 3. p even, 4. q even, 5. contradiction.\",\n        \"Mathematical principles: If a number is rational, it can be expressed as a fraction of integers. If a square of that number is even, then the number itself is even.\"\n    ]\n    \n    # Pancha Avayava: 5-Member Syllogism\n    syllogism = [\n        \"Pratyaksha (Direct Perception): The proof demonstrates a contradiction arising from the assumption that \u221a2 is rational.\",\n        \"Anumana (Inference): From the contradiction, we conclude that \u221a2 is irrational.\",\n        \"Pratyakshana (Comparison): The structure of the proof follows the standard method for proving irrationality of a number: assume rational, derive contradiction, conclude irrationality.\",\n        \"Vytihara (Generalization): This method can be applied to prove the irrationality of other square roots, such as \u221a3, \u221a5, etc.\",\n        \"Prapanchana (Extension): The principles used in the proof are foundational to number theory and rationality proofs.\"\n    ]\n    \n    # Tarka: Counterfactual Reasoning\n    tarka = [\n        \"If \u221a2 were rational, then it could be expressed as p/q with p and q integers having no common factors.\",\n        \"Following the proof steps, this would imply both p and q are even, contradicting the assumption that they have no common factors.\",\n        \"Therefore, \u221a2 cannot be rational; it must be irrational.\"\n    ]\n    \n    # Hetvabhasa: Fallacy Check\n    fallacy_check = [\n        \"Akhandkari (Universal Affirmation): The proof does not universally affirm all rational numbers are irrational. It specifically addresses \u221a2.\",\n        \"Savyabhichara (Circular Reasoning): The proof does not rely on an unproven statement. The contradiction is derived from the initial assumption.\",\n        \"Viruddhakarana (Contradictory Reasoning): No contradictions exist in the proof's logical chain. Each step follows from the previous one without inconsistency.\",\n        \"Tadutpatti (Baseless Assertion): The proof builds upon established mathematical principles, not arbitrary claims.\"\n    ]\n    \n    # Nirnaya: Ascertainment\n    conclusion = \"\"\"\n    The proof is valid. The structure follows the classical method for proving irrationality: assume rationality, derive a contradiction, and conclude irrationality. Each step is logically sound and follows from the previous one. The contradiction arises directly from the assumption, and there are no fallacies or circular reasoning in the proof. The mathematical principles used are foundational and correctly applied.\n    \"\"\"\n    \n    return conclusion\n```\n\n### Analysis:\nThe proof follows the classical method for proving irrationality: assume rationality, derive a contradiction, and conclude irrationality. Each step logically follows from the previous one without fallacies or circular reasoning. The contradiction arises directly from the assumption, and the proof is valid.\n\n---\n\n**Final Answer:**\nThe proof is valid. The square root of 2 is irrational.",
+  "response_length": 3465,
+  "generation_time_ms": 55059,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, proof of \u221a2 irrational is valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "\"\n    ]\n    \n    # Hetvabhasa: Fallacy Check\n    fallacy_check = [\n        \"Akhandkari (Universal Affirmation): The proof does not universally affirm all rational numbers are irrational"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-07-C: Proof valid \u2014 \u221a2 irrational\n",
+        "problem_id": "SAD-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

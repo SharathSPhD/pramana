@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I have this problem about shipping packages, and I need to figure out if the clerk's rule is correct. Let me try to break it down step by step.\n\nFirst, let me list out all the packages with their details:\n\n1. Package 1: Heavy, Domestic \u2192 $15\n2. Package 2: Heavy, Domestic \u2192 $15\n3. Package 3: Heavy, International \u2192 $15\n4. Package 4: Heavy, International \u2192 $15\n5. Package 5: Heavy, Domestic \u2192 $15\n6. Package 6: Heavy, International \u2192 $15\n7. Package 7: Light, Domestic \u2192 $8\n8. Package 8: Light, International \u2192 $12\n\nSo, the clerk is saying that all Heavy packages cost $15 to ship. I need to check if this is correct based on the given data.\n\nLet me see. All the Heavy packages listed here do cost $15 each. So, from the data, Heavy packages are consistently $15, whether they're going Domestic or International. That seems consistent.\n\nBut wait, the problem is about whether the rule is correct. So, is the rule that all Heavy packages cost $15? From the data, yes, all Heavy packages are $15. So, the rule is correct.\n\nBut hold on, let me think again. Maybe the clerk is trying to say that all Heavy packages, regardless of destination, cost $15. So, in the data, that's exactly what's happening. All Heavy packages are $15, whether Domestic or International.\n\nSo, the rule is correct because all Heavy packages indeed cost $15. There are no Heavy packages that cost more or less than $15 in the data provided.\n\nBut let me check the Light packages as well. The clerk didn't mention anything about them, but just to make sure. Package 7 is Light, Domestic at $8, and Package 8 is Light, International at $12. So, Light packages have different costs depending on destination. But the rule is only about Heavy packages, so that's fine.\n\nTherefore, the clerk's rule is correct because all Heavy packages in the data cost exactly $15 to ship, regardless of their destination.\n</think>\n\nThe clerk's rule is correct based on the provided data. All Heavy packages, whether Domestic or International, cost $15 to ship. There are no instances of Heavy packages with different costs, so the rule holds true.\n\n**Answer:** The rule is correct because all Heavy packages cost $15, as shown in the data.",
+  "response_length": 2197,
+  "generation_time_ms": 38169,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all Heavy packages cost $15."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Package 8: Light, International \u2192 $12\n\nSo, the clerk is saying that all Heavy packages cost $15 to ship. I need to check if this is correct based on the given data"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14-C: Heavy \u2192 $15 \u2014 holds\n",
+        "problem_id": "SAV-14-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

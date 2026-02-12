@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-03",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### 1. Samshaya (Doubt Analysis)\n**Question:** Can we conclude that Student Y scored above 90 on the test?\n\n**Analysis:** The given statement is a conditional one: \"If a student scores above 90, they receive a scholarship.\" Student Y received a scholarship, so we have the conditional and the consequence. However, we don't know if Student Y scored above 90 or if there were other reasons for the scholarship.\n\n**Answer:** There is a doubt because we don't know Student Y's test score.\n\n---\n\n### 2. Pramana (Sources of Knowledge)\n**Question:** What are the sources of knowledge relevant to this problem?\n\n**Answer:** The information provided is a conditional statement and the fact that Student Y received a scholarship.\n\n---\n\n### 3. Pancha Avayava (5-Member Syllogism)\n**Question:** Applying the syllogism structure to the problem.\n\n**Syllogism Structure:**\n1. All students who scored above 90 received a scholarship.\n2. Student Y received a scholarship.\n3. Therefore, Student Y scored above 90.\n\n**Answer:** The syllogism is valid, but we need additional information about Student Y's score.\n\n---\n\n### 4. Tarka (Counterfactual Reasoning)\n**Question:** Considering counterfactuals.\n\n**Counterfactual:** If Student Y received a scholarship, could they have scored 90 or below?\n\n**Analysis:** The conditional statement doesn't provide information about students who scored 90 or below. Therefore, Student Y could have scored above 90, but it's not certain.\n\n**Answer:** It's possible, but not necessarily true.\n\n---\n\n### 5. Hetvabhasa (Fallacy Check)\n**Question:** Identifying any fallacies in the reasoning.\n\n**Fallacy:** Assuming that the receipt of a scholarship only occurs for scores above 90.\n\n**Analysis:** The given statement doesn't specify if there are other criteria for scholarships. Therefore, the conclusion might be a fallacy.\n\n**Answer:** The conclusion may be a fallacy due to unknown criteria.\n\n---\n\n### 6. Nirnaya (Ascertainment)\n**Question:** Determining the final conclusion.\n\n**Conclusion:** Based on the given information, we cannot definitively conclude that Student Y scored above 90. Additional evidence about Student Y's test score is required.\n\n**Final Answer:** No, we cannot validly conclude that Student Y scored above 90 on the test based on the given information.",
+  "response_length": 2305,
+  "generation_time_ms": 37896,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude scored above 90."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": false,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-03: Can student NOT have scored above 90? True\n",
+        "problem_id": "VIR-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

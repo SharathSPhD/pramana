@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-04-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I have this problem where there are four cities connected by train routes, and I need to figure out the minimum travel time from City A to City D. Let me try to visualize this first.\n\nCity A is connected to City B, which takes 2 hours. Then, City B is connected to City C, taking 3 hours. Finally, City C is connected to City D, which takes 1 hour. So, if I just follow the path A-B-C-D, the total time would be 2 + 3 + 1, which is 6 hours. But wait, is that the fastest way?\n\nHmm, maybe there's another route. Let me think. Are there any other connections between the cities that I might have missed? The problem only mentions the direct routes: A to B, B to C, and C to D. So, I don't think there are any alternative paths besides going through B and C. \n\nLet me double-check. If I go from A to B, that's 2 hours. From B to C, that's another 3 hours. Then from C to D, 1 hour. So, 2 + 3 + 1 is indeed 6 hours. Is there a way to go from A to D without going through all three cities? Well, A is only connected to B, B is only connected to A and C, C is connected to B and D, and D is only connected to C. So, there are no direct trains from A to C or B to D or anything like that. \n\nTherefore, the only possible route is A-B-C-D, which totals 6 hours. I don't think there's a shorter path because each segment is a direct route without any overlaps or alternative connections. So, I guess 6 hours is the minimum travel time from City A to City D.\n</think>\n\nThe minimum travel time from City A to City D is 6 hours. This is achieved by traveling through the route A \u2192 B \u2192 C \u2192 D, which adds up the individual travel times of 2 hours, 3 hours, and 1 hour respectively. There are no alternative routes or direct connections that offer a shorter path, making this the most efficient journey.\n\n**Answer:** The minimum travel time from City A to City D is 6 hours.",
+  "response_length": 1867,
+  "generation_time_ms": 34974,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "6 hours from A to D."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Is there a way to go from A to D without going through all three cities? Well, A is only connected to B, B is only connected to A and C, C is connected to B and D, and D is only connected to C"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-04-C: A to D time = 6hrs\n",
+        "problem_id": "PRA-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-05",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Inference Process:\n\n1. **Samshaya (Doubt Analysis)**  \n   We are to determine which lab Ravi works in. The information provided is about the locations and beverages of four researchers, but Ravi's lab assignment is not directly stated. This creates a doubt that needs to be resolved.\n\n2. **Pramana (Sources of Knowledge)**  \n   The information is provided through direct statements:  \n   - Priya works in Lab-North.  \n   - Qadir works in Lab-South.  \n   - Ravi drinks coffee.  \n   - Sita works in Lab-North.  \n   - Priya drinks tea.  \n   These are the only facts we consider.\n\n3. **Pancha Avayava (5-Member Syllogism)**  \n   We construct a syllogism to reason about Ravi's lab assignment.  \n   **Pratijna (Thesis):** Ravi works in Lab-North or Lab-South.  \n   **Hetu (Reason):** Priya works in Lab-North, Sita works in Lab-North, Qadir works in Lab-South. Since there are two labs and four researchers, and two are assigned to Lab-North (Priya and Sita), the remaining two (Ravi and Qadir) must be assigned to Lab-South.  \n   **Udaharana (Example):** If two labs exist and four researchers are assigned with two in each lab, then each additional researcher must be assigned to the remaining lab.  \n   **Prasanga (Application):** Applying this rule, Ravi must work in Lab-South.  \n   **Nigamana (Conclusion):** Therefore, Ravi works in Lab-South.\n\n4. **Tarka (Counterfactual Reasoning)**  \n   Suppose Ravi worked in Lab-North. Then, since Priya and Sita are already in Lab-North, there would be three researchers in Lab-North, which is impossible as there are only two labs and four researchers. This contradiction implies that Ravi cannot work in Lab-North. Therefore, Ravi must work in Lab-South.\n\n5. **Hetvabhasa (Fallacy Check)**  \n   We verify that our reasoning does not commit any logical fallacies. The syllogism follows the structure of a valid five-member syllogism, and the counterfactual test confirms the conclusion is consistent with the premises. No fallacies are detected.\n\n6. **Nirnaya (Ascertainment)**  \n   After thorough analysis without contradictions, we conclude that Ravi works in Lab-South.\n---\n\n### Final Answer:\nRavi works in **Lab-South**.",
+  "response_length": 2181,
+  "generation_time_ms": 40568,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot determine Ravi's lab."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "**Udaharana (Example):** If two labs exist and four researchers are assigned with two in each lab, then each additional researcher must be assigned to the remaining lab.  \n   **Prasanga (Application):"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-05: Ravi can be North: True, South: True\n",
+        "problem_id": "PRA-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "prakaranasama",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: prakaranasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "prakaranasama",
+  "hetvabhasa_used_fallback": true
+}

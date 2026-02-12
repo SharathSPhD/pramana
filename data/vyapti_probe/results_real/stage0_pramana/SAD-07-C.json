@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAD-07-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** The answer should be in the format: \"Yes\" or \"No\" with a brief explanation.\n\n---\n\n## Step 1: Samshaya (Doubt Analysis)\nTo analyze the validity of the proof, we need to identify any potential doubts or flaws in the reasoning. The given proof is a classic example of a proof by contradiction, where the assumption that \u221a2 is rational leads to a contradiction, thus proving that \u221a2 is irrational.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe proof relies on basic mathematical concepts, such as the definition of rational numbers and the properties of even numbers. The assumptions and conclusions are based on well-established mathematical principles, making the proof a valid application of mathematical knowledge.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nThe proof follows a standard syllogistic structure:\n1. Assume \u221a2 is rational.\n2. Derive a contradiction from this assumption.\n3. Conclude that \u221a2 is irrational.\nThe 5-member syllogism consists of:\n- Premise 1: \u221a2 is rational.\n- Premise 2: If \u221a2 is rational, then p/q is rational.\n- Conclusion 1: \u221a2 = p/q.\n- Premise 3: If \u221a2 = p/q, then p\u00b2 = 2q\u00b2.\n- Premise 4: If p\u00b2 = 2q\u00b2, then p\u00b2 is even.\n- Conclusion 2: p is even.\n- Premise 5: If p is even, then p = 2k.\n- Premise 6: If p = 2k, then 4k\u00b2 = 2q\u00b2.\n- Premise 7: If 4k\u00b2 = 2q\u00b2, then q\u00b2 = 2k\u00b2.\n- Premise 8: If q\u00b2 = 2k\u00b2, then q\u00b2 is even.\n- Conclusion 3: q is even.\n- Premise 9: If both p and q are even, they share factor 2.\n- Premise 10: If p and q share factor 2, then p/q is not in simplest form.\n- Conclusion 4: \u221a2 = p/q is not in simplest form.\n- Conclusion 5: \u221a2 is irrational.\n\nThe syllogism is valid, and the proof is sound.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nTo test the validity of the proof, we can consider counterfactual scenarios:\n- What if \u221a2 is rational? Then the proof would lead to a contradiction, which is the desired outcome.\n- What if \u221a2 is irrational? Then the proof would be false, which is not the desired outcome.\nSince the proof leads to a contradiction when assuming \u221a2 is rational, it is valid.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nThe proof is free from fallacies:\n- There are no false assumptions.\n- There are no circular arguments.\n- There are no ad hominem attacks.\n- There are no straw man arguments.\n- There are no false dichotomies.\n\nThe proof is logically sound.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, we can conclude that the proof is valid.\n\nThe final answer is: $\\boxed{Yes}$",
+  "response_length": 2465,
+  "generation_time_ms": 27027,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, proof of \u221a2 irrational is valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "- Premise 2: If \u221a2 is rational, then p/q is rational.\n- Conclusion 1: \u221a2 = p/q"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-07-C: Proof valid \u2014 \u221a2 irrational\n",
+        "problem_id": "SAD-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

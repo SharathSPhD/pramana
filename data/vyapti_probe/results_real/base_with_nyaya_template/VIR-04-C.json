@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-04-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Solution:**\n\nWe will analyze the problem using the **Nyaya** methodology, specifically applying each of the six phases to reach a conclusion.\n\n---\n\n### **1. Samshaya (Doubt Analysis)**\n\nThe policy states:  \n*\"No employee who has not completed the safety training is permitted to enter the restricted zone.\"*  \nThis can be logically represented as:  \n**\u00acTraining \u2192 \u00acPermitted**  \n\nEmployee Z is currently inside the restricted zone, which means they are **permitted**.  \nSo, the question is:  \n**If Employee Z is permitted, can we conclude that they have completed the safety training?**\n\n---\n\n### **2. Pramana (Sources of Knowledge)**\n\nThe information provided is the policy document, which is a reliable source of knowledge.  \nThere is no conflicting information or evidence to suggest that the policy has been misapplied or altered.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**\n\nWe can structure the syllogism as follows:  \n\n**Major Premise:** No employee who has not completed the safety training is permitted to enter the restricted zone.  \n**Minor Premise:** Employee Z is permitted to enter the restricted zone.  \n**Conclusion:** Therefore, Employee Z has completed the safety training.\n\nThis follows the logical structure:  \n**\u00acTraining \u2192 \u00acPermitted**  \n**Permitted**  \n**\u2192 Training**\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**\n\nTo ensure the conclusion is valid, we can apply counterfactual reasoning:  \n\n*Assume* Employee Z has **not** completed the safety training.  \nAccording to the policy, this would mean they are **not permitted** to enter the restricted zone.  \nBut we know that Employee Z is **permitted**, which contradicts our assumption.  \nTherefore, our assumption is false, and it must be that Employee Z has completed the safety training.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**\n\nWe need to check for any logical fallacies in the reasoning:  \n\n- **Affirmation of the Consequent**: This fallacy occurs when one affirmatively states the conclusion without proper justification.  \n  However, in this case, the reasoning follows the contrapositive correctly, so there is no fallacy here.\n\n---\n\n### **6. Nirnaya (Ascertainment)**\n\nAfter analyzing all the phases, we can confidently conclude that:  \n**Employee Z has completed the safety training.**\n\n---\n\n### **Final Answer:**\n\n**Yes, we can conclude that Employee Z has completed the safety training.**",
+  "response_length": 2406,
+  "generation_time_ms": 39403,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Employee Z completed training."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-04-C: Can training NOT be completed? False\n",
+        "problem_id": "VIR-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

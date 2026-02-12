@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** The final answer should be a boolean value (true/false) indicating whether the librarian's statement is true or false.\n\n### Solution:\nTo analyze this problem using the 6-phase Nyaya methodology, we will follow the steps below:\n\n## Step 1: Samshaya (Doubt Analysis)\nWe need to analyze the librarian's statement: \"All our recommended books are available.\" We should identify the potential sources of doubt and the conditions under which the statement might be false.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe librarian's statement is based on the catalog system's data. We need to identify the sources of knowledge that support this statement. In this case, the sources of knowledge are the catalog system's data and the librarian's knowledge of the catalog system.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe will construct a 5-member syllogism to analyze the librarian's statement. The 5 members are:\n\n1. All recommended books are available.\n2. All available books are recommended.\n3. All books in the catalog system are recommended or available.\n4. The catalog system contains books that are both recommended and available.\n5. The catalog system contains books that are not both recommended and available.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider counterfactual scenarios to test the librarian's statement. For example:\n\n* What if there is a book that is recommended but not available?\n* What if there is a book that is available but not recommended?\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies in the librarian's statement. For example:\n\n* Is the statement categorical (all-or-nothing) or probabilistic (some-or-some-not)?\n* Is the statement based on a universal characteristic (all recommended books are available) or a particular instance (some recommended books are available)?\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we will make a final determination about the truth of the librarian's statement.\n\nThe final answer is: $\\boxed{\\text{False}}$",
+  "response_length": 2039,
+  "generation_time_ms": 17419,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Recommended \u2286 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "### Solution:\nTo analyze this problem using the 6-phase Nyaya methodology, we will follow the steps below:\n\n## Step 1: Samshaya (Doubt Analysis)\nWe need to analyze the librarian's statement: \"All our "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11-C: Recommended \u2286 Available \u2014 holds\n",
+        "problem_id": "SAV-11-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

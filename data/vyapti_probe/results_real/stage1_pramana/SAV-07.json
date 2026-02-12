@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-07",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Inference:\n**Pratijna (Hypothesis):** The rule \"All compounds containing element X undergo this reaction\" is valid.\n\n**Hetvabhasa (Fallacy Check):** The inference is not affected by the presence of compounds that do not contain element X (e.g., \u03b6) or by the presence of compounds that contain element X but do not react (e.g., \u03b3). These facts do not contradict the rule, as the rule specifies that all compounds containing element X undergo the reaction, not that all compounds that undergo the reaction contain element X.\n\n**Tarka (Counterfactual Reasoning):** If the rule were false, then at least one compound containing element X would not undergo the reaction. However, all compounds containing element X (\u03b1, \u03b2, \u03b4, \u03b5) do undergo the reaction, so the rule cannot be false.\n\n**Nirnaya (Ascertainment):** The rule is valid based on the given data.\n---\n\n### Final Answer:\n\\boxed{\\text{Yes, the rule is valid.}}",
+  "response_length": 926,
+  "generation_time_ms": 15816,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"contains X \u2192 reacts\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "---\n\n### Nyaya Inference:\n**Pratijna (Hypothesis):** The rule \"All compounds containing element X undergo this reaction\" is valid"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-07: Checking 'contains X \u2192 reacts' ===\nCounterexample exists (gamma): True\nChecking refined 'contains X \u2227 acidic \u2192 reacts':\nRefined vy\u0101pti consistent: True\n",
+        "problem_id": "SAV-07"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

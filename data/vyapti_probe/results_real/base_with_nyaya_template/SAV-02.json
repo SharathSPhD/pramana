@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-02",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Solution:**\n\nWe are tasked with determining whether Species H, which is confirmed to be nocturnal, possesses echolocation based on the given observations of other species.\n\n### **1. Samshaya (Doubt Analysis):**\nWe have a doubt whether Species H has echolocation. The question is: Does Species H have echolocation?\n\n### **2. Pramana (Sources of Knowledge):**\nThe information provided is:\n- **Nocturnal species with echolocation:** A, B, C, F, G\n- **Nocturnal species without echolocation:** D\n- **Diurnal species without echolocation:** E\n\n### **3. Pancha Avayava (5-Member Syllogism):**\nWe can construct a syllogism to draw a conclusion.\n\n**Major Premise:** All nocturnal species with echolocation are likely to have echolocation.\n- **Nocturnal and echolocation \u2192 Echolocation**\n\n**Minor Premise:** Species H is a nocturnal species.\n- **H is nocturnal**\n\n**Conclusion:** Therefore, Species H is likely to have echolocation.\n- **H is nocturnal \u2192 H has echolocation**\n\n### **4. Tarka (Counterfactual Reasoning):**\nWe consider the opposite: Suppose Species H does not have echolocation. However, since all other nocturnal species with echolocation do, and Species H is nocturnal, this scenario is inconsistent with the given data. Thus, Species H must have echolocation.\n\n### **5. Hetvabhasa (Fallacy Check):**\nWe check for potential fallacies. The syllogism does not fall into any logical fallacy as it correctly follows the structure of premises and conclusion.\n\n### **6. Nirnaya (Ascertainment):**\nBased on the analysis, we can conclusively determine that Species H has echolocation.\n\n### **Final Answer:**\n\\boxed{\\text{Yes, Species H has echolocation.}}",
+  "response_length": 1670,
+  "generation_time_ms": 29608,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Species H is NOT necessarily echolocating."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "**Major Premise:** All nocturnal species with echolocation are likely to have echolocation"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-02: Checking vy\u0101pti 'Nocturnal \u2192 Echolocation' ===\nH can lack echolocation: True\n",
+        "problem_id": "SAV-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-03",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Vada:\nNyaya Vada is a systematic method of reasoning used in classical Indian philosophy. This problem can be analyzed using the 6-phase Nyaya methodology to systematically derive the solution.\n\n---\n\n### Step-by-Step Analysis:\n\n**1. Samshaya (Doubt Analysis):**\nStudent A has a doubt about whether they can check out a third book during summer session. The policy states a maximum of 2 books, but Student A already has 2 checked out and wants to check out a third.\n\n**2. Pramana (Sources of Knowledge):**\nThe policy is a reliable source of knowledge. It clearly states the maximum number of books that can be checked out during summer session.\n\n**3. Pancha Avayava (5-Member Syllogism):**\n**Pratijna (Thesis):** Student A can check out the third book.\n**Hetu (Reason):** The policy allows a maximum of 2 books during summer session. Student A already has 2 books checked out. Checking out a third book would exceed the policy limit.\n**Udaharana (Example):** If a student has already checked out the maximum allowed books, they cannot check out additional books.\n**Upanaya (Application):** Since Student A has reached the maximum, they cannot check out another book.\n**Nigamana (Conclusion):** Therefore, Student A cannot check out the third book.\n\n**4. Tarka (Counterfactual Reasoning):**\n**Prahraya (Assumption):** Suppose Student A can check out the third book.\n**Prasanga (Consequence):** This would mean the policy allows more than 2 books during summer session.\n**Viruddhakarana (Counterexample):** However, the policy explicitly states a maximum of 2 books.\n**Tarka Samgraha (Counterfactual Conclusion):** Therefore, the assumption is false, and Student A cannot check out the third book.\n\n**5. Hetvabhasa (Fallacy Check):**\n**Kala (Time):** The policy is specific to summer session.\n**Samanya (Generality):** The policy applies to all students during summer session.\n**Nigamana (Inference):** The inference is valid because the policy explicitly limits the number of books.\n**Hetvabhasa Samgraha (Fallacy Conclusion):** No fallacies are present in the reasoning.\n\n**6. Nirnaya (Ascertainment):**\nAfter systematically analyzing the policy, applying logical reasoning, and verifying through counterfactuals, the conclusion is definitive. Student A cannot check out the third book during summer session as it exceeds the policy limit.\n\n---\n\n### Final Answer:\nStudent A cannot check out the third book during summer session.",
+  "response_length": 2442,
+  "generation_time_ms": 41409,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot check out 3rd book."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": false,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-03: Can check out 3rd? False\n",
+        "problem_id": "KAL-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: kalatita"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": true
+}

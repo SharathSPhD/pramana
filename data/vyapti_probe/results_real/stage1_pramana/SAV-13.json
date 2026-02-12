@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-13",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis)**\n\n*What is the question?*  \nIs the food quality at Caf\u00e9 Luna consistently excellent based on the given reviews?\n\n*What do we know?*  \n- Five reviews rate food quality as Excellent (\u2605\u2605\u2605\u2605\u2605) during lunch visits.\n- One review rates food quality as Poor (\u2605\u2606\u2606\u2606\u2606) during a dinner visit.\n- No reviews provide an average rating or a mixed rating.\n\n*What do we need to determine?*  \nWhether the food quality is consistently excellent across all visit types (lunch and dinner).\n\n**2. Pramana (Sources of Knowledge)**\n\n*Textual Evidence*  \n- \"Caf\u00e9 Luna consistently delivers excellent food quality.\"\n\n*Non-textual Knowledge*  \n- Each review provides a specific rating for a specific visit type.\n\n**3. Pancha Avayava (5-Member Syllogism)**\n\n**Syllogism Structure**  \n*Pratijna* (Thesis): Caf\u00e9 Luna's food quality is consistently excellent.  \n*Hetu* (Reason): Five lunch reviews rate food quality as excellent, and no reviews contradict this.  \n*Udaharana* (Example): Lunch reviews consistently rate food quality as excellent.  \n*Pratyaksha* (Perception): Review 1: Excellent \u2605\u2605\u2605\u2605\u2605.  \n*Pratipaksha* (Counterexample): No reviews contradict the thesis.\n\n**4. Tarka (Counterfactual Reasoning)**\n\n*Assumption*: Suppose Caf\u00e9 Luna does not consistently deliver excellent food quality.  \n*Conclusion*: This would imply that at least one lunch or dinner review does not rate food quality as excellent.  \n*Rebuttal*: All reviews rate food quality as excellent, making the assumption false.  \n*Conclusion*: Therefore, Caf\u00e9 Luna does consistently deliver excellent food quality.\n\n**5. Hetvabhasa (Fallacy Check)**\n\n*Checked Fallacies*  \n- *Kala Upasana* (Time Fallacy): No temporal reasoning involved.  \n- *Anupasana* (Comparison Fallacy): No comparisons made.  \n- *Drishti* (Perspective Fallacy): No perspective bias.  \n- *Savyabhichara* (Circular Reasoning): No circular reasoning.  \n- *Hetvabhasa* (Fallacy Fallacy): No fallacy fallacy.\n\n**6. Nirnaya (Ascertainment)**\n\n*Final Determination*  \nCaf\u00e9 Luna consistently delivers excellent food quality based on all available reviews.\n\n---\n\n### Final Answer:\n**Yes**, the food quality at Caf\u00e9 Luna is consistently excellent based on all available reviews.",
+  "response_length": 2237,
+  "generation_time_ms": 40040,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"Visit \u2192 Excellent\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "*What do we need to determine?*  \nWhether the food quality is consistently excellent across all visit types (lunch and dinner)"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-13: 'Visit \u2192 Excellent' holds: False\n",
+        "problem_id": "SAV-13"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

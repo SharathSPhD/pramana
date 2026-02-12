@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-01-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Alright, so I have this problem where five people\u2014Amit, Bela, Charu, Dev, and Ela\u2014are sitting in a row of five seats, labeled from 1 to 5. There are a few constraints given, and I need to figure out where Ela sits. Let me try to break this down step by step.\n\nFirst, let's list out the constraints:\n\n1. **Amit sits in position 1.** Okay, so that's straightforward. Position 1 is occupied by Amit.\n\n2. **Bela sits immediately to the right of Amit.** Since Amit is in position 1, the seat immediately to his right would be position 2. So, Bela must be in position 2.\n\n3. **Charu sits in position 5.** Got it. So, position 5 is taken by Charu.\n\n4. **Ela does not sit in position 3.** Hmm, so Ela can't be in seat 3. That means she has to be in either position 1, 2, 4, or 5. But wait, positions 1 and 2 are already taken by Amit and Bela, and position 5 is taken by Charu. So, that leaves positions 4 as the only possible seat for Ela. Wait, is that right?\n\nLet me visualize the seats:\n\n1: Amit  \n2: Bela  \n3: ?  \n4: ?  \n5: Charu\n\nSo, seats 1, 2, and 5 are already occupied. That leaves seats 3 and 4 open. But constraint 4 says Ela cannot sit in position 3, so she must be in position 4. Therefore, Ela sits in position 4.\n\nBut hold on, let me make sure I didn't miss anything. Are there any other constraints that might affect this? Let me go through each constraint again.\n\n1. Amit in 1: Correct, that's fixed.\n\n2. Bela in 2: Since she has to be immediately to the right of Amit, that's also fixed.\n\n3. Charu in 5: Fixed as well.\n\n4. Ela not in 3: So, she can't be in 3, which leaves 4 as the only option.\n\nSo, the only remaining person is Dev, right? Because the people are Amit, Bela, Charu, Dev, and Ela. So, if we've placed Amit, Bela, and Charu, the remaining two people are Dev and Ela. But since Ela can't be in 3, she must be in 4, leaving Dev to be in 3.\n\nSo, putting it all together:\n\n1: Amit  \n2: Bela  \n3: Dev  \n4: Ela  \n5: Charu\n\nThat seems to satisfy all the constraints. Let me double-check:\n\n- Amit is in 1: Yes.  \n- Bela is immediately to the right of Amit: Yes, in 2.  \n- Charu is in 5: Yes.  \n- Ela is not in 3: Yes, she's in 4.  \n\nSo, that works. Is there another possible arrangement? Let me see.\n\nSuppose I tried to put someone else in seat 4, but the only other person is Dev. So, if I tried to put Dev in 4, then Ela would have to be in 3, which is not allowed. So, that doesn't work. Therefore, the only possible arrangement is the one I have above.\n\nSo, Ela must be in position 4.\n\n**Final Answer**\nEla sits in position \\boxed{4}.\n</think>\n\nGiven the constraints for the seating arrangement of five people\u2014Amit, Bela, Charu, Dev, and Ela\u2014we need to determine the position where Ela sits. The constraints are as follows:\n\n1. Amit sits in position 1.\n2. Bela sits immediately to the right of Amit, which means Bela is in position 2.\n3. Charu sits in position 5.\n4. Ela does not sit in position 3.\n\nBased on these constraints, we can deduce the following:\n\n- Position 1 is occupied by Amit.\n- Position 2 is occupied by Bela.\n- Position 5 is occupied by Charu.\n\nThis leaves positions 3 and 4 open. Since Ela cannot sit in position 3, she must sit in position 4. The remaining person, Dev, will sit in position 3.\n\nThus, the seating arrangement is:\n\n1: Amit  \n2: Bela  \n3: Dev  \n4: Ela  \n5: Charu\n\nTherefore, Ela sits in position \\boxed{4}.",
+  "response_length": 3361,
+  "generation_time_ms": 71828,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Ela sits in position 4."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "So, if I tried to put Dev in 4, then Ela would have to be in 3, which is not allowed. So, that doesn't work. Therefore, the only possible arrangement is the one I have above.\n\nSo, Ela must be in posit"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-01-C: Ela=4 forced: True\n",
+        "problem_id": "PRA-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

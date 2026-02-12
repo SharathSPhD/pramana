@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-03",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Syllogism:\n**Pratijna (Thesis):** Can we validly conclude that Student Y scored above 90 on the test?\n\n**Hypothesis (Private Reasoning):** Every student who scored above 90 received a scholarship. Student Y received a scholarship. Therefore, Student Y scored above 90.\n\n**Udaharana (Comparison):** In cases where a cause is present and its effect is observed, the cause must be present. (Example: Fire causes smoke; Smoke observed \u2192 Fire present.)\n\n**Tarka (Counterfactual):** Suppose Student Y did not score above 90. Then, they would not have received a scholarship. But we know they did receive one. Therefore, Student Y must have scored above 90.\n\n**Hetvabhasa (Fallacy Check):** The argument does not commit any logical fallacy. The conclusion follows directly from the premises.\n\n**Nirnaya (Ascertainment):** The conclusion is valid and certain.\n---\n\n### Final Answer:\n**Pratijna (Thesis):** Can we validly conclude that Student Y scored above 90 on the test?\n\n**Nirnaya (Ascertainment):** Yes, we can validly conclude that Student Y scored above 90 on the test. The conclusion is certain and definitive.",
+  "response_length": 1125,
+  "generation_time_ms": 19791,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude scored above 90."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-03: Can student NOT have scored above 90? True\n",
+        "problem_id": "VIR-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

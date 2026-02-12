@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-06",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya (Doubt Analysis)\n    # The problem is a logic puzzle where we need to determine which statement must be true given the premise.\n    # The premise is a negation of a universal statement: \"It is false that all the lights in Room A are on.\"\n    # This means that not all lights are on, so at least one is off.\n\n    # Pramana (Sources of Knowledge)\n    # The only source of knowledge is the given premise.\n    # Premise: It is false that all the lights in Room A are on.\n    # This is a universal negative statement: \"Not all A are on.\"\n\n    # Pancha Avayava (5-Member Syllogism)\n    # The syllogism is: If not all A are on, then at least one A is off.\n    # This follows the form: If not (all A are on), then not (all A are on) which is a contradiction, hence at least one A is off.\n\n    # Tarka (Counterfactual Reasoning)\n    # Assume the opposite and check for contradiction.\n    # Suppose all lights are on. Then the premise \"It is false that all are on\" would be false. But the premise is given as true, so this leads to a contradiction. Therefore, our original assumption must be wrong.\n\n    # Hetvabhasa (Fallacy Check)\n    # Check for fallacies:\n    # - Akhandha (Universalization) is used in the premise.\n    # - Viruddha (Contradiction) is used in the counterfactual reasoning.\n    # - Sadhyoparamara (Circular Reasoning) is not used.\n    # - Asiddha (Unproven Divisors) is not used.\n\n    # Nirnaya (Ascertainment)\n    # After analysis, the only conclusion that must be true is (b) At least one light in Room A is off.\n\n    # Answer\n    return \"b\"\n```\n\n### Explanation:\n1. **Samshaya (Doubt Analysis)**: We start by identifying the problem as a logic puzzle requiring the analysis of a negated universal statement.\n\n2. **Pramana (Sources of Knowledge)**: The only information provided is the negation of the universal statement about the lights in Room A.\n\n3. **Pancha Avayava (5-Member Syllogism)**: Using the syllogistic form, we derive that if not all lights are on, then at least one must be off.\n\n4. **Tarka (Counterfactual Reasoning)**: By assuming the opposite (all lights are on), we reach a contradiction with the given premise, confirming our original conclusion.\n\n5. **Hetvabhasa (Fallacy Check)**: We verify that our reasoning does not fall into any logical fallacies, ensuring the validity of our conclusion.\n\n6. **Nirnaya (Ascertainment)**: After systematically applying Nyaya methodology, we conclude that option (b) must be true.",
+  "response_length": 2513,
+  "generation_time_ms": 46247,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "(b) At least one light is off."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "# The premise is a negation of a universal statement: \"It is false that all the lights in Room A are on"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-06: Can all lights be on? True\nVIR-06: At least one light is off (\u00ac\u2200 \u2261 \u2203\u00ac)\n",
+        "problem_id": "VIR-06"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

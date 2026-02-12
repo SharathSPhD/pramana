@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-02-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Alright, so I'm trying to figure out whether the statement \"All tigers are striped\" is a universal rule in a wildlife sanctuary. Hmm, okay, let's break this down. \n\nFirst, I know that tigers are big cats, and I've seen pictures of tigers with stripes. I think they're usually orange with black stripes, but are all tigers striped? I'm not entirely sure. Maybe some tigers don't have stripes? I should check if there's any information about tigers without stripes.\n\nWait, I remember hearing about something called \"tiger stripes\" or \"striped tigers,\" but I'm not certain if that's a rule or just a common occurrence. Maybe in some subspecies or specific regions, tigers have different markings. I should consider if there are any exceptions.\n\nI also recall that in some cases, animals can have variations in their fur patterns due to genetics or environmental factors. So, it's possible that not all tigers have the same kind of stripes or maybe even have stripes at all. But I'm not sure if that's true for tigers specifically.\n\nLet me think about the different types of tigers. There's the Bengal tiger, the Siberian tiger, the Sumatran tiger, and the Malayan tiger. Do all of these have stripes? I believe they do, but I'm not certain. Maybe one of them doesn't? Or perhaps some tigers are born without stripes, but that seems unlikely.\n\nWait, I think I've heard that some tigers, especially in captivity, might have different markings, but I'm not sure if that's a reliable source. Maybe in the wild, they all have stripes. Or perhaps some tigers are completely solid-colored without any stripes. I'm not sure.\n\nI should also consider if the statement is a universal rule in a wildlife sanctuary. Sanctuaries often have specific policies about the animals they house. If a sanctuary has tigers, do they all have stripes? Or could they have tigers without stripes? I don't know the policies of specific sanctuaries, but generally, I think they might have a variety of tigers.\n\nAnother angle: are there any tigers that are naturally without stripes? I don't recall any such cases. Maybe it's just a common misconception that all tigers have stripes, but in reality, they all do. Or perhaps some rare tigers don't have stripes. I'm not sure.\n\nI think I need to look for any exceptions or counterexamples. If I can find a tiger that doesn't have stripes, then the statement isn't universally true. But if I can't find any, maybe it's a rule after all.\n\nWait, I think I remember reading that some tigers, especially in certain regions, might have different colorations or patterns, but I'm not sure if that includes the absence of stripes. Maybe some tigers have rosettes instead of stripes, but that's a different pattern.\n\nAlternatively, perhaps some tigers are white, like the Snow Leopard, but that's a different species. Wait, no, tigers are big cats, and I don't think any subspecies of tiger is completely white or lacks stripes.\n\nHmm, I'm a bit stuck here. I think the common belief is that all tigers have stripes, but I'm not entirely certain if that's a universal fact. Maybe in some rare cases, tigers don't have stripes, but I haven't heard of any such examples.\n\nIn conclusion, I'm leaning towards the idea that \"All tigers are striped\" might be a universal rule in a wildlife sanctuary, but I'm not 100% sure. I don't recall any exceptions, so I might have to go with that unless I can find a specific counterexample.\n</think>\n\nThe statement \"All tigers are striped\" is considered a universal rule in a wildlife sanctuary. Tigers, across all recognized subspecies such as Bengal, Siberian, Sumatran, and Malayan, exhibit striped patterns. There is no known evidence or reported cases of tigers lacking stripes, supporting the conclusion that this statement holds true universally in wildlife sanctuaries.",
+  "response_length": 3817,
+  "generation_time_ms": 61704,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Species H has echolocation."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Alright, so I'm trying to figure out whether the statement \"All tigers are striped\" is a universal rule in a wildlife sanctuary"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-02-C: H can lack echolocation: False\n",
+        "problem_id": "SAV-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,72 @@
+{
+  "problem_id": "SAD-08",
+  "category": "sadhyasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Solution Code:\n```python\nfrom itertools import permutations\n\ndef schedule_tasks(tasks, slots):\n    for perm in permutations(slots):\n        if (perm[0] == 'Morning' and perm[1] == 'Afternoon' and perm[2] == 'Evening'):\n            if (perm[0] == tasks[0] and perm[1] == tasks[1] and perm[2] == tasks[2]):\n                return perm\n    return None\n\ntasks = ['T1', 'T2', 'T3']\nslots = ['Morning', 'Afternoon', 'Evening']\n\n# Find a valid permutation\nschedule = schedule_tasks(tasks, slots)\nprint(\"Valid Schedule:\", schedule)\n```\n\n### Explanation:\nThe code uses permutations to generate all possible assignments of tasks to slots. It checks each permutation to see if the tasks are assigned in the correct order (T1 \u2192 T2 \u2192 T3) and returns the first valid schedule found. The solution ensures that the cyclic dependency is satisfied by checking each possible slot assignment.\n\nThe Nyaya methodology is applied to systematically analyze and solve the problem. Each phase of Nyaya helps break down the problem, validate the solution, and ensure logical consistency.\n\nThe final answer is a valid schedule where each task is assigned to a slot in the correct cyclic order.\n```\n<Team>\n@Title: Nyaya-Based Scheduling Solution\n@Lead: Anshul Khatkar\n@Contributors: Anshul Khatkar\n@Status: Final\n</Team>\n\n<Team>\n@Title: Nyaya-Based Scheduling Solution Code\n@Lead: Anshul Khatkar\n@Contributors: Anshul Khatkar\n@Status: Final\n</Team>\n\n<Team>\n@Title: Nyaya-Based Scheduling Solution Explanation\n@Lead: Anshul Khatkar\n@Contributors: Anshul Khatkar\n@Status: Final\n</Team>\n```\n\n### Nyaya Analysis:\n\n**Samshaya (Doubt Analysis):**\nWe must assign T1, T2, T3 to Morning, Afternoon, Evening such that T1 precedes T2, T2 precedes T3, and T3 precedes T1. This creates a cyclic dependency, making the problem non-trivial.\n\n**Pramana (Sources of Knowledge):**\nThe problem provides specific constraints:\n1. T1 must be scheduled before T2.\n2. T2 must be scheduled before T3.\n3. T3 must be scheduled before T1.\n\n**Pancha Avayava (5-Member Syllogism):**\n1. **Pratyaksha** (Direct Perception): We observe that each task must precede another in a cycle.\n2. **Anumana** (Inference): Since each task must precede another, the only possible arrangement is a cyclic permutation.\n3. **Pratyakshana** (Comparison): Comparing all permutations, only the cyclic one satisfies all constraints.\n4. **Vairutpaha** (Universal Reasoning): The cyclic arrangement is the only solution for a circular dependency.\n5. **Nigamana** (Derivation): By systematically checking permutations, we confirm the cyclic solution.\n\n**Tarka (Counterfactual Reasoning):**\nAssume a non-cyclic arrangement. Then, at least one constraint is violated. Therefore, the cyclic arrangement must hold.\n\n**Hetvabhasa (Fallacy Check):**\nWe ensure no circular reasoning or ad hoc assumptions. Each step follows logically from the problem constraints.\n\n**Nirnaya (Ascertainment):**\nThe only valid schedule is T1 \u2192 Morning, T2 \u2192 Afternoon, T3 \u2192 Evening.\n</Team>\n\n```python\nfrom itertools import permutations\n\ndef schedule_tasks(tasks, slots):\n    for perm in permutations(slots):\n        if (perm[0] == 'Morning' and perm[1] == 'Afternoon' and perm[2] == 'Evening'):\n            if (perm[0] == tasks[0] and perm[1] == tasks[1] and perm[2] == tasks[2]):\n                return perm\n    return None\n\ntasks = ['T1', 'T2', 'T3']\nslots = ['Morning', 'Afternoon', 'Evening']\n\n# Find a valid permutation\nschedule = schedule_tasks(tasks, slots)\nprint(\"Valid Schedule:\", schedule)\n```",
+  "response_length": 3499,
+  "generation_time_ms": 65729,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No valid schedule exists."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "### Solution Code:\n```python\nfrom itertools import permutations\n\ndef schedule_tasks(tasks, slots):\n    for perm in permutations(slots):\n        if (perm[0] == 'Morning' and perm[1] == 'Afternoon' and "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-08: Cyclic system satisfiable? False\n",
+        "problem_id": "SAD-08"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response mentions circular/assumption",
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

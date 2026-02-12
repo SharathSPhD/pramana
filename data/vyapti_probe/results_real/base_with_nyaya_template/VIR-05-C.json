@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-05-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n**Solution:**\n\n**Problem Statement:**\nIn a student body:\n- **Set A** = Students who play sports = \\{p, q, r, s, t\\}\n- **Set B** = Students who are on the honor roll = \\{q, r, u, v\\}\n- **Policy Statement:** \"Students who play sports AND are on the honor roll are eligible for the athletics scholarship.\"\n\n**Question:** Which students are eligible for the athletics scholarship?\n\n---\n\n**Step-by-Step Solution Using Nyaya Methodology:**\n\n1. **Samshaya (Doubt Analysis):**\n   - **What is the question?** Identify the students eligible for the athletics scholarship based on the given sets and policy.\n   - **What is in doubt?** Whether the intersection of Set A and Set B exists and who belongs to it.\n\n2. **Pramana (Sources of Knowledge):**\n   - **Set A:** \\{p, q, r, s, t\\}\n   - **Set B:** \\{q, r, u, v\\}\n   - **Policy Statement:** Students who play sports **AND** are on the honor roll are eligible.\n\n3. **Pancha Avayava (5-Member Syllogism):**\n   - **Major Premise:** All students who play sports are in Set A.\n   - **Minor Premise:** All students who are on the honor roll are in Set B.\n   - **Conclusion:** Students who are in both Set A and Set B are eligible for the scholarship.\n\n4. **Tarka (Counterfactual Reasoning):**\n   - Consider if any student is eligible but not in both sets. Since the policy requires both conditions, no such students exist.\n\n5. **Hetvabhasa (Fallacy Check):**\n   - **Fallacy of Intersection:** Assuming that if a student is in both sets, they are eligible.\n   - **Fallacy of Exclusion:** Assuming that only one condition is needed for eligibility.\n\n6. **Nirnaya (Ascertainment):**\n   - After analyzing, the intersection of Set A and Set B is \\{q, r\\}.\n   - Therefore, students **q** and **r** are eligible for the athletics scholarship.\n\n---\n\n**Final Answer:**\n\n\\boxed{\\{q, r\\}}",
+  "response_length": 1820,
+  "generation_time_ms": 35324,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "{q, r} eligible for scholarship."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Pancha Avayava (5-Member Syllogism):**\n   - **Major Premise:** All students who play sports are in Set A"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-05-C: Can pq avoid scholarship? False\nVIR-05-C: Eligible: pq, pr\n",
+        "problem_id": "VIR-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

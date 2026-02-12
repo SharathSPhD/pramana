@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-05",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I need to figure out if Building Z complies with the current building code. Let me start by understanding the problem step by step.\n\nFirst, the original building code from 2015 requires a minimum ceiling height of 8 feet for all residential buildings. That's straightforward. Then, in 2022, there was an amendment. The amendment says that all residential buildings constructed after 2020 must have a minimum ceiling height of 9 feet. However, buildings that were constructed before 2020 are \"grandfathered\" under the original code, meaning they don't need to meet the higher 9-foot standard.\n\nBuilding Z was constructed in 2023, which is after 2020, so according to the amendment, it should have a minimum ceiling height of 9 feet. But the building has 8.5-foot ceilings. That's less than 9 feet, so at first glance, it doesn't meet the requirement.\n\nWait, but let me double-check the amendment. It says \"constructed after 2020,\" and Building Z was built in 2023, which is indeed after 2020. So it should comply with the 9-foot standard. The grandfather clause only applies to buildings built before 2020, right? So if a building was built in 2021, it's after 2020 and must meet the 9-foot requirement.\n\nBut hold on, the original code was 8 feet, and the amendment increased it to 9 feet for newer buildings. So older buildings (before 2020) can still have 8 feet, but newer ones must have 9. Since Building Z is new (2023), it's subject to the higher standard.\n\nTherefore, the 8.5-foot ceilings don't meet the 9-foot minimum, so Building Z doesn't comply. The inspector should issue a violation.\n\nI think that's it. The key points are the construction date relative to 2020 and the corresponding code requirement. Since it's after 2020, the higher standard applies.\n</think>\n\nBuilding Z, constructed in 2023, does not comply with the current building code. The amendment requires a minimum ceiling height of 9 feet for buildings built after 2020. Since Building Z was built in 2023, it must meet the 9-foot standard. However, it only has 8.5-foot ceilings, which is below the required 9 feet. Therefore, Building Z is in violation of the code.\n\n**Answer:** Building Z does not comply with the current building code.",
+  "response_length": 2225,
+  "generation_time_ms": 38003,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Building Z does not comply."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "First, the original building code from 2015 requires a minimum ceiling height of 8 feet for all residential buildings. That's straightforward. Then, in 2022, there was an amendment. The amendment says"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-05: Building Z compliant? False\n",
+        "problem_id": "KAL-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

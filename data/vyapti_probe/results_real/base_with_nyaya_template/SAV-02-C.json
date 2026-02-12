@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAV-02-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\nWhat is the problem?\nThe problem is about a wildlife sanctuary where animals are being killed, and the sanctuary's management is unsure about the reasons behind this. They suspect it might be due to human activities, natural causes, or other factors.\n\nPhase 2: Pramana (Sources of Knowledge)\nWhat are the sources of knowledge available to the sanctuary's management?\n- Witness statements from locals and sanctuary staff.\n- Camera trap data showing animal activity patterns.\n- Satellite imagery to monitor the area.\n- Reports from conservation organizations.\n- Sanctuary records of animal deaths.\n\nPhase 3: Pancha Avayava (5-Member Syllogism)\nConstruct a syllogism with five premises.\nPremise 1: All animals in the sanctuary are protected by law.\nPremise 2: Some animals in the sanctuary have been killed.\nPremise 3: The sanctuary is a protected area.\nPremise 4: If the sanctuary is a protected area, then it should have strict security measures.\nPremise 5: The sanctuary's management is responsible for enforcing these security measures.\n\nPhase 4: Tarka (Counterfactual Reasoning)\nConsider counterarguments and evaluate them.\nCounterargument 1: Maybe the animals are dying from natural causes.\n- Response: Natural causes could explain some deaths, but the pattern of killings suggests something more systematic.\nCounterargument 2: Perhaps the sanctuary is not effectively patrolling.\n- Response: The sanctuary does have patrols, but maybe they are insufficient or not enforcing laws.\nCounterargument 3: The killings might be due to poaching.\n- Response: Poaching is a possibility, but we need more evidence to confirm.\nCounterargument 4: The deaths could be due to disease or predation.\n- Response: While possible, the scale and timing suggest human involvement.\n\nPhase 5: Hetvabhasa (Fallacy Check)\nIdentify and evaluate any logical fallacies in the reasoning.\nFallacy 1: Appeal to Anecdote.\n- Example: \"I heard that a neighboring sanctuary had a poaching incident.\"\n- Evaluation: This is a weak argument without supporting evidence.\n\nFallacy 2: Red Herring.\n- Example: \"The sanctuary has other problems, like lack of funding.\"\n- Evaluation: This distracts from the main issue of animal killings.\n\nFallacy 3: Conjunction Fallacy.\n- Example: \"Since the sanctuary is safe, no animals should be killed.\"\n- Evaluation: This assumes an absolute safety, ignoring potential threats.\n\nPhase 6: Nirnaya (Ascertainment)\nBased on the analysis, what is the most likely cause?\nThe most likely cause is poaching, as the pattern of killings suggests intentional behavior beyond natural causes. The sanctuary's management should investigate further, possibly through increased patrols, better surveillance, and collaboration with conservation groups.\n\nFinal Answer:\nThe most likely cause of the animal killings in the wildlife sanctuary is poaching. The sanctuary's management should take immediate steps to enhance security measures and collaborate with conservation organizations to address this issue.\n</think>\n\nThe most likely cause of the animal killings in the wildlife sanctuary is poaching. The sanctuary's management should take immediate steps to enhance security measures and collaborate with conservation organizations to address this issue.",
+  "response_length": 3277,
+  "generation_time_ms": 48836,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Species H has echolocation."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Premise 1: All animals in the sanctuary are protected by law"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-02-C: H can lack echolocation: False\n",
+        "problem_id": "SAV-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically",
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-12-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Answer:**\nNo, the claim is not valid.\n**Explanation:**\nThe study data shows that all 7 patients with Condition X who received Treatment T recovered. However, the claim is phrased as \"every patient\" with Condition X who received Treatment T recovered. The data does not show that no patient with Condition X who received Treatment T did not recover. In fact, the data shows that all 7 patients recovered. However, the claim's phrasing is ambiguous, and it is possible that the claimant meant to say \"all 7 patients with Condition X who received Treatment T recovered.\" The claim is not valid because it is not supported by the data. The data only shows that all 7 patients recovered, but it does not show that no patient with Condition X who received Treatment T did not recover.\n**Note:** This problem is designed to test the ability to evaluate the validity of a claim based on a limited dataset, and to consider the limitations of the data in making inferences. It requires the ability to analyze the data, identify potential ambiguities in the claim, and make a judgment about the claim's validity.",
+  "response_length": 1103,
+  "generation_time_ms": 8973,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all patients with CondX+TreatT recovered."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Explanation:**\nThe study data shows that all 7 patients with Condition X who received Treatment T recovered. However, the claim is phrased as \"every patient\" with Condition X who received Treatment "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-12-C: CondX \u2227 TreatT \u2192 Recovery \u2014 holds\n",
+        "problem_id": "SAV-12-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

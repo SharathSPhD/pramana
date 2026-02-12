@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-05-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Understand the recursive formula\nThe recursive formula is given as f(1) = 1 and f(n) = f(n-1) + n for n > 1. This means that to find the value of f(n), we need to know the value of f(n-1) and add n to it.\n\n## Step 2: Find f(2)\nUsing the recursive formula, we can find f(2) by substituting n = 2 into the formula: f(2) = f(2-1) + 2 = f(1) + 2 = 1 + 2 = 3.\n\n## Step 3: Find f(3)\nNow that we have f(2), we can find f(3) by substituting n = 3 into the formula: f(3) = f(3-1) + 3 = f(2) + 3 = 3 + 3 = 6.\n\n## Step 4: Find f(4)\nFinally, we can find f(4) by substituting n = 4 into the formula: f(4) = f(4-1) + 4 = f(3) + 4 = 6 + 4 = 10.\n\nThe final answer is: $\\boxed{10}$",
+  "response_length": 675,
+  "generation_time_ms": 10629,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "f(4) = 10."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-05-C: f(4) = 10\n",
+        "problem_id": "SAD-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

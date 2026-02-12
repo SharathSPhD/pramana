@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-04",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef analyze_policy_document():\n    # Samshaya (Doubt Analysis)\n    # We have a clear question: Can we conclude that Employee Z is permitted?\n    # No doubts, the problem is straightforward.\n    \n    # Pramana (Sources of Knowledge)\n    # The policy document states the rule.\n    # Employee Z has completed safety training.\n    \n    # Pancha Avayava (5-Member Syllogism)\n    # 1. Pratijna (Thesis): If an employee has NOT completed safety training, then they are NOT permitted.\n    # 2. Hetu (Reason): The rule applies to all employees.\n    # 3. Upanaya (Application): Employee Z has NOT completed safety training (contrary to the hypothesis).\n    # 4. Prasanga (Comparison): If the hypothesis were true, the conclusion would follow.\n    # 5. Nirnaya (Ascertainment): Therefore, the conclusion does not follow, but Employee Z has completed training, so they are permitted.\n    \n    # Tarka (Counterfactual Reasoning)\n    # Suppose Employee Z has NOT completed safety training.\n    # Then, according to the rule, they are NOT permitted.\n    # But we know Employee Z has completed, so this scenario is impossible.\n    \n    # Hetvabhasa (Fallacy Check)\n    # No fallacies detected. The reasoning follows valid syllogistic rules.\n    \n    # Nirnaya (Ascertainment)\n    # Employee Z is permitted to enter the restricted zone.\n    \n    return \"Yes, Employee Z is permitted to enter the restricted zone.\"\n```\n\n### Solution:\n**Samshaya (Doubt Analysis):**  \nThe problem is clear: We need to determine if Employee Z is permitted in the restricted zone based on the policy.\n\n**Pramana (Sources of Knowledge):**  \nThe policy document provides the rule, and we know Employee Z has completed safety training.\n\n**Pancha Avayava (5-Member Syllogism):**  \n1. **Pratijna (Thesis):** If an employee has NOT completed safety training, then they are NOT permitted.  \n2. **Hetu (Reason):** The rule applies universally.  \n3. **Upanaya (Application):** Employee Z has NOT completed safety training (contrary to the hypothesis).  \n4. **Prasanga (Comparison):** If the hypothesis were true, the conclusion would follow.  \n5. **Nirnaya (Ascertainment):** Therefore, since Employee Z has completed training, the conclusion does not apply, and Employee Z is permitted.\n\n**Tarka (Counterfactual Reasoning):**  \nAssume Employee Z has NOT completed safety training. Then, by the rule, they are NOT permitted. However, this contradicts our known fact that Employee Z has completed training. Thus, the conclusion does not hold.\n\n**Hetvabhasa (Fallacy Check):**  \nNo fallacies are present. The reasoning is valid and follows syllogistic rules.\n\n**Nirnaya (Ascertainment):**  \nEmployee Z is permitted to enter the restricted zone.\n\n**Final Answer:**  \nYes, Employee Z is permitted to enter the restricted zone.",
+  "response_length": 2809,
+  "generation_time_ms": 48930,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude Employee Z is permitted."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "Pratijna (Thesis): If an employee has NOT completed safety training, then they are NOT permitted.\n    # 2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-04: Can employee NOT be permitted? True\n",
+        "problem_id": "VIR-04"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

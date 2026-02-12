@@ -1,0 +1,56 @@
+{
+  "problem_id": "SAV-15",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Let me analyze this step by step.\n\nLooking at the premises, I need to check if the stated rule holds universally.\n\nThere is a counterexample that violates the proposed pattern. Therefore, we cannot conclude the universal rule holds.\n\nThe answer is: No.",
+  "response_length": 252,
+  "generation_time_ms": 2930,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {}
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {}
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "negation_detected": true
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_verification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "simulated": true
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "savyabhichara"
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none"
+}

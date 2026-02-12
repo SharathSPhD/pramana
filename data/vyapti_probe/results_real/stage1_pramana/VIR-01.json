@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-01",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Syllogism:\n**Pratijna (Thesis):** What can we conclude about Student X's final exam result?\n\n**Hypothesis (Hypothesis):** If a student passes the final exam, then the student has completed all homework assignments.\n\n**Udaharana (Example):** Suppose Student Y passed the final exam. Then, Student Y has completed all homework assignments.\n\n**Nigamana (Derivation):** Since Student X has NOT completed all homework assignments, it follows that Student X has NOT passed the final exam.\n\n**Pattaya (Comparison):** Student X's situation is comparable to Student Y's situation.\n\n**Upanaya (Application):** Therefore, Student X has NOT passed the final exam.\n\n**Niyata (Generalization):** This rule applies to all students.\n\n**Pratyaksha (Direct Perception):** This conclusion is directly observable.\n\n**Savyaya (Consequence):** Therefore, Student X has NOT passed the final exam.\n\n---\n\n### Solution Code:\n```python\ndef analyze_student_status(hypothesis):\n    # Samshaya: Doubt Analysis\n    # What do we know? We have a rule and a fact.\n    # Pramana: Sources of Knowledge\n    # The rule is a conditional statement, and the fact is a negation.\n    # Pancha Avayava: 5-Member Syllogism\n    # We need to apply the syllogism to derive the conclusion.\n    \n    # Tarka: Counterfactual Reasoning\n    # Assume the opposite and check for contradictions.\n    # Hetvabhasa: Fallacy Check\n    # Ensure no logical fallacies are present.\n    \n    # Nirnaya: Ascertainment\n    # Combine all reasoning to conclude the final result.\n    \n    # Apply the syllogism step-by-step.\n    # 1. Pratijna: What can we conclude?\n    # 2. Hypothesis: If a student passes, then they complete homework.\n    # 3. Udaharana: Example with Student Y.\n    # 4. Nigamana: Since X hasn't completed homework, X hasn't passed.\n    # 5. Pattaya: Compare X to Y.\n    # 6. Upanaya: Apply to X.\n    # 7. Niyata: General rule.\n    # 8. Pratyaksha: Direct observation.\n    # 9. Savyaya: Final conclusion.\n    \n    # Step 1: Pratijna\n    question = \"What can we conclude about Student X's final exam result?\"\n    \n    # Step 2: Hypothesis\n    hypothesis = \"If a student passes the final exam, then the student has completed all homework assignments.\"\n    \n    # Step 3: Udaharana\n    example = \"Suppose Student Y passed the final exam. Then, Student Y has completed all homework assignments.\"\n    \n    # Step 4: Nigamana\n    derivation = \"Since Student X has NOT completed all homework assignments, it follows that Student X has NOT passed the final exam.\"\n    \n    # Step 5: Pattaya\n    comparison = \"Student X's situation is comparable to Student Y's situation.\"\n    \n    # Step 6: Upanaya\n    application = \"Therefore, Student X has NOT passed the final exam.\"\n    \n    # Step 7: Niyata\n    generalization = \"This rule applies to all students.\"\n    \n    # Step 8: Pratyaksha\n    direct_perception = \"This conclusion is directly observable.\"\n    \n    # Step 9: Savyaya\n    conclusion = \"Therefore, Student X has NOT passed the final exam.\"\n    \n    return conclusion\n```\n\n### Final Answer:\n**Savyaya (Consequence):** Therefore, Student X has NOT passed the final exam.\n\n**Final Answer:** Student X has NOT passed the final exam.",
+  "response_length": 3194,
+  "generation_time_ms": 59569,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Student X did NOT pass."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "---\n\n### Nyaya Syllogism:\n**Pratijna (Thesis):** What can we conclude about Student X's final exam result?\n\n**Hypothesis (Hypothesis):** If a student passes the final exam, then the student has comple"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-01: Can student have passed? False\n",
+        "problem_id": "VIR-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

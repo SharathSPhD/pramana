@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-01-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "The best answer is No. Object X does not have property B. Since Object X has a molecular weight of 750 daltons, which is greater than 500 daltons, Object X has property B. Since Object X has property B, it is Concept A. Therefore, the answer is yes. Object X has property B, and it is Concept A.",
+  "response_length": 295,
+  "generation_time_ms": 2844,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, X has property B and is Concept A."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-01-C: Can X lack B? False\nSAD-01-C: Yes \u2014 X has B (MW 750 > 500)\n",
+        "problem_id": "SAD-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

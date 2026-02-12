@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-03-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** Please follow the format specified in the instructions.\n\n## Step 1: Samshaya (Doubt Analysis)\nTo analyze the problem, we need to identify the statements and their implications. We have three statements:\n1. If the Red box contains the key, then the Blue box contains the coin.\n2. The Green box contains the key.\n3. The Red box contains the ring.\n\nWe need to analyze each statement and identify any potential contradictions or ambiguities.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe need to identify the sources of knowledge for each statement. Statement 1 implies that the Red box contains the key, which is a conditional statement. Statement 2 is a simple assertion that the Green box contains the key. Statement 3 is also a simple assertion that the Red box contains the ring.\n\nWe need to evaluate the credibility of each source of knowledge.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can construct a 5-member syllogism using the statements:\n1. If the Red box contains the key, then the Blue box contains the coin.\n2. The Green box contains the key.\n3. The Red box contains the ring.\n4. The Blue box contains the coin.\n5. The Green box contains the key.\n\nWe can use modus ponens to derive the following conclusions:\n- If the Red box contains the key, then the Blue box contains the coin (Statement 1)\n- If the Green box contains the key, then the Red box contains the key (Statement 2)\n- If the Red box contains the key, then the Blue box contains the coin (Statement 1)\n- Therefore, the Green box contains the key (Statement 2)\n- Therefore, the Red box contains the ring (Statement 3)\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe can use counterfactual reasoning to test the conclusions:\n- What if the Green box does not contain the key? Then the Red box does not contain the key (Statement 2). But then the Red box does not contain the ring (Statement 3). This is a contradiction.\n- What if the Blue box does not contain the coin? Then the Red box does not contain the key (Statement 1). But then the Green box does not contain the key (Statement 2). This is also a contradiction.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for any fallacies in the reasoning:\n- There are no fallacies in the reasoning.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, we can conclude that:\n- The Green box contains the key.\n- The Red box contains the ring.\n- The Blue box contains the coin.\n\nThe final answer is: $\\boxed{Green box: key, Red box: ring, Blue box: coin}$",
+  "response_length": 2503,
+  "generation_time_ms": 23318,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Green=key, Red=ring, Blue=coin."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "If the Red box contains the key, then the Blue box contains the coin.\n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-03-C: Green=key, Red=ring, Blue=coin\n  Green=0, Red=2, Blue=1\n",
+        "problem_id": "SAD-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

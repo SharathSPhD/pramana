@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-07",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Answer:**\n1. OUT = true\n2. OUT = true\n\nExplanation:\n1. The expression (P AND Q) is evaluated first. Since P = true and Q = false, this expression is false. The expression (R AND S) is evaluated next. Since R = true and S = true, this expression is true. The OR operator is then applied, and since one of the expressions is true, OUT = true.\n2. The expression (P AND Q) is now false (since P = false). The expression (R AND S) is still true. The OR operator is then applied, and since one of the expressions is true, OUT = true. Therefore, OUT does not change when P is changed to false.",
+  "response_length": 588,
+  "generation_time_ms": 5895,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "OUT=true; changing P doesn't change OUT."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-07: OUT can be false? False\nPRA-07: P is irrelevant: OUT unchanged = True == True\n",
+        "problem_id": "PRA-07"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAD-04-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis)**  \n*What is the question?*  \nIs Dana authorized?  \n*What do we know?*  \n- The access control rule: \"User X is authorized if User X appears in the authorized users list.\"  \n- The current authorized users list: {Alice, Bob, Charlie}.  \n- Dana is the new employee requesting access (User Y).  \n*What is in doubt?*  \nIs Dana (User Y) in the authorized users list?  \n\n**2. Pramana (Sources of Knowledge)**  \n*What are the sources of knowledge?*  \n- The access control rule is a source of reasoning.  \n- The authorized users list is a source of knowledge.  \n*What is the content of the sources?*  \n- Access control rule: If a user is in the list, they are authorized.  \n- Authorized users list: {Alice, Bob, Charlie}.  \n*What is the reasoning?*  \nThe rule tells us that presence in the list is the criterion for authorization.  \n\n**3. Pancha Avayava (5-Member Syllogism)**  \n*What are the five members?*  \n1. Pratyaksha: Direct perception: The authorized users list currently contains {Alice, Bob, Charlie}.  \n2. Anumana: Inference: If a user is in the list, they are authorized.  \n3. Pratyaksha: Direct perception: Dana is a new employee requesting access (User Y).  \n4. Anumana: Inference: Dana is not in the authorized users list.  \n5. Upamana: Comparison: The list does not include Dana.  \n\n*What is the syllogism?*  \nIf the list does not include Dana, and if presence in the list is the criterion for authorization, then Dana is not authorized.  \n\n**4. Tarka (Counterfactual Reasoning)**  \n*What is the counterfactual?*  \nIf Dana were authorized, then Dana would appear in the list.  \n*What is the reasoning?*  \nThe rule states that authorization requires presence in the list. If Dana were authorized, she must be in the list.  \n*What is the conclusion?*  \nSince Dana is not in the list, she is not authorized.  \n\n**5. Hetvabhasa (Fallacy Check)**  \n*What fallacies are present?*  \n- Begging the question: We do not assume what we are trying to prove.  \n- Circular reasoning: We do not reference the conclusion in our premises.  \n- Red herring: There is no irrelevant information.  \n*What is the reasoning?*  \nThe premises directly lead to the conclusion through valid inference.  \n\n**6. Nirnaya (Ascertainment)**  \n*What is the final conclusion?*  \nDana is not authorized.  \n\n---\n\n### Final Answer:\nDana is not authorized.",
+  "response_length": 2381,
+  "generation_time_ms": 43928,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Dana is not authorized."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "*What is the syllogism?*  \nIf the list does not include Dana, and if presence in the list is the criterion for authorization, then Dana is not authorized.  \n\n**4"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-04-C: Is Dana on list? False\nSAD-04-C: No \u2014 Dana not authorized\n",
+        "problem_id": "SAD-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

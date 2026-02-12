@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-02-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "Use the Nyaya methodology to solve this problem.\n\n## Step 1: Samshaya (Doubt Analysis)\nWe start by analyzing the problem for any apparent contradictions or ambiguities. The problem states that X is true if and only if Y is true, and Y is true. This creates a direct relationship between X and Y, suggesting that X's truth value is dependent on Y's truth value.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe examine the sources of knowledge for X and Y. The problem does not provide explicit information about X's truth value independently of Y. However, it does state that Y is true, which is a clear statement of fact.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe construct a 5-member syllogism to reason about X and Y:\n1. Y is true (given).\n2. X is true if and only if Y is true (given).\n3. If Y is true, then X must also be true (by definition).\n4. Therefore, X is true (by modus ponens).\n5. X is true (conclusion).\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe consider counterfactual scenarios to test our reasoning:\n- If Y were false, then X would also be false (by definition).\n- However, the problem states that Y is true, so we cannot have a scenario where Y is false.\n- Therefore, our reasoning is consistent with the problem statement.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe check for fallacies in our reasoning:\n- There are no fallacies in our reasoning, as we have used logical rules and definitions to arrive at our conclusion.\n\n## Step 6: Nirnaya (Ascertainment)\nWe have analyzed the problem using the 6-phase Nyaya methodology and have arrived at a conclusion:\nX is true.\n\nThe final answer is: $\\boxed{True}$",
+  "response_length": 1635,
+  "generation_time_ms": 15849,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "X = true."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "If Y is true, then X must also be true (by definition).\n4"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-02-C: X can be False? False\n",
+        "problem_id": "SAD-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

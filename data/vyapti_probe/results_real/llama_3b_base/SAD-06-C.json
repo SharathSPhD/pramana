@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-06-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "The final answer is: $\\boxed{Yes}$\n\nExplanation: To determine if Object Q is classified as Type-X, we need to check if it has Feature-P. According to Rule 2, Feature-P is defined as having a surface temperature above 1000\u00b0C. Since Object Q has a surface temperature of 1200\u00b0C, which is above 1000\u00b0C, it meets the definition of Feature-P. Therefore, Object Q is classified as Type-X. The correct answer is Yes.",
+  "response_length": 409,
+  "generation_time_ms": 3888,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Yes, Q is Type-X."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-06-C: Can Q lack type_x? False\nSAD-06-C: Yes \u2014 valid classification\n",
+        "problem_id": "SAD-06-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

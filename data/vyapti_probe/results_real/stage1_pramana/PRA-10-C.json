@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\n**What do we know?**\n- Jun, Kira, Lev each order a different dish.\n- Jun \u2260 pasta.\n- Kira = sushi.\n- Lev \u2260 salad.\n\n**What do we need to find?**\n- Assign each person to a dish: pasta, sushi, salad.\n\n**What is the doubt?**\nWe don't know which dish each person ordered. We have some constraints, but we need to resolve the possibilities.\n\n### Phase 2: Pramana (Sources of Knowledge)\n**What do we know?**\n1. Each person orders a different dish.\n2. Jun does not order pasta.\n3. Kira orders sushi.\n4. Lev does not order salad.\n\n**What can we infer?**\n- Since Kira orders sushi, sushi is taken. So, Jun and Lev cannot order sushi.\n- Jun cannot order pasta, so Jun must order either sushi or salad. But sushi is taken, so Jun must order salad.\n- Lev cannot order salad, so Lev must order pasta. But Jun cannot order pasta, so Lev must order pasta.\n\n**Inference Chain:**\n- Kira \u2192 sushi (given)\n- Jun \u2260 pasta \u2192 Jun must be salad\n- Lev \u2260 salad \u2192 Lev must be pasta\n\n**Final Assignments Before Resolution:**\n- Kira: sushi\n- Jun: salad\n- Lev: pasta\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:**\n1. Pratyaksha (Direct Perception): Kira orders sushi.\n2. Anumana (Inference): Since Jun cannot order pasta, and sushi is taken, Jun must order salad.\n3. Tarka (Counterfactual): Suppose Jun ordered pasta. Then Jun would violate the constraint of not ordering pasta. Therefore, Jun must order salad.\n4. Upamana (Comparison): Since Lev cannot order salad, and pasta is available, Lev must order pasta.\n5. Samsthita Pratyaksha (Composite Perception): Combining all, we have Kira: sushi, Jun: salad, Lev: pasta.\n\n**Syllogism Conclusion:**\nEach person orders as follows:\n- Jun: salad\n- Kira: sushi\n- Lev: pasta\n\n### Phase 4: Tarka (Counterfactual Reasoning)\n**Assume the Opposite:**\nSuppose Jun orders pasta.\n\n**Check Consistency:**\n- Jun orders pasta (contrary to given)\n- Kira orders sushi (given)\n- Lev cannot order salad.\n\n**Conflict:**\n- Jun cannot order pasta, so this assumption leads to a contradiction. Therefore, Jun must order salad.\n\n**Reiteration:**\n- Jun: salad\n- Kira: sushi\n- Lev: pasta\n\n### Phase 5: Hetvabhasa (Fallacy Check)\n**Check for Fallacies:**\n1. Equivocation: No. Each dish is uniquely assigned.\n2. Contraposition: No. Each person is assigned a specific dish.\n3. Division: No. Each person is assigned to one dish.\n4. Conjunction: No. Each assignment is independent.\n\n**Conclusion:**\nNo fallacies detected in the reasoning.\n\n### Phase 6: Nirnaya (Ascertainment)\n**Final Answer:**\n- Jun orders salad.\n- Kira orders sushi.\n- Lev orders pasta.\n\n**Verification:**\n- All constraints are satisfied:\n  - Jun \u2260 pasta \u2714\ufe0f\n  - Kira = sushi \u2714\ufe0f\n  - Lev \u2260 salad \u2714\ufe0f\n- Each person orders a different dish \u2714\ufe0f\n\n**Final Assignments:**\n- Jun: Salad\n- Kira: Sushi\n- Lev: Pasta\n### Solution Code\n```python\n# Define the dishes and people\ndishes = ['pasta', 'sushi', 'salad']\npeople = ['Jun', 'Kira', 'Lev']\n\n# Assign each person to a dish based on constraints\nassignments = {}\n\n# Jun does not order pasta\n# So Jun can order sushi or salad\n# Kira orders sushi, so Jun cannot order sushi\n# Therefore, Jun must order salad\nassignments['Jun'] = 'salad'\n\n# Kira orders sushi\nassignments['Kira'] = 'sushi'\n\n# Lev does not order salad\n# So Lev can order pasta or sushi\n# Kira orders sushi, so Lev cannot order sushi\n# Therefore, Lev must order pasta\nassignments['Lev'] = 'pasta'\n```\n\n### Explanation\n1. **Samshaya**: We start by identifying the constraints and the need to assign each person to a unique dish.\n2. **Pramana**: Using the given constraints, we deduce the possible dishes each person can order.\n3. **Pancha Avayava**: We construct a syllogism to systematically determine each assignment.\n4. **Tarka**: We test the counterfactual to ensure our assignments are consistent with the constraints.\n5. **Hetvabhasa**: We verify that our reasoning does not fall into any logical fallacies.\n6. **Nirnaya**: We conclude the final assignments and verify all constraints are satisfied.",
+  "response_length": 4023,
+  "generation_time_ms": 77936,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Kira=sushi, Lev=pasta, Jun=salad."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Verification:**\n- All constraints are satisfied:\n  - Jun \u2260 pasta \u2714\ufe0f\n  - Kira = sushi \u2714\ufe0f\n  - Lev \u2260 salad \u2714\ufe0f\n- Each person orders a different dish \u2714\ufe0f\n\n**Final Assignments:**\n- Jun: Salad\n- Kira: Sushi"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10-C: Lev=pasta, Jun=salad\n",
+        "problem_id": "PRA-10-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

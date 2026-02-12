@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Alright, let me try to figure this out. So, we have three friends: Jun, Kira, and Lev. Each of them orders a different dish, and the options are pasta, sushi, or salad. I need to figure out what each person ordered based on the given information.\n\nFirst, let me list out the information provided:\n\n1. Jun does not order pasta.\n2. Kira orders sushi.\n3. Lev does not order salad.\n\nOkay, so let's break this down step by step.\n\nStarting with Kira because point 2 directly tells us what she orders. Kira orders sushi. That's straightforward. So, Kira's dish is sushi.\n\nNow, moving on to Jun. Point 1 says Jun does not order pasta. So, Jun's dish isn't pasta. Since each person orders a different dish, and Kira has already ordered sushi, Jun can't have sushi either. So, Jun must have either pasta or salad. But wait, Jun doesn't order pasta, so that leaves salad as the only option. Therefore, Jun must have ordered salad.\n\nWait, hold on. Let me double-check that. If Jun doesn't order pasta, and sushi is taken by Kira, then the remaining dishes are pasta and salad. But Jun can't have pasta, so she must have salad. That seems right.\n\nNow, moving on to Lev. Point 3 says Lev does not order salad. So, Lev's dish isn't salad. The remaining dishes are pasta and sushi. But sushi is already taken by Kira, so Lev must have ordered pasta.\n\nLet me just recap:\n\n- Kira: sushi\n- Jun: salad\n- Lev: pasta\n\nDoes that make sense? Let me make sure each person has a different dish and none of them have the same. Yes, sushi, salad, and pasta are all different. Also, all the given conditions are satisfied:\n\n1. Jun doesn't order pasta \u2013 correct, she orders salad.\n2. Kira orders sushi \u2013 correct.\n3. Lev doesn't order salad \u2013 correct, he orders pasta.\n\nSo, that seems to fit all the information given. I don't think I missed anything here. Each step logically follows from the previous one, and all the constraints are satisfied.\n\nI was a bit confused at first about whether Jun could have pasta, but since it's explicitly stated that Jun doesn't order pasta, that clears it up. So, yeah, I think that's the correct assignment.\n</think>\n\nEach person orders a different dish, and the options are pasta, sushi, or salad. Let's analyze the given information:\n\n1. **Jun does not order pasta.**\n   - Therefore, Jun must order either sushi or salad.\n\n2. **Kira orders sushi.**\n   - So, Kira's dish is sushi.\n\n3. **Lev does not order salad.**\n   - Therefore, Lev must order either pasta or sushi. However, since Kira has already ordered sushi, Lev must order pasta.\n\nNow, let's assign the dishes:\n\n- **Kira** orders sushi.\n- **Lev** does not order salad, so he orders pasta.\n- **Jun** does not order pasta, so she orders salad.\n\n**Final Answer:**\n\n- **Jun** orders salad.\n- **Kira** orders sushi.\n- **Lev** orders pasta.",
+  "response_length": 2799,
+  "generation_time_ms": 50149,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Kira=sushi, Lev=pasta, Jun=salad."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Yes, sushi, salad, and pasta are all different. Also, all the given conditions are satisfied:\n\n1"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10-C: Lev=pasta, Jun=salad\n",
+        "problem_id": "PRA-10-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-01",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I need to figure out whether Gita, the new hire assigned to Engineering, must work remotely based on the given information about the other six employees. Let me try to break this down step by step.\n\nFirst, let me list out all the employees and their departments and work arrangements:\n\n1. Aarav: Engineering, remotely.\n2. Bina: Engineering, remotely.\n3. Chetan: Engineering, on-site.\n4. Diya: Marketing, remotely.\n5. Esha: Engineering, remotely.\n6. Farid: Engineering, remotely.\n\nSo, all these employees are either in Engineering or Marketing. Chetan is the only one working on-site in Engineering, while the rest in Engineering are working remotely. Diya is in Marketing and works remotely.\n\nNow, Gita is being assigned to Engineering. The question is whether she must work remotely. To determine this, I think I need to look at the structure of the departments and the work arrangements of the existing employees.\n\nIn the Engineering department, we have Aarav, Bina, Esha, Farid, and Chetan. Out of these five, four are working remotely, and only Chetan is on-site. So, the majority of the Engineering department is remote. Diya is the only one in Marketing, and she works remotely as well.\n\nI wonder if the company has any specific policies about remote work. The problem doesn't mention any explicit policies, so I can't assume that. It just gives the current work arrangements of the employees.\n\nIf Gita is being assigned to Engineering, is there any reason to think she must work on-site? Well, Chetan is the only on-site employee in Engineering. Maybe the company allows some on-site work, but it's not required for everyone. So, unless there's a policy that all Engineering employees must work on-site, which isn't stated here, Gita could work remotely.\n\nAlternatively, maybe the company has a certain number of on-site positions in Engineering. Since Chetan is the only one working on-site, perhaps there's only one on-site spot. If Gita is assigned to Engineering, maybe she has to take that spot, but that doesn't necessarily mean she must work on-site. She could be the next remote employee.\n\nWait, but the question is whether she \"must\" work remotely. So, is there any information that would force her to work on-site? If the company has a policy that requires all Engineering employees to work on-site except for certain roles, but again, the problem doesn't provide that.\n\nLooking back, the only information given is about the current employees' work arrangements. Since only Chetan is on-site in Engineering, and the rest are remote, it seems that on-site work in Engineering is an option but not a requirement. Therefore, Gita could choose to work on-site or remotely. But the question is whether she \"must\" work remotely. So, unless there's a rule that all Engineering employees must work remotely, she doesn't have to.\n\nBut wait, the problem says Gita is assigned to Engineering. Does that mean she has to work in the office? Or can she work remotely? The problem doesn't specify any constraints on her work arrangement, only her department.\n\nSince the other Engineering employees have the option to work remotely, and only Chetan is on-site, Gita might have the same options. Therefore, she doesn't have to work on-site; she can work remotely.\n\nAlternatively, maybe the company has a specific number of on-site employees per department. If Engineering only allows a certain number of on-site workers, but again, the problem doesn't mention that.\n\nSo, based solely on the given information, there's no requirement for Gita to work on-site. She can work remotely like the others, unless there's a policy that requires her to be on-site because of some other reason, but since that's not provided, I think she doesn't have to work on-site.\n</think>\n\nBased on the information provided, Gita does not have to work on-site. The Engineering department allows for both on-site and remote work, with only Chetan working on-site. Since Gita is assigned to Engineering, she can choose to work remotely, as there is no policy requiring her to work on-site. Therefore, Gita must work remotely.\n\n**Answer:** Yes, Gita must work remotely.",
+  "response_length": 4152,
+  "generation_time_ms": 66036,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Gita is NOT forced to work remotely."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "First, let me list out all the employees and their departments and work arrangements:\n\n1"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-01: Checking vy\u0101pti 'Engineering \u2192 Remote' ===\nVy\u0101pti holds: False\nGita can be non-remote: True\n",
+        "problem_id": "SAV-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

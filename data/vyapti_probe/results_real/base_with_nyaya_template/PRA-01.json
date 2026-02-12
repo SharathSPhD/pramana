@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-01",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Problem Analysis**\n\nWe have five people: **Amit**, **Bela**, **Charu**, **Dev**, and **Ela**. They need to sit in five seats arranged in a row from position 1 (leftmost) to position 5 (rightmost). The constraints are as follows:\n\n1. **Amit** sits in position 1.\n2. **Bela** sits immediately to the right of **Amit**.\n3. **Dev** prefers coffee over tea.\n4. **Charu** sits in position 5.\n5. **Ela** does not sit in position 1.\n\n### **Solution Using Nyaya Methodology**\n\n#### **1. Samshaya (Doubt Analysis)**\n- We need to determine the seating arrangement based on the given constraints.\n\n#### **2. Pramana (Sources of Knowledge)**\n- The information provided is the only source of knowledge for solving this problem.\n\n#### **3. Pancha Avayava (5-Member Syllogism)**\nLet's apply the syllogism step-by-step:\n\n1. **Amit** is in position 1.\n2. **Bela** is immediately to the right of **Amit**, so **Bela** is in position 2.\n3. **Charu** is in position 5.\n4. **Ela** cannot be in position 1 (already occupied by **Amit**).\n5. **Dev** is the only person left, who can be in position 3 or 4.\n\n#### **4. Tarka (Counterfactual Reasoning)**\n- Let's consider if **Ela** could be in position 3 or 4.\n- If **Ela** is in position 3, then **Dev** would be in position 4.\n- If **Ela** is in position 4, then **Dev** would be in position 3.\n\n#### **5. Hetvabhasa (Fallacy Check)**\n- Both scenarios are possible without violating any constraints.\n- Therefore, no fallacies are present.\n\n#### **6. Nirnaya (Ascertainment)**\n- Since both positions 3 and 4 are possible for **Ela**, we need additional information.\n- However, based on the constraints, **Ela** cannot be in position 1, and **Charu** is fixed in position 5.\n- Therefore, **Ela** must be in position 3 or 4.\n\nBut since the problem asks specifically for **Ela**'s position, and both 3 and 4 are possible, we need to consider the most logical arrangement based on the given constraints.\n\n### **Final Answer**\nEla sits in position **3**.",
+  "response_length": 1990,
+  "generation_time_ms": 41761,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot determine Ela's exact position (3 or 4)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "- If **Ela** is in position 3, then **Dev** would be in position 4.\n- If **Ela** is in position 4, then **Dev** would be in position 3"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-01: Ela can be 3: True, Ela can be 4: True\n",
+        "problem_id": "PRA-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,71 @@
+{
+  "problem_id": "PRA-09-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "</think>\n\n**Answer:**\n\nBased on the data provided, the study shows a clear association between taking Medication X and symptom improvement. All subjects who took Medication X experienced symptom improvement, while those who did not take it did not show any improvement. This pattern strongly suggests that Medication X is effective in alleviating symptoms.\n\n**Step-by-Step Explanation:**\n\n1. **Identify the Variables:**\n   - **Independent Variable:** Medication X (Yes/No)\n   - **Dependent Variable:** Symptom Improvement (Yes/No)\n\n2. **Observe the Data:**\n   - **Subjects Who Took Medication X:**\n     - A: Yes \u2192 Yes\n     - C: Yes \u2192 Yes\n     - E: Yes \u2192 Yes\n   - **Subjects Who Did Not Take Medication X:**\n     - B: No \u2192 No\n     - D: No \u2192 No\n     - F: No \u2192 No\n\n3. **Analyze the Pattern:**\n   - All subjects who took Medication X showed symptom improvement.\n   - None of the subjects who did not take Medication X showed symptom improvement.\n\n4. **Conclusion:**\n   - There is a consistent relationship between taking Medication X and symptom improvement.\n   - This indicates that Medication X is associated with symptom improvement.\n\n**Final Answer:**\n\nYes, taking Medication X appears to be associated with symptom improvement, as all subjects who took the medication experienced symptom improvement, while those who did not take it did not show any improvement.",
+  "response_length": 1363,
+  "generation_time_ms": 22755,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Medication X associated with improvement."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All subjects who took Medication X experienced symptom improvement, while those who did not take it did not show any improvement. This pattern strongly suggests that Medication X is effective in allev"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-09-C: Can medication fail to improve? False\nPRA-09-C: Yes \u2014 medication predicts improvement\n",
+        "problem_id": "PRA-09-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically",
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

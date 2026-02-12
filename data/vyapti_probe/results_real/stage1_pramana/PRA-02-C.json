@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-02-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya (Doubt Analysis)\n    doubt = \"What can we conclude about Dr. Kapoor?\"\n    \n    # Pramana (Sources of Knowledge)\n    premises = [\n        \"All surgeons in this hospital have completed a residency program.\",\n        \"Dr. Kapoor is a surgeon in this hospital.\"\n    ]\n    \n    # Pancha Avayava (5-Member Syllogism)\n    syllogism = [\n        \"Pratyaksha Pramana (Direct Perception)\",\n        \"Samjna (Definition)\",\n        \"Prakarana (General Principle)\",\n        \"Tarka (Counterfactual)\",\n        \"Nigamana (Conclusion)\"\n    ]\n    \n    # Tarka (Counterfactual Reasoning)\n    counterfactuals = [\n        \"Suppose Dr. Kapoor is not a surgeon in this hospital.\",\n        \"Then, Dr. Kapoor would not have completed a residency program.\",\n        \"But this contradicts premise 2.\",\n        \"Therefore, Dr. Kapoor must be a surgeon in this hospital.\"\n    ]\n    \n    # Hetvabhasa (Fallacy Check)\n    fallacies = [\n        \"Ekaipaksha (One-sided Tendency)\",\n        \"Pancha Avayava Sama (Balanced Syllogism)\",\n        \"Drishti (Perspective)\",\n        \"Asiddha (Unrestricted)\",\n        \"Savyabhichara (Circular Reasoning)\",\n        \"Kala Atita (Temporal Antecedent)\",\n        \"Kala Sthiti (Spatial Location)\",\n        \"Kala Karana (Causal Relation)\",\n        \"Kala Samanya (Universal Relation)\",\n        \"Kala Pratyabhijna (Direct Recognition)\",\n        \"Kala Pratyaksha (Direct Perception)\",\n        \"Kala Samjna (Definition)\",\n        \"Kala Prakarana (General Principle)\",\n        \"Kala Tarka (Counterfactual)\",\n        \"Kala Nigamana (Conclusion)\",\n        \"Kala Hetvabhasa (Fallacy)\",\n        \"Kala Sama (Symmetry)\",\n        \"Kala Upamana (Comparison)\",\n        \"Kala Anumana (Inference)\",\n        \"Kala Tirtha (Source)\",\n        \"Kala Pratyayatmaka (Self-Justification)\",\n        \"Kala Viruddha (Contradiction)\",\n        \"Kala Sama Sama (Same Source)\",\n        \"Kala Sama Anya (Different Source)\",\n        \"Kala Sama Sama Samya (Same Universal)\",\n        \"Kala Sama Sama Viruddha (Contradictory Universal)\",\n        \"Kala Sama Anya Samya (Different Universal)\",\n        \"Kala Sama Anya Viruddha (Contradictory Universal)\",\n        \"Kala Sama Sama Samya Samya (Same Universal Universal)\",\n        \"Kala Sama Sama Samya Viruddha (Contradictory Universal Universal)\",\n        \"Kala Sama Anya Samya Samya (Different Universal Universal)\",\n        \"Kala Sama Anya Samya Viruddha (Contradictory Universal Universal)\",\n        \"Kala Sama Sama Samya Samya Samya (Same Universal Universal Universal)\",\n        \"Kala Sama Sama Samya Viruddha Samya Samya (Contradictory Universal Universal Universal)\",\n        \"Kala Sama Anya Samya Samya Samya (Different Universal Universal Universal)\",\n        \"Kala Sama Anya Samya Viruddha Samya Samya (Contradictory Universal Universal Universal)\",\n        \"Kala Sama Sama Samya Samya Samya Samya (Same Universal Universal Universal Universal)\",\n        \"Kala Sama Sama Samya Viruddha Samya Samya Samya Samya (Contradictory Universal Universal Universal Universal)\",\n        \"Kala Sama Anya Samya Samya Samya Samya Samya (Different Universal Universal Universal Universal)\",\n        \"Kala Sama Anya Samya Viruddha Samya Samya Samya Samya Samya (Contradictory Universal Universal Universal Universal)\",\n        \"Kala Sama Sama Samya Samya Samya Samya Samya Samya (Same Universal Universal Universal Universal Universal Universal)\",\n        \"Kala Sama Sama Samya Viruddha Samya Samya Samya Samya Samya Samya Samya (Contradictory Universal Universal Universal Universal Universal Universal Universal)\",\n        \"Kala Sama Anya Samya Samya Samya Samya Samya Samya Samya Samya (Different Universal Universal Universal Universal Universal Universal Universal Universal)\",\n        \"Kala Sama Anya Samya Viruddha Samya Samya Samya Samya Samya Samya Samya Samya Samya (Contradictory Universal Universal Universal Universal Universal Universal Universal Universal Universal)\",\n        \"Kala Sama Sama Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya Samya",
+  "response_length": 7050,
+  "generation_time_ms": 149220,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Dr. Kapoor completed a residency program."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Kapoor?\"\n    \n    # Pramana (Sources of Knowledge)\n    premises = [\n        \"All surgeons in this hospital have completed a residency program"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-02-C: Can Kapoor NOT have completed residency? False\n",
+        "problem_id": "PRA-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

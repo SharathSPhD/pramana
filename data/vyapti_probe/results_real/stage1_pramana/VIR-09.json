@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-09",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\nWhat is the question?  \nWe need to determine if we can conclude that no senior partner is assigned to Case #247 based on the given policy and the information that Case #247 is not classified as high-priority.\n\nWhat do we know?  \n1. The policy states: If a case is high-priority, then a senior partner is assigned.\n2. Case #247 is not high-priority.\n\nWhat do we need to find out?  \nCan we conclude that no senior partner is assigned to Case #247?\n\nPossible doubts:  \n- Does the policy only apply to high-priority cases, or does it apply more broadly?  \n- Is the absence of high-priority classification sufficient to conclude the absence of a senior partner?  \n- Are there other reasons a senior partner might be assigned to a case that is not high-priority?\n\n### Phase 2: Pramana (Sources of Knowledge)\nWhat are the sources of knowledge?  \n1. The policy statement: \"If a client case is classified as high-priority, then a senior partner is assigned.\"\n2. The classification of Case #247: \"Case #247 has NOT been classified as high-priority.\"\n\nWhat are the reliable sources?  \n- The policy is a rule of the law firm, so it is a reliable source.\n- The classification of Case #247 is a fact provided, so it is reliable.\n\nWhat is the nature of the knowledge?  \n- The policy is a conditional statement (if-then).\n- The classification is a negative fact.\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\n**Thesis (Hypothesis):**  \nWe can conclude that no senior partner is assigned to Case #247.\n\n**Pratipaksha (Contrainary):**  \nIf the conclusion were wrong, then either the case is high-priority or a senior partner is assigned regardless.\n\n**Prasanga (Application):**  \nThe policy states: If high-priority, then senior partner. Case is not high-priority. Therefore, the condition is not met, so the conclusion follows.\n\n**Pancha Avayava Structure:**  \n1. **Pratijna (Promise):** The policy states: If high-priority, then senior partner.\n2. **Heti (Condition):** Case is not high-priority.\n3. **Udaharana (Generalization):** If the condition is not met, then the conclusion follows.\n4. **Tarka (Counterfactual):** If the conclusion were wrong, then either the case is high-priority or a senior partner is assigned regardless.\n5. **Nigamana (Inference):** Since the case is not high-priority and the policy does not assign a senior partner in such cases, no senior partner is assigned.\n\n### Phase 4: Tarka (Counterfactual Reasoning)\n**Assume the conclusion is wrong:**  \nIf we cannot conclude that no senior partner is assigned to Case #247, then either:  \n1. Case #247 is high-priority, or  \n2. A senior partner is assigned regardless of classification.\n\n**Analyze each possibility:**  \n1. If Case #247 is high-priority, this contradicts the given information that it is NOT high-priority.  \n2. If a senior partner is assigned regardless of classification, this would mean the policy is not a universal rule but applies conditionally. However, the policy states \"if high-priority,\" implying it is conditional.  \n\n**Conclusion:**  \nThe assumption that the conclusion is wrong leads to contradictions. Therefore, the original conclusion must be correct.\n\n### Phase 5: Hetvabhasa (Fallacy Check)\nCheck for common fallacies:  \n1. **Akwarda (Affirming the Negative):** We are concluding a negative (no senior partner) based on a negative (not high-priority). This is valid because the policy directly links high-priority to senior assignment.\n2. **Viruddha (Contradictory Premises):** The premises are consistent; the case is not high-priority, and the policy does not assign a senior partner in such cases.\n3. **Jatya (Universalization):** The policy is a universal rule, so we can generalize from the case to the rule.\n4. **Hetvabhasa (Fallacy of Conjunction):** We are not asserting that no senior partner is ever assigned outside of high-priority cases, only that in this specific case, since it's not high-priority, no senior partner is assigned.\n\n### Phase 6: Nirnaya (Ascertainment)\nAfter analyzing all phases, we can confidently conclude that no senior partner is assigned to Case #247 based on the given policy and information.\n### Final Answer\n**Yes**, we can conclude that no senior partner is assigned to Case #247.",
+  "response_length": 4256,
+  "generation_time_ms": 73245,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude no senior partner."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "### Phase 6: Nirnaya (Ascertainment)\nAfter analyzing all phases, we can confidently conclude that no senior partner is assigned to Case #247 based on the given policy and information"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-09: Can senior partner be assigned? True\n",
+        "problem_id": "VIR-09"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-02",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # List all doubts\n    doubts = [\n        \"Does Species H have echolocation?\",\n        \"Is Species H nocturnal?\"\n    ]\n    \n    # Pramana: Sources of Knowledge\n    # Known facts\n    facts = [\n        \"Species A is nocturnal and has echolocation.\",\n        \"Species B is nocturnal and has echolocation.\",\n        \"Species C is nocturnal and has echolocation.\",\n        \"Species D is nocturnal and does NOT have echolocation.\",\n        \"Species E is diurnal and does NOT have echolocation.\",\n        \"Species F is nocturnal and has echolocation.\",\n        \"Species G is nocturnal and has echolocation.\",\n        \"Species H is nocturnal.\"\n    ]\n    \n    # Pramana: Apply Pratyaksha (Direct Perception)\n    # For each fact, extract properties\n    properties = {}\n    for fact in facts:\n        properties[\"Nocturnal\"] = True\n        properties[\"Echolocation\"] = True\n        # Split the fact into parts\n        parts = fact.split(\" and \")\n        subject = parts[0]\n        predicate = parts[1]\n        properties[subject] = predicate\n        \n        # For H, since it's the only one without a fact, we need to infer\n        if subject == 'Species H':\n            pass  # Will handle in syllogism\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # Syllogism structure: All Nocturnal Species with Echolocation are X. All Nocturnal Species are X or Y. All Species are Y or Z. All Nocturnal Species are Z. Therefore, All Nocturnal Species with Echolocation are Z.\n    # Here, X = Echolocation, Y = Not Echolocation, Z = Echolocation\n    syllogism = [\n        \"All Nocturnal Species with Echolocation are Echolocation.\",\n        \"All Nocturnal Species are Echolocation or Not Echolocation.\",\n        \"All Species are Echolocation or Not Echolocation.\",\n        \"All Nocturnal Species are Echolocation.\",\n        \"Therefore, All Nocturnal Species with Echolocation are Echolocation.\"\n    ]\n    \n    # Tarka: Counterfactual Reasoning\n    # Assume H does not have echolocation, check contradictions\n    tarka = [\n        \"Assume H does not have echolocation.\",\n        \"Then, H is a Nocturnal Species without Echolocation.\",\n        \"But all Nocturnal Species without Echolocation are Species D.\",\n        \"Therefore, H would be Species D.\",\n        \"But H is a new species, so H cannot be Species D.\",\n        \"Therefore, our assumption is false, and H must have echolocation.\"\n    ]\n    \n    # Hetvabhasa: Fallacy Check\n    # Check for common fallacies\n    fallacies = [\n        \"Akward Etymological Fallacy\",\n        \"Analogy Fallacy\",\n        \"Cosmic Fallacy\",\n        \"Efficiency Fallacy\",\n        \"Four Terms Fallacy\",\n        \"Material Fallacy\",\n        \"Modal Fallacy\",\n        \"Potentia Fallacy\",\n        \"Propositional Fallacy\",\n        \"Scope Fallacy\",\n        \"Symptomatic Fallacy\",\n        \"Teleological Fallacy\",\n        \"Textual Fallacy\"\n    ]\n    \n    # Nirnaya: Ascertainment\n    # Final conclusion\n    conclusion = \"Yes, Species H has echolocation.\"\n    \n    # Print all steps\n    print(\"Samshaya:\")\n    for d in doubts:\n        print(f\"- {d}\")\n    \n    print(\"\\nPramana:\")\n    print(\"Known Facts:\")\n    for f in facts:\n        print(f\"- {f}\")\n    print(\"\\nProperties:\")\n    for p in properties:\n        print(f\"- {p}: {properties[p]}\")\n    \n    print(\"\\nPancha Avayava:\")\n    for s in syllogism:\n        print(f\"- {s}\")\n    \n    print(\"\\nTarka:\")\n    for t in tarka:\n        print(f\"- {t}\")\n    \n    print(\"\\nHetvabhasa:\")\n    for f in fallacies:\n        print(f\"- {f}\")\n    \n    print(\"\\nNirnaya:\")\n    print(conclusion)\n    \nsolve()\n```\n\n### Explanation:\nThe solution follows the Nyaya methodology to systematically analyze and conclude whether Species H has echolocation. It starts by listing doubts, then gathers all known facts, applies direct perception to extract properties, constructs a syllogism to infer the conclusion, uses counterfactual reasoning to validate the conclusion, checks for fallacies, and finally ascertains the conclusion. The final answer is that Species H does have echolocation.",
+  "response_length": 4099,
+  "generation_time_ms": 73440,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Species H is NOT necessarily echolocating."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "split(\" and \")\n        subject = parts[0]\n        predicate = parts[1]\n        properties[subject] = predicate\n        \n        # For H, since it's the only one without a fact, we need to infer\n      "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-02: Checking vy\u0101pti 'Nocturnal \u2192 Echolocation' ===\nH can lack echolocation: True\n",
+        "problem_id": "SAV-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-05",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Problem Analysis:**\n\nWe are given two sets of students in a school:\n\n- **Set A (Students who play sports):** {p, q, r, s, t}\n- **Set B (Students who are on the honor roll):** {q, r, u, v}\n\nThe policy states: **\"Students who play sports AND are NOT on the honor roll must attend study hall.\"**\n\nWe need to determine which students must attend study hall.\n\n---\n\n### **Solution Using Nyaya Methodology:**\n\n#### **1. Samshaya (Doubt Analysis)**\n- **What is the question?** Identify the students who must attend study hall.\n- **What is the doubt?** Are all students who play sports and are not on the honor roll required to attend study hall?\n\n#### **2. Pramana (Sources of Knowledge)**\n- **Vernacular Statement:** \"Students who play sports AND are NOT on the honor roll must attend study hall.\"\n- **Logical Translation:** If a student plays sports (A) and is not on the honor roll (not B), then they must attend study hall (C).\n\n#### **3. Pancha Avayava (5-Member Syllogism)**\n- **Major Premise:** All students who play sports are in Set A.\n- **Minor Premise:** All students on the honor roll are in Set B.\n- **Conclusion:** Students who play sports and are not on the honor roll must attend study hall.\n\n#### **4. Tarka (Counterfactual Reasoning)**\n- **If the policy didn't exist:** All students who play sports and are not on the honor roll could choose not to attend study hall.\n- **With the policy in place:** These students **must** attend study hall.\n\n#### **5. Hetvabhasa (Fallacy Check)**\n- **Potential Fallacies:**\n  - **Equivocation:** Misinterpreting \"play sports\" as \"are in Set A.\"\n  - **Omission:** Forgetting that \"not on the honor roll\" is a necessary condition.\n- **Checked:** The statement is clear and unambiguous.\n\n#### **6. Nirnaya (Ascertainment)**\n- **Final Conclusion:** Students who play sports and are not on the honor roll must attend study hall.\n\n---\n\n### **Final Answer:**\n\nThe students who must attend study hall are those who play sports and are **not** on the honor roll. Specifically, they are:\n\n- **Students p, s, t**\n\n**Answer:** {p, s, t}",
+  "response_length": 2086,
+  "generation_time_ms": 39021,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "{p, s, t} must attend study hall."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "- **What is the doubt?** Are all students who play sports and are not on the honor roll required to attend study hall?\n\n#### **2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-05: Can pa avoid study_hall? False\nVIR-05: Must attend: pa, ps, pt (A\u2229B')\n",
+        "problem_id": "VIR-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

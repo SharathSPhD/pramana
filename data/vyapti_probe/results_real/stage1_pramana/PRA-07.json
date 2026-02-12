@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-07",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Vaisya Approach:\n1. **Samshaya (Doubt Analysis)**  \n   - What is the question? Determine the value of OUT given P, Q, R, S.  \n   - What do we need to compute? Apply the logical expression (P \u2227 Q) \u2228 (R \u2227 S).  \n   - What are the uncertainties? Verify each Boolean operation step by step.\n\n2. **Pramana (Sources of Knowledge)**  \n   - What is the basis of our knowledge? The truth values of P, Q, R, S.  \n   - What are the premises? P = true, Q = false, R = true, S = true.  \n   - What are the principles? Boolean AND and OR operations.\n\n3. **Pancha Avayava (5-Member Syllogism)**  \n   - 1. Pratyaksha: Direct perception: P \u2227 Q is false because Q is false.  \n   - 2. Anumana: Inference: R \u2227 S is true because both R and S are true.  \n   - 3. Pratyaksha: Direct perception: (P \u2227 Q) \u2228 (R \u2227 S) is true because R \u2227 S is true.  \n   - 4. Anumana: Inference: OUT is true because (P \u2227 Q) \u2228 (R \u2227 S) is true.  \n   - 5. Upamana: Comparison: This result aligns with logical evaluation.\n\n4. **Tarka (Counterfactual Reasoning)**  \n   - Suppose P is false. Then P \u2227 Q is false. R \u2227 S remains true. So, OUT remains true.  \n   - If Q is true, then P \u2227 Q is true, making OUT true regardless of R \u2227 S.  \n   - If R is false, then R \u2227 S is false. P \u2227 Q is false, so OUT is false.  \n   - If S is false, then R \u2227 S is false. P \u2227 Q is false, so OUT is false.\n\n5. **Hetvabhasa (Fallacy Check)**  \n   - Are we assuming what we are trying to prove? No, we are directly evaluating the expression.  \n   - Is there a middle term fallacy? No, all terms are relevant.  \n   - Is there an infinite regress fallacy? No, we have a finite chain of reasoning.  \n   - Is there a four-term fallacy? No, we have a valid syllogism.  \n   - Is there a counterexample? No, the evaluation holds under all conditions.\n\n6. **Nirnaya (Ascertainment)**  \n   - After thorough analysis, the value of OUT is **true**.  \n   - The change in P does not affect the result because R \u2227 S remains true.  \n   - All fallacies have been ruled out, and the reasoning is valid.\n\n---\n\n### Final Answer:\n1. The value of OUT is **true**.  \n2. Changing P to false does **not** change the value of OUT.",
+  "response_length": 2144,
+  "generation_time_ms": 45764,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "OUT=true; changing P doesn't change OUT."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "- Is there a middle term fallacy? No, all terms are relevant"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-07: OUT can be false? False\nPRA-07: P is irrelevant: OUT unchanged = True == True\n",
+        "problem_id": "PRA-07"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

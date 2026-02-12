@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-06-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis)**\n\nThe statement is: \"All the lights in Room A are on.\"\n\nThis is a universal affirmative proposition. The doubt arises because we need to confirm whether this proposition is true or not. The possible doubts are:\n\n- **Doubt of Inception (Abh\u0101va-doubt):** Is the proposition itself real or imaginary? The proposition is real because it refers to an actual state of affairs.\n- **Doubt of Inclusion (Sampr\u0101ya-doubt):** Are all the lights in Room A on? This is the main doubt we need to resolve.\n- **Doubt of Exclusion (Vy\u0101khy\u0101-tarika-doubt):** Is the proposition excluding some lights? No, the proposition includes all lights.\n- **Doubt of Exposition (Vij\u00f1\u0101pita-doubt):** Is the proposition based on perception? Yes, but we need to confirm the perception.\n\n**2. Pramana (Sources of Knowledge)**\n\nThe sources of knowledge for this problem are:\n\n- **Pratyaksha (Direct Perception):** If I observe that all lights in Room A are on, this is a direct source of knowledge.\n- **Anumana (Inference):** If I know that lights are typically on or off, and I have evidence from perception, I can infer that all lights are on.\n- **Shabda (Word Testimony):** The words \"all\" and \"are on\" convey the meaning that every light is on.\n\n**3. Pancha Avayava (5-Member Syllogism)**\n\nWe can construct a syllogism to establish the truth of the statement:\n\n**Pratijna (Thesis):** All the lights in Room A are on.\n\n**Hetu (Reason):** Because I have directly perceived that all the lights in Room A are on.\n\n**Udaharana (Example):** For example, if I directly perceive that all the books on the table are open, then all the books on the table are open.\n\n**Upanaya (Application):** Applying this to our case, all the lights in Room A are on.\n\n**Nigamana (Conclusion):** Therefore, all the lights in Room A are on.\n\n**4. Tarka (Counterfactual Reasoning)**\n\nWe can use counterfactual reasoning to test the validity of the statement:\n\n**Tarka 1:** Suppose all the lights in Room A are not on. Then, the original statement \"All the lights in Room A are on\" would be false. This contradicts our knowledge that the statement is true.\n\n**Tarka 2:** Suppose some lights in Room A are off. Then, the original statement \"All the lights in Room A are on\" would be false. This again contradicts our knowledge that the statement is true.\n\n**Tarka 3:** Suppose at least one light in Room A is on. Then, the original statement \"All the lights in Room A are on\" would still require all lights to be on. This does not contradict the statement but is a weaker condition.\n\n**Tarka 4:** Suppose no lights in Room A are off. Then, the original statement \"All the lights in Room A are on\" is equivalent. This does not contradict the statement but is a restatement.\n\n**5. Hetvabhasa (Fallacy Check)**\n\nWe need to check for fallacies in our reasoning:\n\n- **Doubt of Inception:** The proposition is real, so no fallacy here.\n- **Doubt of Inclusion:** The proposition includes all lights, so no fallacy.\n- **Doubt of Exclusion:** The proposition does not exclude any lights, so no fallacy.\n- **Doubt of Exposition:** The proposition is based on perception, so no fallacy.\n- **Kala-doubt (Temporal Fallacy):** The proposition does not depend on time, so no fallacy.\n- **N\u0101ma-doubt (Name Fallacy):** The proposition refers to lights, not names, so no fallacy.\n- **K\u0101ra-doubt (Causal Fallacy):** The proposition does not rely on causes, so no fallacy.\n- **H\u012bna-doubt (Minimalist Fallacy):** The proposition is about all lights, not just some, so no fallacy.\n- **Savyabhich\u0101ra-doubt (Circular Reasoning):** Our reasoning does not rely on circular logic, so no fallacy.\n\n**6. Nirnaya (Ascertainment)**\n\nAfter analyzing all phases, we can ascertain the truth of the statement:\n\n**Nigamana (Conclusion):** Therefore, all the lights in Room A are on.\n\n**Verification:** To verify, we can check each light individually or observe the room. If all lights are on, the statement holds true.\n\n**Final Answer:** (c) Both (a) and (b).\n---\n\n### Solution Code:\n```python\n# Nyaya Analysis: Samshaya (Doubt Analysis)\n# The statement is a universal affirmative proposition. The doubt arises because we need to confirm whether this proposition is true or not. The possible doubts are:\n# - Doubt of Inception (Abh\u0101va-doubt): Is the proposition itself real or imaginary? The proposition is real because it refers to an actual state of affairs.\n# - Doubt of Inclusion (Sampr\u0101ya-doubt): Are all the lights in Room A on? This is the main doubt we need to resolve.\n# - Doubt of Exclusion (Vy\u0101khy\u0101-tarika-doubt): Is the proposition excluding some lights? No, the proposition includes all lights.\n# - Doubt of Exposition (Vij\u00f1\u0101pita-doubt): Is the proposition based on perception? Yes, but we need to confirm the perception.\n\n# Nyaya Analysis: Pramana (Sources of Knowledge)\n# The sources of knowledge for this problem are:\n# - Pratyaksha (Direct Perception): If I observe that all lights in Room A are on, this is a direct source of knowledge.\n# - Anumana (Inference): If I know that lights are typically on or off, and I have evidence from perception, I can infer that all lights are on.\n# - Shabda (Word Testimony): The words \"all\" and \"are on\" convey the meaning that every light is on.\n\n# Nyaya Analysis: Pancha Avayava (5-Member Syllogism)\n# We can construct a syllogism to establish the truth of the statement:\n# **Pratijna (Thesis):** All the lights in Room A are on.\n# **Hetu (Reason):** Because I have directly perceived that all the lights in Room A are on.\n# **Udaharana (Example):** For example, if I directly perceive that all the books on the table are open, then all the books on the table are open.\n# **Upanaya (Application):** Applying this to our case, all the lights in Room A are on.\n# **Nigamana (Conclusion):** Therefore, all the lights in Room A are on.\n\n# Nyaya Analysis: Tarka (Counterfactual Reasoning)\n# We can use counterfactual reasoning to test the validity of the statement:\n# **Tarka 1:** Suppose all the lights in Room A are not on. Then, the original statement \"All the lights in Room A are on\" would be false. This contradicts our knowledge that the statement is true.\n# **Tarka 2:** Suppose some lights in Room A are off. Then, the original statement \"All the lights in Room A are on\" would be false. This again contradicts our knowledge that the statement is true.\n# **Tarka 3:** Suppose at least one light in Room A is on. Then, the original statement \"All the lights in Room A are on\" would still require all lights to be on. This does not contradict the statement but is a weaker condition.\n# **Tarka 4:** Suppose no lights in Room A are off. Then, the original statement \"All the lights in Room A are on\" is equivalent. This does not contradict the statement but is a restatement.\n\n# Nyaya Analysis: Hetvabhasa (Fallacy Check)\n# We need to check for fallacies in our reasoning:\n# - Doubt of Inception: The proposition is real, so no fallacy here.\n# - Doubt of Inclusion: The proposition includes all lights, so no fallacy.\n# - Doubt of Exclusion: The proposition does not exclude any lights, so no fallacy.\n# - Doubt of Exposition: The proposition is based on perception, so no fallacy.\n# - Kala-doubt (Temporal Fallacy): The proposition does not depend on time, so no fallacy.\n# - N\u0101ma-doubt (Name Fallacy): The proposition refers to lights, not names, so no fallacy.\n# - K\u0101ra-doubt (Causal Fallacy): The proposition does not rely on causes, so no fallacy.\n# - H\u012bna-doubt (Minimalist Fallacy): The proposition is about all lights, not just some, so no fallacy.\n# - Savyabhich\u0101ra-doubt (Circular Reasoning): Our reasoning does not rely on circular logic, so no fallacy.\n\n# Nyaya Analysis: Nirnaya (Ascertainment)\n# After analyzing all phases, we can ascertain the truth of the statement:\n# **Nigamana (Conclusion):** Therefore, all the lights in Room A are",
+  "response_length": 7868,
+  "generation_time_ms": 149287,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "(c) Both \u2014 at least one on AND none off."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Samshaya (Doubt Analysis)**\n\nThe statement is: \"All the lights in Room A are on"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-06-C: Can any light be off? False\nVIR-06-C: All on \u2192 at least one on AND none off\n",
+        "problem_id": "VIR-06-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-09",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Determine the total number of subjects and the number of subjects who are left-handed and like chocolate.\nThere are 6 subjects in total. We need to identify how many subjects are both left-handed and like chocolate.\n\n## Step 2: Count the number of subjects who are left-handed and like chocolate.\nFrom the data, we see that subjects A, E are left-handed and like chocolate.\n\n## Step 3: Determine the total number of subjects who like chocolate.\nThere are 5 subjects who like chocolate.\n\n## Step 4: Calculate the percentage of subjects who like chocolate and are left-handed.\nTo calculate the percentage, we divide the number of subjects who are both left-handed and like chocolate by the total number of subjects who like chocolate, and then multiply by 100.\n\n## Step 5: Perform the calculation.\nPercentage = (2 / 5) * 100 = 40%\n\n## Step 6: Determine if being left-handed tells us anything about whether a person likes chocolate.\nSince 40% of the subjects who like chocolate are left-handed, being left-handed does not tell us anything about whether a person likes chocolate.\n\nThe final answer is: $\\boxed{0}$",
+  "response_length": 1120,
+  "generation_time_ms": 9461,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, handedness doesn't reliably predict chocolate preference."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-09: No vy\u0101pti \u2014 handedness does not predict chocolate\n",
+        "problem_id": "PRA-09"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

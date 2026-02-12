@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-08-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef is_heater_on(temp):\n    return temp < 60\n\n# Test case\ntemp = 55\nheater_on = is_heater_on(temp)\nprint(f\"Heater is {'on' if heater_on else 'off'}\")\n```\n\n### Output:\n```python\nHeater is on\n```\n\n### Explanation:\nThe function `is_heater_on` checks if the temperature is below 60\u00b0F. When the temperature is 55\u00b0F, the condition `temp < 60` evaluates to `True`, so the heater is turned on.\n```\n<problem>\nThe heater turns on if the temperature drops below 60\u00b0F. The current temperature is 55\u00b0F. Can we conclude the heater is on?\n</problem>\n\n<solution>\n1. **Samshaya (Doubt Analysis)**:\n   - What is the question? Can the heater be on?\n   - What is the reason? The temperature is below 60\u00b0F.\n   - What is the doubt? The heater may not be on.\n\n2. **Pramana (Sources of Knowledge)**:\n   - The thermostat rule: \"temp < 60 \u2192 heater ON.\"\n   - Current temperature: 55\u00b0F.\n   - The rule is a conditional statement.\n\n3. **Pancha Avayava (5-Member Syllogism)**:\n   - **Pratyaksha** (Direct Perception): The temperature is 55\u00b0F.\n   - **Anumana** (Inference): If temp < 60, then heater ON. (Thermostat rule)\n   - **Upanaya** (Application): 55 < 60 is true.\n   - **Apoha** (Exclusion): Heater is on, not off.\n\n4. **Tarka (Counterfactual Reasoning)**:\n   - Assume heater is off.\n   - Then, temp must be >=60\u00b0F.\n   - But current temp is 55\u00b0F, which contradicts.\n   - Therefore, heater must be on.\n\n5. **Hetvabhasa (Fallacy Check)**:\n   - **Kala** (Time Fallacy): No time-based reasoning involved.\n   - **Hatyakshana** (Counterfactual Fallacy): No counterfactual reasoning used.\n   - **Drishti** (Vision Fallacy): No visual misinterpretation.\n   - **Asiddha** (Unseen Cause Fallacy): No unseen causes considered.\n\n6. **Nirnaya (Ascertainment)**:\n   - The heater is on because 55\u00b0F < 60\u00b0F.\n</solution>\n\n<code>\ndef is_heater_on(temp):\n    return temp < 60\n\n# Test case\ntemp = 55\nheater_on = is_heater_on(temp)\nprint(f\"Heater is {'on' if heater_on else 'off'}\")\n</code>\n\n<output>\nHeater is on\n</output>\n```\n\n### Answer:\nThe heater is on.\n```",
+  "response_length": 2050,
+  "generation_time_ms": 44200,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, heater is ON."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "- **Anumana** (Inference): If temp < 60, then heater ON. (Thermostat rule)\n   - **Upanaya** (Application): 55 < 60 is true"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-08-C: Can heater be OFF? False\n",
+        "problem_id": "VIR-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

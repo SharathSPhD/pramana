@@ -1,0 +1,72 @@
+{
+  "problem_id": "VIR-08",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "Yes, we can conclude that the temperature is below 60\u00b0F.\n\nThe rule states that the heater turns on if the temperature drops below 60\u00b0F. Since the heater is currently ON, we can conclude that the temperature must be below 60\u00b0F.\n\nThis is a classic example of a conditional statement, where the condition (temp < 60) is true, and the consequence (heater ON) is also true. Since both the condition and the consequence are true, we can conclude that the temperature is indeed below 60\u00b0F.\n\nIn other words, the rule is a \"necessary condition\" for the heater to be ON. If the temperature were above 60\u00b0F, the heater would not be ON. Therefore, we can conclude that the temperature is below 60\u00b0F, given that the heater is ON.",
+  "response_length": 716,
+  "generation_time_ms": 6348,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude temp < 60."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-08: Can temp be \u226560? True\n",
+        "problem_id": "VIR-08"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

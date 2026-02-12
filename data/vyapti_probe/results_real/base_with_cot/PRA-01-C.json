@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-01-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this problem where five people\u2014Amit, Bela, Charu, Dev, and Ela\u2014are sitting in a row of five seats, labeled positions 1 through 5. There are four constraints given, and I need to figure out where Ela is sitting based on these. Let me try to break this down step by step.\n\nFirst, let me list out all the constraints:\n\n1. Amit sits in position 1.\n2. Bela sits immediately to the right of Amit.\n3. Charu sits in position 5.\n4. Ela does not sit in position 3.\n\nAlright, so starting with the first constraint: Amit is in position 1. That's straightforward. So seat 1 is occupied by Amit.\n\nNext, constraint 2 says Bela sits immediately to the right of Amit. Since Amit is in seat 1, the seat immediately to his right would be seat 2. So Bela must be in seat 2. That leaves seats 3, 4, and 5 open for the remaining three people: Charu, Dev, and Ela.\n\nMoving on to constraint 3: Charu sits in position 5. So seat 5 is occupied by Charu. Now, that leaves seats 3 and 4 for Dev and Ela.\n\nNow, constraint 4 says Ela does not sit in position 3. So Ela can't be in seat 3, which means she must be in seat 4. That leaves seat 3 for Dev.\n\nLet me try to visualize this:\n\n1: Amit\n2: Bela\n3: Dev\n4: Ela\n5: Charu\n\nWait, does that satisfy all the constraints?\n\n1. Amit is in seat 1: Yes.\n2. Bela is immediately to the right of Amit: Yes, seat 2.\n3. Charu is in seat 5: Yes.\n4. Ela is not in seat 3: Yes, she's in seat 4.\n\nSo that seems to fit. But let me double-check if there's another possible arrangement. Sometimes, these problems can have multiple solutions, but in this case, the constraints seem pretty specific.\n\nStarting again:\n\n- Seat 1 must be Amit.\n- Seat 2 must be Bela.\n- Seat 5 must be Charu.\n- Seat 3 cannot be Ela, so Ela must be in seat 4.\n\nTherefore, the only possible arrangement is:\n\n1: Amit\n2: Bela\n3: Dev\n4: Ela\n5: Charu\n\nI don't see any other way to arrange them without violating the constraints. Let me see if any of the other seats could be swapped, but given the constraints, I don't think so.\n\nWait, could Dev be in seat 4 and Ela in seat 3? But no, because Ela can't be in seat 3. So seat 3 has to be Dev or someone else, but the only other person left is Dev. So seat 3 must be Dev, seat 4 must be Ela, and seat 5 is Charu.\n\nSo, yeah, that seems to be the only possible arrangement. Therefore, Ela is sitting in position 4.\n\n**Final Answer**\nEla sits in position \\boxed{4}.\n</think>\n\nGiven the constraints for the seating arrangement of five people\u2014Amit, Bela, Charu, Dev, and Ela\u2014we need to determine the position where Ela sits. The constraints are as follows:\n\n1. Amit sits in position 1.\n2. Bela sits immediately to the right of Amit.\n3. Charu sits in position 5.\n4. Ela does not sit in position 3.\n\nStarting with the first constraint, Amit is in position 1. The second constraint places Bela immediately to the right of Amit, so Bela is in position 2. The third constraint places Charu in position 5. This leaves positions 3 and 4 for Dev and Ela. The fourth constraint states that Ela cannot be in position 3, so Ela must be in position 4. This leaves position 3 for Dev.\n\nThus, the seating arrangement is:\n1: Amit, 2: Bela, 3: Dev, 4: Ela, 5: Charu.\n\nTherefore, Ela sits in position \\boxed{4}.",
+  "response_length": 3226,
+  "generation_time_ms": 66787,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Ela sits in position 4."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-01-C: Ela=4 forced: True\n",
+        "problem_id": "PRA-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

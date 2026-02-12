@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-09",
+  "category": "sadhyasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Syllogism:\n\n**Pramana** (Sources of Knowledge):\n- **Pratyaksha** (Direct Perception): The researcher observes the survey responses in real-time.\n- **Anumana** (Inference): The researcher notes that the survey respondents believe Methodology M is accurate.\n- **Shabda** (Testimony): The researcher interprets the survey responses as evidence of reliability.\n\n**Pancha Avayava** (5-Member Syllogism):\n1. **Pratijna** (Thesis): Methodology M is reliable.\n2. **Hetu** (Reason): The survey respondents report that Methodology M produces accurate results.\n3. **Udaharana** (Comparison): If a methodology produces accurate results, then it is reliable.\n4. **Savyaya** (Connection): The survey respondents' reports indicate that Methodology M produces accurate results.\n5. **Nigamana** (Conclusion): Therefore, Methodology M is reliable.\n\n**Tarka** (Counterfactual Reasoning):\nSuppose Methodology M is not reliable. Then the survey respondents would not report accurate results. This contradicts the evidence. Therefore, Methodology M must be reliable.\n\n**Hetvabhasa** (Fallacy Check):\nThe argument avoids **Kala Upasana** (Time Idealism), **Nigrahaka** (Mentalism), **Hetal Upasana** (Dualism), and **Amananta** (Materialism). No fallacies are committed.\n\n**Nirnaya** (Ascertainment):\nThe argument is logically valid and reliable.\n---\n\n### Final Answer:\nThe argument is logically valid. The methodology is reliable.",
+  "response_length": 1423,
+  "generation_time_ms": 25552,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, argument is circular."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "**Udaharana** (Comparison): If a methodology produces accurate results, then it is reliable.\n4"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-09: No \u2014 circular (self-supporting)\n",
+        "problem_id": "SAD-09"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-04-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef should_grant_access(user, server, date):\n    # Samshaya: Doubt Analysis\n    # We need to determine if User A was granted access on Feb 1.\n    \n    # Pramana: Sources of Knowledge\n    # The log shows two events: grant and revoke.\n    # The grant was on Jan 1, and the revoke on Mar 15.\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # 1. Pratyaksha: Direct Observation: User A was granted access on Jan 1.\n    # 2. Anumana: Inference: The access was valid until revoked.\n    # 3. Samjana: Concept: Access revocation on Mar 15 affects all prior access.\n    # 4. Pratyaksha: Direct Observation: Access was revoked on Mar 15.\n    # 5. Samjana: Concept: Access is granted until revoked.\n    \n    # Tarka: Counterfactual Reasoning\n    # If access was not granted on Feb 1, then the system would not have granted access on Jan 1.\n    # But the system did grant access on Jan 1, so it must have granted access on Feb 1.\n    \n    # Hetvabhasa: Fallacy Check\n    # No fallacies detected in the reasoning.\n    \n    # Nirnaya: Ascertainment\n    # Therefore, the system should have granted User A access to Server X on February 1.\n    \n    return True\n```\n\n### Explanation:\nThe access control system grants access until it is revoked. Since the revoke happened on March 15, all access granted before this date remains valid. Therefore, User A should have access on February 1.",
+  "response_length": 1404,
+  "generation_time_ms": 26980,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, access granted on Feb 1."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Since the revoke happened on March 15, all access granted before this date remains valid"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-04-C: Has access on Feb 1? True\n",
+        "problem_id": "KAL-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

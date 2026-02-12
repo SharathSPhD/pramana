@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-10",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "(If you need to draw a Venn diagram, feel free to do so.)\n\n## Step 1: Understand the contest rule\nThe contest rule states that a contestant must solve either Problem A or Problem B to win a prize.\n\n## Step 2: Analyze Contestant M's qualifications\nContestant M has solved BOTH Problem A and Problem B, which means they have satisfied the condition of solving either Problem A or Problem B.\n\n## Step 3: Determine if Contestant M qualifies for the prize\nSince Contestant M has solved both Problem A and Problem B, they meet the criteria set by the contest rule.\n\nThe final answer is: $\\boxed{Yes}$",
+  "response_length": 594,
+  "generation_time_ms": 5300,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Yes, Contestant M qualifies."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-10: Can prize be denied? False\n",
+        "problem_id": "VIR-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

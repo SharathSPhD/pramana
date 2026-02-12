@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-10-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # What is the doubt? What are the reasons for doubt? What are the reasons against doubt?\n    doubt = \"Does Contestant M qualify for the prize?\"\n    reasons_for_doubt = [\n        \"Contestant M has solved Problem A but not Problem B.\",\n        \"The rule says 'solve Problem A or Problem B' which is an OR condition.\"\n    ]\n    reasons_against_doubt = [\n        \"If a contestant solves either Problem A or Problem B, they qualify.\",\n        \"Contestant M has solved Problem A, which satisfies the OR condition.\"\n    ]\n\n    # Pramana: Sources of Knowledge\n    # What are the sources? What do they state? What is the content of the sources?\n    sources = [\n        \"The contest rule states: 'To win a prize, a contestant must solve Problem A or Problem B.'\",\n        \"Contestant M has solved Problem A but not Problem B.\"\n    ]\n    pramana = f\"\"\"Sources:\n    - {sources[0]}\n    - {sources[1]}\n    Pramana: The rule and the contestant's actions are known.\"\"\"\n\n    # Pancha Avayava: 5-Member Syllogism\n    # Vaiyakshana: Major Premise\n    # Pratijna: Conclusion to be proved\n    # Hetu: Reason\n    # Pratyaksha: Evidence\n    # Sampanna: Conclusion\n    premises = [\n        \"If a contestant solves Problem A or Problem B, they qualify for the prize.\",\n        \"Contestant M has solved Problem A but not Problem B.\"\n    ]\n    syllogism = f\"\"\"Pancha Avayava:\n    Vaiyakshana: If a contestant solves Problem A or Problem B, they qualify for the prize.\n    Pratijna: Contestant M qualifies for the prize.\n    Hetu: Contestant M has solved Problem A, which satisfies the OR condition.\n    Pratyaksha: Contestant M has solved Problem A.\n    Sampanna: Contestant M qualifies for the prize.\"\"\"\n\n    # Tarka: Counterfactual Reasoning\n    # What if the opposite were true? What follows?\n    tarka = f\"\"\"Tarka:\n    Suppose Contestant M does not qualify for the prize.\n    Then, Contestant M must not have solved Problem A and must not have solved Problem B.\n    But we know Contestant M has solved Problem A.\n    Therefore, the opposite conclusion is false. Hence, Contestant M qualifies for the prize.\"\"\"\n\n    # Hetvabhasa: Fallacy Check\n    # What fallacies are present? What arguments are fallacious? What arguments are valid?\n    fallacies = [\n        \"Denying the antecedent\",\n        \"Affirming the consequent\",\n        \"Conjunction fallacy\",\n        \"Modest fallacy\"\n    ]\n    hetvabhasa = f\"\"\"Hetvabhasa:\n    Fallacies Present:\n    - Denying the antecedent: Assuming that because Contestant M solved Problem A, they do not satisfy the OR condition.\n    - Affirming the consequent: Assuming that solving Problem A directly qualifies the contestant.\n    - Conjunction fallacy: Assuming that solving both problems is required when only an OR condition is stated.\n    - Modest fallacy: Assuming that solving Problem A is not sufficient for qualification.\n\n    Fallacious Arguments:\n    - \"Contestant M has solved Problem A but not Problem B, so they do not satisfy the OR condition.\"\n    - \"Solving Problem A is not sufficient for qualification.\"\n\n    Valid Arguments:\n    - \"If a contestant solves Problem A or Problem B, they qualify for the prize.\"\n    - \"Contestant M has solved Problem A, which satisfies the OR condition.\"\n    - \"Contestant M qualifies for the prize.\"\"\"\"\n\n    # Nirnaya: Ascertainment\n    # What is the final answer? What is the reasoning? What is the conclusion?\n    conclusion = f\"\"\"Nirnaya:\n    Final Answer: Yes, Contestant M qualifies for the prize.\n    \n    Reasoning:\n    - The contest rule states that solving either Problem A or Problem B is sufficient for qualification.\n    - Contestant M has solved Problem A, which satisfies the OR condition.\n    - Therefore, Contestant M qualifies for the prize.\n\n    Conclusion: Contestant M qualifies for the prize.\"\"\"\n    \n    print(\"### Nyaya Methodology Analysis ###\")\n    print(doubt)\n    print(\"\\nSamshaya:\")\n    print(\"Doubt Analysis:\")\n    print(\"Doubt: Does Contestant M qualify for the prize?\")\n    print(\"Reasons for Doubt:\")\n    for reason in reasons_for_doubt:\n        print(f\"- {reason}\")\n    print(\"Reasons against Doubt:\")\n    for reason in reasons_against_doubt:\n        print(f\"- {reason}\")\n    print(\"\\n\\nPramana:\")\n    print(\"Sources of Knowledge:\")\n    for source in sources:\n        print(f\"- {source}\")\n    print(pramana)\n    \n    print(\"\\n\\nPancha Avayava:\")\n    print(syllogism)\n    \n    print(\"\\n\\nTarka:\")\n    print(tarka)\n    \n    print(\"\\n\\nHetvabhasa:\")\n    print(hetvabhasa)\n    \n    print(\"\\n\\nNirnaya:\")\n    print(conclusion)\n    \n    return \"Yes, Contestant M qualifies for the prize.\"\n```\n\n### Explanation:\nThe code applies the Nyaya methodology to systematically analyze and solve the problem. It begins with Samshaya (Doubt Analysis) by identifying the question and reasons for doubt. Then, it proceeds through Pramana (Sources of Knowledge), Pancha Avayava (5-Member Syllogism), Tarka (Counterfactual Reasoning), Hetvabhasa (Fallacy Check), and finally Nirnaya (Ascertainment) to reach a definitive conclusion. The final answer is printed as the return value.",
+  "response_length": 5136,
+  "generation_time_ms": 92947,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Contestant M qualifies."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-10-C: Can prize be denied? False\n",
+        "problem_id": "VIR-10-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

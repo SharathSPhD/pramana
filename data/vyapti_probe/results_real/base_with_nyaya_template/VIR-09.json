@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-09",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Solution:**\n\nWe will analyze the problem using the **Nyaya** methodology, specifically applying the **Pramana** (Sources of Knowledge) and **Tarka** (Counterfactual Reasoning) phases.\n\n---\n\n### **1. Samshaya (Doubt Analysis)**\n\n**Question:**  \nCan we conclude that no senior partner is assigned to Case #247, given that Case #247 has NOT been classified as high-priority?\n\n**Analysis:**  \nThe law firm's policy states that a senior partner is assigned to a client case **if and only if** the case is classified as high-priority. This implies a **bi-conditional** relationship:\n- **Only if** the case is high-priority, a senior partner is assigned.\n- **If** a senior partner is assigned, **then** the case is high-priority.\n\nSince Case #247 is **not** classified as high-priority, we need to determine if a senior partner is assigned or not.\n\n---\n\n### **2. Pramana (Sources of Knowledge)**\n\n**Policy Statement:**  \n- **If** a client case is classified as high-priority, **then** a senior partner is assigned.\n- **Only if** a client case is classified as high-priority, a senior partner is assigned.\n\n**Given:**  \n- Case #247 is **not** classified as high-priority.\n\n**Conclusion from Policy:**  \nSince the case is not high-priority, the second part of the bi-conditional (\"Only if...\") does **not** hold. Therefore, we **cannot conclude** that a senior partner is assigned.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**\n\n**Syllogism Structure:**  \n1. **Major Premise:** If a case is high-priority, then a senior partner is assigned.\n2. **Minor Premise:** Case #247 is **not** high-priority.\n3. **Conclusion:** Therefore, no senior partner is assigned to Case #247.\n\n**Analysis:**  \nThe syllogism correctly applies the policy. Since the case is not high-priority, the conclusion logically follows.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**\n\n**Counterfactual:**  \n*If* Case #247 **were** classified as high-priority, **then** a senior partner would be assigned.\n\n**Analysis:**  \nThe counterfactual is true because it aligns with the policy. However, since the case is not high-priority, it does **not** affect our original conclusion.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**\n\n**Fallacy Identification:**  \nThere is no fallacy in the reasoning. The policy is applied correctly without any logical errors.\n\n---\n\n### **6. Nirnaya (Ascertainment)**\n\n**Final Conclusion:**  \nBased on the policy and the given information, **no senior partner is assigned to Case #247**.\n\n---\n\n### **Final Answer:**\n\n\\boxed{\\text{No senior partner is assigned to Case #247.}}",
+  "response_length": 2584,
+  "generation_time_ms": 46640,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude no senior partner."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Major Premise:** If a case is high-priority, then a senior partner is assigned.\n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-09: Can senior partner be assigned? True\n",
+        "problem_id": "VIR-09"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

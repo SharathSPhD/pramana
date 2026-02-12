@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-15",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** The Nyaya methodology is a traditional Indian method of logical reasoning. This problem is designed to test your understanding of logical reasoning and the ability to apply the Nyaya methodology.\n\n---\n\n### Solution:\nLet's analyze the problem step by step using the 6-phase Nyaya methodology.\n\n#### 1. Samshaya (Doubt Analysis)\nThe problem is: \"Is having a Monday meeting guaranteed to complete the project on time?\"\nWe need to analyze the given data to determine if the conclusion is valid.\n\n#### 2. Pramana (Sources of Knowledge)\nThe data provided includes the following patterns:\n- Week 1: M=true, T=true \u2192 Project completed on time \u2713\n- Week 2: M=true, W=true \u2192 Project completed on time \u2713\n- Week 3: M=true, R=true \u2192 Project completed on time \u2713\n- Week 4: M=true, F=true \u2192 Project completed on time \u2713\n- Week 5: M=true, T=false, W=false, R=false, F=false \u2192 Project NOT completed on time \u2717\n- Week 6: T=true, W=true, M=false \u2192 Project completed on time \u2713\n\nThese patterns provide evidence for the conclusion.\n\n#### 3. Pancha Avayava (5-Member Syllogism)\nLet's construct a syllogism to analyze the conclusion:\n1. All instances where M=true and T=true, W=true, R=true, and F=true result in the project being completed on time.\n2. The instance where M=true, T=false, W=false, R=false, and F=false does not result in the project being completed on time.\n3. Therefore, having a Monday meeting (M=true) guarantees the project will be completed on time.\n\nThis syllogism is valid, but we need to check for any fallacies.\n\n#### 4. Tarka (Counterfactual Reasoning)\nLet's consider counterfactuals:\n- If M=true and T=false, W=false, R=false, and F=false, then the project is NOT completed on time.\n- If M=true and T=true, W=false, R=false, and F=false, then the project is NOT completed on time.\n- If M=true and T=true, W=true, R=false, and F=false, then the project is NOT completed on time.\n- If M=true and T=true, W=true, R=true, and F=false, then the project is NOT completed on time.\n- If M=true and T=true, W=true, R=true, and F=true, then the project is NOT completed on time.\n\nWe can see that there are cases where M=true and the project is NOT completed on time. Therefore, having a Monday meeting does not guarantee the project will be completed on time.\n\n#### 5. Hetvabhasa (Fallacy Check)\nWe have checked for fallacies in the syllogism and counterfactuals. The conclusion is not valid.\n\n#### 6. Nirnaya (Ascertainment)\nBased on the analysis, we conclude that the project manager's statement \"Having a Monday meeting guarantees the project will be completed on time\" is **NOT** valid.\n\n**Final Answer:** The final answer is: $\\boxed{0}$ (The conclusion is not valid.)",
+  "response_length": 2673,
+  "generation_time_ms": 26319,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"M=true \u2192 on time\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "Tarka (Counterfactual Reasoning)\nLet's consider counterfactuals:\n- If M=true and T=false, W=false, R=false, and F=false, then the project is NOT completed on time.\n- If M=true and T=true, W=false, R=f"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-15: 'M \u2192 on time' holds: False\n",
+        "problem_id": "SAV-15"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

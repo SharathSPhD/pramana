@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-01",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "The answer is: We cannot conclude anything about Student X's final exam result.\nHere's why:\nThe rule states that passing the final exam is a necessary condition for completing all homework assignments. However, it does not state that passing the final exam is a sufficient condition for completing all homework assignments. In other words, there may be other reasons why Student X has not completed all homework assignments, such as not being able to access the assignments or not having the necessary materials.\nTherefore, we cannot conclude anything about Student X's final exam result based on the information provided. We can only conclude that Student X has not completed all homework assignments, but we cannot determine the reason why.",
+  "response_length": 742,
+  "generation_time_ms": 5227,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Student X did NOT pass."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Here's why:\nThe rule states that passing the final exam is a necessary condition for completing all homework assignments. However, it does not state that passing the final exam is a sufficient conditi"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-01: Can student have passed? False\n",
+        "problem_id": "VIR-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

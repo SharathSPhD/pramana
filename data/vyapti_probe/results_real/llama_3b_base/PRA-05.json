@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-05",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Identify the known information\nFrom the given statements, we know the following:\n- Priya works in Lab-North.\n- Qadir works in Lab-South.\n- Ravi drinks coffee.\n- Sita works in Lab-North.\n- Priya drinks tea.\n\n## Step 2: Determine the lab for Ravi\nSince Priya works in Lab-North and Sita also works in Lab-North, we can conclude that Ravi must work in Lab-South because Qadir is the only one working in Lab-South.\n\n## Step 3: Conclusion\nRavi works in Lab-South.\n\nThe final answer is: $\\boxed{Lab-South}$",
+  "response_length": 511,
+  "generation_time_ms": 5473,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot determine Ravi's lab."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-05: Ravi can be North: True, South: True\n",
+        "problem_id": "PRA-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

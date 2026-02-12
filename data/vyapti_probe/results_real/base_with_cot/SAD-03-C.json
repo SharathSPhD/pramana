@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-03-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this logic puzzle here with three boxes: Red, Blue, and Green. Each box contains something different: a key, a coin, and a ring. The problem gives me three statements:\n\n1. If the Red box contains the key, then the Blue box contains the coin.\n2. The Green box contains the key.\n3. The Red box contains the ring.\n\nI need to figure out what each box contains. Let me try to break this down step by step.\n\nFirst, let me list out the possible items: key, coin, ring. And the boxes: Red, Blue, Green. Each box has exactly one item, and each item is in exactly one box.\n\nNow, let's look at the statements one by one.\n\nStatement 1: If the Red box contains the key, then the Blue box contains the coin.\n\nThis is a conditional statement. In logic terms, it's like saying R \u2192 B, where R is Red has key, and B is Blue has coin. So, if R is true, then B must be true. But if R is false, B can be either true or false. So, R being false doesn't tell us anything about B.\n\nStatement 2: The Green box contains the key.\n\nSo, G has key. That means the key is in Green. So, that directly tells us that the key is not in Red or Blue. So, R does not have key, and B does not have key.\n\nStatement 3: The Red box contains the ring.\n\nSo, R has ring. That means the ring is in Red. So, the ring is not in Blue or Green.\n\nNow, let's try to piece this together.\n\nFrom Statement 2, G has key. So, key is in Green. Therefore, R does not have key, and B does not have key.\n\nFrom Statement 3, R has ring. So, R has ring, not key. So, R has ring, and since the key is in Green, R can't have the key. So, R has ring.\n\nNow, let's see what's left. The items are key, coin, ring. So, R has ring, G has key. That leaves B with the coin.\n\nWait, but let me check Statement 1 again. It says if R has key, then B has coin. But we already know that R doesn't have the key because G has it. So, the condition in Statement 1 is never true. Therefore, the implication R \u2192 B is always true when R is false, which it is here. So, that doesn't give us any new information because the antecedent is always false.\n\nSo, putting it all together:\n\n- G has key.\n- R has ring.\n- Therefore, B must have the coin.\n\nSo, each box contains:\n\n- Red: ring\n- Blue: coin\n- Green: key\n\nI think that makes sense. Let me double-check to make sure there are no contradictions.\n\nIf R has ring, and G has key, then B must have the remaining item, which is coin. So, yes, that works.\n\nIs there any other way this could be? Let's see. Suppose I thought maybe Blue had the ring, but then R can't have the ring because each item is unique. So, if R has ring, Blue can't have it. So, Blue must have the coin.\n\nAlternatively, could Blue have the key? No, because Statement 2 says Green has the key, so Blue can't have it. So, the only item left for Blue is the coin.\n\nTherefore, the conclusion seems solid.\n</think>\n\nThe Red box contains the ring, the Blue box contains the coin, and the Green box contains the key.\n\n**Answer:**\n- Red box: ring\n- Blue box: coin\n- Green box: key",
+  "response_length": 3018,
+  "generation_time_ms": 57586,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Green=key, Red=ring, Blue=coin."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "If the Red box contains the key, then the Blue box contains the coin.\n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-03-C: Green=key, Red=ring, Blue=coin\n  Green=0, Red=2, Blue=1\n",
+        "problem_id": "SAD-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-03",
+  "category": "sadhyasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\nclass Box:\n    def __init__(self, item):\n        self.item = item\n\nclass BoxContents:\n    def __init__(self):\n        self.items = {\n            'Red': None,\n            'Blue': None,\n            'Green': None\n        }\n\n    def assign(self, box, item):\n        self.items[box] = item\n\n    def get_items(self):\n        return self.items\n\nclass PuzzleSolver:\n    def __init__(self):\n        self.box_contents = BoxContents()\n        self.items = ['key', 'coin', 'ring']\n        self.rules = [\n            ('Red', 'key', 'Blue', 'coin'),\n            ('Green', 'ring', None, None)\n        ]\n\n    def apply_rule(self, box, item, next_box, next_item):\n        self.box_contents.assign(box, item)\n        self.box_contents.assign(next_box, next_item)\n\n    def check_rule(self, box, item):\n        if self.box_contents.get_items()[box] == item:\n            return True\n        return False\n\n    def solve(self):\n        # Phase 1: Samshaya (Doubt Analysis)\n        # Identify all possibilities\n        possibilities = [\n            ('Red', 'key'),\n            ('Red', 'coin'),\n            ('Red', 'ring'),\n            ('Blue', 'key'),\n            ('Blue', 'coin'),\n            ('Blue', 'ring'),\n            ('Green', 'key'),\n            ('Green', 'coin'),\n            ('Green', 'ring'),\n        ]\n\n        # Phase 2: Pramana (Sources of Knowledge)\n        # Apply known rules\n        self.apply_rule('Red', 'key', 'Blue', 'coin')\n        self.apply_rule('Green', 'ring', None, None)\n\n        # Phase 3: Pancha Avayava (5-Member Syllogism)\n        # Check all possibilities against rules\n        for possibility in possibilities:\n            box, item = possibility\n            if box == 'Red' and item == 'key':\n                if self.check_rule('Blue', 'coin'):\n                    continue\n                else:\n                    return \"Red does NOT contain the key\"\n            if box == 'Blue' and item == 'coin':\n                if self.check_rule('Red', 'key'):\n                    continue\n                else:\n                    return \"Blue does NOT contain the coin\"\n            if box == 'Green' and item == 'ring':\n                if self.check_rule('Green', 'ring'):\n                    return \"Green does NOT contain the ring\"\n                else:\n                    return \"Green does NOT contain the ring\"\n            # Other possibilities\n            if box == 'Red' and item == 'coin':\n                if self.check_rule('Red', 'key'):\n                    return \"Red does NOT contain the key\"\n                else:\n                    return \"Red contains the coin\"\n            if box == 'Red' and item == 'ring':\n                if self.check_rule('Red', 'key'):\n                    return \"Red does NOT contain the key\"\n                else:\n                    return \"Red contains the ring\"\n            if box == 'Blue' and item == 'key':\n                if self.check_rule('Red', 'key'):\n                    return \"Red does NOT contain the key\"\n                else:\n                    return \"Blue does NOT contain the key\"\n            if box == 'Blue' and item == 'ring':\n                if self.check_rule('Blue', 'coin'):\n                    return \"Blue does NOT contain the ring\"\n                else:\n                    return \"Blue contains the ring\"\n            if box == 'Green' and item == 'key':\n                if self.check_rule('Green', 'ring'):\n                    return \"Green does NOT contain the ring\"\n                else:\n                    return \"Green contains the key\"\n            if box == 'Green' and item == 'coin':\n                if self.check_content('Green', 'ring'):\n                    return \"Green does NOT contain the ring\"\n                else:\n                    return \"Green contains the coin\"\n\n        # Phase 4: Tarka (Counterfactual Reasoning)\n        # Assume Red has key and see contradiction\n        if self.check_rule('Red', 'key'):\n            if self.check_rule('Blue', 'coin'):\n                if not self.check_rule('Green', 'ring'):\n                    return \"Contradiction when Red has key\"\n        # Assume Blue has coin and see contradiction\n        if self.check_rule('Blue', 'coin'):\n            if self.check_rule('Red', 'key'):\n                if not self.check_rule('Green', 'ring'):\n                    return \"Contradiction when Blue has coin\"\n        # Assume Green has ring and see contradiction\n        if self.check_rule('Green', 'ring'):\n            if not self.check_rule('Green', 'ring'):\n                return \"Contradiction when Green has ring\"\n\n        # Phase 5: Hetvabhasa (Fallacy Check)\n        # Check for logical fallacies\n        # Assume Red has key and see contradiction\n        if self.check_rule('Red', 'key'):\n            if self.check_rule('Blue', 'coin'):\n                if not self.check_rule('Green', 'ring'):\n                    # Contradiction: Green should have ring but doesn't\n                    pass\n        # Assume Blue has coin and see contradiction\n        if self.check_rule('Blue', 'coin'):\n            if self.check_rule('Red', 'key'):\n                if not self.check_rule('Green', 'ring'):\n                    # Contradiction: Green should have ring but doesn't\n                    pass\n        # Assume Green has ring and see contradiction\n        if self.check_rule('Green', 'ring'):\n            if not self.check_rule('Green', 'ring'):\n                # Contradiction: Green doesn't have ring\n                pass\n\n        # Phase 6: Nirnaya (Ascertainment)\n        # Determine final assignments\n        self.box_contents.get_items()\n        return {\n            'Red': self.box_contents.get_items()['Red'],\n            'Blue': self.box_contents.get_items()['Blue'],\n            'Green': self.box_contents.get_items()['Green']\n        }\n\n    def main(self):\n        print(\"Puzzle Analysis:\")\n        print(self.solve())\n\nif __code_info__:\n    # This code is part of a larger Python class structure\n    # For testing purposes, the PuzzleSolver class is not standalone\n    pass\n```\n\n### Explanation:\nThe code defines a `PuzzleSolver` class that systematically analyzes the puzzle using the Nyaya methodology. It begins by identifying all possible assignments of items to boxes, then applies the given rules. Each phase of Nyaya is addressed, starting with Samshaya (doubt analysis) and ending with Nirnaya (ascertainment). The final solution is returned as a dictionary mapping each box to its item.",
+  "response_length": 6474,
+  "generation_time_ms": 100601,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Red\u2260key is provable; full assignment is underdetermined (3 solutions)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "It begins by identifying all possible assignments of items to boxes, then applies the given rules. Each phase of Nyaya is addressed, starting with Samshaya (doubt analysis) and ending with Nirnaya (as"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-03: Multiple solutions: Red=coin True, Red=ring True\nSAD-03: Only Red\u2260key provable; full assignment underdetermined\n",
+        "problem_id": "SAD-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: sadhyasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": true
+}

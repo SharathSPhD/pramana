@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-07-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "```markdown\n# Final Answer\n## [Valid/Invalid] Rule\n```\n### Solution:\n\n### Phase 1: Samshaya (Doubt Analysis)\nThe problem requires us to analyze the given data to determine if the proposed rule is valid. We need to consider the relationships between the compounds and the reaction.\n\n### Phase 2: Pramana (Sources of Knowledge)\nThe data provided is based on the actual results of experiments. This data is considered reliable and trustworthy.\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\nWe can construct a 5-member syllogism to analyze the situation:\n\n1. All compounds containing element X are acidic.\n2. All acidic compounds undergo the reaction.\n3. Compounds \u03b1, \u03b2, \u03b3, \u03b4, and \u03b5 contain element X.\n4. All compounds containing element X undergo the reaction.\n5. Therefore, all acidic compounds undergo the reaction.\n\n### Phase 4: Tarka (Counterfactual Reasoning)\nWe can test the validity of the rule by considering counterfactual scenarios:\n\n- What if there is a compound that contains element X but is not acidic? Does the rule hold?\n- What if there is a compound that is acidic but does not contain element X? Does the rule hold?\n\nIf the rule holds in both scenarios, it is likely valid. If not, it may be invalid.\n\n### Phase 5: Hetvabhasa (Fallacy Check)\nWe need to check for any fallacies in the reasoning:\n\n- Is the rule based on a generalization from specific instances?\n- Are there any exceptions or counterexamples?\n\n### Phase 6: Nirnaya (Ascertainment)\nBased on the analysis, we can determine the validity of the rule.\n\nAfter analyzing the data and applying the Nyaya methodology, we can conclude that the rule is valid.\n\n```markdown\n# Final Answer\n## Valid Rule\n```\n\n\nThe final answer is: Valid Rule",
+  "response_length": 1712,
+  "generation_time_ms": 15583,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, \"contains X \u2192 reacts\" holds in data."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "All compounds containing element X are acidic"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-07-C: \u03b3 can fail to react? False\n",
+        "problem_id": "SAV-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

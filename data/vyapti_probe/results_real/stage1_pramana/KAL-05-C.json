@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-05-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis)**  \n*What is the question?*  \nThe building inspector must determine if Building W complies with the current building code. The question is: Does Building W meet the minimum ceiling height requirement under the latest code?\n\n*What are the possibilities?*  \n- Yes, Building W complies.  \n- No, Building W does not comply.\n\n**2. Pramana (Sources of Knowledge)**  \nThe problem provides two key pieces of information:  \n1. The original code (2015) requires a minimum ceiling height of 8 feet for residential buildings.  \n2. The 2022 amendment updates this requirement: after 2020, buildings must have at least 9-foot ceilings. Buildings constructed before 2020 remain under the original code.\n\n**3. Pancha Avayava (5-Member Syllogism)**  \nWe need to establish if Building W meets the current code. The syllogism follows this structure:  \n**Pratijna (Thesis):** Building W complies.  \n**Hetu (Reason):** It was constructed in 2018 and has 8.5-foot ceilings.  \n**Udaharana (Example):** A building constructed in 2018 would comply if it meets the 8-foot requirement.  \n**Upanaya (Application):** Since 8.5 > 8, it complies.  \n**Nigamana (Conclusion):** Therefore, Building W complies.\n\n**4. Tarka (Counterfactual Reasoning)**  \nAssume the opposite: Building W does not comply.  \nIf Building W does not comply, then either:  \n- It was constructed after 2020 and has less than 9-foot ceilings.  \n- It was constructed before 2020 but does not meet the original 8-foot requirement.  \n\nSince Building W was constructed in 2018 (before 2020), the only alternative is that it does not meet the original 8-foot requirement. However, its ceiling height is 8.5 feet, which satisfies the original code. Therefore, the assumption is false, and Building W complies.\n\n**5. Hetvabhasa (Fallacy Check)**  \nWe must check for common fallacies:  \n- **Akwarda:** No. The reasoning is valid.  \n- **Drishti Samsaya:** No. The doubt is properly analyzed.  \n- **Asiddha:** No. The conclusion is supported by multiple reasons.  \n- **Satpratipaksha:** No. The counterfactual test confirms the conclusion.  \n- **Viruddha:** No. The reasoning does not contradict itself.\n\n**6. Nirnaya (Ascertainment)**  \nAfter applying Nyaya methodology, we conclude:  \n**Final Answer:** Building W complies with the current building code.\n---\n\n### Solution Code:\n```python\ndef building_code_compliance(year_built, ceiling_height):\n    \"\"\"\n    Determines if a building complies with the current building code.\n    \n    Parameters:\n    - year_built (int): The year the building was constructed.\n    - ceiling_height (float): The ceiling height of the building.\n    \n    Returns:\n    - str: \"Compliant\" if compliant, \"Non-compliant\" otherwise.\n    \"\"\"\n    # Current code rules\n    # - If built after 2020: ceiling must be >= 9 feet\n    # - If built before 2020: ceiling must be >= 8 feet\n    \n    if year_built > 2020:\n        return \"Non-compliant\" if ceiling_height < 9 else \"Compliant\"\n    elif year_built <= 2020:\n        return \"Non-compliant\" if ceiling_height < 8 else \"Compliant\"\n    else:\n        # This case is logically impossible as per the problem statement\n        return \"Compliant\"\n    \n    # Test case:\n    # Building W: year_built=2018, ceiling_height=8.5\n    # Expected output: \"Compliant\"\n    building_w_compliant = building_code_compliance(2018, 8.5)\n    print(f\"Building W: {building_w_compliant}\")\n```\n\n### Explanation:\nThe function `building_code_compliance` checks the compliance of a building based on the current code rules. It first checks if the building was constructed after 2020. If so, it verifies if the ceiling height meets the 9-foot requirement. If the building was constructed before or in 2020, it checks against the 8-foot requirement. The function returns \"Compliant\" if the building meets the required ceiling height, otherwise \"Non-compliant\". The test case for Building W (constructed in 2018 with 8.5-foot ceilings) correctly returns \"Compliant\".",
+  "response_length": 3994,
+  "generation_time_ms": 72312,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Building W complies."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "If Building W does not comply, then either:  \n- It was constructed after 2020 and has less than 9-foot ceilings"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-05-C: Building W compliant? True\n",
+        "problem_id": "KAL-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

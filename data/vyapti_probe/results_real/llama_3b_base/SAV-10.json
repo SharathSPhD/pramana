@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-10",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Analyze the given supply chain network\nThe given supply chain network consists of multiple routes with different delivery times. We need to analyze each route to determine if the manager's claim is valid.\n\n## Step 2: Identify the routes and their delivery times\n- Route 1: Supplier \u2192 Factory A \u2192 Distributor \u2192 Retailer (delivery time: 3 days + 3 days + 3 days = 9 days)\n- Route 2: Supplier \u2192 Factory B \u2192 Distributor \u2192 Retailer (delivery time: 3 days + 3 days + 3 days = 9 days)\n- Route 3: Supplier \u2192 Factory C \u2192 Distributor \u2192 Retailer (delivery time: 3 days + 3 days + 3 days = 9 days)\n- Route 4: Supplier \u2192 Factory D \u2192 Warehouse \u2192 Retailer (delivery time: 3 days + 7 days = 10 days)\n\n## Step 3: Evaluate the manager's claim\nThe manager's claim states that any product from the Supplier reaches the Retailer in exactly 9 days. However, we can see that Route 4 has a delivery time of 10 days, which does not match the manager's claim.\n\n## Step 4: Determine the validity of the manager's claim\nSince Route 4 has a delivery time of 10 days, which is not equal to 9 days, the manager's claim is not valid for all routes.\n\nThe final answer is: $\\boxed{0}$",
+  "response_length": 1161,
+  "generation_time_ms": 11856,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, not all routes take 9 days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "## Step 4: Determine the validity of the manager's claim\nSince Route 4 has a delivery time of 10 days, which is not equal to 9 days, the manager's claim is not valid for all routes"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-10: All routes 9 days? False\n",
+        "problem_id": "SAV-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

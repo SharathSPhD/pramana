@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-03",
+  "category": "sadhyasama",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Please follow the format to the letter.**\n\n## Step 1: Samshaya (Doubt Analysis)\nThe puzzle solver starts by assuming the Red box contains the key. This assumption is made to test the rules. We need to analyze whether this assumption is valid or not.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe rules given are:\n1. If the Red box contains the key, then the Blue box contains the coin.\n2. The Green box does NOT contain the ring.\nWe have two pieces of information: a conditional rule and a fact about the Green box.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nLet's construct a syllogism based on the given rules:\n1. If Red has the key, then Blue has the coin (Rule 1).\n2. If Red has the key, then Green has the ring (Contradiction, since Rule 2 says Green doesn't have the ring).\n3. Therefore, Red does NOT have the key (by Modus Tollens).\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to test whether the conclusion is valid. Suppose Red does NOT have the key. Then, by Rule 1, Blue does NOT have the coin. But we know Blue has the coin (since Red has the key). This leads to a contradiction, so our assumption that Red does NOT have the key is valid.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check if the puzzle solver's reasoning is free from fallacies. The puzzle solver's reasoning is valid: they correctly apply the rules to arrive at the conclusion that Red does NOT have the key.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, we can conclude that the puzzle solver's initial reasoning is valid. The correct assignment is:\n- Red: coin\n- Blue: key\n- Green: ring\n\nThe final answer is: $\\boxed{Red: coin, Blue: key, Green: ring}$",
+  "response_length": 1670,
+  "generation_time_ms": 16666,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Red\u2260key is provable; full assignment is underdetermined (3 solutions)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "If the Red box contains the key, then the Blue box contains the coin.\n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-03: Multiple solutions: Red=coin True, Red=ring True\nSAD-03: Only Red\u2260key provable; full assignment underdetermined\n",
+        "problem_id": "SAD-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: sadhyasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": true
+}

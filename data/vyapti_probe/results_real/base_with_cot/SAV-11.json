@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this problem about a library catalog system with three tags: [Recommended], [Available], and [New Arrival]. There are six books listed with different combinations of these tags. The librarian says, \"All our recommended books are available.\" I need to figure out if this statement is true.\n\nFirst, I should probably list out all the books and their tags to see what's going on. Let me write them down:\n\n1. \"Algorithms\" \u2014 [Recommended], [Available], [New Arrival]\n2. \"Bioinformatics\" \u2014 [Recommended], [Available], [New Arrival]\n3. \"Compilers\" \u2014 [Recommended], [Available]\n4. \"Databases\" \u2014 [Recommended], [Available], [New Arrival]\n5. \"Encryption\" \u2014 [Recommended], [NOT Available], [New Arrival]\n6. \"Fractals\" \u2014 [Available], [New Arrival]\n\nSo, the librarian is making a statement that all recommended books are available. That means, for every book that's tagged [Recommended], it should also be tagged [Available]. If there's even one book that's recommended but not available, the statement isn't true.\n\nLooking at the list, let's identify which books are recommended. The [Recommended] tag is present on books 1, 2, 4, and 5. So, I need to check each of these four books to see if they are available.\n\nBook 1: Algorithms \u2014 [Available]. Yes, that's fine.\n\nBook 2: Bioinformatics \u2014 [Available]. Also fine.\n\nBook 3: Compilers \u2014 [Recommended], but it's only tagged with [Recommended] and [Available]. Wait, no, book 3 is \"Compilers\" and it's only tagged with [Recommended] and [Available]. So, it's available. That's okay.\n\nBook 4: Databases \u2014 [Available]. Good.\n\nBook 5: Encryption \u2014 [Recommended], but it's tagged [Recommended], [NOT Available], [New Arrival]. So, Encryption is recommended but not available. That's a problem because the librarian said all recommended books are available.\n\nSo, Encryption is a counterexample. It's recommended but not available. Therefore, the librarian's statement isn't true.\n\nWait, let me double-check. The tags for Encryption are [Recommended], [NOT Available], [New Arrival]. So, it's definitely not available. That means the statement is false because not all recommended books are available.\n\nI don't see any other recommended books that aren't available. Compilers, Algorithms, Bioinformatics, and Databases are all available. Only Encryption is the issue. So, the librarian's statement is not entirely correct because of Encryption.\n\nI think that's the only counterexample here. There's no other book that's recommended and not available. So, the answer should be that the statement is false.\n</think>\n\nThe librarian's statement is **not true**. \n\n**Step-by-Step Explanation:**\n\n1. **Identify Recommended Books:**\n   - \"Algorithms\"\n   - \"Bioinformatics\"\n   - \"Compilers\"\n   - \"Databases\"\n   - \"Encryption\"\n\n2. **Check Availability of Each Recommended Book:**\n   - \"Algorithms\" \u2014 Available\n   - \"Bioinformatics\" \u2014 Available\n   - \"Compilers\" \u2014 Available\n   - \"Databases\" \u2014 Available\n   - \"Encryption\" \u2014 NOT Available\n\n3. **Conclusion:**\n   - Since \"Encryption\" is recommended but not available, the statement that all recommended books are available is false.\n\n**Final Answer:** The librarian's statement is false because \"Encryption\" is recommended but not available.",
+  "response_length": 3224,
+  "generation_time_ms": 55126,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Recommended \u2288 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The librarian says, \"All our recommended books are available"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11: 'Recommended \u2286 Available' holds: False\n",
+        "problem_id": "SAV-11"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

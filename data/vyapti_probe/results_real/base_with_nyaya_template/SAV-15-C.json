@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-15-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Solution:**\n\nWe will analyze the problem using the 6-phase **Nyaya** methodology to determine if \"Having a Monday meeting guarantees the project will be completed on time\" is valid.\n\n---\n\n### **1. Samshaya (Doubt Analysis):**\nFrom the given data:\n- **Week 1:** M=true, T=true \u2192 Project completed on time.\n- **Week 2:** M=true, W=true \u2192 Project completed on time.\n- **Week 3:** M=true, R=true \u2192 Project completed on time.\n- **Week 4:** M=true, F=true \u2192 Project completed on time.\n- **Week 5:** M=true, T=true \u2192 Project completed on time.\n- **Week 6:** T=true, W=true, M=false \u2192 Project NOT completed on time.\n\nThe project completed on time in 5 out of 6 weeks. The only week where the project was not completed on time was **Week 6**, where there was no Monday meeting.\n\n---\n\n### **2. Pramana (Sources of Knowledge):**\nThe source of knowledge comes from the project's historical data and the handbook's statement.\n\n- **Historical Data:** 5 weeks with a Monday meeting resulted in on-time completion; 1 week without a Monday meeting resulted in delayed completion.\n- **Handbook Statement:** \"A Monday meeting is sufficient to ensure project completion on time.\"\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism):**\nWe apply the syllogistic form to analyze the relationship between the variables.\n\n- **Major Premise:** If there is a Monday meeting, the project will be completed on time. (Handbook statement)\n- **Minor Premise:** In Week 6, there was no Monday meeting. (From data)\n- **Conclusion:** Therefore, the project was not completed on time in Week 6. (From data)\n\nThis syllogism logically follows the 5-member structure.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning):**\nWe consider the counterfactual scenario:\n- **If** there is a Monday meeting, **then** the project is completed on time.\n- **If** there is no Monday meeting, **then** the project may or may not be completed on time.\n\nFrom the data, when there is no Monday meeting (Week 6), the project was not completed on time. This aligns with the counterfactual reasoning.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check):**\nWe identify any logical fallacies in the reasoning.\n\n- **Fallacy of Composition:** The project was completed on time in 5 weeks with a Monday meeting, but this does not necessarily mean that having a Monday meeting in all weeks will universally guarantee on-time completion. However, the handbook states that a Monday meeting is **sufficient**, not **necessary**.\n- **Fallacy of Omission:** The absence of a Monday meeting in Week 6 directly led to the project's delay, supporting the sufficiency of a Monday meeting.\n\nNo significant fallacies undermine the conclusion.\n\n---\n\n### **6. Nirnaya (Ascertainment):**\nAfter analyzing all phases, we conclude that:\n\n- **Having a Monday meeting is sufficient to ensure project completion on time**, as evidenced by the historical data and the logical reasoning from the syllogism.\n\n---\n\n### **Final Answer:**\n\\boxed{\\text{Yes, having a Monday meeting guarantees the project will be completed on time.}}",
+  "response_length": 3043,
+  "generation_time_ms": 52668,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, \"M \u2192 on time\" is valid in data."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "- **Fallacy of Composition:** The project was completed on time in 5 weeks with a Monday meeting, but this does not necessarily mean that having a Monday meeting in all weeks will universally guarante"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-15-C: M \u2192 on time \u2014 holds\n",
+        "problem_id": "SAV-15-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

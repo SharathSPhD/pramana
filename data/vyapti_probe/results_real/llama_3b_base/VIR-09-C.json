@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-09-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Answer: No**\n\n**Explanation:**\n\nThe statement \"If a client case is classified as high-priority, then a senior partner is assigned\" is a conditional statement of the form \"If P, then Q.\" In this case, P is \"the client case is classified as high-priority\" and Q is \"a senior partner is assigned.\"\n\nThe statement does not say that if a senior partner is assigned, then the case is high-priority. In other words, it does not provide a converse or inverse statement. Therefore, we cannot conclude that Case #247 is not high-priority simply because a senior partner is not assigned.\n\nThere may be other reasons why a senior partner is not assigned, such as the case being low-priority or the firm being busy with other cases. We cannot make a conclusion about the priority of Case #247 based on the information provided.",
+  "response_length": 816,
+  "generation_time_ms": 6840,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Case #247 is NOT high-priority."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Answer: No**\n\n**Explanation:**\n\nThe statement \"If a client case is classified as high-priority, then a senior partner is assigned\" is a conditional statement of the form \"If P, then Q.\" In this case"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-09-C: Can case be high priority? False\n",
+        "problem_id": "VIR-09-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

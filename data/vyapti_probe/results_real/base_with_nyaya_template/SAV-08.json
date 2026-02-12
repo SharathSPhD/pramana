@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-08",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\ndef solve():\n    # Each student studies exactly one subject: Physics, Chemistry, or Biology.\n    # The subjects are P, C, B.\n\n    # Let's represent the students and their subjects and exam results.\n    students = [\n        ('Arjun', 'Physics', 'Passed'),\n        ('Bhavya', 'Chemistry', 'Passed'),\n        ('Chirag', 'Physics', 'Passed'),\n        ('Durga', 'Physics', 'Failed'),\n        ('Emil', 'Biology', 'Passed'),\n        ('Fatima', 'Physics', 'Passed'),\n        ('Gopal', 'Chemistry', 'Passed'),\n    ]\n\n    # We need to assign each student to a unique subject.\n    # So, first, let's count the subjects.\n    subject_counts = {\n        'Physics': 0,\n        'Chemistry': 0,\n        'Biology': 0,\n    }\n\n    for student in students:\n        subject = student[1]\n        subject_counts[subject] += 1\n\n    # Now, check if any subject has more students than available.\n    # There are 7 students, so each subject can have at most 7 students.\n    # But since each student studies exactly one subject, the counts should be <=7.\n    # However, Physics has 4 students, which is more than 7? Wait, no, 4 is less than 7.\n    # Wait, no, 4 is less than 7. So that's okay.\n\n    # Now, let's check if any subject has more students than available.\n    # Wait, no, each subject can have any number of students, as long as each student is assigned to exactly one subject.\n    # So, the counts can be anything, but the total should be 7.\n\n    # Wait, but in the problem, each student studies exactly one subject, so the sum of the counts should be 7.\n    # Let's check that.\n    total = sum(subject_counts.values())\n    if total != 7:\n        print(\"Error: Total students not 7\")\n        return\n\n    # Now, let's see if any subject has more than 7 students.\n    for subject in subject_counts:\n        if subject_counts[subject] > 7:\n            print(f\"Error: {subject} has more than 7 students\")\n            return\n\n    # Now, we need to assign each student to a unique subject, but since each subject can have multiple students, it's okay.\n\n    # Now, the main problem is to see if all Physics students have passed the exam.\n\n    # Let's list all Physics students:\n    physics_students = [s for s in students if s[1] == 'Physics']\n    # Physics students: Arjun, Chirag, Fatima, Durga\n    # Wait, but Durga failed. So, the counselor says every Physics student passed. But Durga failed. So the counselor's statement is false.\n\n    # Wait, but maybe the problem is that the counselor's statement is that \"Every Physics student in this group has passed the exam.\" But Durga is a Physics student and failed. So the statement is false.\n\n    # So the answer is no, the counselor's statement is not accurate.\n\n    # But wait, perhaps I'm misunderstanding the problem. Let me read again.\n\n    # The problem says: Each student studies exactly one subject. So, each of the seven students is assigned to exactly one subject.\n\n    # So, the counselor says: Every Physics student in this group has passed the exam. So, if any Physics student failed, the statement is false.\n\n    # Looking at the list, Durga is a Physics student who failed. So the statement is false.\n\n    # So the counselor's statement is inaccurate.\n\n    # Therefore, the answer is no, the counselor's statement is not accurate.\n\nsolve()\n```\n\n### Analysis\nThe problem involves seven students, each studying one of three subjects: Physics, Chemistry, or Biology. The counselor claims that every Physics student has passed the exam. However, upon examining the data, we find that Durga, who studies Physics, failed the exam. Therefore, the counselor's statement is incorrect.\n\n**Step-by-Step Explanation:**\n\n1. **Samshaya (Doubt Analysis):** We have seven students, each assigned to one of three subjects. The counselor's statement is that all Physics students have passed. But we know that Durga, a Physics student, failed. This raises a doubt about the counselor's accuracy.\n\n2. **Pramana (Sources of Knowledge):** The information provided about each student's subject and exam result is the primary source of knowledge. It directly indicates that Durga failed Physics.\n\n3. **Pancha Avayava (5-Member Syllogism):** This step involves constructing a syllogism. Let's consider the subjects and results:\n   - Some students study Physics.\n   - Durga is one of these students.\n   - Durga failed the exam.\n   - Therefore, at least one Physics student failed.\n\n4. **Tarka (Counterfactual Reasoning):** If the counselor's statement were true, all Physics students would have passed. But since Durga failed, this scenario is impossible. Hence, the statement is false.\n\n5. **Hetvabhasa (Fallacy Check):** The counselor's statement assumes that all Physics students passed without exception. However, Durga's failure is a clear counterexample, indicating a fallacy in the assumption.\n\n6. **Nirnaya (Ascertainment):** After evaluating all steps, it's clear that the counselor's statement is inaccurate because Durga, a Physics student, failed the exam.\n\n**Conclusion:** The counselor's statement is not accurate because Durga, a Physics student, failed the exam.\n```",
+  "response_length": 5126,
+  "generation_time_ms": 88850,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "No, \"Physics \u2192 passed\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "# Now, the main problem is to see if all Physics students have passed the exam"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-08: Checking 'All Physics students passed' ===\nCounterexample exists (Durga): True\n",
+        "problem_id": "SAV-08"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

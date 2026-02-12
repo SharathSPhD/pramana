@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-03-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Please follow the format exactly as instructed.**\n\n## Step 1: Samshaya (Doubt Analysis)\nWe need to identify the doubts in the hypothesis. The hypothesis states \"Whenever S1 is ON, the light is ON.\" However, we have test results that contradict this hypothesis. Specifically, Test 5 shows that when S1 is OFF, the light is OFF. This directly contradicts the hypothesis.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe manual confirms that \"The light turns ON if and only if S1 is ON.\" This is our primary source of knowledge regarding the relationship between S1 and the light.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nTo validate the hypothesis, we need to construct a 5-member syllogism using the manual's statement and the test results.\n\n1. Premise 1: The manual states that \"The light turns ON if and only if S1 is ON.\"\n2. Premise 2: Test 1 shows that when S1 is ON, the light is ON.\n3. Premise 3: Test 2 shows that when S1 is ON and S3 is OFF, the light is ON.\n4. Premise 4: Test 3 shows that when S1 is ON and S2 is OFF, the light is ON.\n5. Premise 5: Test 4 shows that when S1 is ON and S3 is OFF, the light is ON.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider what would happen if the hypothesis were false. If the hypothesis were false, then there would be a case where S1 is ON, but the light is OFF. However, none of the test results provide such a case. Therefore, we cannot find a counterexample to the hypothesis.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check if the hypothesis is a fallacy. The hypothesis is a universal statement (\"Whenever S1 is ON, the light is ON\"). We have test results that support this universal statement. Therefore, the hypothesis is not a fallacy.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, we can conclude that the hypothesis \"Whenever S1 is ON, the light is ON\" is valid. The manual's statement and the test results support this universal statement. We have not found a counterexample to the hypothesis, and the hypothesis is not a fallacy.\n\nThe final answer is: $\\boxed{Valid}$",
+  "response_length": 2074,
+  "generation_time_ms": 20769,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, \"S1=ON \u2192 Light=ON\" is valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider what would happen if the hypothesis were false. If the hypothesis were false, then there would be a case where S1 is ON, but the light i"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-03-C: Vy\u0101pti 'S1\u2192Light' holds: True\n",
+        "problem_id": "SAV-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

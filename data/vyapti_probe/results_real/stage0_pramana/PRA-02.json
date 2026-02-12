@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-02",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "Do not forget to use the Nyaya methodology.\n\n\n## Step 1: Samshaya (Doubt Analysis)\nWe need to identify the premises and the conclusion we are trying to draw. The premises are:\n1. All surgeons in this hospital have completed a residency program.\n2. Dr. Kapoor is a surgeon in this hospital.\n3. The hospital cafeteria serves vegetarian meals on Fridays.\n4. All residents of the hospital housing complex drive sedans.\nThe conclusion we are trying to draw is about Dr. Kapoor.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe need to analyze the sources of knowledge for each premise:\n1. Premise 1: This is a general statement about surgeons in the hospital. The source of knowledge is the hospital's policy or the residency program itself.\n2. Premise 2: This is a statement about Dr. Kapoor's profession. The source of knowledge is Dr. Kapoor's ID or the hospital's records.\n3. Premise 3: This is a statement about the hospital cafeteria. The source of knowledge is the hospital's cafeteria staff or the hospital's website.\n4. Premise 4: This is a statement about residents of the hospital housing complex. The source of knowledge is the hospital's housing complex management or the residents themselves.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe need to construct a 5-member syllogism using the premises:\n1. All surgeons in this hospital have completed a residency program (Premise 1)\n2. Dr. Kapoor is a surgeon in this hospital (Premise 2)\n3. All residents of the hospital housing complex drive sedans (Premise 4)\n4. Dr. Kapoor is a resident of the hospital housing complex (Conclusion: Dr. Kapoor is a resident of the hospital housing complex)\n5. All residents of the hospital housing complex drive sedans (Premise 4)\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider counterfactual scenarios to test the validity of the conclusion:\n- What if Dr. Kapoor is not a resident of the hospital housing complex? Then Premise 4 would be false, and we cannot conclude that Dr. Kapoor is a resident.\n- What if Dr. Kapoor is not a surgeon in the hospital? Then Premise 1 would be false, and we cannot conclude that Dr. Kapoor is a surgeon.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies in the reasoning:\n- No fallacies are apparent in the reasoning.\n\n## Step 6: Nirnaya (Ascertainment)\nWe need to draw a conclusion based on the analysis:\n- We can validly conclude that Dr. Kapoor is a resident of the hospital housing complex.\n- We can also conclude that Dr. Kapoor drives a sedan.\n\nThe final answer is: $\\boxed{Dr. Kapoor is a resident of the hospital housing complex and drives a sedan.}$",
+  "response_length": 2624,
+  "generation_time_ms": 23970,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Dr. Kapoor completed a residency program (only valid conclusion)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "All surgeons in this hospital have completed a residency program"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-02: Can Kapoor NOT have completed residency? False\nPRA-02: Kapoor completed residency (premises 3,4 irrelevant)\n",
+        "problem_id": "PRA-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

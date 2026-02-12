@@ -1,0 +1,72 @@
+{
+  "problem_id": "VIR-10",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis)**\n\n*What is the question asking?*  \nWe need to determine if Contestant M qualifies for the prize based on the contest rule.\n\n*What are the possibilities?*  \n1. Yes, M qualifies.  \n2. No, M does not qualify.\n\n*What is in doubt?*  \nWhether solving both Problem A and Problem B is sufficient for qualification.\n\n**2. Pramana (Sources of Knowledge)**\n\n*What is the premise?*  \n- Contestant M has solved BOTH Problem A and Problem B.\n- The rule states: \"To win a prize, a contestant must solve Problem A or Problem B.\"\n\n*What is the reasoning?*  \nThe rule uses the logical operator \"or,\" which means solving either one satisfies the condition. Since M has solved both, the condition is satisfied.\n\n*What is the conclusion?*  \nM qualifies for the prize.\n\n**3. Pancha Avayava (5-Member Syllogism)**\n\n**Thesis**: M qualifies for the prize.  \n**Reasoning**: M has solved both Problem A and Problem B, and the rule states that solving either Problem A or Problem B is sufficient for qualification.\n\n**Syllogism Structure**:  \n1. The rule says: If a contestant solves Problem A or Problem B, then they qualify.  \n2. M has solved both Problem A and Problem B.  \n3. Therefore, M qualifies.  \n\n**Verification**:  \n- The premise matches the rule.  \n- The conclusion follows logically.\n\n**4. Tarka (Counterfactual Reasoning)**\n\n*Counterfactual Hypothesis*: Suppose M does not qualify.  \n*Consequence*: If M did not solve either Problem A or Problem B, then M would not qualify.  \n*Contrapositive*: If M qualifies, then M must have solved either Problem A or Problem B.  \n*Reversion*: Since M has solved both, the contrapositive holds.  \n*Conclusion*: M qualifies.\n\n**5. Hetvabhasa (Fallacy Check)**\n\n*Checked Fallacies*:  \n- **Akhandaka** (Universalization): The rule applies to all contestants.  \n- **Drishti** (Perspective): The rule does not depend on contestant perspective.  \n- **Hetu-Kutanga** (Causal Fallacy): The solution of problems is the cause of qualification.  \n- **Savyabhichara** (Circular Reasoning): No circularity in logic.  \n\n*Conclusion*: No fallacies detected in the reasoning.\n\n**6. Nirnaya (Ascertainment)**\n\n*Final Answer*:  \nYes, Contestant M qualifies for the prize because solving both Problem A and Problem B satisfies the \"or\" condition specified in the contest rule.\n\n---\n\n### Final Answer:\n\\boxed{Yes}",
+  "response_length": 2374,
+  "generation_time_ms": 42606,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Contestant M qualifies."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The rule says: If a contestant solves Problem A or Problem B, then they qualify.  \n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-10: Can prize be denied? False\n",
+        "problem_id": "VIR-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

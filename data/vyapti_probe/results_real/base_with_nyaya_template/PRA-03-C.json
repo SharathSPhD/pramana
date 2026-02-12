@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-03-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### Solution:\n\nLet's analyze the problem step by step using the **6-phase Nyaya methodology**.\n\n---\n\n#### **1. Samshaya (Doubt Analysis)**\nWe are given:\n- **X** is true.\n- **Y** is true.\n- We need to determine the value of **Q**.\n\nThere are three possible rules based on the truth values of **X** and **Y**:\n1. If **X** is true AND **Y** is true, then **Q** is true.\n2. If **X** is true AND **Y** is false, then **Q** is false.\n3. If **Y** is true AND **X** is false, then **Q** is false.\n\nSince both **X** and **Y** are true, the first rule applies.\n\n---\n\n#### **2. Pramana (Sources of Knowledge)**\nThe information provided is reliable and consistent.\n\n---\n\n#### **3. Pancha Avayava (5-Member Syllogism)**\nThe syllogism is:\n- **Major premise:** If **X** is true AND **Y** is true, then **Q** is true.\n- **Minor premise:** **X** is true.\n- **Middle term:** **Y** is true.\n- **Conclusion:** **Q** is true.\n\n---\n\n#### **4. Tarka (Counterfactual Reasoning)**\nLet's consider counterfactuals to ensure the logic holds:\n- If **X** is true but **Y** is false, **Q** is false. (Rule 2)\n- If **X** is false but **Y** is true, **Q** is false. (Rule 3)\n- If both **X** and **Y** are false, **Q** is undefined (not provided).\n\nIn our case, both **X** and **Y** are true, so the first rule directly applies.\n\n---\n\n#### **5. Hetvabhasa (Fallacy Check)**\nThere are no logical fallacies in the given rules. The syllogism is valid.\n\n---\n\n#### **6. Nirnaya (Ascertainment)**\nBased on the above analysis, **Q** must be **true**.\n\n---\n\n### **Final Answer:**\n\\boxed{\\text{True}}",
+  "response_length": 1567,
+  "generation_time_ms": 34749,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Q = true."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "If **X** is true AND **Y** is true, then **Q** is true.\n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-03-C: Can Q be false? False\n",
+        "problem_id": "PRA-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

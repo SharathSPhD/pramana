@@ -1,0 +1,72 @@
+{
+  "problem_id": "VIR-04-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Sutra:\n**Samshaya** (Doubt Analysis):  \n*What is the nature of the doubt? How can we resolve it?*  \n\n**Pramana** (Sources of Knowledge):  \n*What are the sources of knowledge for this problem? What are the premises?*  \n\n**Pancha Avayava** (5-Member Syllogism):  \n*What is the syllogism structure? What are the premises and conclusion?*  \n\n**Tarka** (Counterfactual Reasoning):  \n*What counterfactuals can we test? What conclusions can we draw?*  \n\n**Hetvabhasa** (Fallacy Check):  \n*Which fallacies are present? How can we identify them?*  \n\n**Nirnaya** (Ascertainment):  \n*What is the final conclusion? How is it supported?*  \n\n---\n\n### Solution:\n\n**Samshaya (Doubt Analysis):**  \n*What is the nature of the doubt? How can we resolve it?*  \nWe are uncertain whether Employee Z has completed the safety training. The policy states that without training, employees are not permitted to enter the restricted zone. Since Employee Z is permitted and is inside the restricted zone, we must determine if this implies they have completed the training.\n\n**Pramana (Sources of Knowledge):**  \n*What are the sources of knowledge for this problem? What are the premises?*  \nThe sources of knowledge are:  \n1. The policy document stating the rule.  \n2. The fact that Employee Z is permitted to enter the restricted zone.  \n3. The contrapositive of the rule: \"If permitted, then training has been completed.\"  \n4. The fact that Employee Z is currently inside the restricted zone.  \n\n**Pancha Avayava (5-Member Syllogism):**  \n*What is the syllogism structure? What are the premises and conclusion?*  \nThe syllogism follows the structure:  \n1. **Pratijna** (Thesis): \"No employee who has not completed the safety training is permitted to enter the restricted zone.\"  \n2. **Heti** (Reason): \"If an employee is permitted to enter the restricted zone, then they must have completed the safety training.\"  \n3. **Udaharana** (Example): \"Employee Z is permitted to enter the restricted zone.\"  \n4. **Prasanga** (Application): \"Therefore, Employee Z has completed the safety training.\"  \n5. **Nigamana** (Conclusion): \"Employee Z has completed the safety training.\"  \n\n**Tarka (Counterfactual Reasoning):**  \n*What counterfactuals can we test? What conclusions can we draw?*  \n1. **Counterfactual 1**: Suppose Employee Z has not completed the safety training.  \n   - Then, according to the policy, they would not be permitted to enter the restricted zone.  \n   - This contradicts the fact that Employee Z is permitted.  \n   - Therefore, our assumption is false, and Employee Z must have completed the training.  \n\n2. **Counterfactual 2**: Suppose Employee Z has completed the safety training.  \n   - This does not contradict any information provided.  \n   - Therefore, this scenario is consistent with the premises.  \n\n**Hetvabhasa (Fallacy Check):**  \n*Which fallacies are present? How can we identify them?*  \nWe analyze the premises for fallacies:  \n1. **Akampaniya** (No universal expansion): The policy applies to all employees, and we correctly apply it to Employee Z.  \n2. **Savyabhichara** (No relabeling fallacy): The terms are used consistently throughout the reasoning.  \n3. **Viruddhakala** (No temporal fallacy): The policy is timeless, and the present state of Employee Z is considered.  \n4. **Heterotropi** (No circular reasoning): The contrapositive is derived directly from the original statement, not assumed independently.  \n5. **Dharmabhuta** (No essentialism fallacy): We correctly apply the rule to the specific case without assuming essential properties.  \n\n**Nirnaya (Ascertainment):**  \n*What is the final conclusion? How is it supported?*  \nBased on the contrapositive of the policy and the fact that Employee Z is permitted, we conclude that Employee Z has completed the safety training. This conclusion is supported by the logical structure of the syllogism and the consistency with the premises.  \n\n**Final Answer:**  \n\\boxed{\\text{Yes, Employee Z has completed the safety training.}}",
+  "response_length": 4006,
+  "generation_time_ms": 70717,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Employee Z completed training."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The contrapositive of the rule: \"If permitted, then training has been completed.\"  \n4"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-04-C: Can training NOT be completed? False\n",
+        "problem_id": "VIR-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem",
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,72 @@
+{
+  "problem_id": "VIR-04",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n**Final Answer:**\n\nYes, Employee Z is permitted to enter the restricted zone.\n\n---\n\n### Step-by-Step Explanation:\n\n1. **Samshaya (Doubt Analysis):**\n   - The policy states that employees who have not completed safety training are not permitted in the restricted zone.\n   - Employee Z has completed the safety training.\n   - The question is whether Employee Z is permitted to enter the restricted zone.\n\n2. **Pramana (Sources of Knowledge):**\n   - The information provided is from the policy document, which is a reliable source of knowledge.\n\n3. **Pancha Avayava (5-Member Syllogism):**\n   - **Major Premise:** No employee who has not completed safety training is permitted to enter the restricted zone.\n   - **Minor Premise:** Employee Z has completed safety training.\n   - **Conclusion:** Therefore, Employee Z is permitted to enter the restricted zone.\n\n4. **Tarka (Counterfactual Reasoning):**\n   - Consider the opposite: If Employee Z had not completed safety training, would they be permitted? The policy explicitly states they would not.\n   - Since Employee Z has completed the training, the opposite does not apply.\n\n5. **Hetvabhasa (Fallacy Check):**\n   - The statement does not contain any logical fallacies. The syllogism is valid.\n\n6. **Nirnaya (Ascertainment):**\n   - Based on the valid syllogism and the given information, it is certain that Employee Z is permitted to enter the restricted zone.\n\n---\n\n**Answer:**  \n\\boxed{Yes}",
+  "response_length": 1451,
+  "generation_time_ms": 24452,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude Employee Z is permitted."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-04: Can employee NOT be permitted? True\n",
+        "problem_id": "VIR-04"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

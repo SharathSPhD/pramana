@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I have this problem about a company's vacation policy, and I need to figure out how many vacation days Employee #5501 gets. Let me try to break it down step by step.\n\nFirst, the policy manual has three sections, each with different rules. The rules are in order of priority, which I think means that the higher priority rule takes precedence over the lower ones. So, I should check the rules in the order they're listed to see which one applies to Employee #5501.\n\nThe rules are:\n\n1. **General Rule (Section 1)**: All employees receive 15 vacation days per year.\n2. **Department Override (Section 3)**: Engineering department employees receive 20 vacation days per year.\n3. **Individual Exception (Section 5)**: Employee #4472 (Engineering) receives 10 vacation days due to probationary period.\n\nNow, the question is about Employee #5501, who is a non-probationary Engineering employee. So, let's analyze each rule in order.\n\nStarting with the **General Rule**. It says all employees get 15 days. That's a broad rule, so unless there's a higher priority rule that applies, this is the default. But then, there's a **Department Override** rule specifically for Engineering employees, which gives them 20 days. Since this rule is in a higher section number (Section 3) than the General Rule (Section 1), does that mean it's more specific? Wait, the problem says the rules are in order of priority, so maybe the order of the sections indicates their priority. So, Section 1 is the most general, then Section 3, then Section 5.\n\nWait, but the problem lists them as:\n\n- Section 1: General Rule\n- Section 3: Department Override\n- Section 5: Individual Exception\n\nSo, the priority order is Section 1, then Section 3, then Section 5. That means the General Rule is the first to apply, but if a more specific rule applies, it takes precedence.\n\nSo, for an Engineering employee, the Department Override (Section 3) would apply because it's more specific than the General Rule. So, normally, an Engineering employee would get 20 days instead of 15.\n\nBut then, there's the **Individual Exception** (Section 5) for Employee #4472, who is in Engineering and gets 10 days because of probation. So, that's a specific rule for a specific employee.\n\nBut the question is about Employee #5501, who is also an Engineering employee but not on the Individual Exception list. So, do we need to check if there's an exception for them? The problem doesn't mention any exception for Employee #5501, only for Employee #4472.\n\nSo, applying the rules in order of priority:\n\n1. General Rule: 15 days.\n2. Department Override: 20 days for Engineering employees.\n3. Individual Exception: Only applies to Employee #4472, so it doesn't affect Employee #5501.\n\nTherefore, for Employee #5501, the Department Override applies because they are in the Engineering department, giving them 20 days. The Individual Exception doesn't apply because it's only for Employee #4472.\n\nWait, but I should make sure that the Department Override is indeed more specific than the General Rule. Since the policy is in order of priority, the higher section number doesn't necessarily mean higher priority, but the way it's written, the Department Override is a specific rule that overrides the General Rule. So, for Engineering employees, they get 20 days regardless of the General Rule.\n\nSo, even though the General Rule is first, the Department Override is more specific and takes precedence. Therefore, Employee #5501, being an Engineering employee, gets 20 days.\n\nI think that's it. The key is that the Department Override is a higher priority rule for Engineering employees, so it overrides the General Rule. The Individual Exception only affects a specific employee, so it doesn't apply here.\n</think>\n\nEmployee #5501 receives **20 vacation days per year**.\n\n**Explanation:**\n\n1. **General Rule (Section 1)**: Applies to all employees, granting 15 vacation days.\n2. **Department Override (Section 3)**: Specifically for Engineering department employees, granting 20 vacation days. This rule takes precedence over the General Rule because it is more specific.\n3. **Individual Exception (Section 5)**: Applies only to Employee #4472 and does not affect Employee #5501.\n\nSince Employee #5501 is an Engineering employee, the Department Override rule applies, giving them 20 vacation days.",
+  "response_length": 4342,
+  "generation_time_ms": 70098,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "20 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "It says all employees get 15 days. That's a broad rule, so unless there's a higher priority rule that applies, this is the default"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01-C: Vacation days for #5501: 20\n",
+        "problem_id": "KAL-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

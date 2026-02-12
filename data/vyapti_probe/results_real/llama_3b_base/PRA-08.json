@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-08",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Analyze the given clues\nFrom the clues, we can start by identifying the statements that directly relate to the entry point of the thief. Clue 1 states that the thief entered through either the window or the door. Clue 2 mentions muddy footprints on the windowsill if the thief entered through the window. Clue 3 states that there are no muddy footprints on the windowsill. Clue 6 mentions scratch marks on the lock if the thief entered through the door. Clue 7 states that the lock shows scratch marks.\n\n## Step 2: Eliminate impossible options\nFrom Clue 3, we know there are no muddy footprints on the windowsill, which means the thief did not enter through the window (Clue 2). From Clue 7, we know the lock shows scratch marks, which means the thief entered through the door (Clue 6).\n\n## Step 3: Consider additional information\nClue 4 mentions the neighbor's loud dog, but Clue 5 states that the dog did not bark during the night. This information does not affect our conclusion about the entry point.\n\n## Step 4: Draw a conclusion\nBased on the analysis, we can conclude that the thief entered through the door.\n\nThe final answer is: $\\boxed{door}$",
+  "response_length": 1162,
+  "generation_time_ms": 10582,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Through the door."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-08: Door consistent? True\nPRA-08: Window consistent? False\nPRA-08: Answer = Door\n",
+        "problem_id": "PRA-08"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

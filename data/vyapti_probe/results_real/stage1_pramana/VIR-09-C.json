@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-09-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Syllogism:\n**Pratijna (Thesis):** Can we conclude that Case #247 is NOT classified as high-priority?\n\n**Hetus (Reason):** Because if a client case is classified as high-priority, then a senior partner is assigned, and Case #247 does NOT have a senior partner assigned.\n\n**Udaharana (Example):** For example, if a client case is classified as high-priority, then a senior partner is assigned. Therefore, if a client case is not assigned a senior partner, it cannot be classified as high-priority.\n\n**Nigamana (Derivation):** Since the rule states that high-priority cases have senior partners, and Case #247 lacks a senior partner, it must not be high-priority.\n\n**Pratyaksha (Perception):** This is directly observable through the policy statement and the case details.\n\n**Savyaya (Comparison):** If we compare with similar cases, whenever a senior partner is assigned, the case is high-priority, and whenever a senior partner is not assigned, the case is not high-priority.\n\n**Viruddhara (Opposition):** If we assume the conclusion is wrong, we get contradictions with the given facts.\n\n**Prasanga (Context):** This reasoning applies whenever we evaluate client cases according to the law firm's policy.\n\n**Sama (Similarity):** This reasoning is similar to how we evaluate other policies that have conditional assignments.\n\n**Ataraki (Difference):** This reasoning differs from cases where assignments are not conditional, but in this case, the assignment is explicitly conditional.\n\n**Niyama (Disposition):** The disposition is syllogistic reasoning based on conditional rules.\n\n**Samsthita (Coherence):** The reasoning is coherent and consistent with the policy statement and the case details.\n\n**Svarupa (Correspondence):** The conclusion corresponds to the rule's requirements, ensuring that all cases follow the policy.\n\n**Kala (Time):** This reasoning is applicable at all times when evaluating client cases.\n\n**Karma (Action):** Applying this reasoning is an action that ensures policy compliance.\n\n**Dharma (Morality):** The reasoning adheres to moral principles of fairness and consistency in policy enforcement.\n\n**Tirtha (Place):** This reasoning is place-independent and applies universally.\n\n**Kala (Time):** This reasoning is time-independent and applies at all times.\n\n**Samadhi (Concentration):** The reasoning is focused and clear, avoiding cognitive distortion.\n\n**Pancha Avayava (5-Member Syllogism):**  \n1. **Pratijna (Thesis):** Can we conclude that Case #247 is NOT classified as high-priority?  \n2. **Hetus (Reason):** Because if a client case is classified as high-priority, then a senior partner is assigned, and Case #247 does NOT have a senior partner assigned.  \n3. **Udaharana (Example):** For example, if a client case is classified as high-priority, then a senior partner is assigned. Therefore, if a client case is not assigned a senior partner, it cannot be classified as high-priority.  \n4. **Nigamana (Derivation):** Since the rule states that high-priority cases have senior partners, and Case #247 lacks a senior partner, it must not be high-priority.  \n5. **Nirnaya (Ascertainment):** Yes, we can conclude that Case #247 is NOT classified as high-priority.\n\n---\n\n### Final Answer:\n**Yes, we can conclude that Case #247 is NOT classified as high-priority.**",
+  "response_length": 3310,
+  "generation_time_ms": 54997,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Case #247 is NOT high-priority."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "---\n\n### Nyaya Syllogism:\n**Pratijna (Thesis):** Can we conclude that Case #247 is NOT classified as high-priority?\n\n**Hetus (Reason):** Because if a client case is classified as high-priority, then a"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-09-C: Can case be high priority? False\n",
+        "problem_id": "VIR-09-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

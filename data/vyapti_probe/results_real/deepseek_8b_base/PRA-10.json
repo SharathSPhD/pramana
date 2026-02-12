@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I need to figure out what Lev orders from the restaurant. Let me see. There are three friends: Jun, Kira, and Lev. Each of them orders a different dish, and the options are pasta, sushi, or salad. So, each person has one of those three dishes, and no two people have the same dish. Got it.\n\nLet me list out the information given:\n\n1. Jun does not order pasta.\n2. The restaurant has won three Michelin stars.\n3. Kira orders sushi.\n4. The restaurant's interior features exposed brick walls.\n\nHmm, okay. So, starting with point 1: Jun doesn't order pasta. That means Jun must order either sushi or salad. Got it.\n\nPoint 3: Kira orders sushi. So, Kira has already chosen sushi. Since each person orders a different dish, that means sushi is taken by Kira, so Jun and Lev can't order sushi. So, Jun and Lev have to choose between pasta and salad.\n\nBut wait, point 1 says Jun doesn't order pasta, so Jun must order salad. Therefore, Lev is left with pasta because Lev can't order the same as Jun or Kira. So, Lev must order pasta.\n\nWait, but let me make sure I didn't miss anything. The restaurant has three Michelin stars. I don't think that affects the dish ordering directly, so maybe that's just extra information. The interior with exposed brick walls\u2014again, probably just setting the scene, not affecting the dishes.\n\nSo, to recap:\n\n- Kira orders sushi.\n- Jun doesn't order pasta, so Jun must order salad.\n- Therefore, Lev is left with pasta.\n\nSo, Lev orders pasta.\n\nI think that's it. I don't see any other possibilities because each person must have a different dish, and the options are limited to pasta, sushi, or salad. So, with Kira taking sushi, Jun can't take pasta, so Lev must take pasta.\n\n**Final Answer**\nLev orders \\boxed{pasta}.\n</think>\n\nGiven the problem, we need to determine what Lev orders from the restaurant. The three friends\u2014Jun, Kira, and Lev\u2014each order a different dish: pasta, sushi, or salad. Here are the key points:\n\n1. Jun does not order pasta.\n2. Kira orders sushi.\n3. Each person orders a different dish.\n\nFrom point 1, we know Jun must order either sushi or salad. From point 3, since Kira orders sushi, Jun and Lev cannot order sushi. Therefore, Jun must order salad (since he cannot order pasta). This leaves Lev with the only remaining option, which is pasta.\n\nThus, Lev orders \\boxed{pasta}.",
+  "response_length": 2337,
+  "generation_time_ms": 41025,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Lev orders pasta."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10: Lev = Pasta (aesthetic info irrelevant)\n",
+        "problem_id": "PRA-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

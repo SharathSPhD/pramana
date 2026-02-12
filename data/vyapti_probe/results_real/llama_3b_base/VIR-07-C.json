@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-07-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Solution**\n\n## Step 1: Understand the conditions for the backup system to activate\nThe backup system activates under two conditions: (1) the server is overloaded, and (2) the network is down.\n\n## Step 2: Evaluate the current state of the system\nThe server is overloaded, but the network is not down.\n\n## Step 3: Determine if the conditions for the backup system to activate are met\nSince the server is overloaded but the network is not down, only one of the conditions for the backup system to activate is met.\n\n## Step 4: Conclude whether the backup system activates\nGiven that only one condition is met, we cannot conclude that the backup system activates.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 695,
+  "generation_time_ms": 5883,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, backup activates."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-07-C: Can backup NOT activate? False\n",
+        "problem_id": "VIR-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

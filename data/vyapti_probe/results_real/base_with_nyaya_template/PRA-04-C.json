@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-04-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Solution:**\n\nWe are tasked with finding the minimum travel time from City A to City D through the network of cities connected by train routes. Let's analyze the problem step-by-step using the **Nyaya methodology**.\n\n---\n\n### **1. Samshaya (Doubt Analysis)**\n\n- **Question:** What is the minimum travel time from City A to City D?\n- **Possible Paths:**\n  1. **Path 1:** A \u2192 B \u2192 C \u2192 D\n  2. **Path 2:** A \u2192 B \u2192 C \u2192 D (Alternative Route)\n\n---\n\n### **2. Pramana (Sources of Knowledge)**\n\n- **Definition:** Identify the known travel times between cities.\n- **Given:**\n  - A to B: 2 hours\n  - B to C: 3 hours\n  - C to D: 1 hour\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**\n\n- **Definition:** Use a syllogistic figure to analyze the relationships.\n- **Premises:**\n  1. A is connected to B.\n  2. B is connected to C.\n  3. C is connected to D.\n- **Conclusion:** There are multiple paths from A to D, but we need to find the one with the least time.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**\n\n- **Definition:** Consider alternative scenarios to validate the solution.\n- **Alternative Scenario:** If there were a direct route from A to D, it would take less time. However, since no such route exists, we must rely on the available paths.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**\n\n- **Definition:** Identify and eliminate any logical fallacies.\n- **Potential Fallacy:** Assuming the absence of alternative routes or considering only the direct path. However, in this case, the direct path doesn't exist, so we must consider the available sequential routes.\n\n---\n\n### **6. Nirnaya (Ascertainment)**\n\n- **Definition:** Reach a definitive conclusion based on the analysis.\n- **Conclusion:** The minimum travel time from City A to City D is the sum of the travel times along the shortest available path.\n\n---\n\n### **Final Calculation:**\n\n- **Path 1:** A \u2192 B \u2192 C \u2192 D\n  - A to B: 2 hours\n  - B to C: 3 hours\n  - C to D: 1 hour\n  - **Total:** 2 + 3 + 1 = **6 hours**\n\n- **Path 2:** A \u2192 B \u2192 C \u2192 D (Alternative Route)\n  - Assuming there's an alternative route, but since it's not specified, we stick with the given routes.\n\n---\n\n### **Final Answer:**\n\nThe minimum travel time from City A to City D is \\(\\boxed{6 \\text{ hours}}\\).",
+  "response_length": 2242,
+  "generation_time_ms": 44361,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "6 hours from A to D."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-04-C: A to D time = 6hrs\n",
+        "problem_id": "PRA-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

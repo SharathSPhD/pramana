@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-03",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "Do not use any external resources.\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nThe problem involves determining the value of Q based on given rules and inputs. We need to analyze the rules and inputs to identify any potential doubts or ambiguities.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe have the following sources of knowledge:\n- Rule 1: If X is true AND Y is true, then Q is true.\n- Rule 2: If X is true AND Y is false, then Q is false.\n- Rule 3: Z is true OR Z is false.\n- Rule 4: If Y is true AND X is false, then Q is false.\n- Given: X is true, Y is true, Z is false.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can construct a 5-member syllogism to determine the value of Q:\n1. If X is true AND Y is true, then Q is true (Rule 1).\n2. X is true (Given).\n3. Y is true (Given).\n4. Z is false (Given).\n5. Therefore, Q is true (Rule 1).\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe can test the validity of our conclusion by considering counterfactual scenarios:\n- If X were false, Rule 1 would be false, and Rule 2 would be true. However, this would not affect the conclusion that Q is true.\n- If Y were false, Rule 1 would be false, and Rule 2 would be true. However, this would not affect the conclusion that Q is true.\n- If Z were true, Rule 3 would be true, but this would not affect the conclusion that Q is true.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies in our reasoning:\n- We have not assumed any information that is not given.\n- We have not used any fallacious reasoning, such as affirming the consequent or denying the antecedent.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we can conclude that Q is true.\n\nThe final answer is: $\\boxed{true}$",
+  "response_length": 1723,
+  "generation_time_ms": 18453,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Q = true."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "## Step 2: Pramana (Sources of Knowledge)\nWe have the following sources of knowledge:\n- Rule 1: If X is true AND Y is true, then Q is true.\n- Rule 2: If X is true AND Y is false, then Q is false"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-03: Can Q be false? False\n",
+        "problem_id": "PRA-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

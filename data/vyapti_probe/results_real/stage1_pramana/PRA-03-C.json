@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-03-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\n**Question:** What is the value of Q when X is true and Y is true?\n\n**Doubts:**\n1. Is there any rule that directly applies when both X and Y are true?\n2. Could there be an alternative interpretation of the rules?\n3. Are all the rules applicable in this scenario, or do some not apply?\n\n**Analysis:**\n1. The first rule states that if X and Y are both true, Q is true. This directly applies to our case.\n2. The second rule applies when X is true and Y is false.\n3. The third rule applies when Y is true and X is false.\n\n**Resolution:**\nThere is a direct rule for when both X and Y are true, which is the first rule. The other rules do not apply because they specify different truth values for X and Y. Therefore, the first rule is the only applicable one.\n### Phase 2: Pramana (Sources of Knowledge)\n**Sources:**\n1. Rule 1: If X and Y are both true, then Q is true.\n2. Given facts: X is true and Y is true.\n\n**Justification:**\nRule 1 directly states the condition for Q when both X and Y are true. The given facts confirm that X and Y are both true. Therefore, Rule 1 applies, and Q must be true.\n\n**Relevant Knowledge:**\n- Rule 1 is a conditional statement that defines Q in terms of X and Y.\n- The truth values of X and Y are provided as true.\n\n**Conclusion:**\nRule 1 is the source of knowledge for determining Q. Given that X and Y are both true, Q is true.\n### Phase 3: Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:**\n1. **Pratijna (Thesis):** Q is true.\n2. **Hetu (Reason):** Rule 1 applies because X and Y are both true.\n3. **Udaharana (Example):** If X and Y are both true, then Q is true (Rule 1).\n4. **Upanaya (Application):** Since X is true and Y is true, Rule 1 is applied.\n5. **Nigamana (Conclusion):** Therefore, Q is true.\n\n**Proof:**\n1. **Pratijna:** Q is true.\n2. **Hetu:** Rule 1 applies because X and Y are both true.\n3. **Udaharana:** Rule 1 states that when X and Y are both true, Q is true.\n4. **Upanaya:** X is true and Y is true, so Rule 1 is applied.\n5. **Nigamana:** Therefore, Q is true.\n\n**Conclusion:**\nThe syllogism confirms that Q is true based on Rule 1 applying when both X and Y are true.\n### Phase 4: Tarka (Counterfactual Reasoning)\n**Counterfactual Analysis:**\n1. **Assume Q is true:** This aligns with Rule 1 when X and Y are both true.\n2. **Assume Q is false:** This contradicts Rule 1 when X and Y are both true.\n\n**Reasoning:**\n- If Q were false when X and Y are both true, it would violate Rule 1.\n- Rule 1 explicitly states that Q is true in this scenario.\n\n**Conclusion:**\nQ must be true to satisfy Rule 1 when X and Y are both true.\n### Phase 5: Hetvabhasa (Fallacy Check)\n**Fallacy Identification:**\n1. **Equivalence Fallacy:** Assuming that Q being true is equivalent to X and Y being true. This is not a fallacy because Rule 1 directly links Q to X and Y.\n2. **Denial of the Consequent:** Assuming that if Q is false, then X and Y cannot be both true. This is valid reasoning, not a fallacy.\n3. **Conjunction Fallacy:** Assuming that Q is true only if both X and Y are true. This is correct because Rule 1 specifies the condition for Q being true.\n\n**Fallacy Check:**\n- All reasoning follows valid logical principles.\n- Rule 1 is applied correctly without contradiction.\n\n**Conclusion:**\nNo fallacies are present in the reasoning. The application of Rule 1 is valid and consistent.\n### Phase 6: Nirnaya (Ascertainment)\n**Final Knowledge:**\n- Q is true when X and Y are both true (Rule 1).\n\n**Justification:**\nRule 1 directly applies to the given truth values of X and Y. There are no conflicting rules or interpretations that would negate this conclusion.\n\n**Relevant Knowledge:**\n- Rule 1 is the definitive source for determining Q in this scenario.\n- The given truth values of X and Y are not subject to doubt.\n\n**Conclusion:**\nQ is definitely true when X and Y are both true based on Rule 1.\n---\n\n### Final Answer\nQ is **true**.",
+  "response_length": 3929,
+  "generation_time_ms": 76880,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Q = true."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Are all the rules applicable in this scenario, or do some not apply?\n\n**Analysis:**\n1"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-03-C: Can Q be false? False\n",
+        "problem_id": "PRA-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

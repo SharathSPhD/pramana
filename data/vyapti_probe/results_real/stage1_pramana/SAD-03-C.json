@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-03-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # What do we know?\n    # 1. If Red has key, then Blue has coin.\n    # 2. Green has key.\n    # 3. Red has ring.\n    \n    # Pramana: Sources of Knowledge\n    # We know all three facts are given as true.\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # 1. Pratyaksha: Direct perception: Red has ring.\n    # 2. Pratyaksha: Direct perception: Green has key.\n    # 3. Samigraha: Composite perception: If Red has key, then Blue has coin.\n    # 4. Samigraha: Composite perception: Green has key and Red has ring.\n    # 5. Samigraha: Composite perception: If Green has key, then Red cannot have key.\n    \n    # Tarka: Counterfactual Reasoning\n    # Suppose Red does not have ring.\n    # Then, since Green has key, Red cannot have key (from Samigraha 5).\n    # If Red does not have key, then Blue does not have coin (contrary to Samigraha 3).\n    # But we know Blue must have coin (from Samigraha 3), so this is impossible.\n    # Therefore, Red must have ring.\n    \n    # Hetvabhasa: Fallacy Check\n    # No fallacies detected in reasoning.\n    \n    # Nirnaya: Ascertainment\n    # Red has ring.\n    # Green has key.\n    # Therefore, Red cannot have key.\n    # Since Red cannot have key, Blue does not have coin.\n    # Therefore, the final distribution is:\n    # Red: ring\n    # Green: key\n    # Blue: does not have coin\n    \n    # Output the result\n    print(\"Red: ring, Green: key, Blue: does not have coin\")\n    \nsolve()\n```\n\n### Explanation:\nThe solution systematically applies the Nyaya methodology to deduce the contents of each box. By analyzing each phase, the reasoning confirms that the Red box contains the ring, the Green box contains the key, and consequently, the Blue box does not contain the coin. This structured approach ensures logical consistency and validity in reaching the conclusion.",
+  "response_length": 1880,
+  "generation_time_ms": 36041,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Green=key, Red=ring, Blue=coin."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "# Pramana: Sources of Knowledge\n    # We know all three facts are given as true"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-03-C: Green=key, Red=ring, Blue=coin\n  Green=0, Red=2, Blue=1\n",
+        "problem_id": "SAD-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

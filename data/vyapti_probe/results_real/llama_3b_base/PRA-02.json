@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-02",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Answer:** Dr. Kapoor drives a sedan.\n\n**Explanation:** This question requires the use of logical reasoning and inference. We are given several premises, and we need to determine which one(s) logically lead to the conclusion about Dr. Kapoor.\n\nFrom premise 1, we know that all surgeons have completed a residency program. From premise 2, we know that Dr. Kapoor is a surgeon. Therefore, we can conclude that Dr. Kapoor has completed a residency program (by modus ponens).\n\nFrom premise 4, we know that all residents of the hospital housing complex drive sedans. Since Dr. Kapoor is a resident (by modus ponens), we can conclude that Dr. Kapoor drives a sedan.\n\nWe cannot conclude that Dr. Kapoor eats vegetarian meals on Fridays (premise 3) because there is no logical connection between being a surgeon and eating vegetarian meals. Similarly, we cannot conclude that Dr. Kapoor is a resident of the hospital housing complex (premise 4) because there is no logical connection between being a surgeon and living in the hospital housing complex.\n\nTherefore, the only valid conclusion we can draw about Dr. Kapoor is that Dr. Kapoor drives a sedan.",
+  "response_length": 1146,
+  "generation_time_ms": 9334,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Dr. Kapoor completed a residency program (only valid conclusion)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "From premise 1, we know that all surgeons have completed a residency program"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-02: Can Kapoor NOT have completed residency? False\nPRA-02: Kapoor completed residency (premises 3,4 irrelevant)\n",
+        "problem_id": "PRA-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

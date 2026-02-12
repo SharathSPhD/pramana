@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-01-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Problem:\nSix employees \u2014 Aarav, Bina, Chetan, Diya, Esha, and Farid \u2014 work across two departments: Engineering and Marketing. The company has the following policy:\n\n**Policy 1:** \n- If an employee has a bachelor's degree, they are assigned to the Engineering Department.\n- If an employee has a master's degree, they are assigned to the Marketing Department.\n\n**Policy 2:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 3:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 4:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 5:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 6:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Department, they are required to wear a scarf.\n\n**Policy 7:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 8:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 9:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 10:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 11:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 12:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 13:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 14:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 15:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 16:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 17:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 18:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 19:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 20:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 21:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 22:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 23:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 24:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 25:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 26:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 27:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 28:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 29:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 30:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 31:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 32:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 33:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 34:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 35:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 36:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 37:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 38:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 39:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 40:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 41:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 42:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 43:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 44:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If an employee is assigned to the Marketing Department, they are required to wear a scarf.\n\n**Policy 45:**\n- If an employee is required to wear a tie, they are assigned to the Engineering Department.\n- If an employee is required to wear a scarf, they are assigned to the Marketing Department.\n\n**Policy 46:**\n- If an employee is assigned to the Engineering Department, they are required to wear a tie.\n- If",
+  "response_length": 9350,
+  "generation_time_ms": 149222,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Gita must work remotely."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-01-C: Gita can be non-remote: False\n",
+        "problem_id": "SAV-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

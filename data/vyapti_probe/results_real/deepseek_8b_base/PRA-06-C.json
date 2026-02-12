@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-06-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I have this problem here. Let me read it again.\n\n\"Given:\n1. Rishi owns a bicycle.\n2. All bicycle owners live within 5 km of the campus.\n\nCan we conclude that Rishi lives within 5 km of the campus?\"\n\nHmm, I need to figure out if Rishi must live within 5 km of the campus based on the given information. Let me break it down.\n\nFirst, the first statement is that Rishi owns a bicycle. So, Rishi is a bicycle owner. The second statement says that all bicycle owners live within 5 km of the campus. So, every person who owns a bicycle lives within that radius.\n\nNow, since Rishi is a bicycle owner, does that mean he must also live within 5 km? It seems like it, because the second statement applies to all bicycle owners. So, if Rishi is one of them, he should also be within that area.\n\nWait, but is there any possibility that Rishi doesn't live within 5 km? The statements don't mention anything about Rishi's specific location except that he owns a bicycle. Since all bicycle owners are within 5 km, Rishi must be too.\n\nLet me think about it another way. If I have a category of people, which is bicycle owners, and all of them are within 5 km, then any individual in that category must also be within 5 km. So, Rishi, being in that category, must be within 5 km.\n\nIs there any loophole here? Like, maybe Rishi doesn't live on campus but just owns a bicycle for some other reason? But the statement says all bicycle owners live within 5 km, regardless of where they live. So, even if Rishi doesn't live on campus, as long as he's a bicycle owner, he's within 5 km.\n\nSo, I think the conclusion is yes, Rishi lives within 5 km of the campus.\n</think>\n\nYes, we can conclude that Rishi lives within 5 km of the campus.\n\n**Explanation:**\nThe given information states that all bicycle owners live within 5 km of the campus. Since Rishi is a bicycle owner (as stated in the first point), he falls under the category of individuals covered by the second statement. Therefore, by the definition provided, Rishi must live within 5 km of the campus. There are no exceptions or additional conditions that would allow Rishi to be outside this radius. Hence, the conclusion is unavoidable.",
+  "response_length": 2183,
+  "generation_time_ms": 37441,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Yes, Rishi lives within 5km."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Now, since Rishi is a bicycle owner, does that mean he must also live within 5 km? It seems like it, because the second statement applies to all bicycle owners. So, if Rishi is one of them, he should "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-06-C: Can Rishi be outside 5km? False\n",
+        "problem_id": "PRA-06-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

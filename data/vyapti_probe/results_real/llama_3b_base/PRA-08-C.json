@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-08-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Analyze the given clues\nFrom the clues, we can deduce the following:\n- The thief entered through either the window or the door.\n- If the thief entered through the window, muddy footprints would be on the windowsill.\n- There are no muddy footprints on the windowsill.\n- If the thief entered through the door, the lock would show scratch marks.\n- The lock shows scratch marks.\n\n## Step 2: Eliminate impossible options\nFrom clue 2 and clue 3, we can conclude that the thief did not enter through the window because there are no muddy footprints on the windowsill.\nFrom clue 4 and clue 5, we can conclude that the thief did enter through the door because the lock shows scratch marks.\n\n## Step 3: Determine the method of entry\nSince the thief entered through the door, we can conclude that the method of entry is through the door.\n\nThe final answer is: $\\boxed{door}$",
+  "response_length": 874,
+  "generation_time_ms": 7747,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Through the door."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-08-C: Can it NOT be door? False\nPRA-08-C: Answer = Door\n",
+        "problem_id": "PRA-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

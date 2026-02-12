@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-05",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "The final answer is: $\\boxed{No}$\n\nExplanation: The building inspector needs to determine whether Building Z complies with the current building code. Since Building Z was constructed in 2023, it is subject to the 2022 amendment. The amendment states that all residential buildings constructed after 2020 must have a minimum ceiling height of 9 feet. Therefore, Building Z does not comply with the current building code because its ceiling height is less than the required 9 feet. The building inspector should issue a non-compliance notice to the building owner.\nThe best answer is No.",
+  "response_length": 585,
+  "generation_time_ms": 4623,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "No, Building Z does not comply."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "The amendment states that all residential buildings constructed after 2020 must have a minimum ceiling height of 9 feet"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-05: Building Z compliant? False\n",
+        "problem_id": "KAL-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

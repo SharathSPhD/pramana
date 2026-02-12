@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I need to figure out how many vacation days Employee #4472 gets based on the company's policy manual. Let me go through each rule step by step.\n\nFirst, the General Rule in Section 1 says all employees get 15 vacation days per year. That seems straightforward. So, without any exceptions, every employee, including Employee #4472, would get 15 days.\n\nBut wait, there are other sections in the manual that might override this general rule. The next rule is in Section 3, which is the Department Override. It states that Engineering department employees receive 20 vacation days per year. Hmm, so if Employee #4472 is in the Engineering department, this rule would apply. That would mean they get 20 days instead of the usual 15. But hold on, there's another section that might come into play.\n\nSection 5 is the Individual Exception. It specifically mentions Employee #4472, saying they receive 10 vacation days due to a probationary period. Now, this is interesting because it's overriding the previous rules. The question is, does this exception take precedence over the Department Override?\n\nI remember that in policy manuals, later rules usually override earlier ones unless stated otherwise. So, the order of the sections is important here. The manual lists them as Section 1, Section 3, and then Section 5. So, Section 5 is the last one and would override the previous ones if applicable.\n\nBut wait, let me make sure. The Department Override is in Section 3, which is a general rule for the Engineering department. The Individual Exception in Section 5 is more specific. It's not just about the department; it's about a specific employee. So, even though the Engineering department rule gives 20 days, the exception for this particular employee reduces it to 10 days.\n\nIs there a conflict here? Yes, because the Department Override would give 20 days, but the Individual Exception says 10. Since the exception is later and more specific, it should take precedence. So, the employee gets 10 days despite being in the Engineering department.\n\nI should also check if there's any rule that says individual exceptions override department rules. The problem doesn't mention that explicitly, but logically, if an exception is made for an individual, it should override the general rule for their department. Otherwise, the exception wouldn't apply.\n\nSo, putting it all together:\n\n1. General Rule: 15 days.\n2. Department Override: 20 days for Engineering.\n3. Individual Exception: 10 days for Employee #4472.\n\nSince the last rule applies, the employee gets 10 vacation days.\n</think>\n\nEmployee #4472 receives 10 vacation days per year due to the Individual Exception in Section 5, which overrides the Department Override in Section 3 and the General Rule in Section 1.\n\n**Answer:** Employee #4472 receives 10 vacation days per year.",
+  "response_length": 2836,
+  "generation_time_ms": 43393,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "10 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": false,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01: Vacation days for #4472: 10\n",
+        "problem_id": "KAL-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

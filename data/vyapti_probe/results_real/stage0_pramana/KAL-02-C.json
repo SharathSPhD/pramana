@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-02-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "The puzzle is: \"A man is in a room with two doors. One door leads to freedom, and the other door leads to a trap. The man has no key. He meets a stranger who says, 'If you ask me, I will tell you which door leads to freedom. But if you ask another person, they will tell you which door leads to freedom.' The man is not sure which door leads to freedom. What should he do?\"\n\n## Step 1: Samshaya (Doubt Analysis)\nThe man is in a room with two doors, one leading to freedom and the other to a trap. He has no key. He meets a stranger who claims to know which door leads to freedom but will only tell if asked by the man. The man is uncertain. We need to analyze the situation to determine the best course of action.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe stranger's statement is a source of knowledge for the man. The stranger's claim is that if asked, he will tell the man which door leads to freedom. However, the stranger's statement does not guarantee that the stranger actually knows which door leads to freedom. The stranger might be lying or mistaken.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nLet's construct a syllogism to analyze the situation:\n1. If the man asks the stranger, the stranger will tell him which door leads to freedom.\n2. If the stranger tells the man which door leads to freedom, then the stranger actually knows which door leads to freedom.\n3. If the stranger tells the man which door leads to freedom, then the man will choose the door that leads to freedom.\n4. If the man chooses the door that leads to freedom, then the stranger actually knows which door leads to freedom.\n5. Therefore, if the man asks the stranger and the stranger tells him which door leads to freedom, then the stranger actually knows which door leads to freedom.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider what would happen if the man asks the stranger and the stranger tells him which door leads to freedom. In this case, the stranger's statement would be true, and the stranger would actually know which door leads to freedom. However, this does not necessarily mean that the stranger's statement is reliable. The stranger might be lying or mistaken.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies in the reasoning. The argument is based on the stranger's statement, which is a source of knowledge. However, the stranger's statement is not a guarantee of truth. We need to consider alternative explanations for the stranger's statement.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, the man should not ask the stranger. If the stranger tells him which door leads to freedom, the stranger might be lying or mistaken. If the stranger tells him which door leads to freedom, the stranger might actually know which door leads to freedom. However, the stranger's statement is not a reliable source of knowledge. The man should not rely on the stranger's statement. Instead, the man should choose one of the doors at random.\n\nThe final answer is: $\\boxed{1}$",
+  "response_length": 3024,
+  "generation_time_ms": 26174,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Red is the heaviest."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "If the stranger tells the man which door leads to freedom, then the stranger actually knows which door leads to freedom.\n3"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-02-C: Heaviest = Red\n",
+        "problem_id": "KAL-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: kalatita"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-15",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Understand the given data and the conclusion\nThe given data includes the outcomes of various combinations of meetings on different days of the week. The conclusion drawn by the project manager is that having a Monday meeting guarantees the project will be completed on time.\n\n## Step 2: Identify the relevant data points for the conclusion\nTo assess the validity of the conclusion, we need to examine the data points that involve having a Monday meeting. These are:\n- Week 1: M=true, T=true\n- Week 2: M=true, W=true\n- Week 3: M=true, R=true\n- Week 4: M=true, F=true\n- Week 5: M=true, T=false, W=false, R=false, F=false\n\n## Step 3: Analyze the data points for the conclusion\nFrom the data points, we can see that having a Monday meeting (M=true) in all these weeks results in the project being completed on time. However, we also need to consider the data point where M=true, but other meetings are false (Week 5), and the project is not completed on time.\n\n## Step 4: Determine the validity of the conclusion\nThe conclusion that having a Monday meeting guarantees the project will be completed on time is not entirely valid. While having a Monday meeting in all the successful weeks results in the project being completed on time, there is one instance (Week 5) where having a Monday meeting does not result in the project being completed on time, even though all other meetings are false.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 1435,
+  "generation_time_ms": 12728,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"M=true \u2192 on time\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "These are:\n- Week 1: M=true, T=true\n- Week 2: M=true, W=true\n- Week 3: M=true, R=true\n- Week 4: M=true, F=true\n- Week 5: M=true, T=false, W=false, R=false, F=false\n\n## Step 3: Analyze the data points "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-15: 'M \u2192 on time' holds: False\n",
+        "problem_id": "SAV-15"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

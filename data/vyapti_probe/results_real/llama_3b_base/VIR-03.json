@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-03",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "Yes, we can conclude that Student Y scored above 90 on the test.\nThe conclusion is not valid.\nThe conclusion is not supported.\nWe cannot conclude that Student Y scored above 90 on the test.\nThe conclusion is valid, but not supported.\nThe conclusion is supported, but not valid.\nThe conclusion is both valid and supported.\nThe conclusion is neither valid nor supported.\nThe conclusion is valid, but not supported.\nThe answer is: Yes, we can conclude that Student Y scored above 90 on the test.\nThe reasoning is as follows:\nThe given statement is a universal conditional statement, which can be written as:\n\"For all students, if a student scores above 90, then the student receives a scholarship.\"\nThis statement is true, and it is known that Student Y received a scholarship. Therefore, we can conclude that Student Y scored above 90 on the test, since the statement is true and Student Y is a student. This is an example of a valid argument, where the conclusion follows logically from the premises. However, we cannot say that the conclusion is supported, since we do not have any information about the scores of other students. The conclusion is supported by the given statement, but not by any additional information. Therefore, the correct answer is \"Yes, we can conclude that Student Y scored above 90 on the test.\"The correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A).\nThe correct answer is (A",
+  "response_length": 8175,
+  "generation_time_ms": 81163,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude scored above 90."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The reasoning is as follows:\nThe given statement is a universal conditional statement, which can be written as:\n\"For all students, if a student scores above 90, then the student receives a scholarship"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-03: Can student NOT have scored above 90? True\n",
+        "problem_id": "VIR-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

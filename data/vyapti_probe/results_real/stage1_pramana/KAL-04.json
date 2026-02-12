@@ -1,0 +1,71 @@
+{
+  "problem_id": "KAL-04",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Solution:\n\n**1. Samshaya (Doubt Analysis):**\nThe question raises a doubt about whether User A should be granted access on June 1. The system must determine if the access is still active.\n\n**2. Pramana (Sources of Knowledge):**\nThe system relies on the log entries:\n- Jan 1: Grant\n- Mar 15: Revocation\n- Jun 1: Attempt\n\n**3. Pancha Avayava (5-Member Syllogism):**\n**Pratijna (Thesis):** User A should be granted access on June 1.\n**Hetu (Reason):** The access was granted on Jan 1 and not revoked by Mar 15.\n**Udaharana (Example):** If access is granted and not revoked, it remains valid.\n**Upanaya (Application):** Apply to User A and Server X.\n**Nigamana (Conclusion):** Therefore, access should be granted.\n\n**4. Tarka (Counterfactual Reasoning):**\nIf access were revoked, the system would deny access. Since revocation is not recorded, access remains valid.\n\n**5. Hetvabhasa (Fallacy Check):**\nNo fallacies are present. The reasoning follows logical principles.\n\n**6. Nirnaya (Ascertainment):**\nBased on the evidence, User A should be granted access on June 1.\n\n---\n\n### Final Answer:\nYes, the system should grant User A access to Server X on June 1.",
+  "response_length": 1168,
+  "generation_time_ms": 22887,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No access on June 1."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-04: Has access on Jun 1? False\n",
+        "problem_id": "KAL-04"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

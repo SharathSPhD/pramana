@@ -1,0 +1,71 @@
+{
+  "problem_id": "PRA-09-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Phase 1: Samshaya (Doubt Analysis)\n**Question:** Does taking Medication X appear to be associated with symptom improvement?\n\n**Doubt Analysis:**\n- **Doubt Type:** Correlational Doubt\n- **Justification:** The data shows that all subjects who took Medication X experienced symptom improvement, while those who did not take it did not. This suggests a strong association between the two variables.\n\n**Resolution:** The correlation is direct and consistent across all subjects, indicating a probable causal relationship.\n\n---\n\n### Phase 2: Pramana (Sources of Knowledge)\n**Sources:**\n1. **Pratyaksha (Direct Perception):** Observational data from the study.\n2. **Anumana (Inference):** The consistent correlation across all subjects suggests a causal relationship.\n3. **Shabda (Testimony):** Statistical methods confirm the correlation's significance.\n\n**Justification:** The data provides direct evidence of the association, and statistical analysis supports its significance.\n\n---\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:**\n1. **Pratijna (Thesis):** Taking Medication X is associated with symptom improvement.\n2. **Heti (Reason):** All subjects who took Medication X experienced symptom improvement, while those who did not take it did not.\n3. **Udaharana (Example):** Similar patterns hold across all subjects, indicating a consistent effect.\n4. **Prasanga (Comparison):** No confounding variables are present, as the study is a randomized controlled trial.\n5. **Nigamana (Conclusion):** Therefore, Medication X is associated with symptom improvement.\n\n**Justification:** The syllogism adheres to the five-member structure, providing a logical argument for the association.\n\n---\n\n### Phase 4: Tarka (Counterfactual Reasoning)\n**Counterfactual Analysis:**\n1. **Assumption:** Taking Medication X is associated with symptom improvement.\n2. **Counterfactual:** Suppose taking Medication X does not cause symptom improvement.\n3. **Consequence:** This would imply that symptom improvement is unrelated to Medication X, which contradicts the observed data.\n4. **Resolution:** Therefore, the initial assumption must hold true.\n\n**Justification:** The counterfactual reasoning confirms the association by eliminating the possibility of no causal effect.\n\n---\n\n### Phase 5: Hetvabhasa (Fallacy Check)\n**Fallacy Identification:**\n1. **Samkalpa Sama (Unilateral Bias):** No bias is present as all subjects are equally represented.\n2. **Viparyaya Sama (Symmetry Bias):** No symmetry bias is present in the data analysis.\n3. **Asiddha Sama (Unsupportable Bias):** The data supports the association without contradiction.\n4. **Satpratipaksha Sama (Inverse Bias):** No inverse bias is present; the association is correctly identified.\n\n**Justification:** The analysis avoids common fallacies, ensuring the conclusion is valid.\n\n---\n\n### Phase 6: Nirnaya (Ascertainment)\n**Final Ascertainment:**\n1. **Pratyaksha (Direct Perception):** Observational data confirms the association.\n2. **Anumana (Inference):** Statistical methods support the causal relationship.\n3. **Shabda (Testimony):** The study protocol confirms randomization and controlled conditions.\n\n**Final Answer:** Yes, taking Medication X appears to be associated with symptom improvement.\n\n---\n\n### Final Answer\n**Yes, taking Medication X appears to be associated with symptom improvement.**",
+  "response_length": 3377,
+  "generation_time_ms": 54889,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Medication X associated with improvement."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "---\n\n### Phase 1: Samshaya (Doubt Analysis)\n**Question:** Does taking Medication X appear to be associated with symptom improvement?\n\n**Doubt Analysis:**\n- **Doubt Type:** Correlational Doubt\n- **Just"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-09-C: Can medication fail to improve? False\nPRA-09-C: Yes \u2014 medication predicts improvement\n",
+        "problem_id": "PRA-09-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically",
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

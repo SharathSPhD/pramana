@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef analyze_book_catalog():\n    books = {\n        \"Algorithms\": [\"Recommended\", \"Available\", \"New Arrival\"],\n        \"Bioinformatics\": [\"Recommended\", \"Available\", \"New Arrival\"],\n        \"Compilers\": [\"Recommended\", \"Available\"],\n        \"Databases\": [\"Recommended\", \"Available\", \"New Arrival\"],\n        \"Encryption\": [\"Recommended\", \"Available\", \"New Arrival\"],\n        \"Fractals\": [\"Available\", \"New Arrival\"]\n    }\n    \n    # Phase 1: Samshaya (Doubt Analysis)\n    doubt = \"Is the librarian's statement true?\"\n    \n    # Phase 2: Pramana (Sources of Knowledge)\n    pramana = (\n        \"The librarian knows the catalog system.\",\n        \"The librarian has direct knowledge of each book's availability.\"\n    )\n    \n    # Phase 3: Pancha Avayava (5-Member Syllogism)\n    syllogism = (\n        \"All recommended books are available in the catalog.\",\n        \"All books in the catalog are in the system.\",\n        \"The librarian's statement is about all recommended books.\",\n        \"If any recommended book is not available, the statement is false.\",\n        \"Therefore, all recommended books are available.\"\n    )\n    \n    # Phase 4: Tarka (Counterfactual Reasoning)\n    tarka = (\n        \"Suppose a recommended book is not available.\",\n        \"Then the librarian's statement would be false.\",\n        \"But we know all recommended books are available.\",\n        \"Therefore, the librarian's statement is true.\"\n    )\n    \n    # Phase 5: Hetvabhasa (Fallacy Check)\n    fallacy = (\n        \"Denying the Conclusion\",\n        \"Affirming the Premise\",\n        \"Denying the Antecedent\",\n        \"Concluding from Insufficient Evidence\"\n    )\n    \n    # Phase 6: Nirnaya (Ascertainment)\n    conclusion = (\n        \"The librarian's statement is true.\",\n        \"All recommended books are available in the catalog.\"\n    )\n    \n    return {\n        \"Samshaya\": [doubt],\n        \"Pramana\": pramana,\n        \"Pancha Avayava\": syllogism,\n        \"Tarka\": tarka,\n        \"Hetvabhasa\": fallacy,\n        \"Nirnaya\": conclusion\n    }\n\nanalyze_book_catalog()\n```\n\n### Analysis:\nLet's analyze the problem step by step using the Nyaya methodology.\n\n1. **Samshaya (Doubt Analysis)**  \n   The question is: \"Is the librarian's statement true?\" This creates a Samshaya because we need to verify whether all recommended books are indeed available.\n\n2. **Pramana (Sources of Knowledge)**  \n   The librarian's knowledge is based on direct observation of the catalog system. This means the librarian's statement is a valid source of knowledge.\n\n3. **Pancha Avayava (5-Member Syllogism)**  \n   - **Pratijna (Thesis):** All recommended books are available.  \n   - **Hetu (Reason):** Every recommended book is marked as [Available].  \n   - **Udaharana (Example):** \"Algorithms\" and \"Bioinformatics\" are recommended and available.  \n   - **Upanaya (Application):** Since all recommended books share the [Available] tag, they must all be available.  \n   - **Nigamana (Inference):** Therefore, the librarian's statement is true.\n\n4. **Tarka (Counterfactual Reasoning)**  \n   - **Hypothesis:** Suppose a recommended book is not available.  \n   - **Consequence:** The librarian's statement would be false.  \n   - **Rebuttal:** However, all recommended books are available.  \n   - **Conclusion:** The librarian's statement is true.\n\n5. **Hetvabhasa (Fallacy Check)**  \n   We check for common fallacies:  \n   - **Denying the Conclusion:** Not applicable.  \n   - **Affirming the Premise:** Not applicable.  \n   - **Denying the Antecedent:** Not applicable.  \n   - **Concluding from Insufficient Evidence:** Not applicable.  \n   No fallacies are committed in this reasoning.\n\n6. **Nirnaya (Ascertainment)**  \n   After thorough analysis, we conclude that the librarian's statement is true. All recommended books are available in the catalog.\n---\n\n### Final Answer:\nThe librarian's statement is **true**. All recommended books are available in the catalog.",
+  "response_length": 3946,
+  "generation_time_ms": 69661,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Recommended \u2286 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "\"\n    )\n    \n    # Phase 3: Pancha Avayava (5-Member Syllogism)\n    syllogism = (\n        \"All recommended books are available in the catalog"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11-C: Recommended \u2286 Available \u2014 holds\n",
+        "problem_id": "SAV-11-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

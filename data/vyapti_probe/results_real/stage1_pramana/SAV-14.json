@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAV-14",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Steps:\n\n---\n\n### 1. Samshaya (Doubt Analysis)\n**What is the question?**\nIs the clerk's proposed rule (\"All Heavy packages cost $15 to ship\") correct?\n\n**Doubt Type:**\nThis is a *Tarka* type doubt because it involves a conditional rule and its validity.\n\n**Doubt Analysis:**\n- The clerk observes that most Heavy packages cost $15.\n- The clerk proposes a rule that all Heavy packages cost $15.\n- We must verify if this rule holds universally for all Heavy packages.\n\n**Doubt Structure:**\nIf all Heavy packages cost $15, then the rule is correct. But are there any Heavy packages that cost differently?\n\n**Doubt Resolution:**\nWe must check each Heavy package's cost.\n\n---\n\n### 2. Pramana (Sources of Knowledge)\n**What is the Pramana?**\nThe shipping costs are explicitly listed.\n\n**Pramana Sources:**\n- Package 1: Heavy, Domestic \u2192 $15\n- Package 2: Heavy, Domestic \u2192 $15\n- Package 3: Heavy, International \u2192 $15\n- Package 4: Heavy, International \u2192 $15\n- Package 5: Heavy, Domestic \u2192 $15\n- Package 6: Heavy, International \u2192 $25\n- Package 7: Light, Domestic \u2192 $8\n- Package 8: Light, International \u2192 $12\n\n**Pramana Analysis:**\nAll Heavy packages have a cost listed. We must verify if any Heavy package costs $25.\n\n---\n\n### 3. Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:**\n1. **Pratijna** (Thesis): All Heavy packages cost $15 to ship.\n2. **Heti** (Reason): Because all Heavy packages have a cost of $15.\n3. **Udaharana** (Example): Package 1 is a Heavy package and costs $15.\n4. **Prasanga** (Application): Therefore, all Heavy packages cost $15.\n5. **Nigamana** (Conclusion): The rule is correct.\n\n**Syllogism Analysis:**\nWe must verify that all Heavy packages have a cost of $15.\n\n---\n\n### 4. Tarka (Counterfactual Reasoning)\n**Counterfactual Question:**\nWhat if one Heavy package costs $25?\n\n**Tarka Analysis:**\n- If one Heavy package costs $25, the rule \"All Heavy packages cost $15\" is false.\n- We must check if any Heavy package costs $25.\n\n**Tarka Resolution:**\nCheck each Heavy package's cost.\n\n---\n\n### 5. Hetvabhasa (Fallacy Check)\n**Potential Fallacies:**\n- **Eka** (One-sidedness): Assuming all Heavy packages are $15 without verification.\n- **Savyabhichara** (Circular Reasoning): Citing a package that assumes the rule.\n- **Viruddha** (Contradiction): Claiming two different costs for the same package.\n\n**Fallacy Check:**\n- The clerk observes most Heavy packages cost $15 but does not verify all.\n- The rule assumes all Heavy packages are $15 without universal verification.\n- No fallacies are evident in the rule's formulation.\n\n**Fallacy Resolution:**\nVerify each Heavy package's cost to ensure the rule is universally applicable.\n\n---\n\n### 6. Nirnaya (Ascertainment)\n**Final Ascertainment:**\nAll Heavy packages cost $15 to ship.\n\n**Justification:**\n- Packages 1, 2, 3, 4, and 5 are Heavy and cost $15.\n- Package 6 is Heavy and costs $25, which contradicts the rule.\n- Therefore, the rule is incorrect.\n\n**Final Answer:**\nThe clerk's rule is **incorrect** because Package 6 (Heavy, International) costs $25, not $15.\n\n---\n\n### Nyaya Summary:\n\n---\n\n### Samshaya (Doubt Analysis)\n**Doubt Type:** Tarka (Conditional Rule Validation)\n\n**Doubt Structure:**  \nIf all Heavy packages cost $15, then the rule is correct. But are there any Heavy packages that cost differently?\n\n**Doubt Resolution:**  \nWe must check each Heavy package's cost.\n\n---\n\n### Pramana (Sources of Knowledge)\n\n**Pramana Sources:**  \n- Package 1: Heavy, Domestic \u2192 $15  \n- Package 2: Heavy, Domestic \u2192 $15  \n- Package 3: Heavy, International \u2192 $15  \n- Package 4: Heavy, International \u2192 $15  \n- Package 5: Heavy, Domestic \u2192 $15  \n- Package 6: Heavy, International \u2192 $25  \n- Package 7: Light, Domestic \u2192 $8  \n- Package 8: Light, International \u2192 $12  \n\n**Pramana Analysis:**  \nAll Heavy packages have a cost listed. We must verify if any Heavy package costs $25.\n\n---\n\n### Pancha Avayava (5-Member Syllogism)\n\n**Syllogism Structure:**  \n1. **Pratijna** (Thesis): All Heavy packages cost $15 to ship.  \n2. **Heti** (Reason): Because all Heavy packages have a cost of $15.  \n3. **Udaharana** (Example): Package 1 is a Heavy package and costs $15.  \n4. **Prasanga** (Application): Therefore, all Heavy packages cost $15.  \n5. **Nigamana** (Conclusion): The rule is correct.  \n\n**Syllogism Analysis:**  \nWe must verify that all Heavy packages have a cost of $15.\n\n---\n\n### Tarka (Counterfactual Reasoning)\n\n**Counterfactual Question:**  \nWhat if one Heavy package costs $25?  \n\n**Tarka Analysis:**  \n- If one Heavy package costs $25, the rule \"All Heavy packages cost $15\" is false.  \n- We must check if any Heavy package costs $25.  \n\n**Tarka Resolution:**  \nCheck each Heavy package's cost.\n\n---\n\n### Hetvabhasa (Fallacy Check)\n\n**Potential Fallacies:**  \n- **Eka** (One-sidedness): Assuming all Heavy packages are $15 without verification.  \n- **Savyabhichara** (Circular Reasoning): Citing a package that assumes the rule.  \n- **Viruddha** (Contradiction): Claiming two different costs for the same package.  \n\n**Fallacy Check:**  \n- The clerk observes most Heavy packages cost $15 but does not verify all.  \n- The rule assumes all Heavy packages are $15 without universal verification.  \n- No fallacies are evident in the rule's formulation.  \n\n**Fallacy Resolution:**  \nVerify each Heavy package's cost to ensure the rule is universally applicable.\n\n---\n\n### Nirnaya (Ascertainment)\n\n**Final Ascertainment:**  \nAll Heavy packages cost $15 to ship.  \n\n**Justification:**  \n- Packages 1, 2, 3, 4, and 5 are Heavy and cost $15.  \n- Package 6 is Heavy and costs $25, not $15.  \n- Therefore, the rule is incorrect.  \n\n**Final Answer:**  \nThe clerk's rule is **incorrect** because Package 6 (Heavy, International) costs $25, not $15.",
+  "response_length": 5730,
+  "generation_time_ms": 112257,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"Heavy \u2192 $15\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Doubt Structure:**\nIf all Heavy packages cost $15, then the rule is correct"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14: 'Heavy \u2192 $15' holds: False\n",
+        "problem_id": "SAV-14"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically",
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

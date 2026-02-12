@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I need to figure out what Lev orders. Let's see, the problem involves three friends: Jun, Kira, and Lev. Each of them orders a different dish, and the options are pasta, sushi, or salad. So, each person orders one of these three, and no two people order the same dish.\n\nThe given information is:\n\n1. Jun does not order pasta.\n2. The restaurant has won three Michelin stars.\n3. Kira orders sushi.\n4. The restaurant's interior features exposed brick walls.\n\nHmm, I need to figure out what Lev orders based on this information. Let me break it down step by step.\n\nFirst, let's list out the dishes: pasta, sushi, salad. Each person orders a different one, so we can think of this as a permutation of the three dishes among the three friends.\n\nGiven that Jun does not order pasta, that means Jun must order either sushi or salad. So, Jun's dish is either sushi or salad.\n\nNext, Kira orders sushi. So, Kira's dish is sushi. Since each person orders a different dish, that means sushi is already taken by Kira, so Jun and Lev can't have sushi. So, Jun and Lev must order the remaining two dishes: pasta and salad.\n\nWait, but Jun doesn't order pasta, so Jun must order salad. Therefore, Lev must order pasta because the only remaining dish is pasta.\n\nBut hold on, let me make sure I didn't skip any steps. Let's go through it again.\n\n- Kira orders sushi. So, sushi is taken.\n- Jun does not order pasta, so Jun must order either sushi or salad. But sushi is already taken by Kira, so Jun must order salad.\n- Therefore, Lev is left with the remaining dish, which is pasta.\n\nSo, Lev orders pasta.\n\nBut wait, the restaurant has three Michelin stars and has exposed brick walls. Does that information affect anything? Hmm, the problem doesn't specify any relationship between the dishes and the restaurant's features or stars. It just mentions that the restaurant has these features, but it doesn't link them to the dishes ordered. So, maybe that information is just extra and doesn't influence the ordering.\n\nAlternatively, could the Michelin stars relate to the type of dishes? For example, maybe sushi restaurants are more likely to have Michelin stars, but the problem doesn't specify that. So, I think that information is just additional background and doesn't affect the dish ordering.\n\nSo, focusing back on the orders:\n\n- Kira: sushi\n- Jun: cannot be pasta, so must be salad\n- Lev: only remaining dish is pasta\n\nTherefore, Lev orders pasta.\n\nWait, is there any possibility that the Michelin stars could influence the dish? For example, maybe the restaurant's dishes are such that pasta is more likely to be awarded a star, but the problem doesn't state that. So, without specific information, I can't assume that. So, I think the Michelin stars don't affect the dish ordering.\n\nTherefore, my conclusion is that Lev orders pasta.\n\nBut let me think again: each person orders a different dish, so we have three dishes and three people. Each dish is unique. So, if Kira has sushi, Jun can't have sushi. Jun can't have pasta, so Jun must have salad. Then Lev is left with pasta.\n\nYes, that seems correct. So, Lev orders pasta.\n\nI don't see any contradictions or alternative possibilities here. The information given doesn't leave any other option for Lev. So, I think that's the answer.\n</think>\n\nLev orders pasta.\n\n**Step-by-Step Explanation:**\n\n1. **Identify the Dishes and Orders:**\n   - Three dishes: pasta, sushi, salad.\n   - Three friends: Jun, Kira, Lev. Each orders a different dish.\n\n2. **Analyze the Given Information:**\n   - **Jun does not order pasta.** Therefore, Jun's dish is either sushi or salad.\n   - **Kira orders sushi.** This means sushi is taken, so Jun and Lev cannot have sushi.\n   - **Restaurant has three Michelin stars and exposed brick walls.** This information doesn't directly influence dish selection as it's not linked to the dishes.\n\n3. **Determine Jun's Dish:**\n   - Since Jun can't order pasta and sushi is taken by Kira, Jun must order salad.\n\n4. **Determine Lev's Dish:**\n   - The remaining dish after Kira (sushi) and Jun (salad) is pasta.\n   - Therefore, Lev orders pasta.\n\n**Answer:** Lev orders pasta.",
+  "response_length": 4140,
+  "generation_time_ms": 69758,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Lev orders pasta."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10: Lev = Pasta (aesthetic info irrelevant)\n",
+        "problem_id": "PRA-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

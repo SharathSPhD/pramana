@@ -1,0 +1,71 @@
+{
+  "problem_id": "KAL-02-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "Original Puzzle:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n5 6 7 8 9 1 2 3 4\n1 2 3 4 5 6 7 8 9\n```\nPhase 1:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n5 6 7 8 9 1 2 3 4\n```\nPhase 2:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 3:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 4:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 5:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 6:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 7:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 8:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 9:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 10:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 11:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 12:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 13:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 14:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 15:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 16:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 17:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 18:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 19:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 20:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 21:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 22:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 23:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9 1\n```\nPhase 24:\n```\n1 2 3 4 5 6 7 8 9\n8 9 1 2 3 4 5 6 7\n3 4 5 6 7 8 9 1 2\n2 3 4 5 6 7 8 9",
+  "response_length": 2295,
+  "generation_time_ms": 81006,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Red is the heaviest."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-02-C: Heaviest = Red\n",
+        "problem_id": "KAL-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response does not acknowledge temporal update"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

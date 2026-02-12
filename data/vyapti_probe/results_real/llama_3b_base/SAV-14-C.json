@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Understand the problem and the proposed rule\nThe problem presents a scenario where eight packages have different weights and destinations, and their shipping costs are provided. A clerk proposes a rule stating that all Heavy packages cost $15 to ship. We need to determine if this rule is correct based on the given data.\n\n## Step 2: Analyze the data for Heavy packages\nWe need to examine the data for packages that are classified as Heavy. The packages that are Heavy are: Package 1, Package 2, Package 3, Package 4, Package 5, and Package 6.\n\n## Step 3: Check the shipping costs for Heavy packages\nThe shipping costs for these Heavy packages are: $15, $15, $15, $15, $15, and $15. All of these costs are indeed $15.\n\n## Step 4: Draw a conclusion based on the analysis\nSince all the shipping costs for the Heavy packages are $15, the proposed rule \"All Heavy packages cost $15 to ship\" is correct based on the given data.\n\nThe final answer is: $\\boxed{1}$",
+  "response_length": 967,
+  "generation_time_ms": 8973,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all Heavy packages cost $15."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "A clerk proposes a rule stating that all Heavy packages cost $15 to ship. We need to determine if this rule is correct based on the given data"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14-C: Heavy \u2192 $15 \u2014 holds\n",
+        "problem_id": "SAV-14-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

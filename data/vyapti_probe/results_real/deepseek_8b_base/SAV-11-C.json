@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I need to figure out if the librarian's statement is true. The statement is: \"All our recommended books are available.\" The librarian has three tags: [Recommended], [Available], and [New Arrival]. Each book has these tags assigned, and I need to check if every book that's recommended is also available.\n\nFirst, let me list out all the books and their tags:\n\n1. \"Algorithms\" \u2014 [Recommended], [Available], [New Arrival]\n2. \"Bioinformatics\" \u2014 [Recommended], [Available], [New Arrival]\n3. \"Compilers\" \u2014 [Recommended], [Available]\n4. \"Databases\" \u2014 [Recommended], [Available], [New Arrival]\n5. \"Encryption\" \u2014 [Recommended], [Available], [New Arrival]\n6. \"Fractals\" \u2014 [Available], [New Arrival]\n\nSo, the librarian is saying that all the recommended books are available. That means for every book that has the [Recommended] tag, it should also have the [Available] tag. Let me go through each book one by one.\n\nStarting with \"Algorithms\": It has [Recommended], [Available], and [New Arrival]. So, it's both recommended and available. That's good.\n\nNext, \"Bioinformatics\": Same tags as \"Algorithms\" \u2014 [Recommended], [Available], [New Arrival]. So, also both recommended and available.\n\n\"Compilers\" is next. It has [Recommended] and [Available], but no [New Arrival]. So, it's recommended and available. That's fine.\n\n\"Databases\": Again, [Recommended], [Available], [New Arrival]. So, all three tags. Recommended and available, so that's okay.\n\n\"Encryption\": Same as \"Algorithms\" and others \u2014 [Recommended], [Available], [New Arrival]. So, it's all set.\n\nLastly, \"Fractals\": It only has [Available] and [New Arrival]. There's no [Recommended] tag here. Hmm, that's interesting. So, \"Fractals\" is available and new, but not recommended. That means the statement \"All our recommended books are available\" doesn't include \"Fractals\" because it's not recommended. So, the statement is only about the recommended ones, not about all books.\n\nWait, so the statement is specifically about the recommended books. So, does \"Fractals\" being not recommended affect the statement? No, because the statement is only making a claim about the recommended ones. So, as long as every book that's recommended is available, the statement is true.\n\nLooking back, all the books that have the [Recommended] tag also have [Available]. None of the recommended books are missing the [Available] tag. Even \"Compilers\" is recommended and available, so that's covered.\n\nTherefore, the librarian's statement holds true because every book that's recommended is indeed available. The fact that some non-recommended books are available doesn't contradict the statement because the statement is only about the recommended ones.\n</think>\n\nThe librarian's statement is true. Every book tagged as [Recommended] is also marked as [Available]. None of the recommended books are missing the [Available] tag, ensuring the statement holds.",
+  "response_length": 2897,
+  "generation_time_ms": 48088,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Recommended \u2286 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "The statement is: \"All our recommended books are available"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11-C: Recommended \u2286 Available \u2014 holds\n",
+        "problem_id": "SAV-11-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

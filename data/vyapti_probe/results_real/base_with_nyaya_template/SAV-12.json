@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-12",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\n# Define the patients\npatients = [\n    \"Patient 1: Condition X, Treatment T, Recovered \u2713\",\n    \"Patient 2: Condition X, Treatment T, Recovered \u2713\",\n    \"Patient 3: Condition X, Treatment T, Recovered \u2713\",\n    \"Patient 4: Condition T, Condition X, Did NOT recover \u2717\",\n    \"Patient 5: Condition X, Treatment T, Recovered \u2713\",\n    \"Patient 6: Patient 7: Condition X, Treatment T, Recovered \u2713\",\n    \"Patient 7: Condition X, Treatment T, Recovered \u2713\",\n    \"Patient 8: Condition X, No treatment, Recovered \u2713\"\n]\n\n# Process each patient\ndef process_patient(s):\n    parts = s.split(\", \")\n    condition = parts[0]\n    treatment = parts[1]\n    outcome = parts[2]\n    return (condition, treatment, outcome)\n\npatients_processed = [process_patient(p) for p in patients]\n\n# Check if all patients with Treatment T recovered\nall_t_recovered = True\nfor p in patients_processed:\n    if p[1] == \"Treatment T\":\n        if p[2] != \"Recovered \u2713\":\n            all_t_recovered = False\n            break\n\n# Check if any patient without Treatment T recovered\nany_without_recovered = False\nfor p in patients_processed:\n    if p[1] != \"Treatment T\":\n        if p[2] == \"Recovered \u2713\":\n            any_without_received = True\n            break\n\n# Check if all patients without Treatment T did not recover\nall_without_did_not_recover = True\nfor p in patients_processed:\n    if p[1] != \"Treatment T\":\n        if p[2] == \"Recovered \u2713\":\n            all_without_did_not_recover = False\n            break\n\n# Now, analyze the claim\n# Claim: Treatment T guarantees recovery for Condition X patients.\n# So, for all Condition X patients, if they received Treatment T, then they recovered.\n# We need to check if this holds.\n\n# First, check if all Condition X with Treatment T recovered\nif not all_t_recovered:\n    print(\"The claim is false because not all Condition X patients with Treatment T recovered.\")\nelse:\n    # Now check if all Condition X without Treatment T did not recover\n    if all_without_did_not_recover:\n        print(\"The claim is true.\")\n    else:\n        print(\"The claim is false because some Condition X patients without Treatment T recovered.\")\n```\n\n### Output\nThe output is a Python script that prints whether the claim is true or false based on the given data.\n\nThe code processes each patient, checks whether all Condition X patients with Treatment T recovered, and whether all Condition X patients without Treatment T did not recover. Based on these checks, it determines the validity of the claim.\n\nThe final answer is:\n\\boxed{The claim is false.}\n```\n\n### Explanation\nThe code processes each patient to extract their condition, treatment, and outcome. It then checks two main points:\n1. Whether all patients who received Treatment T and had Condition X recovered.\n2. Whether all patients who had Condition X but did not receive Treatment T did not recover.\n\nIf both conditions are met, the claim holds true. If either condition is not met, the claim is false. In the given data, all Condition X patients with Treatment T recovered, but some without Treatment T also recovered, which violates the guarantee. Hence, the claim is false.\n```\n\n### Final Answer\nThe claim is false.\n\\boxed{The claim is false.}\n```",
+  "response_length": 3218,
+  "generation_time_ms": 55194,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"CondX \u2227 TreatT \u2192 Recovery\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "In the given data, all Condition X patients with Treatment T recovered, but some without Treatment T also recovered, which violates the guarantee. Hence, the claim is false"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-12: 'CondX \u2227 TreatT \u2192 Recovery' holds: False\n",
+        "problem_id": "SAV-12"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

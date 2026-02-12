@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-07",
+  "category": "sadhyasama",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Samshaya (Doubt Analysis)**\n\nThe theorem states that all prime numbers greater than 2 are odd. This is a fundamental concept in number theory, as primes are the building blocks of integers. The proof provided attempts to show that assuming a prime greater than 2 is even leads to a contradiction, thereby proving that such primes must be odd.\n\n### **Pramana (Sources of Knowledge)**\n\nThe sources of knowledge used in this proof are:\n- Definition of prime numbers.\n- Basic properties of even and odd numbers.\n- The divisibility rules and factors of numbers.\n\n### **Pancha Avayava (5-Member Syllogism)**\n\nThe five-member syllogism used in the proof is:\n1. Let p be a prime number greater than 2.\n2. Assume p is even. Then p = 2k for some integer k > 1.\n3. Since p = 2k, p is divisible by 2.\n4. Since p > 2 and p is divisible by 2, p is not prime (because it has a factor other than 1 and itself).\n5. This contradicts premise 1 (p is prime).\n6. Therefore, p is not even, so p is odd.\n\n### **Tarka (Counterfactual Reasoning)**\n\nThe proof uses counterfactual reasoning by assuming the opposite of what it wants to prove (that p is even) and then showing that this leads to a contradiction. This is a valid method in logical reasoning.\n\n### **Hetvabhasa (Fallacy Check)**\n\nThe proof does not contain any fallacies. The argument is logical and follows the rules of inference correctly.\n\n### **Nirnaya (Ascertainment)**\n\nBased on the analysis, the proof is valid and correctly demonstrates that all prime numbers greater than 2 are odd.\n\n### **Final Answer**\n\nThe proof is valid. All prime numbers greater than 2 are indeed odd.",
+  "response_length": 1636,
+  "generation_time_ms": 29774,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, the proof IS valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "</think>\n\n### **Samshaya (Doubt Analysis)**\n\nThe theorem states that all prime numbers greater than 2 are odd"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-07: Proof valid \u2014 not circular\n",
+        "problem_id": "SAD-07"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

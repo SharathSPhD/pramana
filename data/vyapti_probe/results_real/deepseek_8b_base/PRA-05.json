@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-05",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I have this problem with four researchers: Priya, Qadir, Ravi, and Sita. Each of them works in either Lab-North or Lab-South, and they each have a favorite beverage\u2014coffee or tea. I need to figure out which lab Ravi works in. Let me go through the information step by step.\n\nFirst, let's list out all the given facts:\n\n1. Priya works in Lab-North.\n2. Qadir works in Lab-South.\n3. Ravi drinks coffee.\n4. Sita works in Lab-North.\n5. Priya drinks tea.\n\nI need to find out where Ravi works. Hmm, okay. So, let's see what we can deduce from the given information.\n\nStarting with fact 1: Priya is in Lab-North. Fact 4 says Sita is also in Lab-North. So, both Priya and Sita are in the same lab, which is Lab-North. That means Lab-North has at least two people: Priya and Sita. \n\nFact 2 tells me that Qadir is in Lab-South. So, Lab-South has at least one person: Qadir. \n\nNow, the four researchers are Priya, Qadir, Ravi, and Sita. So, we have four people total. Two are in Lab-North (Priya and Sita), and one is in Lab-South (Qadir). That leaves Ravi. Since there are only two labs, Ravi must be in either Lab-North or Lab-South. \n\nBut let's see if we can figure out more details. Fact 5 says Priya drinks tea. So, Priya's beverage is tea. Fact 3 says Ravi drinks coffee. So, Ravi's beverage is coffee. \n\nWait, so we have two people in Lab-North: Priya and Sita. We know Priya drinks tea, but we don't know what Sita drinks. Similarly, in Lab-South, we have Qadir, and we don't know what he drinks. \n\nBut Ravi is the only one left, and we need to figure out where Ravi works. Let me think about the possible distribution. \n\nSince there are four researchers and two labs, each lab must have two people. So, Lab-North has Priya and Sita, which is two people. Lab-South must have Qadir and someone else. That someone else must be Ravi. \n\nSo, Ravi is in Lab-South. \n\nWait, let me double-check that. If Ravi is in Lab-South, then Lab-South has Qadir and Ravi. That makes two people, which is correct. Lab-North has Priya and Sita, also two people. \n\nBut does that affect the beverages? Let's see. Priya drinks tea, Ravi drinks coffee. So, in Lab-North, we have tea and maybe coffee? Sita's beverage isn't specified. In Lab-South, Qadir's beverage isn't specified, but Ravi drinks coffee. \n\nIs there any conflict here? I don't think so. The only thing is that Sita's beverage isn't given, but since we don't need it for the question, it doesn't matter. \n\nSo, putting it all together: \n\n- Lab-North: Priya (tea) and Sita (unknown beverage)\n- Lab-South: Qadir (unknown beverage) and Ravi (coffee)\n\nTherefore, Ravi works in Lab-South. \n\nWait, hold on. Let me make sure I didn't miss anything. The problem only asks about Ravi's lab, not about the others' beverages. So, as long as Ravi is in a lab with Qadir, which is Lab-South, that's the answer. \n\nI think that's solid. No contradictions in the information provided. So, yeah, Ravi is in Lab-South.\n</think>\n\nRavi works in Lab-South.\n\n**Step-by-Step Explanation:**\n\n1. **Identify the Labs and Researchers:**\n   - There are four researchers: Priya, Qadir, Ravi, and Sita.\n   - Each works in either Lab-North or Lab-South.\n\n2. **Determine the Lab Assignments:**\n   - From the given information:\n     - Priya works in Lab-North.\n     - Qadir works in Lab-South.\n     - Sita works in Lab-North.\n   - Therefore:\n     - Lab-North has Priya and Sita.\n     - Lab-South has Qadir.\n\n3. **Identify the Remaining Researcher:**\n   - The four researchers are Priya, Qadir, Ravi, and Sita.\n   - Priya, Sita, and Qadir are assigned to the labs.\n   - The only researcher left is Ravi.\n\n4. **Assign Ravi to the Remaining Lab:**\n   - Since Lab-North already has two researchers (Priya and Sita), Ravi must be in Lab-South to complete the two-person requirement for that lab.\n\n5. **Conclusion:**\n   - Ravi works in Lab-South.\n\n**Answer:** Ravi works in Lab-South.",
+  "response_length": 3890,
+  "generation_time_ms": 79937,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot determine Ravi's lab."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "If Ravi is in Lab-South, then Lab-South has Qadir and Ravi. That makes two people, which is correct. Lab-North has Priya and Sita, also two people. \n\nBut does that affect the beverages? Let's see"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-05: Ravi can be North: True, South: True\n",
+        "problem_id": "PRA-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "prakaranasama",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: prakaranasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "prakaranasama",
+  "hetvabhasa_used_fallback": true
+}

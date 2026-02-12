@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-05-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Solution:**\n\nWe will analyze the problem using the **Nyaya** methodology, specifically applying the six phases to reach a definitive conclusion.\n\n---\n\n### **1. Samshaya (Doubt Analysis)**\n\nWe are asked whether **every employee listed** reports directly or indirectly to the CEO. Let's list out the employees and their reporting relationships:\n\n- **VP-Sales**:  \n  - **Anita** reports to VP-Sales.  \n  - **Bhaskar** reports to VP-Sales.\n\n- **VP-Engineering**:  \n  - **Chandra** reports to VP-Engineering.  \n  - **Deepak** reports to VP-Engineering.\n\n- **Director-Operations**:  \n  - **Ekta** reports to Director-Operations.  \n  - Director-Operations reports to **COO**.\n\n- **VP-Finance**:  \n  - **Faizan** reports to VP-Finance.\n\n- **COO**:  \n  - **COO** reports directly to **CEO**.\n\nFrom this, we observe that **COO** and **VPs** (Sales, Engineering, Finance) all report directly to **CEO**. However, **Director-Operations** reports to **COO**, and **Ekta** reports to Director-Operations. This creates a chain of reporting: **Ekta \u2192 Director-Operations \u2192 COO \u2192 CEO**.\n\nThus, **Ekta** indirectly reports to the CEO through multiple levels.\n\n---\n\n### **2. Pramana (Sources of Knowledge)**\n\nThe information provided is based on the hierarchical reporting structure, which is a reliable source of knowledge about the relationships.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**\n\nWe can apply the syllogistic reasoning to understand the reporting relationships:\n\n- **Major Premise**: All VPs and the COO report to the CEO.  \n  - VP-Sales, VP-Engineering, VP-Finance, and COO all report to CEO.\n\n- **Minor Premise**: Director-Operations reports to COO.  \n  - Director-Operations is a subordinate of COO.\n\n- **Conclusion**: Therefore, Director-Operations also reports to CEO (through COO).\n\nSimilarly, Ekta, who reports to Director-Operations, indirectly reports to CEO.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**\n\nLet's consider if any employee does **not** report to the CEO:\n\n- If Ekta does not report to the CEO, this would contradict the established hierarchy where Director-Operations reports to COO, and Ekta reports to Director-Operations. Hence, Ekta must report to the CEO indirectly.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**\n\nWe must ensure that our reasoning is free from fallacies:\n\n- **Fallacy of Omission**: We have accounted for all employees listed and their reporting chains.\n- **Fallacy of Composition**: Since each subordinate reports up the chain, the entire group ultimately reports to the CEO.\n\n---\n\n### **6. Nirnaya (Ascertainment)**\n\nAfter analyzing all phases, we conclude that **every employee listed** reports directly or indirectly to the CEO.\n\n---\n\n### **Final Answer:**\n\n\\boxed{Yes}",
+  "response_length": 2741,
+  "generation_time_ms": 48995,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all employees report to CEO."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "From this, we observe that **COO** and **VPs** (Sales, Engineering, Finance) all report directly to **CEO**. However, **Director-Operations** reports to **COO**, and **Ekta** reports to Director-Opera"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-05-C: Ekta can NOT report to CEO: False\n",
+        "problem_id": "SAV-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

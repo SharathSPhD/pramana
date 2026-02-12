@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this problem about shipping packages, and I need to figure out if the clerk's rule is correct. Let me try to break it down step by step.\n\nFirst, let me list out all the packages with their details:\n\n1. Package 1: Heavy, Domestic \u2192 $15\n2. Package 2: Heavy, Domestic \u2192 $15\n3. Package 3: Heavy, International \u2192 $15\n4. Package 4: Heavy, International \u2192 $15\n5. Package 5: Heavy, Domestic \u2192 $15\n6. Package 6: Heavy, International \u2192 $25\n7. Package 7: Light, Domestic \u2192 $8\n8. Package 8: Light, International \u2192 $12\n\nThe clerk's rule is that all Heavy packages cost $15 to ship. So, I need to check if this rule holds true for all Heavy packages without any exceptions.\n\nLet me start by categorizing the packages based on their weight and destination.\n\nHeavy packages:\n- Packages 1, 2, 3, 4, 5: All Domestic or International, but all cost $15.\n- Package 6: Heavy, International \u2192 $25\n\nWait, so Package 6 is Heavy and International, but it costs $25 instead of $15. That seems like an exception to the clerk's rule. So, the rule as stated isn't entirely accurate because there's at least one Heavy package that doesn't cost $15.\n\nBut maybe I'm missing something. Let me double-check the problem statement. It says the shipping costs are listed for each package, so Package 6 is indeed $25. So, the clerk's rule is incorrect because it doesn't account for Package 6.\n\nHold on, maybe the clerk is only referring to Domestic Heavy packages costing $15. But the rule says \"All Heavy packages cost $15,\" which includes International ones as well. Since Package 6 is Heavy and International but costs more, the rule is wrong.\n\nAlternatively, maybe the clerk is considering that all Heavy packages except for some special case cost $15, but the rule as stated is too broad. So, the rule isn't correct because it's not universally true for all Heavy packages.\n\nI should also check if there are any other Heavy packages that might have different costs. Looking back, all other Heavy packages (1-5) are $15, but Package 6 is $25. So, yes, that's the only exception.\n\nTherefore, the clerk's rule is incorrect because it doesn't hold for all Heavy packages. There's at least one Heavy package that doesn't cost $15.\n</think>\n\nThe clerk's rule is not correct because it fails to account for Package 6, which is a Heavy package with an International destination but costs $25 instead of the usual $15. This exception invalidates the universal rule that all Heavy packages cost $15.\n\n**Answer:** The rule is incorrect because Package 6, a Heavy package with an International destination, costs $25.",
+  "response_length": 2588,
+  "generation_time_ms": 45129,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"Heavy \u2192 $15\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Package 8: Light, International \u2192 $12\n\nThe clerk's rule is that all Heavy packages cost $15 to ship. So, I need to check if this rule holds true for all Heavy packages without any exceptions"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14: 'Heavy \u2192 $15' holds: False\n",
+        "problem_id": "SAV-14"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

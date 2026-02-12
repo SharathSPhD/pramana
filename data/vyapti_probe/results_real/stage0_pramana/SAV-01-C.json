@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-01-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "## Step 1: Samshaya (Doubt Analysis)\nTo begin, we must analyze the problem and identify any doubts or uncertainties. In this case, the problem does not explicitly state any doubts or uncertainties, so we can proceed with the assumption that the information provided is accurate.\n\n## Step 2: Pramana (Sources of Knowledge)\nNext, we need to identify the sources of knowledge for this problem. The problem states that six employees work across two departments: Engineering and Marketing. This information is provided, and we can assume that it is accurate.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nNow, we can apply the 5-member syllogism to analyze the problem. The 5-member syllogism consists of five steps:\n\n1. First, we identify the subject (the employees) and the predicate (the departments).\n2. Next, we identify the middle term (the department that the employees work in).\n3. Then, we identify the fourth term (the department that the employees do not work in).\n4. After that, we identify the fifth term (the department that the employees work in, but not the one mentioned in the predicate).\n5. Finally, we apply the syllogism to arrive at a conclusion.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nTo apply the counterfactual reasoning step, we must consider what would happen if the employees worked in the opposite department. However, the problem does not provide enough information to apply counterfactual reasoning.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nTo check for fallacies, we must examine the argument for any logical errors. In this case, the argument is straightforward, and there are no obvious fallacies.\n\n## Step 6: Nirnaya (Ascertainment)\nFinally, we can arrive at a conclusion based on the analysis. Since the problem does not provide enough information to determine which department the employees work in, we cannot make a definitive conclusion.\n\nThe final answer is: $\\boxed{0}$",
+  "response_length": 1911,
+  "generation_time_ms": 16592,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Gita must work remotely."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-01-C: Gita can be non-remote: False\n",
+        "problem_id": "SAV-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

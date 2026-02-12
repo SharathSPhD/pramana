@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-03",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\ndef solve():\n    # Test cases\n    test_cases = [\n        # Test 1: S1 ON, S2 ON, S3 ON \u2192 Light ON\n        (True, True, True, True, True, True),  # S1, S2, S3, S4, S5, Light\n        # Test 2: S1 ON, S2 ON, S3 OFF \u2192 Light ON\n        (True, True, False, True, True, True),\n        # Test 3: S1 ON, S2 OFF, S3 ON \u2192 Light ON\n        (True, False, True, True, True, True),\n        # Test 4: S1 ON, S2 OFF, S3 OFF \u2192 Light OFF\n        (True, False, False, True, True, False),\n        # Test 5: S1 OFF, S2 ON, S3 ON \u2192 Light OFF\n        (False, True, True, True, True, False),\n    ]\n    \n    # Hypothesis: Whenever S1 is ON, the light is ON.\n    # So, the rule is: if S1 is ON, then Light is ON.\n    \n    # Check all test cases against the hypothesis\n    for case in test_cases:\n        s1, s2, s3, s4, s5, light = case\n        # The hypothesis says: if S1 is ON, then Light is ON.\n        # So, if S1 is ON, light must be ON.\n        # If S1 is OFF, light can be anything.\n        if s1:\n            if light != True:\n                # Hypothesis is violated\n                return False\n        # Else, if S1 is OFF, no constraint on light\n        # So, the hypothesis is valid for this case\n    return True\n\nsolve()\n```\n### Explanation\nThe code checks each test case against the hypothesis. If S1 is ON, the light must be ON according to the hypothesis. If S1 is OFF, the light can be either ON or OFF without violating the hypothesis. The function returns True if all test cases are consistent with the hypothesis, otherwise False.\n\n### Analysis\n1. **Samshaya (Doubt Analysis):** We have conflicting results where sometimes the light is ON and sometimes OFF based on the switches.\n2. **Pramana (Sources of Knowledge):** The test results are the primary source of knowledge.\n3. **Pancha Avayava (5-Member Syllogism):** We need to form a syllogism to test the hypothesis.\n4. **Tarka (Counterfactual Reasoning):** Consider cases where the hypothesis might not hold.\n5. **Hetvabhasa (Fallacy Check):** Ensure the hypothesis doesn't fall into logical errors.\n6. **Nirnaya (Ascertainment):** After analysis, conclude whether the hypothesis is valid.\n\nThe hypothesis is tested against each test case. If S1 is ON, the light must be ON. All test cases comply with this, so the hypothesis holds.\n```\n\n### Final Answer\nThe hypothesis is valid.\n```python\n# The final answer is \\boxed{True}\n```\nThe hypothesis is valid because in all test cases where S1 is ON, the light is ON. There are no test cases where S1 is ON and the light is OFF, so the hypothesis holds.\n```",
+  "response_length": 2577,
+  "generation_time_ms": 52518,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"S1=ON \u2192 Light=ON\" is NOT valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "# Check all test cases against the hypothesis\n    for case in test_cases:\n        s1, s2, s3, s4, s5, light = case\n        # The hypothesis says: if S1 is ON, then Light is ON"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-03: Vy\u0101pti 'S1\u2192Light' holds: False\n",
+        "problem_id": "SAV-03"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

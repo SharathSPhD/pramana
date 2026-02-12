@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-05-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "Please follow the format instructions.\n\n\n## Step 1: Samshaya (Doubt Analysis)\nWe need to identify the elements of the problem that are uncertain or unclear. In this case, the problem is clear, but we need to analyze the given sets and the policy to understand the eligibility criteria.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe have two sets of information:\n- Set A: Students who play sports = {p, q, r, s, t}\n- Set B: Students who are on the honor roll = {q, r, u, v}\n- The policy states: \"Students who play sports AND are on the honor roll are eligible for the athletics scholarship.\"\n\nThe sources of knowledge are the sets A and B, and the policy statement.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nTo determine which students are eligible for the athletics scholarship, we need to apply the policy statement to the sets A and B. We can use the following 5-member syllogism:\n1. All students who play sports are in set A.\n2. All students who are on the honor roll are in set B.\n3. Students who play sports AND are on the honor roll are in both set A and set B.\n4. Students who are in both set A and set B are eligible for the athletics scholarship.\n5. Students who are in both set A and set B are {q, r}.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider what would happen if a student is in set A but not in set B, or if a student is in set B but not in set A. If a student is in set A but not in set B, they are not eligible for the athletics scholarship. If a student is in set B but not in set A, they are not eligible for the athletics scholarship either.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies in our reasoning. In this case, we have applied the policy statement correctly to the sets A and B. There are no fallacies in our reasoning.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we can conclude that the students who are eligible for the athletics scholarship are those who are in both set A and set B, which are {q, r}.\n\nThe final answer is: $\\boxed{\\{q, r\\}}$",
+  "response_length": 2041,
+  "generation_time_ms": 20030,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "{q, r} eligible for scholarship."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All students who play sports are in set A"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-05-C: Can pq avoid scholarship? False\nVIR-05-C: Eligible: pq, pr\n",
+        "problem_id": "VIR-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

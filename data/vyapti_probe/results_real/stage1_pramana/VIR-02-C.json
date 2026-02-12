@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-02-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Syllogism:\n**Pratijna (Thesis):** Is Product P rejected?\n\n**Hypothesis (Hetu):** The product is rejected if it is NOT the case that BOTH Test-A passes AND Test-B passes.\n\n**Udaharana (Example):** Consider a product that fails both Test-A and Test-B.\n\n**Savyaya (Comparison):** If a product fails both Test-A and Test-B, then it is NOT the case that BOTH Test-A passes AND Test-B passes.\n\n**Nigamana (Inference):** Therefore, the product is rejected.\n\n**Pratyaksha (Perception):** A product that fails both Test-A and Test-B is observed to be rejected.\n\n**Svarupa (Correspondence):** The inference corresponds to the observed reality.\n\n**Pratyabhijna (Recognition):** This is a valid inference.\n\n**Nirnaya (Ascertainment):** The product is rejected.\n---\n\n### Solution Code:\n```python\ndef is_product_rejected(test_a_passes, test_b_passes):\n    # The product is rejected if it is NOT the case that BOTH Test-A passes AND Test-B passes.\n    # So, the product is rejected if (Test-A does not pass OR Test-B does not pass)\n    return not (test_a_passes and test_b_passes)\n```\n\n### Test Cases:\n1. Test Case 1:\n   - Test-A passes: True\n   - Test-B passes: True\n   - Expected: False (Not rejected)\n   - Output: False\n\n2. Test Case 2:\n   - Test-A passes: False\n   - Test-B passes: True\n   - Expected: True (Rejected)\n   - Output: True\n\n3. Test Case 3:\n   - Test-A passes: True\n   - Test-B passes: False\n   - Expected: True (Rejected)\n   - Output: True\n\n4. Test Case 4:\n   - Test-A passes: False\n   - Test-B passes: False\n   - Expected: True (Rejected)\n   - Output: True\n\n5. Test Case 5:\n   - Test-A passes: True\n   - Test-B passes: True\n   - Expected: False (Not rejected)\n   - Output: False\n\n6. Test Case 6:\n   - Test-A passes: False\n   - Test-B passes: False\n   - Expected: True (Rejected)\n   - Output: True\n```\n\n### Explanation:\nThe function `is_product_rejected` checks whether the product is rejected based on the logical condition provided. It returns `True` if either Test-A fails or Test-B fails (or both), and `False` otherwise. This aligns with the problem's requirement that the product is rejected if it is NOT the case that both tests pass. The test cases verify the function's correctness across all possible combinations of test outcomes.",
+  "response_length": 2258,
+  "generation_time_ms": 43409,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, rejected."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Savyaya (Comparison):** If a product fails both Test-A and Test-B, then it is NOT the case that BOTH Test-A passes AND Test-B passes.\n\n**Nigamana (Inference):** Therefore, the product is rejected"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-02-C: Can product NOT be rejected? False\n",
+        "problem_id": "VIR-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

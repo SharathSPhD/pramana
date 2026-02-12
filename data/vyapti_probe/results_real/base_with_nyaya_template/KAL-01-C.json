@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\nLet's analyze the problem step-by-step using the **Nyaya** methodology.\n\n---\n\n### **1. Samshaya (Doubt Analysis)**\nThe question is: How many vacation days does Employee #5501, a non-probationary Engineering employee, receive?\n\nThere are conflicting rules provided:\n- **General Rule (Section 1):** All employees receive 15 vacation days per year.\n- **Department Override (Section 3):** Engineering department employees receive 20 vacation days per year.\n- **Individual Exception (Section 5):** Employee #4472 (Engineering) receives 10 vacation days due to probationary period.\n\n---\n\n### **2. Pramana (Sources of Knowledge)**\nThe sources of knowledge are:\n- **General Rule (Section 1):** A company-wide policy stating all employees receive 15 vacation days.\n- **Department Override (Section 3):** A specific rule for the Engineering department, overriding the general rule.\n- **Individual Exception (Section 5):** A specific rule for Employee #4472, which may override both the general and departmental rules.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**\nWe need to apply the **Syllogism** to determine the correct number of vacation days for Employee #5501.\n\n**Syllogism Structure:**\n- **Major Premise:** All employees receive 15 vacation days (General Rule).\n- **Minor Premise:** Engineering employees receive 20 vacation days (Department Override).\n- **Conclusion:** Therefore, Engineering employees receive 20 vacation days.\n\nHowever, the **Individual Exception** complicates this syllogism. Employee #4472, an Engineering employee, is exceptions due to probation, receiving only 10 vacation days.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**\nLet's consider counterfactuals:\n- If Employee #5501 is not probationary, does the Individual Exception apply?\n  - No, because the exception specifically mentions Employee #4472.\n- If the Department Override does not exist, would the General Rule apply?\n  - Yes, but the Department Override takes precedence.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**\nCheck for fallacies:\n- **Equivocation:** The rules are clear; there's no ambiguity in the wording.\n- **Omission:** No relevant information is missing.\n- **Accidental Conversion:** No misapplication of terms.\n\n---\n\n### **6. Nirnaya (Ascertainment)**\nBased on the analysis:\n- **General Rule** applies to all employees unless overridden.\n- **Department Override** specifically applies to Engineering employees, granting them 20 vacation days.\n- **Individual Exception** only applies to Employee #4472 and does not affect other Engineering employees.\n\n**Conclusion:** Employee #5501, a non-probationary Engineering employee, receives **20 vacation days** per year.\n\n---\n\n**Final Answer:**\n\\boxed{20}",
+  "response_length": 2715,
+  "generation_time_ms": 44995,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "20 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01-C: Vacation days for #5501: 20\n",
+        "problem_id": "KAL-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

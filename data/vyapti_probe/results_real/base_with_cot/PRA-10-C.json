@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this problem where three friends\u2014Jun, Kira, and Lev\u2014each order one dish at a restaurant. The dishes available are pasta, sushi, or salad, and each person orders a different dish. There are three statements given:\n\n1. Jun does not order pasta.\n2. Kira orders sushi.\n3. Lev does not order salad.\n\nI need to figure out what each person orders. Let me try to break this down step by step.\n\nFirst, let's list out the people: Jun, Kira, Lev. Each of them orders one of the three dishes: pasta, sushi, or salad. Also, each person orders a different dish, so no two people can have the same dish. That means we have to assign each dish to one person without any overlaps.\n\nNow, let's go through the given information one by one.\n\nStatement 1: Jun does not order pasta. So, Jun's dish is either sushi or salad.\n\nStatement 2: Kira orders sushi. So, Kira's dish is definitely sushi. Since each person has a different dish, sushi is taken by Kira, so Jun and Lev can't have sushi.\n\nStatement 3: Lev does not order salad. So, Lev's dish is either pasta or sushi. But wait, sushi is already taken by Kira, so Lev must be ordering pasta. Because sushi is out, and Lev can't have salad either. So, Lev must have pasta.\n\nSo, let me summarize:\n\n- Kira has sushi (from statement 2).\n- Lev cannot have salad (statement 3), and since sushi is taken, Lev must have pasta (statement 1 indirectly affects Lev? Wait, no. Statement 1 is about Jun, not Lev. So, Lev's options are pasta or sushi, but sushi is taken, so Lev must have pasta.\n\nSo, Lev has pasta.\n\nNow, going back to Jun. Statement 1 says Jun does not order pasta. So, Jun must have either sushi or salad. But sushi is already taken by Kira, so Jun must have salad.\n\nSo, putting it all together:\n\n- Kira: sushi\n- Lev: pasta\n- Jun: salad\n\nLet me double-check to make sure there are no overlaps and that all constraints are satisfied.\n\n1. Jun does not order pasta: Correct, Jun has salad.\n2. Kira orders sushi: Correct.\n3. Lev does not order salad: Correct, Lev has pasta.\n\nAlso, each person has a different dish: pasta, sushi, salad. All three are covered without any duplicates. So, that seems to fit.\n\nWait, but let me think again. Is there any possibility that I missed something? For example, could Lev have sushi? But no, because Kira already ordered sushi, and each person must have a different dish. So, Lev can't have sushi. Therefore, Lev must have pasta. Then, Jun can't have pasta, so Jun must have salad.\n\nYes, that seems to hold up. So, the assignments are:\n\n- Jun: Salad\n- Kira: Sushi\n- Lev: Pasta\n\nI don't see any contradictions or exceptions here. Each person's dish is unique, and all the given statements are satisfied.\n</think>\n\nEach person orders a different dish, and the constraints are satisfied as follows:\n\n- **Kira** orders **sushi**.\n- **Lev** does not order **salad**, so he must order **pasta**.\n- **Jun** does not order **pasta**, and since **sushi** is taken by **Kira**, **Jun** must order **salad**.\n\n**Final Answer:**\n\n- Jun orders salad.\n- Kira orders sushi.\n- Lev orders pasta.",
+  "response_length": 3064,
+  "generation_time_ms": 55928,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Kira=sushi, Lev=pasta, Jun=salad."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "So, putting it all together:\n\n- Kira: sushi\n- Lev: pasta\n- Jun: salad\n\nLet me double-check to make sure there are no overlaps and that all constraints are satisfied"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10-C: Lev=pasta, Jun=salad\n",
+        "problem_id": "PRA-10-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

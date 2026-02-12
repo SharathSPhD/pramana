@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Determine the priority of the rules\nThe rules are listed in order of priority, with later rules overriding earlier ones. So, we need to apply the rules in the order they appear in the manual.\n\n## Step 2: Apply the General Rule\nThe General Rule states that all employees receive 15 vacation days per year. Since Employee #4472 is an employee, they would normally receive 15 vacation days per year.\n\n## Step 3: Apply the Department Override\nThe Department Override states that Engineering department employees receive 20 vacation days per year. However, this rule only applies to employees in the Engineering department, and Employee #4472 is not explicitly stated to be in the Engineering department. We need to consider the Individual Exception rule as well.\n\n## Step 4: Apply the Individual Exception\nThe Individual Exception states that Employee #4472 receives 10 vacation days per year due to a probationary period. This rule overrides the Department Override rule, as it specifically applies to Employee #4472.\n\n## Step 5: Determine the final answer\nSince the Individual Exception rule overrides the Department Override rule, Employee #4472 receives 10 vacation days per year.\n\nThe final answer is: $\\boxed{10}$",
+  "response_length": 1226,
+  "generation_time_ms": 9689,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "10 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "## Step 2: Apply the General Rule\nThe General Rule states that all employees receive 15 vacation days per year. Since Employee #4472 is an employee, they would normally receive 15 vacation days per ye"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01: Vacation days for #4472: 10\n",
+        "problem_id": "KAL-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

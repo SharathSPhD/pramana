@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-07-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\ndef is_rule_valid(compounds, element, reaction):\n    # Compound is a tuple (name, contains_element, reacts)\n    # Returns True if the rule is valid, False otherwise\n    # Rule: All compounds containing element X undergo reaction.\n    # So, for all compounds that contain X, they must react.\n    # For all compounds that do not contain X, they may or may not react.\n\n    # Check if any compound that contains X does not react\n    for comp in compounds:\n        name, has_x, reacts = comp\n        if has_x:\n            if not reacts:\n                return False\n    # Also check if any compound that does not contain X reacts\n    # Because if a compound without X reacts, the rule is invalid\n    for comp in compounds:\n        name, has_x, reacts = comp\n        if not has_x:\n            if reacts:\n                return False\n    return True\n```\n\n### Solution Code Explanation\nThe function `is_rule_valid` takes three parameters: `compounds`, `element`, and `reaction`. It iterates through each compound to check two main things:\n1. **All compounds containing the element must react**: If any compound containing the element does not react, the rule is invalid.\n2. **No compound without the element should react**: If any compound without the element reacts, the rule is invalid.\nIf both conditions are satisfied, the rule is considered valid, and the function returns `True`. Otherwise, it returns `False`.\n\n### Analysis:\nThe rule is \"All compounds containing element X undergo this reaction.\" To validate this, we need to ensure:\n- **Only X-containing compounds react**: If any non-X compound reacts, the rule is broken.\n- **No X-containing compound fails to react**: If any X compound doesn't react, the rule is broken.\n\nIn the given data:\n- All X-containing compounds react (\u03b1 to \u03b5), and the non-X compound \u03b6 does not react. So, the rule holds in this specific case.\n\nHowever, the function's logic ensures that this holds for any dataset, not just the given example. It checks both conditions comprehensively.\n```\n\n### Final Answer\nThe rule is valid because all compounds containing element X react, and no compound without element X reacts.\n```python\n# The rule is valid.\nis_rule_valid([\n    (\"\u03b1\", True, True),\n    (\"\u03b2\", True, True),\n    (\"\u03b3\", True, True),\n    (\"\u03b4\", True, True),\n    (\"\u03b5\", True, True),\n    (\"\u03b6\", False, False),\n], \"X\", \"\u2713\") => True\n```\n```",
+  "response_length": 2390,
+  "generation_time_ms": 39753,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, \"contains X \u2192 reacts\" holds in data."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "# So, for all compounds that contain X, they must react"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-07-C: \u03b3 can fail to react? False\n",
+        "problem_id": "SAV-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

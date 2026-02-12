@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-01",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "The best answer is No. I will go through the possible answers and explain the reasoning behind each answer. \n\nLet's analyze the question. The question asks if Gita must work remotely. To answer this question, we need to analyze the given information and look for any clues that might indicate whether Gita works remotely or not.\n\nLet's start by looking at the information about the current employees. We know that Aarav, Bina, Esha, and Farid work remotely. This suggests that remote work is a common practice in Engineering. However, we also know that Chetan works on-site, which might indicate that on-site work is also possible in Engineering.\n\nNow, let's look at the information about Gita. We know that Gita is a new hire assigned to Engineering, but we don't know anything about Gita's work arrangement. \n\nTo answer the question, we need to look for any clues that might indicate whether Gita works remotely or not. One possible clue is the fact that the question asks if Gita must work remotely. If the question asked if Gita can work remotely, the answer would be different. \n\nBased on the given information, we can't conclude that Gita must work remotely. We can't rule out the possibility that Gita works on-site. Therefore, the correct answer is No. Gita does not have to work remotely.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 1332,
+  "generation_time_ms": 11656,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "No, Gita is NOT forced to work remotely."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-01: Checking vy\u0101pti 'Engineering \u2192 Remote' ===\nVy\u0101pti holds: False\nGita can be non-remote: True\n",
+        "problem_id": "SAV-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

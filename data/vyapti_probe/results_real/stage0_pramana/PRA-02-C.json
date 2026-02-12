@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-02-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** The answer should be in the format of a single sentence.\n\n## Step 1: Samshaya (Doubt Analysis)\nThe problem does not present any doubts or uncertainties that need to be addressed. The premises are given, and we are to draw a valid conclusion from them.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe premises are based on the following sources of knowledge:\n1. All surgeons in this hospital have completed a residency program. (This premise is based on a general rule or universal statement.)\n2. Dr. Kapoor is a surgeon in this hospital. (This premise is based on a specific instance or particular fact.)\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nTo draw a valid conclusion, we need to construct a 5-member syllogism:\n1. All surgeons in this hospital have completed a residency program. (Universal Affirmative)\n2. Dr. Kapoor is a surgeon in this hospital. (Universal Affirmative)\n3. All surgeons who have completed a residency program are qualified surgeons. (Universal Affirmative)\n4. Dr. Kapoor has completed a residency program. (Universal Affirmative)\n5. Therefore, Dr. Kapoor is a qualified surgeon. (Universal Affirmative)\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider counterfactual scenarios to ensure the validity of our conclusion:\n- If Dr. Kapoor were not a surgeon in this hospital, then he would not have completed a residency program.\n- If Dr. Kapoor had not completed a residency program, then he would not be a qualified surgeon.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies in our reasoning:\n- Our reasoning is based on universal affirmative premises and a valid syllogism.\n- There are no fallacies in our reasoning.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we can conclude that Dr. Kapoor is a qualified surgeon.\n\nThe final answer is: Dr. Kapoor is a qualified surgeon.",
+  "response_length": 1864,
+  "generation_time_ms": 16860,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Dr. Kapoor completed a residency program."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All surgeons in this hospital have completed a residency program"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-02-C: Can Kapoor NOT have completed residency? False\n",
+        "problem_id": "PRA-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

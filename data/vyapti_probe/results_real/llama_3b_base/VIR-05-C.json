@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-05-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Identify the sets and the condition for eligibility\nSet A consists of students who play sports, and Set B consists of students who are on the honor roll. The condition for eligibility is that a student must be in both Set A and Set B to be eligible for the athletics scholarship.\n\n## Step 2: Determine the intersection of Set A and Set B\nTo find the students who are eligible for the athletics scholarship, we need to identify the students who are common to both Set A (students who play sports) and Set B (students who are on the honor roll). This is the intersection of Set A and Set B.\n\n## Step 3: List the common elements\nThe common elements between Set A and Set B are q and r, as they are the only students who appear in both sets.\n\nThe final answer is: $\\boxed{\\{q, r\\}}$",
+  "response_length": 789,
+  "generation_time_ms": 7014,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "{q, r} eligible for scholarship."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-05-C: Can pq avoid scholarship? False\nVIR-05-C: Eligible: pq, pr\n",
+        "problem_id": "VIR-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

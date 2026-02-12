@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-05-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I have this problem with four researchers: Priya, Qadir, Ravi, and Sita. Each of them works in one of two labs: Lab-North or Lab-South. I need to figure out which lab Ravi is working in based on the given information.\n\nLet me list out the facts provided:\n\n1. Priya works in Lab-North.\n2. Qadir works in Lab-South.\n3. Sita works in Lab-North.\n4. Lab-South has exactly two researchers.\n\nAlright, so I need to determine where Ravi is working. Let's break this down step by step.\n\nFirst, let's note down who is in which lab based on the given information. \n\n- Priya is in Lab-North.\n- Qadir is in Lab-South.\n- Sita is in Lab-North.\n\nSo, from this, we know that at least two people are in Lab-North: Priya and Sita. Qadir is in Lab-South. Now, the fourth point says that Lab-South has exactly two researchers. Since Qadir is already in Lab-South, there must be one more person in Lab-South.\n\nThe remaining researcher is Ravi. So, if Lab-South has exactly two researchers, and Qadir is one, Ravi must be the other. Therefore, Ravi is in Lab-South.\n\nWait, let me double-check to make sure I didn't miss anything. So, the labs are either North or South. We have four researchers in total.\n\n- Priya: North\n- Qadir: South\n- Sita: North\n- Ravi: ?\n\nSince Lab-South has exactly two researchers, and Qadir is one, Ravi must be the second. So, Ravi is in South.\n\nIs there any possibility that Ravi could be in North? Let's see. If Ravi were in North, then Lab-North would have three researchers (Priya, Sita, Ravi), and Lab-South would have only Qadir. But the problem states that Lab-South has exactly two researchers. Therefore, Ravi can't be in North because that would leave only one researcher in South, which contradicts the given information.\n\nSo, Ravi must be in Lab-South. There's no other possibility because if Ravi were in North, it would violate the condition about Lab-South having exactly two researchers.\n\nI don't see any exceptions or alternative scenarios here. The information given is straightforward. Each piece of information leads directly to the conclusion without any ambiguity. So, I'm confident that Ravi is working in Lab-South.\n</think>\n\nRavi works in Lab-South.\n\n**Step-by-Step Explanation:**\n\n1. **Identify the Researchers and Their Labs:**\n   - Priya: Lab-North\n   - Qadir: Lab-South\n   - Sita: Lab-North\n   - Ravi: Unknown\n\n2. **Determine the Number of Researchers in Each Lab:**\n   - From the given information, Lab-South must have exactly two researchers.\n\n3. **Assign Ravi to Lab-South:**\n   - Since Qadir is already in Lab-South, Ravi must be the second researcher there.\n\n4. **Verify No Other Possibilities Exist:**\n   - If Ravi were in Lab-North, Lab-South would only have Qadir, which contradicts the condition of having two researchers.\n\n**Conclusion:** Ravi works in Lab-South.",
+  "response_length": 2813,
+  "generation_time_ms": 52770,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Ravi works in Lab-South."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "If Ravi were in North, then Lab-North would have three researchers (Priya, Sita, Ravi), and Lab-South would have only Qadir. But the problem states that Lab-South has exactly two researchers. Therefor"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-05-C: Ravi = South: 1 == 1\n",
+        "problem_id": "PRA-05-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

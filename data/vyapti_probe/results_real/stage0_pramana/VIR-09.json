@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-09",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "Do not use any external resources or information beyond the problem statement.\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nThe problem involves a conditional statement: \"If a client case is classified as high-priority, then a senior partner is assigned.\" We are given that Case #247 has NOT been classified as high-priority. We need to analyze whether this information allows us to conclude that no senior partner is assigned to Case #247.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe source of knowledge in this problem is the law firm's policy. This policy is a rule that governs the assignment of senior partners to client cases. We can rely on this policy as a basis for our analysis.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can construct a 5-member syllogism to analyze this problem:\n\n1. All high-priority cases are assigned to senior partners (Rule).\n2. Case #247 is NOT a high-priority case (Given).\n3. Therefore, Case #247 is NOT assigned to a senior partner (Rule 1, Modus Tollens).\n4. However, we cannot conclude that no senior partner is assigned to Case #247 (Rule 1, Modus Tollens).\n5. Therefore, we cannot conclude that no senior partner is assigned to Case #247 (Rule 1, Modus Tollens).\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe can consider the following counterfactual: \"If Case #247 were a high-priority case, then a senior partner would be assigned.\" However, we know that Case #247 is NOT a high-priority case. Therefore, we cannot conclude that a senior partner is assigned to Case #247.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for fallacies in our reasoning. Our reasoning is valid, and we have not committed any fallacies.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we can conclude that we cannot conclude that no senior partner is assigned to Case #247.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 1871,
+  "generation_time_ms": 17647,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, cannot conclude no senior partner."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "All high-priority cases are assigned to senior partners (Rule)"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-09: Can senior partner be assigned? True\n",
+        "problem_id": "VIR-09"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

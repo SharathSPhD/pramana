@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-02",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I have this logic problem here with four premises, and I need to figure out what can be concluded about Dr. Kapoor. Let me go through each premise one by one and see how they connect.\n\nFirst premise: All surgeons in this hospital have completed a residency program. Hmm, so that means if someone is a surgeon here, they must have done a residency. Now, Dr. Kapoor is a surgeon in the hospital, so that should connect to this. So, from premise 2, Dr. Kapoor is a surgeon, and from premise 1, all surgeons have completed a residency. So, does that mean Dr. Kapoor has completed a residency? It seems like it. So maybe one conclusion is that Dr. Kapoor has completed a residency program.\n\nMoving on to premise 3: The hospital cafeteria serves vegetarian meals on Fridays. Hmm, not sure how this connects yet. Maybe it's a distractor or maybe it's related to something else. Let's see.\n\nPremise 4: All residents of the hospital housing complex drive sedans. Okay, so if someone lives in the housing complex, they drive sedans. Now, does Dr. Kapoor live in the housing complex? The premises don't say that. So unless we can infer that from somewhere else, maybe not. Unless there's another connection.\n\nWait, maybe the cafeteria thing is a clue. So, if the cafeteria serves vegetarian meals on Fridays, maybe Dr. Kapoor eats there on Fridays. But does that tell us anything about Dr. Kapoor's driving or residency? Not directly, unless we can link it through something else.\n\nAlternatively, maybe the vegetarian meals are a red herring, and the important part is the residency and the driving. So, let's focus on that.\n\nSo, premise 1 and 2 lead us to conclude that Dr. Kapoor has completed a residency. Premise 4 is about residents of the housing complex driving sedans. But unless we know Dr. Kapoor lives there, we can't conclude he drives a sedan. The premises don't mention where Dr. Kapoor lives, so maybe we can't connect that.\n\nWait, but maybe the hospital's residents include surgeons? Or is it a different group? The wording says \"residents of the hospital housing complex.\" So, that's a specific group. If Dr. Kapoor is a surgeon, does that mean he's a resident of the housing complex? Not necessarily. Surgeons could live off-campus. So, I don't think we can conclude that Dr. Kapoor drives a sedan based on premise 4.\n\nSo, putting it all together, the only valid conclusion is that Dr. Kapoor has completed a residency program because all surgeons in the hospital have done so, and Dr. Kapoor is a surgeon here.\n</think>\n\nFrom the given premises, we can logically conclude that Dr. Kapoor has completed a residency program. Here's the step-by-step reasoning:\n\n1. **Premise 1:** All surgeons in this hospital have completed a residency program.\n2. **Premise 2:** Dr. Kapoor is a surgeon in this hospital.\n   \n   Since Dr. Kapoor is a surgeon and all surgeons have completed a residency, it follows that Dr. Kapoor must have completed a residency program.\n\n3. **Premise 3:** The hospital cafeteria serves vegetarian meals on Fridays. This premise does not provide any direct information about Dr. Kapoor and cannot be used to draw a conclusion about him.\n   \n4. **Premise 4:** All residents of the hospital housing complex drive sedans. While this premise is true for residents of the housing complex, there is no information provided about Dr. Kapoor's residence. Therefore, we cannot conclude that Dr. Kapoor drives a sedan.\n\n**Conclusion:** The only valid conclusion based on the premises is that Dr. Kapoor has completed a residency program.",
+  "response_length": 3559,
+  "generation_time_ms": 56802,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Dr. Kapoor completed a residency program (only valid conclusion)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "First premise: All surgeons in this hospital have completed a residency program"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-02: Can Kapoor NOT have completed residency? False\nPRA-02: Kapoor completed residency (premises 3,4 irrelevant)\n",
+        "problem_id": "PRA-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

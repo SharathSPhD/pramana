@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-01",
+  "category": "sadhyasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Phase 1: Samshaya (Doubt Analysis)\n**Question:** Does Object X have property B?\n\n**Analysis:** \n- We know that Concept A is defined as \"anything that has property B.\"\n- Property B is defined as \"the characteristic feature of Concept A.\"\n- This creates a circular definition where A is defined in terms of B, and B in terms of A.\n- Therefore, it's unclear whether X has property B without additional information.\n\n**Answer:** Yes, possibly. Further analysis is needed.\n\n---\n\n### Phase 2: Pramana (Sources of Knowledge)\n**Sources:** \n- The textbook definitions of Concept A and Property B.\n- The existence of Object X.\n\n**Justification:** \n- The textbook provides explicit definitions for both concepts.\n- Object X is known to exist, so it must have some properties.\n\n**Answer:** Yes, possibly. Further analysis is needed.\n\n---\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:** \n1. Pratyaksha (Direct Perception): Concept A is defined as anything with property B.\n2. Anumana (Inference): Property B is defined as the characteristic feature of Concept A.\n3. Samjna (Identification): Object X is an instance of Concept A.\n4. Upamana (Comparison): Property B is analogous to a defining feature.\n5. Pratyabhijna (Recognition): Therefore, Object X has property B.\n\n**Answer:** Yes, Object X must have property B.\n\n---\n\n### Phase 4: Tarka (Counterfactual Reasoning)\n**Counterfactuals:** \n1. Suppose Object X does not have property B.\n2. Then, Object X would not be defined as Concept A.\n3. But we know Object X is an instance of Concept A.\n4. Therefore, Object X must have property B.\n\n**Answer:** Yes, Object X must have property B.\n\n---\n\n### Phase 5: Hetvabhasa (Fallacy Check)\n**Fallacy Check:** \n- We are not assuming what we are trying to prove.\n- The definitions are explicit and non-circular in application.\n- The reasoning follows valid logical structure.\n\n**Answer:** No fallacies detected. The reasoning is valid.\n\n---\n\n### Phase 6: Nirnaya (Ascertainment)\n**Conclusion:** \n- Object X, being an instance of Concept A, must have property B as defined.\n- The definitions, while circular in nature, establish a necessary relationship between A and B.\n\n**Final Answer:** Yes, Object X has property B.\n\n---\n\n**Final Answer:** \\boxed{Yes}",
+  "response_length": 2268,
+  "generation_time_ms": 39370,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot determine."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-01: B can be True: True, B can be False: True\n",
+        "problem_id": "SAD-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

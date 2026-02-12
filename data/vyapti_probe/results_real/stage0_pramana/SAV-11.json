@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "### Solution:\n\n## Step 1: Samshaya (Doubt Analysis)\nThe librarian's statement is: \"All our recommended books are available.\" To analyze this, we need to identify the books that are both recommended and available. From the catalog, we see that \"Algorithms\", \"Bioinformatics\", \"Databases\", and \"Fractals\" are both recommended and available. However, \"Compilers\" and \"Encryption\" are recommended but not all are available. Therefore, the librarian's statement is not universally true.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe sources of knowledge here are the catalog entries and the librarian's statement. The catalog entries provide the information about the availability of books, and the librarian's statement is based on this information. We can trust the catalog entries as they are the primary source of information about the books.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nTo determine the truth of the librarian's statement, we can construct a 5-member syllogism using the following premises:\n\n1. All recommended books are available (premise 1).\n2. \"Algorithms\", \"Bioinformatics\", \"Databases\", and \"Fractals\" are recommended and available (premise 2).\n3. \"Compilers\" and \"Encryption\" are recommended but not all are available (premise 3).\n4. If all recommended books are available, then \"Compilers\" and \"Encryption\" must be available (conclusion 1).\n5. However, \"Compilers\" and \"Encryption\" are not all available (conclusion 2).\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe can test the librarian's statement by considering a counterfactual scenario: what if \"Compilers\" and \"Encryption\" were both available? In this case, the librarian's statement would be true. However, we know that \"Compilers\" and \"Encryption\" are not all available. Therefore, the librarian's statement is false.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nThe librarian's statement is a universal affirmative statement (\"All our recommended books are available\"). This type of statement is subject to the fallacy of affirming the consequent. However, the librarian's statement is not an example of this fallacy. The fallacy would occur if the statement were \"All available books are recommended,\" which is not the case here.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we conclude that the librarian's statement is false. Not all recommended books are available.\n\nThe final answer is: $\\boxed{False}$",
+  "response_length": 2405,
+  "generation_time_ms": 21444,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Recommended \u2288 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "### Solution:\n\n## Step 1: Samshaya (Doubt Analysis)\nThe librarian's statement is: \"All our recommended books are available"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11: 'Recommended \u2286 Available' holds: False\n",
+        "problem_id": "SAV-11"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-08",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # Possible entry points: window or door\n    # Possible clues: footprints, dog, lock, scratch marks\n    \n    # Pramana: Sources of Knowledge\n    # If window: footprints on windowsill\n    # If door: lock shows scratch marks\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # 1. Pratyaksha: Direct observation: no footprints, scratch marks present\n    # 2. Anumana: If window, footprints would be present. Since they are not, it's not window\n    # 3. Pratyaksha: Dog barked (loud dog implies barking)\n    # 4. Anumana: If door, lock shows scratch marks. Since it does, it's door\n    # 5. Upamana: If both, contradiction. So only door\n    \n    # Tarka: Counterfactual Reasoning\n    # Assume thief entered through window\n    # Then footprints should be present. But they are not. So contradiction.\n    # Therefore, thief must have entered through door\n    \n    # Hetvabhasa: Fallacy Check\n    # No fallacies detected in reasoning\n    \n    # Nirnaya: Ascertainment\n    # Thief entered through door\n    \n    return \"door\"\n```\n\n### Solution Explanation:\n1. **Samshaya (Doubt Analysis)**: We start by identifying the possible entry points (window or door) and the relevant clues (footprints, dog, lock status).\n\n2. **Pramana (Sources of Knowledge)**: We establish the relationships: if the thief entered through the window, muddy footprints would be present; if through the door, the lock shows scratch marks.\n\n3. **Pancha Avayava (5-Member Syllogism)**: \n   - **Pratyaksha**: Direct observation shows no footprints and scratch marks are present.\n   - **Anumana**: If the thief entered through the window, footprints would be present. Since they are not, it's not the window.\n   - **Pratyaksha**: The dog did not bark, implying it barked when the thief was not present.\n   - **Anumana**: If the thief entered through the door, the lock shows scratch marks. Since it does, it's the door.\n   - **Upamana**: If both entry points were possible, there would be a contradiction. Therefore, only the door is possible.\n\n4. **Tarka (Counterfactual Reasoning)**: We test the assumption that the thief entered through the window. This leads to a contradiction (no footprints), confirming that the thief must have entered through the door.\n\n5. **Hetvabhasa (Fallacy Check)**: We verify that our reasoning does not fall into common logical errors.\n\n6. **Nirnaya (Ascertainment)**: Based on the analysis, we conclude that the thief entered through the door.\n\nThe final answer is **door**.\n```",
+  "response_length": 2552,
+  "generation_time_ms": 46883,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Through the door."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-08: Door consistent? True\nPRA-08: Window consistent? False\nPRA-08: Answer = Door\n",
+        "problem_id": "PRA-08"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

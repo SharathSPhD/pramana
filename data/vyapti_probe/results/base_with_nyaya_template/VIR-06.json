@@ -1,0 +1,56 @@
+{
+  "problem_id": "VIR-06",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "Based on the information given, the pattern suggests a clear conclusion.\n\nThe majority of cases follow this pattern, so we can reasonably conclude: (a) or (c) \u2014 models often interpret \"not all X are Y\" as \"no X are Y\" or \"all X are not-Y,\" which is a much stronger claim.\n\nYes.",
+  "response_length": 277,
+  "generation_time_ms": 2791,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {}
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {}
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "negation_detected": true
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_verification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "simulated": true
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.8,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha"
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha"
+}

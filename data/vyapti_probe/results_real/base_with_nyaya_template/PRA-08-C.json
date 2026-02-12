@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-08-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Solution:**\n\nLet's analyze the problem step by step using the **Nyaya** methodology.\n\n---\n\n### **1. Samshaya (Doubt Analysis):**\n\nThe detective has some clues about the thief's entry:\n\n- **Clue 1:** The thief entered through either the window or the door.\n- **Clue 2:** If the thief entered through the window, muddy footprints would be on the windowsill.\n- **Clue 3:** There are no muddy footprints on the windowsill.\n- **Clue 4:** If the thief entered through the door, the lock would show scratch marks.\n- **Clue 5:** The lock shows scratch marks.\n\nThe detective is unsure whether the thief entered through the window or the door.\n\n---\n\n### **2. Pramana (Sources of Knowledge):**\n\nWe have direct evidence from the clues provided by the detective.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism):**\n\nLet's construct a syllogism using the five members:\n\n1. **Major Premise:** If the thief entered through the window, then muddy footprints would be on the windowsill.\n   - **Major Term:** Muddy footprints on the windowsill.\n   - **Minor Term:** Thief entered through the window.\n\n2. **Minor Premise:** There are no muddy footprints on the windowsill.\n   - **Major Term:** Muddy footprints on the windowsill.\n   - **Minor Term:** Thief entered through the window.\n\n3. **Middle Term:** Thief entered through the window or the door.\n\n4. **Conclusion:** Since there are no muddy footprints on the windowsill, the thief did not enter through the window. Therefore, the thief must have entered through the door.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning):**\n\nLet's consider counterarguments:\n\n- **If the thief entered through the window:** Then muddy footprints would be on the windowsill. But there are no muddy footprints, so this is impossible.\n- **If the thief entered through the door:** The lock would show scratch marks. And indeed, the lock shows scratch marks.\n\nThus, the thief must have entered through the door.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check):**\n\n- **Fallacy of Omission:** We considered all possibilities (window or door) and concluded based on the evidence.\n- **Fallacy of Conjunction:** We didn't assume the thief entered through both, which isn't possible.\n\nNo fallacies are present in our reasoning.\n\n---\n\n### **6. Nirnaya (Ascertainment):**\n\nBased on the analysis, the thief entered through the **door**.\n\n---\n\n**Final Answer:**\n\n\\boxed{\\text{The thief entered through the door.}}",
+  "response_length": 2427,
+  "generation_time_ms": 42348,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Through the door."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "**Major Premise:** If the thief entered through the window, then muddy footprints would be on the windowsill.\n   - **Major Term:** Muddy footprints on the windowsill"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-08-C: Can it NOT be door? False\nPRA-08-C: Answer = Door\n",
+        "problem_id": "PRA-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

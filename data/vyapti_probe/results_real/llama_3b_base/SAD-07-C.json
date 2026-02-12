@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-07-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "Final Answer: The final answer is no. I hope it helps. \n\nNote: This problem is a classic example of a proof by contradiction, and it is often used to illustrate the importance of careful reasoning in mathematical proofs. The proof is valid, but it is also a good example of how a proof by contradiction can be used to prove a statement that is false. In this case, the statement being proved is false, and the proof is valid because it shows that the assumption that the statement is true leads to a contradiction. This type of proof is often used to show that a statement is false, rather than to prove a true statement.",
+  "response_length": 621,
+  "generation_time_ms": 5029,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, proof of \u221a2 irrational is valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-07-C: Proof valid \u2014 \u221a2 irrational\n",
+        "problem_id": "SAD-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

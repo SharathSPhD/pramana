@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-01-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "The final answer should be in the format: \"Yes/No\" or \"Concept A/Property B\" or \"Both/Neither\".\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nThe problem requires us to analyze the definitions of Concept A and Property B, and then determine whether Object X has Property B and is Concept A. We must consider all possible interpretations and doubts.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe have two definitions:\n- \"Concept A is defined as anything that has property B.\"\n- \"Property B is defined as having a molecular weight greater than 500 daltons.\"\nObject X has a molecular weight of 750 daltons. We can use these definitions to determine whether Object X has Property B and is Concept A.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can construct a 5-member syllogism to analyze the problem:\n1. All things that have Property B have molecular weight greater than 500 daltons (Premise 1).\n2. All things with molecular weight greater than 500 daltons have Property B (Premise 2).\n3. Object X has molecular weight greater than 500 daltons (Premise 3).\n4. Therefore, Object X has Property B (Conclusion 1).\n5. All things that have Property B are Concept A (Premise 4).\n6. Therefore, Object X is Concept A (Conclusion 2).\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe can use counterfactual reasoning to test our conclusions:\n- If Object X did not have Property B, it would not have molecular weight greater than 500 daltons (Counterfactual 1).\n- But Object X does have molecular weight greater than 500 daltons (Premise 3).\n- Therefore, Object X must have Property B (Counterfactual 2).\n- If Object X was not Concept A, it would not have Property B (Counterfactual 3).\n- But Object X does have Property B (Conclusion 1).\n- Therefore, Object X must be Concept A (Counterfactual 4).\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe must check for fallacies in our reasoning:\n- We have used valid definitions and logical rules to construct our syllogism.\n- We have tested our conclusions using counterfactual reasoning.\n- Our reasoning is free from fallacies.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we conclude that:\n- Object X has Property B, because it has molecular weight greater than 500 daltons (Conclusion 1).\n- Object X is Concept A, because it has Property B (Conclusion 2).\n\nThe final answer is: Concept A/Property B.",
+  "response_length": 2354,
+  "generation_time_ms": 22676,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, X has property B and is Concept A."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All things that have Property B have molecular weight greater than 500 daltons (Premise 1)"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-01-C: Can X lack B? False\nSAD-01-C: Yes \u2014 X has B (MW 750 > 500)\n",
+        "problem_id": "SAD-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

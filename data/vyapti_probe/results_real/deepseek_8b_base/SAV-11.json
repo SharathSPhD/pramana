@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "Okay, so I need to figure out if the librarian's statement is true. The statement is: \"All our recommended books are available.\" The librarian says this, so I have to check if every book that's recommended is indeed available. \n\nFirst, let me list out all the books and their tags. The books are:\n\n1. \"Algorithms\" \u2014 [Recommended] [Available] [New Arrival]\n2. \"Bioinformatics\" \u2014 [Recommended] [Available] [New Arrival]\n3. \"Compilers\" \u2014 [Recommended] [Available]\n4. \"Databases\" \u2014 [Recommended] [Available] [New Arrival]\n5. \"Encryption\" \u2014 [Recommended] [NOT Available] [New Arrival]\n6. \"Fractals\" \u2014 [Available] [New Arrival]\n\nSo, the librarian is saying that all recommended books are available. That means I need to check each book that has the [Recommended] tag and see if it also has the [Available] tag.\n\nLooking at each book:\n\n1. \"Algorithms\" has [Recommended], [Available], and [New Arrival]. So, it's available. Good.\n2. \"Bioinformatics\" is also recommended and available. Check.\n3. \"Compilers\" is recommended and available. Okay.\n4. \"Databases\" is recommended and available. That's fine.\n5. \"Encryption\" is recommended, but it's [NOT Available]. Hmm, that's a problem.\n6. \"Fractals\" isn't recommended, so it doesn't affect the statement. We don't care about its availability because the librarian didn't recommend it.\n\nSo, focusing only on the recommended books: Algorithms, Bioinformatics, Compilers, Databases, and Encryption. Out of these, Encryption is not available. Therefore, the statement that all recommended books are available is false because Encryption is recommended but not available.\n\nWait, but let me double-check. The tags for Encryption are [Recommended], [NOT Available], and [New Arrival]. So, it's definitely not available. That means the librarian's statement is incorrect because not all recommended books are available. There's at least one that isn't.\n\nI don't think I missed any. Let me count the recommended books again. Algorithms, Bioinformatics, Compilers, Databases, and Encryption. That's five books. Only Encryption is not available. So, yes, the statement is false.\n</think>\n\nThe librarian's statement is **false**. \n\n**Explanation:**\nThe librarian claims that all recommended books are available. However, examining the list, \"Encryption\" is tagged as [Recommended] but [NOT Available]. Therefore, not all recommended books are accessible, making the statement incorrect.",
+  "response_length": 2412,
+  "generation_time_ms": 40344,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Recommended \u2288 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "The statement is: \"All our recommended books are available"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11: 'Recommended \u2286 Available' holds: False\n",
+        "problem_id": "SAV-11"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

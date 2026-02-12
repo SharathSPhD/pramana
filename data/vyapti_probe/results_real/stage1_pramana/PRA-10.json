@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\nWhat do we know and what do we doubt?\n\n**Known Facts:**\n- Jun does not order pasta.\n- The restaurant has three Michelin stars.\n- Kira orders sushi.\n- The restaurant's interior features exposed brick walls.\n\n**Unknowns:**\n- What does Lev order?\n- What is the relationship between the restaurant's Michelin stars and the dishes ordered?\n\n**Doubts:**\n- How do the Michelin stars relate to the dishes ordered?\n- Is there a connection between the restaurant's interior and the dishes served?\n\n**Questions:**\n- Does the number of Michelin stars indicate anything about the dishes served?\n- How does the restaurant's interior (exposed brick walls) influence the dishes available?\n\n**Phase 2: Pramana (Sources of Knowledge)**\nWhere do we get our knowledge?\n\n**Sources:**\n1. The problem statement.\n2. Common knowledge about Michelin stars and restaurants.\n3. Common knowledge about dish types and ordering.\n\n**Justification:**\n- The problem provides direct information about each person's dish and the restaurant's features.\n- Michelin stars are known to relate to the quality and variety of dishes served.\n- Exposed brick walls are a common feature in certain types of restaurants, potentially indicating a specific cuisine.\n\n**Phase 3: Pancha Avayava (5-Member Syllogism)**\nConstruct a syllogism with five members.\n\n**Syllogism Structure:**\n1. Major premise: If X, then Y.\n2. Minor premise: This is X.\n3. Conclusion: Therefore, this is Y.\n\n**Members:**\n1. Major premise: If a restaurant has three Michelin stars, then it serves pasta, sushi, and salad.\n2. Minor premise: The restaurant has three Michelin stars.\n3. Conclusion: Therefore, the restaurant serves pasta, sushi, and salad.\n\n**Justification:**\n- Michelin stars are awarded based on the quality and variety of dishes, which suggests that a three-star restaurant offers a range of high-quality dishes, including pasta, sushi, and salad.\n\n**Phase 4: Tarka (Counterfactual Reasoning)**\nTest our conclusion with counterfactuals.\n\n**Counterfactual 1:**\n- Suppose the restaurant does not serve pasta.\n- Then, Jun would have to order sushi or salad.\n- However, Kira already orders sushi, so Lev would order salad.\n- But this contradicts the conclusion that Lev orders salad, so the original conclusion must be correct.\n\n**Counterfactual 2:**\n- Suppose the restaurant does not serve sushi.\n- Then, Kira would have to order pasta or salad.\n- But Jun does not order pasta, so Kira would order salad.\n- However, Lev would then have to order pasta, which contradicts the conclusion that Lev orders salad, so the original conclusion must be correct.\n\n**Counterfactual 3:**\n- Suppose the restaurant does not serve salad.\n- Then, Jun, Kira, and Lev would have to order pasta and sushi.\n- But this is impossible since each person orders a different dish, so the restaurant must serve salad.\n\n**Justification:**\n- Each counterfactual leads to a contradiction unless the original conclusion holds, confirming the validity of our reasoning.\n\n**Phase 5: Hetvabhasa (Fallacy Check)**\nCheck for fallacies in our reasoning.\n\n**Fallacies Checked:**\n1. Begging the question: We assume what we are trying to prove.\n2. Appeal to popularity: We rely on majority opinion without justification.\n3. straw man: We misrepresent opponents' views.\n4. ad hominem: We attack the person rather than the argument.\n\n**Results:**\n- No fallacies are present in our reasoning.\n- Our premises are justified by independent sources (Michelin stars and restaurant features).\n\n**Phase 6: Nirnaya (Ascertainment)**\nFinal conclusion after eliminating all doubts.\n\n**Final Answer:**\nLev orders salad.\n### Solution Code\n```python\n# Phase 1: Samshaya (Doubt Analysis)\nprint(\"### Phase 1: Samshaya (Doubt Analysis) ###\")\nprint(\"What do we know and what do we doubt?\")\nprint(\"\\n**Known Facts:**\")\nprint(\"- Jun does not order pasta.\")\nprint(\"- The restaurant has three Michelin stars.\")\nprint(\"- Kira orders sushi.\")\nprint(\"- The restaurant's interior features exposed brick walls.\")\nprint(\"\\n**Unknowns:**\")\nprint(\"- What does Lev order?\")\nprint(\"- What is the relationship between the restaurant's Michelin stars and the dishes ordered?\")\nprint(\"\\n**Doubts:**\")\nprint(\"- How do the Michelin stars relate to the dishes ordered?\")\nprint(\"- Is there a connection between the restaurant's interior and the dishes served?\")\nprint(\"\\n**Questions:**\")\nprint(\"- Does the number of Michelin stars indicate anything about the dishes served?\")\nprint(\"- How does the restaurant's interior (exposed brick walls) influence the dishes available?\")\n\n# Phase 2: Pramana (Sources of Knowledge)\nprint(\"\\n### Phase 2: Pramana (Sources of Knowledge) ###\")\nprint(\"Where do we get our knowledge?\")\nprint(\"\\n**Sources:**\")\nprint(\"- The problem statement.\")\nprint(\"- Common knowledge about Michelin stars and restaurants.\")\nprint(\"- Common knowledge about dish types and ordering.\")\nprint(\"\\n**Justification:**\")\nprint(\"- The problem provides direct information about each person's dish and the restaurant's features.\")\nprint(\"- Michelin stars are known to relate to the quality and variety of dishes served.\")\nprint(\"- Exposed brick walls are a common feature in certain types of restaurants, potentially indicating a specific cuisine.\")\n\n# Phase 3: Pancha Avayava (5-Member Syllogism)\nprint(\"\\n### Phase 3: Pancha Avayava (5-Member Syllogism) ###\")\nprint(\"Construct a syllogism with five members.\")\nprint(\"\\n**Syllogism Structure:**\")\nprint(\"1. Major premise: If X, then Y.\")\nprint(\"2. Minor premise: This is X.\")\nprint(\"3. Conclusion: Therefore, this is Y.\")\nprint(\"\\n**Members:**\")\nprint(\"1. Major premise: If a restaurant has three Michelin stars, then it serves pasta, sushi, and salad.\")\nprint(\"2. Minor premise: The restaurant has three Michelin stars.\")\nprint(\"3. Conclusion: Therefore, the restaurant serves pasta, sushi, and salad.\")\n\n# Phase 4: Tarka (Counterfactual Reasoning)\nprint(\"\\n### Phase 4: Tarka (Counterfactual Reasoning) ###\")\nprint(\"Test our conclusion with counterfactuals.\")\nprint(\"\\n**Counterfactual 1:**\")\nprint(\"- Suppose the restaurant does not serve pasta.\")\nprint(\"- Then, Jun would have to order sushi or salad.\")\nprint(\"- However, Kira already orders sushi, so Lev would order salad.\")\nprint(\"- But this contradicts the conclusion that Lev orders salad, so the original conclusion must be correct.\")\nprint(\"\\n**Counterfactual 2:**\")\nprint(\"- Suppose the restaurant does not serve sushi.\")\nprint(\"- Then, Kira would have to order pasta or salad.\")\nprint(\"- But Jun does not order pasta, so Kira would order salad.\")\nprint(\"- However, Lev would then have to order pasta, which contradicts the conclusion that Lev orders salad, so the original conclusion must be correct.\")\nprint(\"\\n**Counterfactual 3:**\")\nprint(\"- Suppose the restaurant does not serve salad.\")\nprint(\"- Then, Jun, Kira, and Lev would have to order pasta and sushi.\")\nprint(\"- But this is impossible since each person orders a different dish, so the restaurant must serve salad.\")\nprint(\"\\n**Justification:**\")\nprint(\"- Each counterfactual leads to a contradiction unless the original conclusion holds, confirming the validity of our reasoning.\")\n\n# Phase 5: Hetvabhasa (Fallacy Check)\nprint(\"\\n### Phase 5: Hetvabhasa (Fallacy Check) ###\")\nprint(\"Check for fallacies in our reasoning.\")\nprint(\"\\n**Fallacies Checked:**\")\nprint(\"1. Begging the question: We assume what we are trying to prove.\")\nprint(\"2. Appeal to popularity: We rely on majority opinion without justification.\")\nprint(\"3. straw man: We misrepresent opponents' views.\")\nprint(\"4. ad hominem: We attack the person rather than the argument.\")\nprint(\"\\n**Results:**\")\nprint(\"- No fallacies are present in our reasoning.\")\nprint(\"- Our premises are justified by independent sources (Michelin stars and restaurant features).\")\n\n# Phase 6: Nirnaya (Ascertainment)\nprint(\"\\n### Phase 6: Nirnaya (Ascertainment) ###\")\nprint(\"Final conclusion after eliminating all doubts.\")\nprint(\"\\n**Final Answer:**\")\nprint(\"Lev orders salad.\")\n```\n\n### Solution Code\n```python\n# Phase 1: Samshaya (Doubt Analysis)\nprint(\"### Phase 1: Samshaya (Doubt Analysis) ###\")\nprint(\"What do we know and what do we doubt?\")\nprint(\"\\n**Known Facts:**\")\nprint(\"- Jun does not order pasta.\")\nprint(\"- The restaurant has three Michelin stars.\")\nprint(\"- Kira orders sushi.\")\nprint(\"- The restaurant's interior features exposed brick walls.\")\nprint(\"\\n**Unknowns:**\")\nprint(\"- What does Lev order?\")\nprint(\"- What is the relationship between the restaurant's Michelin stars and the dishes ordered?\")\nprint(\"\\n**Doubts:**\")\nprint(\"- How do the Michelin stars relate to the dishes ordered?\")\nprint(\"- Is there a connection between the restaurant's interior and the dishes served?\")\nprint(\"\\n**Questions:**\")\nprint(\"- Does the number of Michelin stars indicate anything about the dishes served?\")\nprint(\"- How does the",
+  "response_length": 8857,
+  "generation_time_ms": 149345,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Lev orders pasta."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "Major premise: If X, then Y.\n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10: Lev = Pasta (aesthetic info irrelevant)\n",
+        "problem_id": "PRA-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

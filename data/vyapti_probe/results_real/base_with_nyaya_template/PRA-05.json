@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-05",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\nLet's analyze the problem step by step using the **Nyaya** methodology.\n\n---\n\n### **1. Samshaya (Doubt Analysis)**\nWe have four researchers: Priya, Qadir, Ravi, and Sita. Each works in one of two labs: **Lab-North** or **Lab-South**, and each has a favorite beverage: **coffee** or **tea**. The given information is:\n\n1. **Priya** works in **Lab-North**.\n2. **Qadir** works in **Lab-South**.\n3. **Ravi** drinks **coffee**.\n4. **Sita** works in **Lab-North**.\n5. **Priya** drinks **tea**.\n\nOur goal is to determine which lab **Ravi** works in.\n\n---\n\n### **2. Pramana (Sources of Knowledge)**\nWe have the following facts from the problem:\n\n- **Priya** works in **Lab-North** and drinks **tea**.\n- **Qadir** works in **Lab-South**.\n- **Ravi** drinks **coffee**.\n- **Sita** works in **Lab-North**.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**\nWe need to establish a relationship between the given facts to deduce Ravi's lab.\n\n#### Premises:\n1. **Priya** works in **Lab-North** and drinks **tea**.\n2. **Sita** works in **Lab-North**.\n3. **Ravi** drinks **coffee**.\n4. **Qadir** works in **Lab-South**.\n\n#### Syllogism:\n- Since **Priya** and **Sita** both work in **Lab-North**, we can conclude that **Lab-North** employs at least two researchers.\n- **Qadir** works in **Lab-South**, indicating that **Lab-South** employs at least one researcher.\n- **Ravi** drinks **coffee**, but we don't have direct information about his lab.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**\nLet's consider if **Ravi** could work in **Lab-South**:\n- If **Ravi** worked in **Lab-South**, then **Lab-South** would have at least two researchers (Qadir and Ravi).\n- However, there is no information suggesting that **Lab-South** has more than one researcher.\n\nTherefore, it's more plausible that **Ravi** works in **Lab-North**, where both Priya and Sita are already employed.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**\nWe need to ensure our reasoning isn't flawed:\n- **Lab-North** employs Priya and Sita, and **Lab-South** employs Qadir.\n- Since Ravi drinks coffee, and there's no restriction on beverage preferences, his lab isn't determined by his drink.\n- No fallacies (e.g., assuming what we need to prove) are present in our reasoning.\n\n---\n\n### **6. Nirnaya (Ascertainment)**\nBased on the above analysis, the most consistent conclusion is that **Ravi** works in **Lab-North**.\n\n---\n\n### **Final Answer**\n\\boxed{\\text{Lab-North}}",
+  "response_length": 2431,
+  "generation_time_ms": 50747,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot determine Ravi's lab."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "Tarka (Counterfactual Reasoning)**\nLet's consider if **Ravi** could work in **Lab-South**:\n- If **Ravi** worked in **Lab-South**, then **Lab-South** would have at least two researchers (Qadir and Ravi"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-05: Ravi can be North: True, South: True\n",
+        "problem_id": "PRA-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

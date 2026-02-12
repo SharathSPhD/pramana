@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-04-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "## Step 1: Identify the students enrolled in both Philosophy and Mathematics\nTo determine if the advisor's claim is true, we first need to identify the students who are enrolled in both Philosophy (P) and Mathematics (M). From the given data, the students in both sets are Mira, Neel, Omar, and Priya.\n\n## Step 2: Check if these students are also enrolled in the Logic course\nNext, we need to verify if the students identified in step 1 are also enrolled in the Logic course (L). The data shows that Mira, Neel, Omar, and Priya are enrolled in both P and M, and indeed, all of them are also enrolled in L.\n\n## Step 3: Determine the validity of the advisor's claim\nSince all students who are enrolled in both Philosophy and Mathematics are also enrolled in the Logic course, the advisor's claim is true based on the provided data.\n\nThe final answer is: $\\boxed{True}$",
+  "response_length": 866,
+  "generation_time_ms": 7758,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, P\u2229M \u2286 L."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "The data shows that Mira, Neel, Omar, and Priya are enrolled in both P and M, and indeed, all of them are also enrolled in L"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-04-C: P\u2229M \u2286 L violated? False\n",
+        "problem_id": "SAV-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

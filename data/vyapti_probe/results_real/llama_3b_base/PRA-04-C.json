@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-04-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "The minimum travel time is 6 hours. To get to City D from City A, you can travel from City A to City B (2 hours), then from City B to City C (3 hours), and finally from City C to City D (1 hour). This route takes a total of 2 + 3 + 1 = 6 hours. This is the minimum travel time because it is the shortest path between City A and City D. \n\nHowever, there is another route from City A to City D: City A to City C (3 hours) and then City C to City D (1 hour). This route also takes a total of 3 + 1 = 4 hours, which is less than the original route. Therefore, the minimum travel time from City A to City D is actually 4 hours. \n\nThe correct answer is 4 hours. I apologize for the initial mistake. The correct solution involves considering all possible routes and finding the shortest one. \n\nThe correct reasoning is as follows:\n\n- The minimum travel time from City A to City B is 2 hours.\n- The minimum travel time from City B to City C is 3 hours.\n- The minimum travel time from City C to City D is 1 hour.\n\nTo get to City D from City A, you can travel from City A to City B (2 hours), then from City B to City C (3 hours), and finally from City C to City D (1 hour). This route takes a total of 2 + 3 + 1 = 6 hours.\n\nAlternatively, you can travel from City A to City C (3 hours) and then from City C to City D (1 hour). This route takes a total of 3 + 1 = 4 hours.\n\nThe minimum travel time from City A to City D is 4 hours. \n\nThe final answer is: $\\boxed{4}$",
+  "response_length": 1456,
+  "generation_time_ms": 15021,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "6 hours from A to D."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-04-C: A to D time = 6hrs\n",
+        "problem_id": "PRA-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

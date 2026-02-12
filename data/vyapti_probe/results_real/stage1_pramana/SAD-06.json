@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-06",
+  "category": "sadhyasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis)**  \n*Vyakhyana*: The classification system's rules and the analyst's reasoning create a potential contradiction. If all Type-X objects must have Feature-P, and Object Q has Feature-P, does it necessarily follow that Object Q is Type-X? This is a point of doubt.\n\n**2. Pramana (Sources of Knowledge)**  \n*Vyakhyana*: The classification rules and the analyst's observation are considered valid sources of knowledge. The classification system defines Feature-P as exclusive to Type-X, and the analyst's observation is a direct perception of Feature-P in Object Q.\n\n**3. Pancha Avayava (5-Member Syllogism)**  \n*Vyakhyana*: Using the syllogistic structure:  \n- **Pratijna** (Thesis): Object Q is Type-X.  \n- **Heti** (Reason): Object Q has Feature-P.  \n- **Udaharana** (Example): All Type-X objects have Feature-P.  \n- **Prasanga** (Application): Since Object Q has Feature-P, it is Type-X.  \n- **Nigamana** (Conclusion): Therefore, Object Q is Type-X.\n\n**4. Tarka (Counterfactual Reasoning)**  \n*Vyakhyana*: If Object Q were not Type-X, it would contradict the definition of Feature-P as exclusive to Type-X. Therefore, Object Q must be Type-X.\n\n**5. Hetvabhasa (Fallacy Check)**  \n*Vyakhyana*: The reasoning avoids fallacies such as *Kala Prapatti* (temporal accommodation) and *Nigrahasthana* (overcompensation). The classification is logically consistent.\n\n**6. Nirnaya (Ascertainment)**  \n*Vyakhyana*: The classification is valid because the analyst's reasoning aligns with the defined rules, and the syllogistic structure holds without contradiction.\n\n---\n\n### Final Answer:\nThe classification is logically valid.",
+  "response_length": 1672,
+  "generation_time_ms": 30750,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, classification is circular/invalid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "If all Type-X objects must have Feature-P, and Object Q has Feature-P, does it necessarily follow that Object Q is Type-X? This is a point of doubt"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-06: Classification circular: T True, F True\nSAD-06: No \u2014 circular definition\n",
+        "problem_id": "SAD-06"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

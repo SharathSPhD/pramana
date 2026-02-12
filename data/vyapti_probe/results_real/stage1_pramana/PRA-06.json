@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-06",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Steps:\n\n---\n\n### 1. Samshaya (Doubt Analysis)\n\n**Question:** Can we conclude that Rishi lives within 5 km of the campus?\n\n**Analysis:**\n- We know Rishi owns a bicycle.\n- We know all bicycle owners live within 5 km of the campus.\n- We need to determine if Rishi's residence is within 5 km.\n\n**Doubt:** Does owning a bicycle guarantee that the owner lives nearby? Or could Rishi live far away but still own a bicycle?\n\n**Possible Answers:**\n1. Yes, we can conclude Rishi lives within 5 km.\n2. No, we cannot conclude this without additional information.\n\n**Reasoning:** The fact that Rishi owns a bicycle does not necessarily mean he lives within 5 km. He might live farther but have access to a bicycle through another means (e.g., borrowing, renting, or keeping a bicycle at the club). However, since all members can play chess and Rishi is a member, he likely has access to the club's facilities, which may include a bicycle. But without explicit information about his residence, we cannot definitively conclude his location.\n\n**Final Answer:** There is doubt. We cannot definitively conclude Rishi lives within 5 km of the campus without further information.\n\n---\n\n### 2. Pramana (Sources of Knowledge)\n\n**Sources:**\n1. Rishi is a member of the chess club.\n2. All members can play chess.\n3. Rishi owns a bicycle.\n4. All bicycle owners live within 5 km of the campus.\n\n**Justification:** These statements are given as facts in the problem. The first three facts directly relate to Rishi, and the fourth fact establishes the condition for bicycle ownership.\n\n**Final Answer:** The sources of knowledge are clear and directly related to the problem.\n\n---\n\n### 3. Pancha Avayava (5-Member Syllogism)\n\n**Syllogism Structure:**\n1. **Pratijna (Thesis):** Can we conclude that Rishi lives within 5 km of the campus?\n2. **Heti (Hypothesis):** Rishi owns a bicycle.\n3. **Udaharana (General Rule):** All bicycle owners live within 5 km of the campus.\n4. **Nigamana (Conclusion):** Therefore, Rishi lives within 5 km of the campus.\n5. **Pattaya (Reasoning):** Because if Rishi owns a bicycle, and all bicycle owners live nearby, then Rishi must live nearby.\n\n**Justification:** The syllogism follows the five-member structure, linking the hypothesis and general rule to the conclusion through reasoning.\n\n**Final Answer:** The syllogism is correctly structured and supports the conclusion.\n\n---\n\n### 4. Tarka (Counterfactual Reasoning)\n\n**Counterfactual:** Suppose Rishi does not live within 5 km of the campus. Then, Rishi owns a bicycle but does not live nearby. This contradicts the rule that all bicycle owners live within 5 km. Therefore, our original conclusion must be true.\n\n**Justification:** The counterfactual test confirms the validity of the conclusion. If the conclusion were false, it would violate the given rule.\n\n**Final Answer:** The counterfactual reasoning confirms the conclusion is valid.\n\n---\n\n### 5. Hetvabhasa (Fallacy Check)\n\n**Fallacy Check:** We ensure that the reasoning does not commit any logical fallacies, such as affirming the consequent or denying the antecedent without justification.\n\n**Analysis:**\n- We do not assume Rishi owns the bicycle. The premise states Rishi owns a bicycle, so we use this fact.\n- We correctly apply the general rule to the specific case through the syllogism structure.\n\n**Conclusion:** No fallacies are committed in the reasoning.\n\n**Final Answer:** The reasoning is free from fallacies.\n\n---\n\n### 6. Nirnaya (Ascertainment)\n\n**Final Conclusion:** Based on the syllogistic reasoning, counterfactual test, and absence of fallacies, we can conclude that Rishi lives within 5 km of the campus.\n\n**Justification:** All premises are true, the syllogism is valid, and the counterfactual test confirms the conclusion.\n\n**Final Answer:** Yes, we can conclude that Rishi lives within 5 km of the campus.\n---",
+  "response_length": 3867,
+  "generation_time_ms": 66055,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Rishi lives within 5km (via premises 3+4)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "However, since all members can play chess and Rishi is a member, he likely has access to the club's facilities, which may include a bicycle"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-06: Can Rishi be outside 5km? False\nPRA-06: Rishi within 5km (premises 1+2 are red herring)\n",
+        "problem_id": "PRA-06"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "prakaranasama",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: prakaranasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "prakaranasama",
+  "hetvabhasa_used_fallback": true
+}

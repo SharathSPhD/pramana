@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\nWhat do I know? I have a company policy manual with specific rules about vacation days. The rules are in order of priority, meaning later rules override earlier ones. The rules are:\n\n1. General Rule: All employees receive 15 vacation days per year.\n2. Department Override: Engineering department employees receive 20 vacation days per year.\n3. Individual Exception: Employee #4472 (who is in the Engineering department) receives 10 vacation days per year due to a probationary period.\n\nThe question is: How many vacation days does Employee #4472 receive?\n\nWhat do I need to find out? The number of vacation days for Employee #4472.\n\nWhat am I unsure about? The priority order of the rules and how they apply to this specific employee.\n\nPhase 2: Pramana (Sources of Knowledge)\nWhere do I get this information? The problem statement provides the policy manual rules. These are the authoritative sources for the rules.\n\nPhase 3: Pancha Avayava (5-Member Syllogism)\nWhat is the syllogism? The syllogism is a logical structure with five parts: the premises, the conclusion, the premises together, the premises in combination, and the conclusion from the premises.\n\nPremise 1: All employees receive 15 vacation days per year (General Rule).\nPremise 2: Engineering department employees receive 20 vacation days per year (Department Override).\nPremise 3: Employee #4472 is in the Engineering department and receives 10 vacation days due to probation (Individual Exception).\n\nCombined Premise: All employees receive 15 vacation days per year, and Engineering department employees receive 20 vacation days per year, and Employee #4472 is in the Engineering department and receives 10 vacation days due to probation.\n\nConclusion: Employee #4472 receives 10 vacation days per year.\n\nPhase 4: Tarka (Counterfactual Reasoning)\nWhat if the rules didn't specify the priority? How would that affect the outcome? If the rules didn't specify priority, we would need to determine which rule takes precedence. However, the problem states that later rules override earlier ones, so the Individual Exception would override the Department Override, which in turn overrides the General Rule.\n\nPhase 5: Hetvabhasa (Fallacy Check)\nAm I committing any fallacies? No fallacies are present. The rules are applied correctly in the order of priority.\n\nPhase 6: Nirnaya (Ascertainment)\nBased on the analysis, the final answer is 10 vacation days for Employee #4472.\n### Final Answer:\nEmployee #4472 receives \\boxed{10} vacation days per year.\n</think>\n\n### Phase 1: Samshaya (Doubt Analysis)\n**What do I know?**  \nThe company policy manual outlines three rules regarding vacation days for employees:\n1. **General Rule (Section 1):** All employees receive 15 vacation days per year.\n2. **Department Override (Section 3):** Engineering department employees receive 20 vacation days per year.\n3. **Individual Exception (Section 5):** Employee #4472 (who is in the Engineering department) receives 10 vacation days per year due to a probationary period.\n\n**What do I need to find out?**  \nThe number of vacation days Employee #4472 receives.\n\n**What am I unsure about?**  \nThe priority order of the rules and how they apply to this specific employee.\n\n### Phase 2: Pramana (Sources of Knowledge)\n**Where do I get this information?**  \nThe problem statement provides the policy manual rules. These are the authoritative sources for the rules.\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\n**What is the syllogism?**  \nThe syllogism is a logical structure with five parts: the premises, the conclusion, the premises together, the premises in combination, and the conclusion from the premises.\n\n**Premise 1:** All employees receive 15 vacation days per year (General Rule).  \n**Premise 2:** Engineering department employees receive 20 vacation days per year (Department Override).  \n**Premise 3:** Employee #4472 is in the Engineering department and receives 10 vacation days due to probation (Individual Exception).  \n\n**Combined Premise:** All employees receive 15 vacation days per year, and Engineering department employees receive 20 vacation days per year, and Employee #4472 is in the Engineering department and receives 10 vacation days due to probation.  \n\n**Conclusion:** Employee #4472 receives 10 vacation days per year.\n\n### Phase 4: Tarka (Counterfactual Reasoning)\n**What if the rules didn't specify the priority?**  \nIf the rules didn't specify priority, we would need to determine which rule takes precedence. However, the problem states that later rules override earlier ones, so the Individual Exception would override the Department Override, which in turn overrides the General Rule.\n\n### Phase 5: Hetvabhasa (Fallacy Check)\n**Am I committing any fallacies?**  \nNo fallacies are present. The rules are applied correctly in the order of priority.\n\n### Phase 6: Nirnaya (Ascertainment)\n**Based on the analysis,** the final answer is 10 vacation days for Employee #4472.\n\n### Final Answer:\nEmployee #4472 receives \\boxed{10} vacation days per year.",
+  "response_length": 5069,
+  "generation_time_ms": 81729,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "10 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Combined Premise: All employees receive 15 vacation days per year, and Engineering department employees receive 20 vacation days per year, and Employee #4472 is in the Engineering department and recei"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01: Vacation days for #4472: 10\n",
+        "problem_id": "KAL-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-04-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\ndef is_authorized(user):\n    return user in authorized_users\n\n# Example usage:\n# authorized_users = {'Alice', 'Bob', 'Charlie'}\n# print(is_authorized('Dana'))  # Should output False\n```\n```python\ndef is_administrator(user):\n    return user in administrators\n\n# Example usage:\n# authorized_users = {'Alice', 'Bob', 'Charlie'}\n# print(is_administrator('Dana'))  # Should output False\n```\n\nBut wait, the problem says that the database administrator maintains the access control. So perhaps the function is_authorized is correct, but the second function is_administrator is not relevant here.\n\nWait, the problem is about whether Dana is authorized. The access control is that a user is authorized if they appear in the authorized users list, which currently includes Alice, Bob, Charlie. So, Dana is not in the list, so she is not authorized.\n\nBut wait, perhaps the database administrator can add users. So, the initial setup is that the security team maintains the list, but the admin can add users. So, the question is, is Dana added by the admin? Or is the admin the one who can add her?\n\nWait, the problem says the database administrator maintains the access control. So, perhaps the admin can add users to the list. So, if the admin adds Dana, then she is authorized. But the problem says the current list is {Alice, Bob, Charlie}, so unless the admin adds Dana, she's not in the list.\n\nBut the problem doesn't state whether the admin has added her. So, perhaps the answer is that Dana is not authorized because she's not in the list.\n\nWait, but the problem is about the access control rules. The rules are: User X is authorized if X is in the list. The list is maintained by the security team, and currently has Alice, Bob, Charlie. So, the security team is responsible for adding users, not the admin? Or is the admin part of the security team?\n\nHmm, the problem says the database administrator maintains the access control. So, perhaps the admin is part of the security team, and the list is maintained by them. So, the admin can add users to the list. So, if the admin adds Dana, she is authorized. But the problem doesn't say that the admin has done that. So, unless the admin has added her, she's not authorized.\n\nBut the problem is asking whether Dana is authorized based on the given information. The given information is that the list contains Alice, Bob, Charlie. So, unless Dana is in the list, she's not authorized. So, the answer is no.\n\nWait, but perhaps the admin can add users, so Dana might be added. But the problem doesn't provide information that she has been added. So, based on the given data, she's not in the list, so she's not authorized.\n\nSo, the function is_authorized returns False for Dana.\n\nSo, the final answer is no, Dana is not authorized.\n</think>\n\nDana is not authorized because she does not appear in the authorized users list maintained by the security team.\n\n**Step-by-Step Explanation:**\n\n1. **Samshaya (Doubt Analysis):** The question is whether Dana is authorized.\n2. **Pramana (Sources of Knowledge):** The source of knowledge is the access control policy and the current authorized users list.\n3. **Pancha Avayava (5-Member Syllogism):** The syllogism is that a user is authorized if they are in the list. The list includes Alice, Bob, Charlie, not Dana.\n4. **Tarka (Counterfactual Reasoning):** Considering if Dana were in the list, she would be authorized. Since she isn't, she isn't authorized.\n5. **Hetvabhasa (Fallacy Check):** There's no fallacy in the reasoning; the logic is straightforward.\n6. **Nirnaya (Ascertainment):** Based on the given information, Dana is not authorized.\n\n**Answer:** Dana is not authorized.",
+  "response_length": 3696,
+  "generation_time_ms": 62124,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Dana is not authorized."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "So, if the admin adds Dana, then she is authorized. But the problem says the current list is {Alice, Bob, Charlie}, so unless the admin adds Dana, she's not in the list.\n\nBut the problem doesn't state"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-04-C: Is Dana on list? False\nSAD-04-C: No \u2014 Dana not authorized\n",
+        "problem_id": "SAD-04-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: sadhyasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": true
+}

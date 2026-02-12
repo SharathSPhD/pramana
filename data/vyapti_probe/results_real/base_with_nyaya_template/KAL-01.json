@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Solution:**\n\nWe will analyze the problem using the **Nyaya** methodology, specifically applying the six phases:\n\n1. **Samshaya (Doubt Analysis):**\n   - The employee in question is **Employee #4472**, who is in the **Engineering department**.\n   - The company's policy manual has three rules:\n     1. **General Rule (Section 1):** All employees receive 15 vacation days per year.\n     2. **Department Override (Section 3):** Engineering department employees receive 20 vacation days per year.\n     3. **Individual Exception (Section 5):** Employee #4472 (in the Engineering department) receives 10 vacation days per year due to a probationary period.\n\n2. **Pramana (Sources of Knowledge):**\n   - The information is provided directly from the company's policy manual, which is a reliable source of knowledge.\n\n3. **Pancha Avayava (5-Member Syllogism):**\n   - **Major Premise:** All employees receive 15 vacation days per year.\n   - **Minor Premise:** Employee #4472 is an employee.\n   - **Conclusion:** Employee #4472 receives 15 vacation days per year.\n   \n   - **Major Premise:** Engineering department employees receive 20 vacation days per year.\n   - **Minor Premise:** Employee #4472 is in the Engineering department.\n   - **Conclusion:** Employee #4472 receives 20 vacation days per year.\n   \n   - **Major Premise:** Employee #4472 receives 10 vacation days per year due to probation.\n   - **Minor Premise:** Employee #4472 is an employee.\n   - **Conclusion:** Employee #4472 receives 10 vacation days per year.\n\n4. **Tarka (Counterfactual Reasoning):**\n   - If the individual exception does not apply, the Department Override would take precedence, giving 20 days.\n   - However, the individual exception explicitly states that Employee #4472 receives 10 days due to probation, which takes priority over the Department Override.\n\n5. **Hetvabhasa (Fallacy Check):**\n   - The fallacy here is the **\"Priority of Rules\"** fallacy, where later rules override earlier ones.\n   - The Individual Exception (Section 5) explicitly applies to Employee #4472 and overrides the Department Override (Section 3), which in turn overrides the General Rule (Section 1).\n\n6. **Nirnaya (Ascertainment):**\n   - After analyzing all the rules and applying the correct priority, **Employee #4472 receives 10 vacation days per year** due to the individual exception.\n\n### **Final Answer:**\n\\boxed{10}",
+  "response_length": 2395,
+  "generation_time_ms": 41403,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "10 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": false,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01: Vacation days for #4472: 10\n",
+        "problem_id": "KAL-01"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

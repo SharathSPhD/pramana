@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-10-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Steps:\n\n---\n\n### 1. Samshaya (Doubt Analysis)\n**Question:** Does every product from the Supplier reach the Retailer in exactly 9 days across all routes?\n\n**Doubts:**\n- **Doubt 1:** Are all routes independent? (Are the delivery times additive across different routes?)\n- **Doubt 2:** Does the delivery time per step hold universally? (Is each step exactly 3 days regardless of the route?)\n\n**Analysis:**\n- The manager assumes that each step takes exactly 3 days and that each route is independent. However, in reality, multiple products can share the same routes, potentially causing delays. Also, if a route is shared by multiple products, the delivery time could be extended due to congestion.\n\n**Resolution:**\n- The claim assumes independence and fixed delivery times, but without knowing if routes are shared or not, the claim may not hold universally.\n\n---\n\n### 2. Pramana (Sources of Knowledge)\n**Question:** What are the sources of knowledge about delivery times across routes?\n\n**Sources:**\n- **Pramana 1:** Each step (Supplier \u2192 Factory, Factory \u2192 Distributor, Distributor \u2192 Retailer) takes exactly 3 days.\n- **Pramana 2:** The routes are independent; no shared routes or congestion.\n\n**Justification:**\n- If the routes are independent, the delivery times are additive, resulting in exactly 9 days per product. If routes are shared, delivery times could be longer.\n\n**Resolution:**\n- The claim holds if routes are independent and each step takes exactly 3 days.\n\n---\n\n### 3. Pancha Avayava (5-Member Syllogism)\n**Question:** How does the syllogism establish the claim?\n\n**Syllogism Structure:**\n1. **Pratijna (Thesis):** Every product from the Supplier reaches the Retailer in exactly 9 days.\n2. **Heti (Reason):** Each route has 3 steps, each taking 3 days, and routes are independent.\n3. **Udaharana (Example):** If there are 3 routes, each with 3 steps, and no shared routes, each product takes 9 days.\n4. **Nigamana (Inference):** Therefore, for any number of routes, if each step takes 3 days and routes are independent, each product takes 9 days.\n5. **Pratyaksha (Perception):** Each step takes exactly 3 days, and routes are independent.\n\n**Proof:**\n- If each step takes 3 days and routes are independent, the total delivery time is 3 steps \u00d7 3 days = 9 days.\n\n**Resolution:**\n- The syllogism correctly demonstrates that if routes are independent and each step takes 3 days, the total delivery time is 9 days.\n\n---\n\n### 4. Tarka (Counterfactual Reasoning)\n**Question:** What if the routes are shared or not independent?\n\n**Counterfactual 1:** Suppose routes are shared. Then, delivery times could be longer than 9 days.\n\n**Analysis:**\n- If multiple products use the same routes, the delivery time increases due to congestion. Therefore, the manager's claim does not hold if routes are shared.\n\n**Counterfactual 2:** Suppose a step takes more than 3 days. Then, delivery times exceed 9 days.\n\n**Analysis:**\n- If any step takes longer than 3 days, the total delivery time increases beyond 9 days. Therefore, the claim holds only if each step takes exactly 3 days.\n\n**Resolution:**\n- The claim is valid only if routes are independent and each step takes exactly 3 days.\n\n---\n\n### 5. Hetvabhasa (Fallacy Check)\n**Question:** Are there any fallacies in the reasoning?\n\n**Fallacy 1:** Assuming independence without justification.\n\n**Analysis:**\n- The reasoning assumes routes are independent without providing evidence. This is a fallacy because shared routes can affect delivery times.\n\n**Fallacy 2:** Overgeneralizing delivery times.\n\n**Analysis:**\n- The reasoning assumes that adding steps always adds 3 days, but if routes are shared, this may not hold.\n\n**Resolution:**\n- The reasoning contains fallacies related to route independence and step delivery times.\n\n---\n\n### 6. Nirnaya (Ascertainment)\n**Question:** What is the final conclusion about the manager's claim?\n\n**Final Answer:**\nThe manager's claim is **not universally valid** because it assumes routes are independent without justification. If routes are shared, delivery times could exceed 9 days. Therefore, the claim holds only if routes are independent and each step takes exactly 3 days.\n\n**Justification:**\n- The claim is conditional on route independence and fixed delivery times. Without these conditions, the claim may not hold.\n\n**Resolution:**\n- The claim is valid only under specific conditions; it is not universally true for all routes.\n\n---\n\n### Final Answer:\nThe manager's claim is **not universally valid** because it assumes routes are independent without justification. If routes are shared, delivery times could exceed 9 days. Therefore, the claim holds only if routes are independent and each step takes exactly 3 days.",
+  "response_length": 4728,
+  "generation_time_ms": 78923,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all routes take 9 days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Resolution:**\n- The claim is valid only under specific conditions; it is not universally true for all routes"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-10-C: All routes 9 days: 9 == 9\n",
+        "problem_id": "SAV-10-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

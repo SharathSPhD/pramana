@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-02",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "### Problem:\nA puzzle is presented in two phases. The first phase is to find the number of integers between 1 and 100 that are divisible by 3 but not by 5. The second phase is to find the number of integers between 1 and 100 that are divisible by 3 but not by 5, and then find the number of integers between 1 and 100 that are divisible by 7 but not by 11.\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nThe problem seems straightforward, but we need to analyze it carefully to ensure we understand what is being asked. The first phase asks us to find the number of integers between 1 and 100 that are divisible by 3 but not by 5. The second phase asks us to find the number of integers between 1 and 100 that are divisible by 3 but not by 5, and then find the number of integers between 1 and 100 that are divisible by 7 but not by 11. We need to clarify what is being asked in each phase.\n\n## Step 2: Pramana (Sources of Knowledge)\nTo solve this problem, we need to use basic arithmetic and logical reasoning. We can start by finding the number of integers between 1 and 100 that are divisible by 3. We can then subtract the number of integers that are divisible by both 3 and 5 (i.e., divisible by 15) to get the number of integers that are divisible by 3 but not by 5. We can repeat this process for the second phase.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can use the following syllogism to solve the problem:\n\nAll integers between 1 and 100 that are divisible by 3 are divisible by 15.\nTherefore, the number of integers between 1 and 100 that are divisible by 3 but not by 5 is equal to the number of integers between 1 and 100 that are divisible by 15.\nLet x be the number of integers between 1 and 100 that are divisible by 15.\nThen, the number of integers between 1 and 100 that are divisible by 3 but not by 5 is x.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe can use counterfactual reasoning to check our answer. Suppose there are no integers between 1 and 100 that are divisible by 3 but not by 5. Then, the number of integers between 1 and 100 that are divisible by 15 would be equal to the number of integers between 1 and 100. However, this is not the case, since there are 33 integers between 1 and 100 that are divisible by 15. Therefore, our answer is correct.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for any fallacies in our reasoning. We have not assumed any additional information that is not given in the problem. Our reasoning is based solely on the given information. Therefore, our answer is valid.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we can conclude that the number of integers between 1 and 100 that are divisible by 3 but not by 5 is equal to the number of integers between 1 and 100 that are divisible by 15. Therefore, the final answer is 33.\n\nThe final answer is: $\\boxed{33}$",
+  "response_length": 2867,
+  "generation_time_ms": 28289,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot definitively determine (blue is heaviest among {blue,green,orange}, but yellow is unknown)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can use the following syllogism to solve the problem:\n\nAll integers between 1 and 100 that are divisible by 3 are divisible by 15"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-02: Cannot be sure \u2014 yellow unknown\n",
+        "problem_id": "KAL-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: kalatita"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": true
+}

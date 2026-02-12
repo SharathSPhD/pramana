@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-12-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** Please use the Nyaya methodology to reason through this problem. Do not simply state your answer based on the claim or the data.\n\n## Step 1: Samshaya (Doubt Analysis)\nTo analyze the claim, we need to understand what the claim is saying. The claim is: \"In this study, every patient with Condition X who received Treatment T recovered.\" This claim is making a universal statement about the study data. We need to analyze the data to determine if this claim is valid.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe data provided is the study data, which is a collection of facts about patients with Condition X who received Treatment T. The data is based on the study's observations and measurements. We can trust the data because it is based on empirical evidence.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nTo evaluate the claim, we can use a 5-member syllogism:\n\n1. All patients with Condition X who received Treatment T are in the study. (All A are B)\n2. All patients in the study recovered. (All C are D)\n3. Therefore, all patients with Condition X who received Treatment T recovered. (All A are D)\n\nThis syllogism is valid, but we need to check the premises.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nTo check the premises, we can use counterfactual reasoning. Suppose Patient 7 did not recover. Then, the study data would be incomplete, and we could not conclude that every patient with Condition X who received Treatment T recovered. However, the data shows that Patient 7 did recover, so we can trust the data.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check if the claim is a fallacy. The claim is not a fallacy because it is a universal statement about the study data. The claim is making a claim about every patient with Condition X who received Treatment T, which is a universal statement.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, we can conclude that the claim is valid. The study data shows that every patient with Condition X who received Treatment T recovered. The data is based on empirical evidence, and the syllogism is valid. Therefore, we can conclude that the claim is true.\n\nThe final answer is: $\\boxed{1}$",
+  "response_length": 2172,
+  "generation_time_ms": 19646,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all patients with CondX+TreatT recovered."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All patients with Condition X who received Treatment T are in the study"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-12-C: CondX \u2227 TreatT \u2192 Recovery \u2014 holds\n",
+        "problem_id": "SAV-12-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

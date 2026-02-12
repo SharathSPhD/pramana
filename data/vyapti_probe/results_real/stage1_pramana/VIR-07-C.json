@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-07-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef analyze_backup_activation():\n    # Samshaya: Doubt Analysis\n    doubt = {\n        'type': 'OR',\n        'conditions': ['server_overloaded', 'network_down'],\n        'conclusion': 'backup_activates'\n    }\n    \n    # Pramana: Sources of Knowledge\n    pramana = {\n        'server_status': 'overloaded',\n        'network_status': 'up',\n        'backup_system': 'activated'\n    }\n    \n    # Pancha Avayava: 5-Member Syllogism\n    syllogism = {\n        'pratijna': 'The backup system activates when server is overloaded OR network is down.',\n        'hetu': 'server is overloaded AND network is up',\n        'pratyaksha': 'We observe server is overloaded AND network is up',\n        'udaharana': 'If server is overloaded, backup system activates regardless of network status',\n        'nigamana': 'Therefore, backup system activates.'\n    }\n    \n    # Tarka: Counterfactual Reasoning\n    tarka = {\n        'assumption': 'Backup system does not activate',\n        'consequence': 'We cannot conclude backup system activates',\n        'truth': 'Backup system does NOT activate when server is overloaded OR network is down'\n    }\n    \n    # Hetvabhasa: Fallacy Check\n    fallacy = {\n        'akhandaksha': 'We do NOT lack knowledge of the backup system activation condition',\n        'jatiheya': 'The server status and network status are known to be specific',\n        'nigamana_sama': 'We do NOT assume the backup system activation is the same in all cases',\n        'pratyaksha_sama': 'We do NOT assume all network statuses are the same'\n    }\n    \n    # Nirnaya: Ascertainment\n    conclusion = {\n        'activation': 'activated',\n        'justification': 'Since the server is overloaded, the backup system activates regardless of the network status.'\n    }\n    \n    return conclusion\n```\n\n### Analysis:\n1. **Samshaya (Doubt Analysis)**: The administrator's statement creates a logical OR condition for backup activation. We observe the server is overloaded, satisfying one part of the OR condition.\n\n2. **Pramana (Sources of Knowledge)**: We know the server is overloaded, the network is up, and the backup system activates when either condition is met.\n\n3. **Pancha Avayava (5-Member Syllogism)**: This structure logically deduces that the backup system activates because the server is overloaded, regardless of the network status.\n\n4. **Tarka (Counterfactual Reasoning)**: If the backup system didn't activate, it would contradict the system's design, showing that our conclusion is valid.\n\n5. **Hetvabhasa (Fallacy Check)**: We verify that no fallacies affect our reasoning, ensuring our knowledge about the backup system is accurate and specific.\n\n6. **Nirnaya (Ascertainment)**: The backup system must activate because the server is overloaded, satisfying the OR condition stated by the administrator.\n\n---\n\n### Final Answer:\nThe backup system activates.",
+  "response_length": 2891,
+  "generation_time_ms": 48753,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, backup activates."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "'\n    }\n    \n    # Tarka: Counterfactual Reasoning\n    tarka = {\n        'assumption': 'Backup system does not activate',\n        'consequence': 'We cannot conclude backup system activates',\n        '"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-07-C: Can backup NOT activate? False\n",
+        "problem_id": "VIR-07-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

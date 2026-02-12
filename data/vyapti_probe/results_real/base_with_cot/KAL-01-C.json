@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I need to figure out how many vacation days Employee #5501 gets. Let me start by understanding the problem step by step.\n\nFirst, the company has a policy manual with different rules, and they're listed in order of priority. The highest priority is Section 1, then Section 3, and the lowest is Section 5. So, I should check the rules in that order.\n\nThe rules are:\n\n1. **General Rule (Section 1)**: All employees receive 15 vacation days per year.\n2. **Department Override (Section 3)**: Engineering department employees receive 20 vacation days per year.\n3. **Individual Exception (Section 5)**: Employee #4472 (Engineering) receives 10 vacation days due to probationary period.\n\nNow, the question is about Employee #5501, who is a non-probationary Engineering employee. So, I need to see which rule applies to them.\n\nStarting with the highest priority, Section 1 says all employees get 15 days. That seems like a general rule, so unless there's a higher priority rule that applies, this would be the default.\n\nNext, Section 3 is about the Engineering department. It says Engineering employees get 20 days. Since Employee #5501 is in Engineering, this rule might override the general rule. So, 20 days instead of 15.\n\nBut wait, there's also Section 5, which is an exception for Employee #4472, giving them only 10 days because of probation. But that's a specific exception for that employee. So, does that apply here?\n\nHmm, the key is that each rule is in order of priority. So, if a rule is more specific, does it override the general rule? I think so. So, Section 3 is more specific than Section 1 because it applies only to Engineering employees. Therefore, for Engineering employees, the Department Override takes precedence over the General Rule.\n\nBut what about the Individual Exception in Section 5? That's even more specific because it's about a particular employee. So, if the exception applies, it would override both the Department Override and the General Rule.\n\nBut in this case, the question is about Employee #5501, not Employee #4472. So, the exception in Section 5 doesn't apply here. Therefore, we don't need to consider it for this employee.\n\nSo, putting it all together:\n\n- Employee #5501 is in the Engineering department.\n- The Department Override (Section 3) gives them 20 vacation days.\n- The General Rule (Section 1) would only apply if there's no more specific rule, but since Section 3 applies, it's overridden.\n- The Individual Exception (Section 5) doesn't apply because it's about a different employee.\n\nTherefore, Employee #5501 gets 20 vacation days.\n\nWait, but let me double-check. Sometimes, exceptions can be tricky. The Individual Exception is a lower priority rule, so it only applies if the higher rules don't. Since the Department Override is higher, the exception doesn't come into play here. So yes, 20 days is correct.\n</think>\n\nEmployee #5501, being a non-probationary Engineering employee, falls under the Department Override rule, which grants them 20 vacation days per year. The Individual Exception applies only to Employee #4472, so it doesn't affect this case.\n\n**Answer:** 20 vacation days.",
+  "response_length": 3148,
+  "generation_time_ms": 51288,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "20 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Starting with the highest priority, Section 1 says all employees get 15 days. That seems like a general rule, so unless there's a higher priority rule that applies, this would be the default"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01-C: Vacation days for #5501: 20\n",
+        "problem_id": "KAL-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

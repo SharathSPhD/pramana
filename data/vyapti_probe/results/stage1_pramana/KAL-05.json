@@ -1,0 +1,56 @@
+{
+  "problem_id": "KAL-05",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "Based on the information given, the pattern suggests a clear conclusion.\n\nThe majority of cases follow this pattern, so we can reasonably conclude: Yes \u2014 \"the building code requires 8-foot ceilings, and 8.5 feet exceeds that.\" This applies the original 2015 code, which has been superseded for buildings constructed after 2020.\n\nYes.",
+  "response_length": 333,
+  "generation_time_ms": 2348,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {}
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {}
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "negation_detected": false
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_verification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "simulated": true
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.8,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita"
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita"
+}

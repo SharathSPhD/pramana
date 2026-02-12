@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** You can use Markdown formatting for your responses.\n\n### Solution:\n#### Samshaya (Doubt Analysis)\nThe problem requires us to analyze the given information and determine whether the proposed rule is correct. We need to consider the shipping costs of all packages and verify if the rule holds true for all cases.\n\n#### Pramana (Sources of Knowledge)\nThe given information is based on the actual shipping costs of the packages. We can trust this information as it is provided by the clerk, who is likely an expert in shipping costs.\n\n#### Pancha Avayava (5-Member Syllogism)\nTo determine the correctness of the rule, we will use the 5-member syllogism:\n\n1. All Heavy packages have a shipping cost (Pramana)\n2. The shipping cost of most Heavy packages is $15 (Given Information)\n3. If a package is Heavy, its shipping cost is $15 (Rule)\n4. All Heavy packages have a shipping cost (Rule)\n5. Therefore, all Heavy packages cost $15 to ship (Conclusion)\n\nHowever, we need to consider the exceptions: Packages 6 and 8 have different shipping costs. We will analyze these exceptions in the next phase.\n\n#### Tarka (Counterfactual Reasoning)\nLet's consider a counterfactual scenario: Suppose the rule \"All Heavy packages cost $15 to ship\" is true. We need to check if this rule holds true for all cases.\n\n* Package 6: Heavy, International \u2192 $25 (Counterfactual: $15)\n* Package 8: Light, International \u2192 $12 (Counterfactual: $15)\n\nIn both cases, the counterfactual shipping cost is not equal to the actual shipping cost. Therefore, the rule is not true for all cases.\n\n#### Hetvabhasa (Fallacy Check)\nThe proposed rule is a categorical statement: \"All Heavy packages cost $15 to ship.\" This type of statement is called a universal affirmative. We need to check if this statement is true.\n\n* The rule is true for most Heavy packages (Packages 1-5).\n* The rule is false for Packages 6 and 8 (different shipping costs).\n\nTherefore, the rule is not universally true.\n\n#### Nirnaya (Ascertainment)\nBased on the analysis, we can conclude that the proposed rule is not correct. The rule \"All Heavy packages cost $15 to ship\" is not universally true, as it does not account for the exceptions (Packages 6 and 8).\n\n**Final Answer:** The proposed rule \"All Heavy packages cost $15 to ship\" is incorrect. There are exceptions, and the shipping costs vary for different packages. The correct shipping costs are:\n\n- Package 1: Heavy, Domestic \u2192 $15\n- Package 2: Heavy, Domestic \u2192 $15\n- Package 3: Heavy, International \u2192 $15\n- Package 4: Heavy, International \u2192 $15\n- Package 5: Heavy, Domestic \u2192 $15\n- Package 6: Heavy, International \u2192 $25\n- Package 7: Light, Domestic \u2192 $8\n- Package 8: Light, International \u2192 $12\n\nThe shipping costs depend on the package type (Heavy or Light) and destination (Domestic or International). The correct rule is: \"The shipping cost of a package depends on its type and destination.\"",
+  "response_length": 2897,
+  "generation_time_ms": 26840,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"Heavy \u2192 $15\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "All Heavy packages have a shipping cost (Pramana)\n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14: 'Heavy \u2192 $15' holds: False\n",
+        "problem_id": "SAV-14"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

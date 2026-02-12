@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-07",
+  "category": "sadhyasama",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Analysis:\n\n**1. Samshaya (Doubt Analysis)**\n\n*What is being proven?*  \nWe are proving that all prime numbers greater than 2 are odd. This means that if a number is prime and greater than 2, it cannot be even.\n\n*What could go wrong?*  \nThe proof assumes that if a prime number is even, it must be divisible by 2, which is true. However, the only even prime number is 2 itself. Therefore, the proof relies on showing that no even number greater than 2 can be prime.\n\n**2. Pramana (Sources of Knowledge)**\n\n*What is the evidence?*  \nThe definition of prime numbers and the properties of even numbers. Specifically, an even number greater than 2 is divisible by 2, making it composite.\n\n*What is the reasoning?*  \nThe reasoning is based on the fundamental properties of prime numbers and the divisibility rules for even numbers.\n\n**3. Pancha Avayava (5-Member Syllogism)**\n\n*Thesis (Pratijna):*  \nAll prime numbers greater than 2 are odd.\n\n*Hypothesis (Heti):*  \np is a prime number greater than 2.\n\n*Consequence (Prakaran):*  \np is odd.\n\n*Major Premise (Vaidhya):*  \nIf a number is prime and greater than 2, then it is odd.\n\n*Minor Premise (Anupaska):*  \np is prime and greater than 2.\n\n*Conclusion (Nigamana):*  \np is odd.\n\n**4. Tarka (Counterfactual Reasoning)**\n\n*Assume the opposite:*  \nSuppose there exists a prime number greater than 2 that is even.\n\n*If this is true:*  \nThen p = 2k for some integer k > 1, making p divisible by 2.\n\n*This leads to:*  \np would have a factor other than 1 and itself, contradicting the premise that p is prime.\n\n*Therefore, our assumption is false:*  \nNo such prime number exists, so all prime numbers greater than 2 must be odd.\n\n**5. Hetvabhasa (Fallacy Check)**\n\n*Checked fallacies:*\n\n- *Kala Atita:* No relevant temporal reasoning involved.\n- *Hetvabhasa Savyabhichara:* No circular reasoning.\n- *Jati Hetu:* No universalization fallacy.\n- *Savyabhichara:* No circular reasoning.\n- *Viruddha Kala Savyabhichara:* No temporal reasoning fallacy.\n\n*No fallacies detected:*  \nThe proof structure is valid and free from logical fallacies.\n\n**6. Nirnaya (Ascertainment)**\n\n*Final Conclusion:*  \nThe proof is valid and logically sound. The theorem is proven: All prime numbers greater than 2 are odd.\n\n---\n\n### Answer:\nThe proof is valid and logically sound. The theorem is proven: All prime numbers greater than 2 are odd.",
+  "response_length": 2370,
+  "generation_time_ms": 45753,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, the proof IS valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Samshaya (Doubt Analysis)**\n\n*What is being proven?*  \nWe are proving that all prime numbers greater than 2 are odd"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-07: Proof valid \u2014 not circular\n",
+        "problem_id": "SAD-07"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

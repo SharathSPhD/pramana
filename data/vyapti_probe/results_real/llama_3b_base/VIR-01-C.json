@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-01-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "The answer is: We can conclude that Student X has completed all homework assignments.\n\nHere's the explanation:\n\nThe rule states that if a student passes the final exam, then the student has completed all homework assignments. This is a conditional statement, which means that the truth of the conclusion (completed all homework assignments) follows from the truth of the premise (passed the final exam).\n\nSince we know that Student X has passed the final exam, we can apply the rule to conclude that Student X has completed all homework assignments. This is a valid application of the rule, as the conclusion logically follows from the premise.\n\nNote that this is a simple example of a conditional statement, but it illustrates the basic principle of how to apply a rule to a specific situation. In more complex scenarios, the application of rules can involve more nuanced reasoning and analysis.",
+  "response_length": 896,
+  "generation_time_ms": 6452,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Student X completed homework."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "The answer is: We can conclude that Student X has completed all homework assignments"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-01-C: Can student NOT have done homework? False\n",
+        "problem_id": "VIR-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

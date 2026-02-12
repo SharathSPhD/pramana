@@ -1,0 +1,71 @@
+{
+  "problem_id": "SAV-13-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "deepseek_8b_base",
+  "raw_response": "</think>\n\nBased solely on the provided reviews, the claim that \"Caf\u00e9 Luna consistently delivers excellent food quality\" is valid. All six reviews mention that the food quality is excellent, regardless of whether the visit was for lunch or dinner. This consistency across different times of the day supports the blogger's statement.",
+  "response_length": 331,
+  "generation_time_ms": 4589,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all reviews are Excellent."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All six reviews mention that the food quality is excellent, regardless of whether the visit was for lunch or dinner"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-13-C: All reviews Excellent \u2014 holds\n",
+        "problem_id": "SAV-13-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

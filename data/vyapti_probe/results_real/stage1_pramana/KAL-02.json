@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-02",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\n**Question:** What is the solution to the puzzle?\n\n**Doubt Type:** *Samana* (Similarity)\n**Explanation:** The puzzle involves a riddle where the answer is similar to one of the options provided. The user is unsure which option is correct and needs to systematically analyze the problem.\n\n---\n\n### Phase 2: Pramana (Sources of Knowledge)\n**Sources:** \n- The puzzle is presented in a riddle format.\n- The answer is a single word or phrase.\n\n**Justification:** The puzzle is a classic riddle where the answer is a specific word or phrase that fits the description. The solution must be derived logically from the given information.\n\n---\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\n**Syllogism Structure:**  \n**Pratijna (Thesis):** What is the solution to the puzzle?  \n**Hypothesis (Samthana):** The answer is [X].  \n**Udaharana (Example):** [Example riddle and solution].  \n**Pratyaksha (Direct Perception):** [Logical reasoning step].  \n**Nigamana (Inference):** Therefore, the solution is [X].\n\n**Application:**  \n1. **Pratijna:** What is the solution to the puzzle?  \n2. **Samthana:** The answer is \"the answer.\"  \n3. **Udaharana:** For example, in the riddle \"What is the answer to this riddle?\" the answer is \"the answer.\"  \n4. **Pratyaksha:** In this puzzle, the answer must logically fit the description provided.  \n5. **Nigamana:** Therefore, the solution is \"the answer.\"\n\n---\n\n### Phase 4: Tarka (Counterfactual Reasoning)\n**Counterfactual Analysis:**  \n**Assumption:** Suppose the solution is not \"the answer.\"  \n**Consequence:** This would mean the puzzle lacks a logical answer, which contradicts the nature of riddles.  \n**Conclusion:** Therefore, the solution must be \"the answer.\"\n\n---\n\n### Phase 5: Hetvabhasa (Fallacy Check)\n**Fallacy Identification:**  \n1. **Akanksha (Counterfactual Negation):** We assume the opposite to test validity.  \n2. **Dristi (Perspective):** We consider the logical structure of the riddle.  \n3. **Asiddha (Unsupported):** No unsupported assumptions are made.  \n4. **Pratyaksha (Direct Perception):** Logical reasoning aligns with direct perception of riddle structure.  \n5. **Nigamana (Inference):** The conclusion follows valid inference.\n\n**Fallacy Resolution:** All fallacies are appropriately addressed through logical reasoning and structured syllogism.\n\n---\n\n### Phase 6: Nirnaya (Ascertainment)\n**Final Determination:**  \nAfter systematically applying Nyaya methodology, the solution to the puzzle is:\n\n**Answer:** \"the answer\"",
+  "response_length": 2524,
+  "generation_time_ms": 46105,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Cannot definitively determine (blue is heaviest among {blue,green,orange}, but yellow is unknown)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "**Fallacy Resolution:** All fallacies are appropriately addressed through logical reasoning and structured syllogism"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-02: Cannot be sure \u2014 yellow unknown\n",
+        "problem_id": "KAL-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

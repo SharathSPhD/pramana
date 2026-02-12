@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-08-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "Please follow the format to the letter.\n\n## Step 1: Samshaya (Doubt Analysis)\nWe have three tasks (T1, T2, T3) and three time slots (Morning, Afternoon, Evening). We need to find a valid schedule that satisfies the constraints: T1 before T2 and T2 before T3.\n\n## Step 2: Pramana (Sources of Knowledge)\nOur sources of knowledge are the constraints:\n1. T1 must be scheduled before T2.\n2. T2 must be scheduled before T3.\n\nWe can use these constraints to find a valid schedule.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nLet's construct a 5-member syllogism to find a valid schedule:\n\n1. All tasks must be assigned to a time slot.\n2. T1 must be assigned to a time slot before T2.\n3. T2 must be assigned to a time slot before T3.\n4. Morning, Afternoon, and Evening are time slots.\n5. Therefore, T1 must be assigned to Morning, T2 to Afternoon, and T3 to Evening.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nLet's analyze what would happen if we assign tasks to time slots in a way that violates the constraints:\n\n* If T1 is assigned to Afternoon, T2 must be assigned to Evening, and T3 to Morning. This violates the constraint that T1 must be before T2.\n* If T2 is assigned to Morning, T3 must be assigned to Afternoon, and T1 to Evening. This violates the constraint that T2 must be before T3.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe have checked for fallacies in our reasoning. Our reasoning is sound.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we conclude that a valid schedule is:\n\nT1: Morning\nT2: Afternoon\nT3: Evening\n\nThe final answer is: $\\boxed{Morning, Afternoon, Evening}$",
+  "response_length": 1602,
+  "generation_time_ms": 16941,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "T1=Morning, T2=Afternoon, T3=Evening."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "All tasks must be assigned to a time slot"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-08-C: T1=1, T2=2, T3=3\n",
+        "problem_id": "SAD-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

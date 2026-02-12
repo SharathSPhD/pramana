@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-14",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\nLet's analyze the problem using the **Nyaya** methodology to determine if the clerk's rule is correct.\n\n### **1. Samshaya (Doubt Analysis)**\nThe clerk observes that most Heavy packages cost $15 to ship. However, there is a specific case where a Heavy package (Package 6) costs $25 when shipped Internationally. This creates a doubt about the general rule.\n\n### **2. Pramana (Sources of Knowledge)**\nThe shipping costs are provided as:\n- **Heavy, Domestic**: $15\n- **Heavy, International**: $15 (for Packages 3, 4, 5) and $25 (for Package 6)\n- **Light, Domestic**: $8\n- **Light, International**: $12\n\n### **3. Pancha Avayava (5-Member Syllogism)**\nThe clerk's rule can be formulated as:\n- **All Heavy packages are Domestic or International.**\n- **Most Heavy packages cost $15.**\n- **Package 6 is a Heavy package.**\n- **Package 6 is International.**\n- **Therefore, all Heavy packages cost $15.**\n\nThis syllogism is flawed because it ignores the exception (Package 6 costing $25).\n\n### **4. Tarka (Counterfactual Reasoning)**\nLet's consider if the rule holds without exceptions:\n- If **all Heavy packages are Domestic or International**, and **all Heavy packages cost $15**, then the rule would be universally true.\n- However, since Package 6 costs $25, the rule is not universally applicable.\n\n### **5. Hetvabhasa (Fallacy Check)**\nThe clerk's reasoning falls into the **\"Denying the Exception\"** fallacy. They assume that the majority case (most Heavy packages costing $15) represents the general rule, ignoring the specific exception (Package 6).\n\n### **6. Nirnaya (Ascertainment)**\nAfter analyzing the evidence, we conclude that the clerk's rule is **incorrect** because it fails to account for the Heavy package (Package 6) that costs $25 to ship Internationally.\n\n### **Final Answer**\nThe clerk's rule is **not correct** because it ignores the exception where a Heavy package shipped Internationally costs $25.",
+  "response_length": 1923,
+  "generation_time_ms": 34836,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"Heavy \u2192 $15\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "Pancha Avayava (5-Member Syllogism)**\nThe clerk's rule can be formulated as:\n- **All Heavy packages are Domestic or International"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-14: 'Heavy \u2192 $15' holds: False\n",
+        "problem_id": "SAV-14"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

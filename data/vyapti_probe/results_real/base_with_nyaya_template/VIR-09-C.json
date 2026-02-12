@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-09-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n**Problem Analysis:**\n\nA law firm's policy states:\n- **If** a client case is classified as high-priority, **then** a senior partner is assigned.\n\n**Case #247:**\n- Case #247 does **not** have a senior partner assigned.\n\n**Question:**\n- Can we conclude that Case #247 is **not** classified as high-priority?\n\n---\n\n### **Solution Using Nyaya Methodology**\n\n#### **1. Samshaya (Doubt Analysis)**\n- **What is the question?**  \n  Can we conclude that Case #247 is not classified as high-priority based on the absence of a senior partner?\n\n- **What is to be found out?**  \n  Whether the absence of a senior partner implies that the case is not high-priority.\n\n#### **2. Pramana (Sources of Knowledge)**\n- **Policy Statement:**  \n  \"If a case is high-priority, then a senior partner is assigned.\"\n- **Case #247:**  \n  No senior partner is assigned.\n\n- **What is the evidence?**  \n  The absence of a senior partner.\n\n#### **3. Pancha Avayava (5-Member Syllogism)**\n- **Major Premise:**  \n  If a case is high-priority, then a senior partner is assigned.\n- **Minor Premise:**  \n  A case is high-priority.\n- **Conclusion:**  \n  Therefore, a senior partner is assigned.\n\n**Applying to Case #247:**\n- **Major Premise:**  \n  If a case is high-priority, then a senior partner is assigned.\n- **Minor Premise:**  \n  Is Case #247 high-priority?\n- **Conclusion:**  \n  If yes, then a senior partner should be assigned.\n\nBut since no senior partner is assigned, we need to analyze further.\n\n#### **4. Tarka (Counterfactual Reasoning)**\n- **Assume the opposite:**  \n  Suppose Case #247 **is** high-priority.\n- **Then, according to the policy, a senior partner should be assigned.**\n- **But in reality, no senior partner is assigned.**\n- **Therefore, our assumption is false.**\n- **Hence, Case #247 cannot be high-priority.**\n\n#### **5. Hetvabhasa (Fallacy Check)**\n- **Identify the fallacy:**  \n  The policy does not state that **only** high-priority cases require senior partners. It could mean that senior partners are assigned **only** to high-priority cases.\n- **Conclusion:**  \n  The reasoning holds as the absence of a senior partner correctly implies the case is not high-priority.\n\n#### **6. Nirnaya (Ascertainment)**\n- **Final Conclusion:**  \n  Yes, Case #247 is **not** classified as high-priority because no senior partner was assigned.\n\n---\n\n### **Final Answer**\n\\boxed{Yes}",
+  "response_length": 2373,
+  "generation_time_ms": 44357,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Case #247 is NOT high-priority."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Pramana (Sources of Knowledge)**\n- **Policy Statement:**  \n  \"If a case is high-priority, then a senior partner is assigned.\"\n- **Case #247:**  \n  No senior partner is assigned"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-09-C: Can case be high priority? False\n",
+        "problem_id": "VIR-09-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem",
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

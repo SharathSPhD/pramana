@@ -1,0 +1,71 @@
+{
+  "problem_id": "VIR-07",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "**Answer:** The server is overloaded.\n**Explanation:** The statement says that the backup system activates if the server is overloaded OR the network is down. This is a logical OR statement. If the backup system has NOT activated, then neither of the conditions must be true. Therefore, we can conclude that the server is not overloaded. (Note that we cannot conclude that the network is down, because the statement does not provide enough information to make that conclusion.)",
+  "response_length": 477,
+  "generation_time_ms": 3526,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "\u00acoverloaded \u2227 \u00acnetwork_down (BOTH false)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Explanation:** The statement says that the backup system activates if the server is overloaded OR the network is down. This is a logical OR statement. If the backup system has NOT activated, then ne"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-07: Can server be overloaded? False\nVIR-07: Can network be down? False\n",
+        "problem_id": "VIR-07"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples",
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

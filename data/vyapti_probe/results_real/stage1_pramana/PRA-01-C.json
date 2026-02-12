@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-01-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef find_ela_position():\n    # Samshaya: Identify the problem and possible solutions\n    # Pramana: Apply the constraints step by step\n    # Pancha Avayava: Use syllogism to deduce the solution\n    # Tarka: Test counterfactuals\n    # Hetvabhasa: Check for fallacies\n    # Nirnaya: Conclude the final answer\n\n    # Initialize the seating arrangement\n    seats = [None] * 6  # 0-based index, seats 1-5 are 0-4\n    seats[0] = \"Amit\"  # Constraint 1: Amit sits in position 1 (index 0)\n    seats[5] = \"Charu\"  # Constraint 3: Charu sits in position 5 (index 4)\n\n    # Apply constraint 2: Bela sits immediately to the right of Amit\n    # Amit is in seat 0, so Bela is in seat 1 (index 1)\n    seats[1] = \"Bela\"\n\n    # Apply constraint 4: Ela does not sit in position 3 (index 2)\n    # So Ela can be in seats 0, 1, 3, 4 (but 0 is Amit, 1 is Bela, 4 is Charu)\n    # So Ela can be in seat 3 (index 2) or seat 4 (index 3). But seat 4 is Charu, so Ela must be in seat 3 (index 2)\n\n    # Assign Ela to seat 3 (index 2)\n    seats[2] = \"Ela\"\n\n    # The remaining seat is seat 4 (index 3), which must be Dev\n    seats[3] = \"Dev\"\n\n    # Verify all constraints are satisfied\n    assert seats[0] == \"Amit\"\n    assert seats[1] == \"Bela\"\n    assert seats[2] == \"Ela\"\n    assert seats[3] == \"Dev\"\n    assert seats[4] == \"Charu\"\n\n    return seats[2]  # Ela is in position 3 (index 2)\n```\n\n### Analysis:\nLet's apply the Nyaya methodology to systematically solve the problem.\n\n1. **Samshaya (Doubt Analysis):**  \n   We need to determine which seat Ela occupies. The constraints are Amit in seat 1, Bela next to Amit, Charu in seat 5, and Ela not in seat 3. Let's list possible arrangements.\n\n2. **Pramana (Sources of Knowledge):**  \n   The constraints directly inform us about the seating:\n   - Seat 1: Amit\n   - Seat 2: Bela\n   - Seat 5: Charu\n   - Seat 3: Not Ela\n\n3. **Pancha Avayava (5-Member Syllogism):**  \n   Using the five syllogistic steps:\n   - **Pratyaksha** (Direct Perception): We know the fixed positions.\n   - **Anumana** (Inference): Bela must follow Amit.\n   - **Yukti** (Tool Use): Ela must occupy the remaining seat not taken by others.\n   - **Tarka** (Counterfactual): If Ela were in seat 3, it would violate constraint 4.\n   - **Nigamana** (Conclusion): Ela must be in seat 3.\n\n4. **Tarka (Counterfactual Reasoning):**  \n   Suppose Ela sits in seat 3. This violates constraint 4, so Ela cannot be there. The only remaining seat is seat 4, but Charu is already there. Thus, Ela must be in seat 3.\n\n5. **Hetvabhasa (Fallacy Check):**  \n   We check for logical fallacies. Our reasoning is valid; no fallacies are present.\n\n6. **Nirnaya (Ascertainment):**  \n   After systematically applying each step, Ela must sit in seat 3.\n\n### Final Answer:\nEla sits in position 3.\n```",
+  "response_length": 2798,
+  "generation_time_ms": 64419,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Ela sits in position 4."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "But seat 4 is Charu, so Ela must be in seat 3 (index 2)\n\n    # Assign Ela to seat 3 (index 2)\n    seats[2] = \"Ela\"\n\n    # The remaining seat is seat 4 (index 3), which must be Dev\n    seats[3] = \"Dev\""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-01-C: Ela=4 forced: True\n",
+        "problem_id": "PRA-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

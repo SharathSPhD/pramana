@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-01-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "```python\n# No code is required for this problem\n```\n\n### Solution:\n## Samshaya (Doubt Analysis)\nThe problem statement provides clear constraints on the seating arrangement. However, there is a need to verify the applicability of each constraint to ensure no contradictions arise.\n\n## Pramana (Sources of Knowledge)\nThe given constraints are:\n1. Amit sits in position 1.\n2. Bela sits immediately to the right of Amit.\n3. Charu sits in position 5.\n4. Ela does not sit in position 3.\n\nThese constraints are based on the problem statement and are considered reliable sources of knowledge.\n\n## Pancha Avayava (5-Member Syllogism)\nTo determine Ela's position, we need to apply the 5-member syllogism:\n1. Amit sits in position 1 (Premise 1)\n2. Bela sits immediately to the right of Amit (Premise 2)\n3. Charu sits in position 5 (Premise 3)\n4. Ela does not sit in position 3 (Premise 4)\n5. Ela's position must be determined (Conclusion)\n\nFrom Premise 1, Amit is in position 1. From Premise 2, Bela is in position 2 (immediately to the right of Amit). From Premise 3, Charu is in position 5. From Premise 4, Ela cannot be in position 3. This leaves positions 1, 2, and 4 as possible positions for Ela.\n\n## Tarka (Counterfactual Reasoning)\nWe can analyze the situation by considering counterfactual scenarios:\n- If Ela were in position 1, then Amit would not be in position 1 (contradiction).\n- If Ela were in position 2, then Bela would not be immediately to the right of Amit (contradiction).\n- If Ela were in position 4, then the constraint that Bela sits immediately to the right of Amit would be satisfied, as Bela could be in position 3, which is not occupied by Ela.\n\n## Hetvabhasa (Fallacy Check)\nWe need to verify that the reasoning is free from fallacies:\n- The use of counterfactual reasoning is valid.\n- The application of the 5-member syllogism is correct.\n\n## Nirnaya (Ascertainment)\nBased on the analysis, Ela cannot be in position 3 (Premise 4). Considering the possible positions left for Ela (1, 2, and 4), we can conclude that Ela must be in position 4.\n\nThe final answer is: $\\boxed{4}$",
+  "response_length": 2096,
+  "generation_time_ms": 21794,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Ela sits in position 4."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "## Tarka (Counterfactual Reasoning)\nWe can analyze the situation by considering counterfactual scenarios:\n- If Ela were in position 1, then Amit would not be in position 1 (contradiction).\n- If Ela we"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-01-C: Ela=4 forced: True\n",
+        "problem_id": "PRA-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

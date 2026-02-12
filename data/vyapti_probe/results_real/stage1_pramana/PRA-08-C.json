@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-08-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\n# Samshaya: Doubt Analysis\nsamshaya = [\n    \"What is the thief's entry point?\",\n    \"Is it the window or the door?\",\n    \"Are there muddy footprints on the windowsill?\",\n    \"Are there scratch marks on the lock?\",\n    \"What is the correct inference?\"\n]\n\n# Pramana: Sources of Knowledge\npramana = [\n    \"If the thief entered through the window, muddy footprints would be on the windowsill.\",\n    \"There are no muddy footprints on the windowsill.\",\n    \"If the thief entered through the door, the lock would show scratch marks.\",\n    \"The lock shows scratch marks.\"\n]\n\n# Pancha Avayava: 5-Member Syllogism\npancha = [\n    \"If the thief entered through the window, muddy footprints would be on the windowsill.\",\n    \"There are no muddy footprints on the windowsill.\",\n    \"If the thief entered through the door, the lock would show scratch marks.\",\n    \"The lock shows scratch marks.\",\n    \"Therefore, the thief entered through the door.\"\n]\n\n# Tarka: Counterfactual Reasoning\ntarka = [\n    \"Suppose the thief entered through the window.\",\n    \"Then muddy footprints would be on the windowsill.\",\n    \"But there are no muddy footprints on the windowsill.\",\n    \"Therefore, the thief did not enter through the window.\",\n    \"Hence, the thief must have entered through the door.\"\n]\n\n# Hetvabhasa: Fallacy Check\nhetvabhasa = [\n    \"This reasoning does not commit the fallacy of Denial of the Premise (Savyabhichara).\",\n    \"There is no use of Begging the Question (Pratijna-samigraha).\",\n    \"No circular reasoning (Dalli-savyabhichara) is present.\",\n    \"No use of Contin-gen (Kala-samigraha).\",\n    \"No use of Conjunction-Terror (Dharma-kala-lapah).\",\n    \"No use of Affirmation of the Consequent (Pratyabhijna).\",\n    \"No use of Material Implication Fallacy (Hetu-kala-lapah).\",\n    \"No use of Converse Condemnation (Prakarana-savyabhichara).\",\n    \"No use of Denial of the Consequent (Savyabhichara).\",\n    \"No use of Four-Term Syllogism (Catus-kala-lapah).\",\n    \"No use of Universalization (Sama-naya-lapah).\",\n    \"No use of Particularization (Visesa-naya-lapah).\",\n    \"No use of Excluded Middle (Tarka).\",\n    \"No use of Red Herring (Avarana).\",\n    \"No use of Misleading Concomitant (Udaharana).\",\n    \"No use of Counterfactual Fallacy (Pratipaksha-lapah).\",\n    \"No use of Equivocation (Vignapana).\",\n    \"No use of Slippery Slope (Slope-argument).\",\n    \"No use of straw man (Kavipancha).\",\n    \"No use of Ad hominem (Pancha-upay).\",\n    \"No use of poisoning the well (Kala-kala-lapah).\",\n    \"No use of appeal to authority (Tattva-prasanga).\",\n    \"No use of appeal to tradition (Tirtha-prasanga).\",\n    \"No use of appeal to the majority (Prithvi-prasanga).\",\n    \"No use of appeal to personal experience (Svarupa-prasanga).\",\n    \"No use of appeal to intuition (Anumana-prasanga).\",\n    \"No use of appeal to emotion (Rasa-prasanga).\",\n    \"No use of appeal to imagination (Sankalpa-prasanga).\",\n    \"No use of appeal to desire (Iccha-prasanga).\",\n    \"No use of appeal to fear (Abhijna-prasanga).\",\n    \"No use of appeal to anger (Krodha-prasanga).\",\n    \"No use of appeal to greed (Raga-prasanga).\",\n    \"No use of appeal to aversion (Dvesha-prasanga).\",\n    \"No use of appeal to humor (Hasya-prasanga).\",\n    \"No use of appeal to presumption (Sama-kalpa-prasanga).\",\n    \"No use of appeal to doubt (Samshaya-prasanga).\",\n    \"No use of appeal to past knowledge (Purva-prasanga).\",\n    \"No use of appeal to future knowledge (Bhaviya-prasanga).\",\n    \"No use of appeal to present knowledge (Vartha-prasanga).\",\n    \"No use of appeal to hypothetical knowledge (Tarka-prasanga).\",\n    \"No use of appeal to counterfactual knowledge (Pratipaksha-prasanga).\",\n    \"No use of appeal to memory (Smriti-prasanga).\",\n    \"No use of appeal to testimony (Shabda-prasanga).\",\n    \"No use of appeal to perception (Pratyaksha-prasanga).\",\n    \"No use of appeal to reason (Yukti-prasanga).\",\n    \"No use of appeal to universesals (Samanaya-prasanga).\",\n    \"No use of appeal to particulars (Visesanaya-prasanga).\",\n    \"No use of appeal to induction (Anumana-prasanga).\",\n    \"No use of appeal to deduction (Yukti-prasanga).\",\n    \"No use of appeal to analogy (Upamana-prasanga).\",\n    \"No use of appeal to example (Dravya-prasanga).\",\n    \"No use of appeal to comparison (Samana-laksha\u1e45ka).\",\n    \"No use of appeal to contradiction (Prakara\u1e45ka).\",\n    \"No use of appeal to consequence (Kara\u1e45ka).\",\n    \"No use of appeal to cause (Hetu-prasanga).\",\n    \"No use of appeal to effect (Karma-prasanga).\",\n    \"No use of appeal to genus (Jati-prasanga).\",\n    \"No use of appeal to species (Laksha\u1e45ga-prasanga).\",\n    \"No use of appeal to difference (Viparyaya-prasanga).\",\n    \"No use of appeal to similarity (Sama-laksha\u1e45ga-prasanga).\",\n    \"No use of appeal to identity (Nama-rupa-prasanga).\",\n    \"No use of appeal to accident (Samsaya-prasanga).\",\n    \"No use of appeal to necessity (Dharma-prasanga).\",\n    \"No use of appeal to possibility (Sambhava-prasanga).\",\n    \"No use of appeal to existence (Sat-prasanga).\",\n    \"No use of appeal to non-existence (Asat-prasanga).\",\n    \"No use of appeal to universality (Samata-vyapana-prasanga).\",\n    \"No use of appeal to particularity (Visesha-vyapana-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n    \"No use of appeal to universesals and particulars (Samanaya-Visesanaya-samavaya-prasanga).\",\n",
+  "response_length": 6884,
+  "generation_time_ms": 149368,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Through the door."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-08-C: Can it NOT be door? False\nPRA-08-C: Answer = Door\n",
+        "problem_id": "PRA-08-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

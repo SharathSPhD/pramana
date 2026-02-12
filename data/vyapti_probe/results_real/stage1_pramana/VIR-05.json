@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-05",
+  "category": "viruddha",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\nWhat is the question? What are the reasons for doubt? What are the reasons for certainty?\n\n**Question:** Which students must attend study hall?\n\n**Doubt Reasons:**\n1. What defines a student who must attend study hall?\n2. How do the sets A and B overlap or not?\n3. What is the exact policy statement?\n\n**Doubt Reasons (Certainty):**\n1. The policy exists and is stated.\n2. Set A and Set B are clearly defined.\n3. The logical structure of \"AND\" in the policy is clear.\n\n### Phase 2: Pramana (Sources of Knowledge)\nList all sources of knowledge. For each, state how it helps.\n\n**Sources:**\n1. Problem statement\n2. Set A: {p, q, r, s, t}\n3. Set B: {q, r, u, v}\n4. Policy statement\n\n**Explanation:**\n1. The problem statement defines the sets and the policy.\n2. Set A lists students who play sports.\n3. Set B lists students on the honor roll.\n4. The policy specifies the condition for study hall.\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\nConstruct a syllogism with 5 members.\n\n**Syllogism Structure:**\n1. Pratijna (Thesis): Which students must attend study hall?\n2. Hetu (Reason): Students who play sports AND are NOT on the honor roll must attend study hall.\n3. Upanaya (Application): Apply this condition to the sets A and B.\n4. Prasanga (Comparison): Compare the result with the policy.\n5. Sampanna (Conclusion): Determine which students must attend study hall.\n\n**Explanation:**\n1. **Pratijna:** The question asks which students must attend study hall.\n2. **Hetu:** The policy states that students who play sports AND are NOT on the honor roll must attend study hall.\n3. **Upanaya:** We apply the condition to Set A and Set B.\n4. **Prasanga:** Compare the result with the policy to ensure it meets the condition.\n5. **Sampanna:** We conclude which students must attend study hall.\n\n### Phase 4: Tarka (Counterfactual Reasoning)\nAssume the opposite and check consistency.\n\n**Tarka Statement:** Suppose no students play sports and are not on the honor roll attend study hall.\n\n**Analysis:**\n1. If no students play sports and are not on the honor roll attend study hall, then the policy would not apply.\n2. However, the policy requires that such students attend study hall.\n3. This contradiction implies our Tarka assumption is false.\n4. Therefore, the original statement must be true.\n\n**Conclusion:** The policy is consistent and valid.\n\n### Phase 5: Hetvabhasa (Fallacy Check)\nCheck for common fallacies in reasoning.\n\n**Fallacies Checked:**\n1. Akhandaka: Universalization bias\n2. Viruddha: Contradictory premises\n3. Prakaranatmaka: Scope fallacy\n4. Savyabhichara: Circular reasoning\n5. Hetvabhasa: Faulty analogy\n\n**Analysis:**\n1. **Akhandaka:** We do not assume all students play sports or are on the honor roll.\n2. **Viruddha:** No premises contradict each other.\n3. **Prakaranatmaka:** We do not confuse the sets or misapply the policy.\n4. **Savyabhichara:** No circular reasoning used.\n5. **Hetvabhasa:** No faulty analogies applied.\n\n**Conclusion:** No fallacies detected in reasoning.\n\n### Phase 6: Nirnaya (Ascertainment)\nFinal conclusion after eliminating doubt.\n\n**Final Answer:** The students who must attend study hall are those who play sports AND are NOT on the honor roll. From Set A and Set B, the students p, s, and t are in Set A but not in Set B. Therefore, students p, s, and t must attend study hall.\n\n**Verification:**\n1. Check membership: p, s, t are only in Set A.\n2. Check honor roll: None of p, s, t are in Set B.\n3. Apply policy: Since they play sports AND are not on honor roll, they must attend study hall.\n\n**Final Answer:** {p, s, t}\n### Answer\nThe students who must attend study hall are \\boxed{\\{p, s, t\\}}.\n### Final Answer\nThe students who must attend study hall are \\boxed{\\{p, s, t\\}}.\n```",
+  "response_length": 3771,
+  "generation_time_ms": 71247,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "{p, s, t} must attend study hall."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Akhandaka:** We do not assume all students play sports or are on the honor roll"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-05: Can pa avoid study_hall? False\nVIR-05: Must attend: pa, ps, pt (A\u2229B')\n",
+        "problem_id": "VIR-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "viruddha",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

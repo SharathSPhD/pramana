@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-03-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "llama_3b_base",
+  "raw_response": "The Red box contains the key and the ring.\nThe Blue box contains the coin.\nThe Green box contains the key.\n\nExplanation: The first statement says that if the Red box contains the key, then the Blue box contains the coin. This means that the Red box and the Blue box are connected by a conditional statement. The second statement says that the Green box contains the key. This means that the Green box is connected to the Red box by a conditional statement. The third statement says that the Red box contains the ring. This means that the Red box is connected to the Blue box by a conditional statement. Since the Red box contains the key, the Green box must also contain the key. Therefore, the Green box must contain the key and the ring. Since the Red box contains the key and the ring, the Blue box must contain the coin. Therefore, the Red box contains the key and the ring, the Blue box contains the coin, and the Green box contains the key and the ring. The answer is the Red box contains the key and the ring, the Blue box contains the coin, and the Green box contains the key and the ring. The Green box contains the key and the ring.\nThe Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring.\n\nThe correct answer is The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box contains the key and the ring. The Green box contains the key and the ring.\nThe Blue box contains the coin.\nThe Red box",
+  "response_length": 9174,
+  "generation_time_ms": 81106,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Green=key, Red=ring, Blue=coin."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Explanation: The first statement says that if the Red box contains the key, then the Blue box contains the coin. This means that the Red box and the Blue box are connected by a conditional statement. "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-03-C: Green=key, Red=ring, Blue=coin\n  Green=0, Red=2, Blue=1\n",
+        "problem_id": "SAD-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

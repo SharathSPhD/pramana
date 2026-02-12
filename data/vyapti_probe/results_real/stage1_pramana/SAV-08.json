@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-08",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Steps:\n\n1. **Samshaya (Doubt Analysis)**  \n   Hari is told that every Physics student in the group has passed the exam. But is this true? We need to verify each Physics student.\n\n2. **Pramana (Sources of Knowledge)**  \n   The information provided is the primary source of knowledge. We will use this to determine the status of each Physics student.\n\n3. **Pancha Avayava (5-Member Syllogism)**  \n   We will construct a syllogism to determine if all Physics students have passed.\n\n4. **Tarka (Counterfactual Reasoning)**  \n   Suppose not all Physics students have passed. What would follow? If one Physics student failed, the counselor's statement would be false. But since the counselor's statement is true, this leads to a contradiction, proving our original statement is valid.\n\n5. **Hetvabhasa (Fallacy Check)**  \n   We will check for any logical fallacies in our reasoning.\n\n6. **Nirnaya (Ascertainment)**  \n   After applying all methods, we conclude that the counselor's statement is accurate.\n\n---\n\n### Solution Code:\n```python\ndef analyze_counselor_statement():\n    # Samshaya: Check each Physics student\n    physics_students = [\"Arjun\", \"Chirag\", \"Fatima\", \"Hari\"]\n    passed_physics = []\n    \n    # Check each student\n    for student in physics_students:\n        if student == \"Arjun\":\n            passed_physics.append(\"passed\")\n        elif student == \"Chirag\":\n            passed_physics.append(\"passed\")\n        elif student == \"Fatima\":\n            passed_physics.append(\"passed\")\n        elif student == \"Hari\":\n            # Hari's status is unknown yet\n            pass\n    \n    # Check non-Physics students (they don't affect the statement)\n    # So, all Physics students have passed\n    \n    # Tarka: Assume not all passed, leads to contradiction\n    # Therefore, the counselor's statement is accurate\n    \n    return \"Counselor's statement is accurate.\"\n```\n\n### Final Answer:\nThe counselor's statement is accurate. Hari should be encouraged because every Physics student in the group has indeed passed the exam.",
+  "response_length": 2046,
+  "generation_time_ms": 33710,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"Physics \u2192 passed\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "**Pancha Avayava (5-Member Syllogism)**  \n   We will construct a syllogism to determine if all Physics students have passed"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-08: Checking 'All Physics students passed' ===\nCounterexample exists (Durga): True\n",
+        "problem_id": "SAV-08"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.8,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.8,
+        "used_fallback": false,
+        "evidence": [
+          "Model response matches trap answer pattern"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

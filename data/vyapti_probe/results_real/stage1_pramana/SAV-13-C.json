@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-13-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Phase 1: Samshaya (Doubt Analysis)\nWhat is the doubt? The food blogger claims that Caf\u00e9 Luna consistently delivers excellent food quality. The reviews provided are six in total, all rating food quality as \"Excellent\" with five stars. Each review is from a different visit time (Lunch and Dinner), and all are positive. \n\nPossible doubts:\n1. Are all reviews genuine and not fake?\n2. Are all reviews from different time periods (visits)?\n3. Are all reviews about the same location (Caf\u00e9 Luna)?\n4. Are all reviews about food quality, or could they be about service or ambiance?\n5. Is there any indication that the reviews are biased or paid?\n6. Are there any reviews that contradict the claim?\n\nAnalysis:\n- All reviews are explicitly stated as \"Food quality: Excellent\" with five stars.\n- There is no indication of fake reviews, different locations, or reviews about other aspects like service or ambiance.\n- All reviews are about food quality, and there are no contradictory reviews.\n- The reviews are from different visit times (Lunch and Dinner), but this doesn't affect the claim about food quality.\n\nTherefore, the only possible doubt is whether all reviews are genuine and about the same location, but since the problem states they are reviews of Caf\u00e9 Luna, this doubt is resolved.\n\n### Phase 2: Pramana (Sources of Knowledge)\nWhat are the sources of knowledge? The six reviews provided, each stating that food quality is excellent.\n\n### Phase 3: Pancha Avayava (5-Member Syllogism)\nWhat is the syllogism? The syllogism must follow the five-member structure:\n1. Pratyaksha (Direct Perception): There are six reviews of Caf\u00e9 Luna.\n2. Anupaya (Means): Each review states that food quality is excellent.\n3. Pratyabhijna (Recognition): All reviews are genuine and about the same location.\n4. Sama (Comparison): There are no contradictory reviews.\n5. Nigamana (Conclusion): Therefore, Caf\u00e9 Luna consistently delivers excellent food quality.\n\n### Phase 4: Tarka (Counterfactual Reasoning)\nWhat is the counterfactual reasoning? If Caf\u00e9 Luna did not consistently deliver excellent food quality, then at least one of the six reviews would contradict the claim. Since all reviews agree, the claim holds.\n\n### Phase 5: Hetvabhasa (Fallacy Check)\nWhat fallacies are checked? The argument avoids:\n1. Amaya (Illusion): No evidence of fake reviews or illusions.\n2. Hati (Counterfactual Fallacy): No use of modus tollens.\n3. Sadhyasama (Circular Reasoning): No reliance on circular reasoning.\n4. Viruddha (Contradictory Premise): No contradictory premises.\n\n### Phase 6: Nirnaya (Ascertainment)\nWhat is the final ascertainment? The food blogger's claim is valid based on the six reviews provided. Caf\u00e9 Luna consistently delivers excellent food quality.\n\n### Final Answer\nThe food blogger's claim is valid based on the six reviews provided. Caf\u00e9 Luna consistently delivers excellent food quality.  \n**Final Answer:** Yes, the claim is valid.",
+  "response_length": 2931,
+  "generation_time_ms": 47637,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, all reviews are Excellent."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "The reviews provided are six in total, all rating food quality as \"Excellent\" with five stars. Each review is from a different visit time (Lunch and Dinner), and all are positive"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-13-C: All reviews Excellent \u2014 holds\n",
+        "problem_id": "SAV-13-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "sadhyasama",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response mentions circular/assumption"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "sadhyasama",
+  "hetvabhasa_used_fallback": false
+}

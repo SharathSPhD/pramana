@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-01-C",
+  "category": "prakaranasama",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Problem Analysis:**\n\nWe have five people: **Amit**, **Bela**, **Charu**, **Dev**, and **Ela**. They need to be seated in five positions (1 to 5). The constraints are:\n\n1. **Amit** sits in position 1.\n2. **Bela** sits immediately to the right of **Amit**.\n3. **Charu** sits in position 5.\n4. **Ela** does **not** sit in position 3.\n\n### **Step-by-Step Solution:**\n\n#### **1. Samshaya (Doubt Analysis):**\nWe need to determine the seating arrangement based on the given constraints.\n\n#### **2. Pramana (Sources of Knowledge):**\nThe information provided is the only source of knowledge for this problem.\n\n#### **3. Pancha Avayava (5-Member Syllogism):**\nLet's analyze the constraints step by step.\n\n- **Amit** is fixed in position 1.\n- **Bela** must be in position 2 (immediately to the right of **Amit**).\n- **Charu** is fixed in position 5.\n- **Ela** cannot be in position 3.\n\n#### **4. Tarka (Counterfactual Reasoning):**\nLet's consider if any constraints could be misinterpreted or if there's a possibility of multiple solutions.\n\n- Suppose **Ela** is in position 3. But the constraint says she cannot be there. So, **Ela** must be in another position.\n- The remaining positions are 2, 3, and 4. However, position 2 is already occupied by **Bela**, and position 3 is restricted for **Ela**. Therefore, **Ela** must be in position 4.\n\n#### **5. Hetvabhasa (Fallacy Check):**\nWe need to ensure that our reasoning doesn't fall into any logical errors.\n\n- **Amit** in 1, **Bela** in 2, **Charu** in 5, and **Ela** in 4 satisfy all constraints.\n- **Dev** would then be in position 3, which is allowed since there's no restriction on **Dev**.\n\n#### **6. Nirnaya (Ascertainment):**\nAfter verifying all constraints and ensuring no contradictions, we can conclude the seating arrangement.\n\n### **Final Answer:**\n\nEla sits in position **4**.",
+  "response_length": 1847,
+  "generation_time_ms": 37525,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Ela sits in position 4."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-01-C: Ela=4 forced: True\n",
+        "problem_id": "PRA-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

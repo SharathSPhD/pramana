@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-15",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Nyaya Inference:\n**Samshaya (Doubt Analysis):**  \nThe project manager observes that the project is completed on time in multiple weeks, but not all weeks have Monday meetings. However, in one week (Week 5), the project was not completed on time despite having a Monday meeting. This creates doubt about whether the Monday meeting is a sufficient condition for project completion.\n\n**Pramana (Sources of Knowledge):**  \nThe data includes specific weeks with known meeting configurations and project completion outcomes. These observations are the primary sources of knowledge for this analysis.\n\n**Pancha Avayava (5-Member Syllogism):**  \n1. **Pratyaksha** (Direct Perception): Week 1: M=true, T=true \u2192 \u2713  \n2. **Anumana** (Inference): M=true is a sufficient condition for project completion.  \n3. **Drishti** (Testimony): The project manager reports that having a Monday meeting guarantees completion.  \n4. **Savyaya** (Comparison): Week 5: M=true, others=false \u2192 \u2717  \n5. **Nigamana** (Conclusion): Therefore, having a Monday meeting is a sufficient condition for project completion.\n\n**Tarka (Counterfactual Reasoning):**  \nIf the project is completed on time, then a Monday meeting must occur. This is logically consistent with the data, as every week where the project was completed had a Monday meeting, and the week without a Monday meeting resulted in failure.\n\n**Hetvabhasa (Fallacy Check):**  \nThe conclusion does not commit the fallacy of affirming the antecedent or denying the consequent. The reasoning correctly identifies the sufficient condition and avoids unwarranted generalizations.\n\n**Nirnaya (Ascertainment):**  \nBased on the systematic analysis, the conclusion is valid. Having a Monday meeting guarantees the project will be completed on time.\n\n### Final Answer:\n**\\boxed{Valid Conclusion}**",
+  "response_length": 1819,
+  "generation_time_ms": 29607,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, \"M=true \u2192 on time\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "---\n\n### Nyaya Inference:\n**Samshaya (Doubt Analysis):**  \nThe project manager observes that the project is completed on time in multiple weeks, but not all weeks have Monday meetings"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-15: 'M \u2192 on time' holds: False\n",
+        "problem_id": "SAV-15"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-02",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** The Nyaya methodology is a traditional Indian method of logical reasoning. It is used to analyze arguments and arrive at valid conclusions. The 6 phases are: Samshaya, Pramana, Pancha Avayava, Tarka, Hetvabhasa, and Nirnaya.\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nWe need to analyze the given information to identify any doubts or uncertainties. The problem states that Species H is nocturnal, but we do not have any information about its echolocation abilities. We must consider the possibility that Species H may or may not have echolocation.\n\n## Step 2: Pramana (Sources of Knowledge)\nWe need to identify the sources of knowledge that support our conclusion. The problem provides information about the characteristics of Species A, B, C, D, E, F, and G. However, none of these sources provide information about Species H. Therefore, our knowledge about Species H is limited to the fact that it is nocturnal.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe need to construct a 5-member syllogism to analyze the problem. Let's assume the following propositions:\n\n1. Species H is nocturnal (H).\n2. All nocturnal species have echolocation (N).\n3. Species H has echolocation (H').\n4. Not all species with echolocation are nocturnal (N').\n5. Species H is not nocturnal (H').\n\nWe can now construct the syllogism:\n\n1. H (Species H is nocturnal)\n2. N (All nocturnal species have echolocation)\n3. H' (Species H has echolocation)\n4. N' (Not all species with echolocation are nocturnal)\n5. H' (Species H is not nocturnal)\n\nThe syllogism is invalid because it contains a false premise (H').\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe need to consider counterfactual scenarios to test the validity of our conclusion. Let's assume that Species H does not have echolocation. We can then analyze the following scenarios:\n\n- If Species H does not have echolocation, then it is not nocturnal (by definition of echolocation).\n- However, Species H is nocturnal (by assumption).\n- This leads to a contradiction, which means that our assumption is false.\n\nTherefore, we can conclude that Species H must have echolocation.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe need to check for any fallacies in our reasoning. The syllogism is invalid because it contains a false premise (H'). However, the counterfactual reasoning is valid.\n\n## Step 6: Nirnaya (Ascertainment)\nWe have analyzed the problem using the 6 phases of Nyaya methodology. Based on our analysis, we can conclude that Species H has echolocation.\n\nThe final answer is: $\\boxed{Yes}$",
+  "response_length": 2553,
+  "generation_time_ms": 24178,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Species H is NOT necessarily echolocating."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "All nocturnal species have echolocation (N)"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-02: Checking vy\u0101pti 'Nocturnal \u2192 Echolocation' ===\nH can lack echolocation: True\n",
+        "problem_id": "SAV-02"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-11-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n**Solution:**\n\nWe are tasked with determining whether the librarian's statement, \"All our recommended books are available,\" is true based on the given information.\n\n### **1. Samshaya (Doubt Analysis):**\nThe librarian expresses doubt about the statement. We need to analyze if there's any reason to believe that not all recommended books are available.\n\n### **2. Pramana (Sources of Knowledge):**\nThe information provided is from the library catalog system, which is a reliable source. Therefore, we can trust the tags assigned to each book.\n\n### **3. Pancha Avayava (5-Member Syllogism):**\nLet's break down the syllogism:\n\n- **Major Premise:** All recommended books are available. (Librarian's statement)\n- **Minor Premise:** All the listed books are recommended. (From the catalog)\n- **Conclusion:** Therefore, all the listed books are available.\n\n### **4. Tarka (Counterfactual Reasoning):**\nWe need to consider if there are any exceptions or counterexamples. Looking at the list:\n\n- **\"Algorithms\"** \u2013 [Recommended] [Available] [New Arrival]\n- **\"Bioinformatics\"** \u2013 [Recommended] [Available] [New Arrival]\n- **\"Compilers\"** \u2013 [Recommended] [Available]\n- **\"Databases\"** \u2013 [Recommended] [Available] [New Arrival]\n- **\"Encryption\"** \u2013 [Recommended] [Available] [New Arrival]\n- **\"Fractals\"** \u2013 [Available] [New Arrival]\n\nAll recommended books are also marked as available. There are no books in the list that are recommended but not available.\n\n### **5. Hetvabhasa (Fallacy Check):**\nWe need to check for logical fallacies. The statement is a universal affirmative (\"All recommended books are available\"). Since there are no exceptions in the list, the fallacy check confirms the statement's validity.\n\n### **6. Nirnaya (Ascertainment):**\nAfter analyzing all phases, we conclude that the librarian's statement is true.\n\n**Final Answer:**\n\\boxed{\\text{Yes, the statement is true.}}",
+  "response_length": 1892,
+  "generation_time_ms": 32970,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Recommended \u2286 Available."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "</think>\n\n**Solution:**\n\nWe are tasked with determining whether the librarian's statement, \"All our recommended books are available,\" is true based on the given information"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-11-C: Recommended \u2286 Available \u2014 holds\n",
+        "problem_id": "SAV-11-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-01-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "base_with_cot",
+  "raw_response": "Okay, so I'm trying to figure out whether Object X is Concept A and if it has Property B. Let me break this down step by step.\n\nFirst, the textbook defines two terms. Concept A is anything that has property B. Property B is defined as having a molecular weight greater than 500 daltons. Object X has a molecular weight of 750 daltons. So, does that mean Object X has Property B, and therefore is it Concept A?\n\nLet me think about definitions. If something is defined as having a certain property, then having that property makes it fall under that definition. So, if Property B is being greater than 500 daltons, and Object X is 750, which is greater, then it does have Property B. Therefore, by the definition of Concept A, which is anything with Property B, Object X should be Concept A.\n\nWait, but I should make sure there aren't any exceptions or universal rules that might apply here. The problem mentions that these definitions are given, so I should assume they are straightforward unless stated otherwise. There's no mention of any exceptions or alternative interpretations, so I think the definitions are as they are.\n\nAnother way to look at it is through the use of logical definitions. If Property B is a property defined as MW > 500, then any object with MW > 500 has Property B. Since Object X's MW is 750, which is greater than 500, it must have Property B. Then, since Concept A is defined as anything with Property B, Object X is Concept A.\n\nI don't see any counterexamples here because the definitions are clear. If there was an object with MW exactly 500, it wouldn't have Property B, but since Object X is above that, it fits.\n\nSo, putting it all together, Object X has Property B because its molecular weight is over 500, and since it has Property B, it is Concept A.\n</think>\n\nObject X has a molecular weight of 750 daltons, which is greater than 500, thus it has Property B. Since Concept A is defined as anything with Property B, Object X is Concept A.\n\n**Answer:** Yes, Object X has Property B, and therefore it is Concept A.",
+  "response_length": 2049,
+  "generation_time_ms": 33072,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, X has property B and is Concept A."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": true,
+        "vyapti_text": "If something is defined as having a certain property, then having that property makes it fall under that definition. So, if Property B is being greater than 500 daltons, and Object X is 750, which is "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-01-C: Can X lack B? False\nSAD-01-C: Yes \u2014 X has B (MW 750 > 500)\n",
+        "problem_id": "SAD-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

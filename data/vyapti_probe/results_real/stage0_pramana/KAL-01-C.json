@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-01-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Please format your answer as follows:**\n\"The final answer is $\\boxed{[answer]}$.\"\n\n**Do not forget to include the boxed notation around your final answer.**\n\n### Solution:\n## Samshaya (Doubt Analysis)\nNo doubt; we have clear rules and no ambiguity in the rules.\n\n## Pramana (Sources of Knowledge)\nSources of knowledge: The company's policy manual.\n\n## Pancha Avayava (5-Member Syllogism)\n### Phase 1: Samanya Sutra (General Rule)\nAll employees receive 15 vacation days per year. (Section 1)\n\n### Phase 2: Vivkta Sutra (Department Override)\nEngineering department employees receive 20 vacation days per year. (Section 3)\n\n### Phase 3: Vivkta Vivkta Sutra (Individual Exception)\nEmployee #4472 (Engineering) receives 10 vacation days due to probationary period. (Section 5)\n\n### Phase 4: Vivkta Vivkta Vivkta Sutra (Individual Exception for Specific Employee)\nEmployee #4472 is on probation, but Employee #5501 is not. (Section 5)\n\n### Phase 5: Samanya Vivkta Sutra (General Rule for Specific Employee)\nEmployee #5501 is an Engineering employee. (Section 1)\n\n## Tarka (Counterfactual Reasoning)\nIf Employee #5501 were not on probation, they would receive 20 vacation days, just like other Engineering employees. However, since they are not on probation, they receive the general rule amount.\n\n## Hetvabhasa (Fallacy Check)\nNo fallacies detected.\n\n## Nirnaya (Ascertainment)\nEmployee #5501, a non-probationary Engineering employee, receives 20 vacation days per year.\n\nThe final answer is $\\boxed{20}$.",
+  "response_length": 1501,
+  "generation_time_ms": 14712,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "20 vacation days."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-01-C: Vacation days for #5501: 20\n",
+        "problem_id": "KAL-01-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "kalatita",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

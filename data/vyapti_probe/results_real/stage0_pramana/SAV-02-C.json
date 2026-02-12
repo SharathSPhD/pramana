@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-02-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage0_pramana",
+  "raw_response": "### Problem:\nIn a wildlife sanctuary, the following is established: \nA tiger is a carnivore. \nAll carnivores are large animals. \nThe tiger is large. \nTherefore, the tiger is a large carnivore.\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nThe problem is a logical argument about the nature of a tiger in a wildlife sanctuary. The goal is to determine if the conclusion logically follows from the premises.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe sources of knowledge for this problem are:\n\n- The definition of a carnivore: An animal that primarily consumes meat.\n- The characteristics of large animals: Animals with a significant size, typically weighing over a certain threshold.\n- The classification of tigers: Tigers are members of the Felidae family and are known to be carnivores.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nThe argument can be broken down into a 5-member syllogism:\n\n1. A tiger is a carnivore (All A are B, where A = tiger, B = carnivore)\n2. All carnivores are large animals (All B are C, where B = carnivore, C = large animal)\n3. The tiger is large (All A are C, where A = tiger, C = large animal)\n4. Therefore, the tiger is a large carnivore (All A are B and C, where A = tiger, B = carnivore, C = large animal)\n\n## Step 4: Tarka (Counterfactual Reasoning)\nTo test the validity of the argument, we can consider counterfactual scenarios:\n\n- If the tiger were not a carnivore, it would not be large (Premise 2 would be false)\n- If the tiger were not large, it would not be a carnivore (Premise 1 would be false)\n- If the tiger were not a large carnivore, it would not be a tiger (Conclusion would be false)\n\nThese counterfactuals suggest that the argument is valid.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nThe argument does not contain any fallacies:\n\n- It is not an example of a false dilemma (either/or fallacy)\n- It is not an example of a false cause (post hoc ergo propter hoc)\n- It is not an example of a false analogy (equivocation)\n- It is not an example of a false syllogism (undistributed middle)\n\n## Step 6: Nirnaya (Ascertainment)\nBased on the analysis, the conclusion logically follows from the premises. Therefore, the tiger is indeed a large carnivore.\n\nThe final answer is: $\\boxed{Yes}$",
+  "response_length": 2241,
+  "generation_time_ms": 21888,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Species H has echolocation."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "All carnivores are large animals"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-02-C: H can lack echolocation: False\n",
+        "problem_id": "SAV-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references majority/pattern/typically"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

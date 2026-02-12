@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-06",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code:\n```python\ndef solve():\n    # Step 1: Samshaya (Doubt Analysis)\n    # We have a doubt whether Rishi lives within 5 km of the campus.\n    \n    # Step 2: Pramana (Sources of Knowledge)\n    # The sources of knowledge are:\n    # - All members of the chess club can play chess.\n    # - Rishi is a member of the chess club.\n    # - Rishi owns a bicycle.\n    # - All bicycle owners live within 5 km of the campus.\n    \n    # Step 3: Pancha Avayava (5-Member Syllogism)\n    # Let's construct the syllogism.\n    # Major premise: All members of the chess club can play chess.\n    # Minor premise: Rishi is a member of the chess club.\n    # Conclusion: Rishi can play chess.\n    \n    # Step 4: Tarka (Counterfactual Reasoning)\n    # Let's consider counterfactuals.\n    # If Rishi did not own a bicycle, would he live within 5 km of the campus?\n    # If Rishi did not live within 5 km of the campus, could he be a member of the chess club?\n    \n    # Step 5: Hetvabhasa (Fallacy Check)\n    # Checking for fallacies:\n    # - Denying the antecedent (Fallacy)\n    # - Affirming the consequent (Fallacy)\n    # - Modifying the subject (Fallacy)\n    # - Distributive (Fallacy)\n    # - Conjunction (Fallacy)\n    # - Omission (Fallacy)\n    \n    # Step 6: Nirnaya (Ascertainment)\n    # After analyzing, we conclude that Rishi does live within 5 km of the campus.\n    \n    return \"Yes\"\n```\n\n### Explanation:\nThe problem is analyzed using the Nyaya methodology. The steps are followed systematically to determine if Rishi lives within 5 km of the campus. The conclusion is that Rishi does live within 5 km based on the given premises and logical reasoning.\n\nThe code provided outlines each step of the Nyaya process, including the identification of doubt, sources of knowledge, construction of a syllogism, counterfactual reasoning, fallacy checking, and final ascertainment. The conclusion is reached by logically deducing that since all bicycle owners live within 5 km and Rishi owns a bicycle, Rishi must live within that distance.\n```\n\nThe final answer is **Yes**.\n```",
+  "response_length": 2067,
+  "generation_time_ms": 39157,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Rishi lives within 5km (via premises 3+4)."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "The conclusion is reached by logically deducing that since all bicycle owners live within 5 km and Rishi owns a bicycle, Rishi must live within that distance"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-06: Can Rishi be outside 5km? False\nPRA-06: Rishi within 5km (premises 1+2 are red herring)\n",
+        "problem_id": "PRA-06"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "prakaranasama",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: prakaranasama"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "prakaranasama",
+  "hetvabhasa_used_fallback": true
+}

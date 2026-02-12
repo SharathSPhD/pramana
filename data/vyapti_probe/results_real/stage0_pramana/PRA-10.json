@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-10",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "stage0_pramana",
+  "raw_response": "**Note:** The answer should be in the format \"The final answer is: [answer].\"\n\n### Solution:\n## Step 1: Samshaya (Doubt Analysis)\nThe problem involves three friends ordering different dishes at a Michelin-starred restaurant. We need to determine what Lev orders. We should identify the given information, unknowns, and potential doubts.\n\n## Step 2: Pramana (Sources of Knowledge)\nThe given information is:\n- Jun does not order pasta.\n- Kira orders sushi.\n- The restaurant has won three Michelin stars.\n- The restaurant's interior features exposed brick walls.\n\nThe unknown is what Lev orders.\n\n## Step 3: Pancha Avayava (5-Member Syllogism)\nWe can construct a syllogism using the given information:\n1. If the restaurant has won three Michelin stars, then it is a high-end restaurant.\n2. High-end restaurants typically have a sophisticated atmosphere, which may include exposed brick walls.\n3. Kira orders sushi, which is a common dish in high-end restaurants.\n4. Jun does not order pasta, which is a common dish in high-end restaurants.\n5. Since Lev orders a different dish than Jun and Kira, and considering the high-end atmosphere, Lev must order salad.\n\n## Step 4: Tarka (Counterfactual Reasoning)\nWe should consider alternative scenarios to ensure our conclusion is reasonable. If Lev ordered pasta, it would contradict the fact that Jun does not order pasta. If Lev ordered sushi, it would contradict the fact that Kira orders sushi. If Lev ordered salad, it is consistent with all given information.\n\n## Step 5: Hetvabhasa (Fallacy Check)\nWe should check for fallacies in our reasoning. There are no fallacies in our reasoning, as we have used valid logical steps to arrive at our conclusion.\n\n## Step 6: Nirnaya (Ascertainment)\nBased on our analysis, we can conclude that Lev orders salad.\n\nThe final answer is: $\\boxed{salad}$",
+  "response_length": 1834,
+  "generation_time_ms": 16301,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "Lev orders pasta."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "If the restaurant has won three Michelin stars, then it is a high-end restaurant.\n2"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-10: Lev = Pasta (aesthetic info irrelevant)\n",
+        "problem_id": "PRA-10"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

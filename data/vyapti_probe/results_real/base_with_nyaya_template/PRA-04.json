@@ -1,0 +1,70 @@
+{
+  "problem_id": "PRA-04",
+  "category": "prakaranasama",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code\n```python\nfrom typing import Dict, List\nimport networkx as nx\n\ndef main():\n    # Create a graph with cities as nodes and routes as edges\n    graph = nx.Graph()\n    graph.add_edge('A', 'B', weight=2)\n    graph.add_edge('B', 'C', weight=3)\n    graph.adders.add_edge('C', 'D', weight=1)\n    graph.add_edge('E', 'F', weight=4)\n    graph.add_edge('F', 'G', weight=2)\n    \n    # Question 1: Minimum travel time from A to D\n    # Use Dijkstra's algorithm\n    shortest_path = nx.dijkstra(graph, 'A', 'D')\n    print(f\"Shortest distance from A to D: {shortest_path['distance']}\")\n    \n    # Question 2: Are A-D and E-G routes connected?\n    # Check if the two paths share any common nodes\n    path_a_d = nx.shortest_path(graph, 'A', 'D')\n    path_e_g = nx.shortest_path(graph, 'E', 'G')\n    \n    # Check if there's any overlap between the two paths\n    common_nodes = set(path_a_d).intersection(set(path_e_g))\n    if common_nodes:\n        print(\"There is a common node in the A-D and E-G routes.\")\n    else:\n        print(\"There is no common node between the A-D and E-G routes.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\n### Explanation\nThe code creates a graph of cities connected by train routes with specific travel times. For the first question, it uses Dijkstra's algorithm to find the shortest path from City A to City D. For the second question, it checks if there is any overlap between the nodes of the shortest path from A to D and the shortest path from E to G by finding the intersection of the two sets of nodes.\n\nThis approach ensures that we accurately determine the minimum travel time and check for any shared nodes between the two routes.\n```\n\n### Solution Code\n```python\nfrom typing import Dict, List\nimport networkx as nx\n\ndef main():\n    # Create a graph with cities as nodes and routes as edges\n    graph = nx.Graph()\n    graph.add_edge('A', 'B', weight=2)\n    graph.add_edge('B', 'C', weight=3)\n    graph.add_edge('C', 'D', weight=1)\n    graph.add_edge('E', 'F', weight=4)\n    graph.add_edge('F', 'G', weight=2)\n    \n    # Question 1: Minimum travel time from A to D\n    # Use Dijkstra's algorithm\n    shortest_path = nx.dijkstra(graph, 'A', 'D')\n    print(f\"Shortest distance from A to D: {shortest_path['distance']}\")\n    \n    # Question 2: Are A-D and E-G routes connected?\n    # Check if the two paths share any common nodes\n    path_a_d = nx.shortest_path(graph, 'A', 'D')\n    path_e_g = nx.shortest_path(graph, 'E', 'G')\n    \n    # Check if there's any overlap between the two paths\n    common_nodes = set(path_a_d).intersection(set(path_e_g))\n    if common_nodes:\n        print(\"There is a common node in the A-D and E-G routes.\")\n    else:\n        print(\"There is no common node between the A-D and E-G routes.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\n### Explanation\nThe code creates a graph of cities connected by train routes with specific travel times. For the first question, it uses Dijkstra's algorithm to find the shortest path from City A to City D. For the second question, it checks if there is any overlap between the nodes of the shortest path from A to D and the shortest path from E to G by finding the intersection of the two sets of nodes.\n\nThis approach ensures that we accurately determine the minimum travel time and check for any shared nodes between the two routes.\n```\n\n### Solution Code\n```python\nfrom typing import Dict, List\nimport networkx as nx\n\ndef main():\n    # Create a graph with cities as nodes and routes as edges\n    graph = nx.Graph()\n    graph.add_edge('A', 'B', weight=2)\n    graph.add_edge('B', 'C', weight=3)\n    graph.add_edge('C', 'D', weight=1)\n    graph.add_edge('E', 'F', weight=4)\n    graph.add_edge('F', 'G', weight=2)\n    \n    # Question 1: Minimum travel time from A to D\n    # Use Dijkstra's algorithm\n    shortest_path = nx.dijkstra(graph, 'A', 'D')\n    print(f\"Shortest distance from A to D: {shortest_path['distance']}\")\n    \n    # Question 2: Are A-D and E-G routes connected?\n    # Check if the two paths share any common nodes\n    path_a_d = nx.shortest_path(graph, 'A', 'D')\n    path_e_g = nx.shortest_path(graph, 'E', 'G')\n    \n    # Check if there's any overlap between the two paths\n    common_nodes = set(path_a_d).intersection(set(path_e_g))\n    if common_nodes:\n        print(\"There is a common node in the A-D and E-G routes.\")\n    else:\n        print(\"There is no common node between the A-D and E-G routes.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\n### Explanation\nThe code creates a graph of cities connected by train routes with specific travel times. For the first question, it uses Dijkstra's algorithm to find the shortest path from City A to City D. For the second question, it checks if there is any overlap between the nodes of the shortest path from A to D and the shortest path from E to G by finding the intersection of the two sets of nodes.\n\nThis approach ensures that we accurately determine the minimum travel time and check for any shared nodes between the two routes.\n```\n\n### Solution Code\n```python\nfrom typing import Dict, List\nimport networkx as nx\n\ndef main():\n    # Create a graph with cities as nodes and routes as edges\n    graph = nx.Graph()\n    graph.add_edge('A', 'B', weight=2)\n    graph.add_edge('B', 'C', weight=3)\n    graph.add_edge('C', 'D', weight=1)\n    graph.add_edge('E', 'F', weight=4)\n    graph.add_edge('F', 'G', weight=2)\n    \n    # Question 1: Minimum travel time from A to D\n    # Use Dijkstra's algorithm\n    shortest_path = nx.dijkstra(graph, 'A', 'D')\n    print(f\"Shortest distance from A to D: {shortest_path['distance']}\")\n    \n    # Question 2: Are A-D and E-G routes connected?\n    # Check if the two paths share any common nodes\n    path_a_d = nx.shortest_path(graph, 'A', 'D')\n    path_e_g = nx.shortest_path(graph, 'E', 'G')\n    \n    # Check if there's any overlap between the two paths\n    common_nodes = set(path_a_d).intersection(set(path_e_g))\n    if common_nodes:\n        print(\"There is a common node in the A-D and E-G routes.\")\n    else:\n        print(\"There is no common node between the A-D and E-G routes.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\n### Explanation\nThe code creates a graph of cities connected by train routes with specific travel times. For the first question, it uses Dijkstra's algorithm to find the shortest path from City A to City D. For the second question, it checks if there is any overlap between the nodes of the shortest path from A to D and the shortest path from E to G by finding the intersection of the two sets of nodes.\n\nThis approach ensures that we accurately determine the minimum travel time and check for any shared nodes between the two routes.\n```\n\n### Solution Code\n```python\nfrom typing import Dict, List\nimport networkx as nx\n\ndef main():\n    # Create a graph with cities as nodes and routes as edges\n    graph = nx.Graph()\n    graph.add_edge('A', 'B', weight=2)\n    graph.add_edge('B', 'C', weight=3)\n    graph.add_edge('C', 'D', weight=1)\n    graph.add_edge('E', 'F', weight=4)\n    graph.add_edge('F', 'G', weight=2)\n    \n    # Question 1: Minimum travel time from A to D\n    # Use Dijkstra's algorithm\n    shortest_path = nx.dijkstra(graph, 'A', 'D')\n    print(f\"Shortest distance from A to D: {shortest_path['distance']}\")\n    \n    # Question 2: Are A-D and E-G routes connected?\n    # Check if the two paths share any common nodes\n    path_a_d = nx.shortest_path(graph, 'A', 'D')\n    path_e_g = nx.shortest_path(graph, 'E', 'G')\n    \n    # Check if there's any overlap between the two paths\n    common_nodes = set(path_a_d).intersection(set(path_e_g))\n    if common_nodes:\n        print(\"There is a common node in the A-D and E-G routes.\")\n    else:\n        print(\"There is no common node between the A-D and E-G routes.\")\n\nif __name__ == \"__main__\":\n    main()\n```\n\n### Explanation\nThe code creates a graph of cities connected by train routes with specific travel times. For the first question, it uses Dijkstra's",
+  "response_length": 7948,
+  "generation_time_ms": 151808,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "6 hours from A to D; E-F-G route is disconnected."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "PRA-04: A to D time = 6hrs\nPRA-04: Routes not connected\n",
+        "problem_id": "PRA-04"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": false,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "prakaranasama",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

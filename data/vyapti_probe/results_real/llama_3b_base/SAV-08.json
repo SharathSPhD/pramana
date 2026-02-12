@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-08",
+  "category": "savyabhichara",
+  "problem_type": "probe",
+  "model_name": "llama_3b_base",
+  "raw_response": "The final answer is: $\\boxed{No}$\n\n## Step 1: Analyze the given information\nWe are given information about seven students and their subjects of study, as well as their exam results. We need to determine if the counselor's statement is accurate.\n\n## Step 2: Identify the key information\nThe key information is that every Physics student has passed the exam. We need to check if this is true based on the given information.\n\n## Step 3: Check the Physics students\nWe know that Arjun, Chirag, Fatima, and Gopal study Physics and have passed the exam. However, we also know that Durga studies Physics and failed the exam.\n\n## Step 4: Determine the accuracy of the counselor's statement\nSince Durga studies Physics and failed the exam, the counselor's statement that every Physics student has passed the exam is not accurate.\n\nThe final answer is: $\\boxed{No}$",
+  "response_length": 854,
+  "generation_time_ms": 7348,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "No, \"Physics \u2192 passed\" is false."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "has_nyaya_structure": false
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "## Step 2: Identify the key information\nThe key information is that every Physics student has passed the exam"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "=== SAV-08: Checking 'All Physics students passed' ===\nCounterexample exists (Durga): True\n",
+        "problem_id": "SAV-08"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}

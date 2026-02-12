@@ -1,0 +1,70 @@
+{
+  "problem_id": "VIR-10-C",
+  "category": "viruddha",
+  "problem_type": "control",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "</think>\n\n### **Problem Analysis Using Nyaya Methodology**\n\n**Contestant M has solved Problem A but not Problem B.**  \nThe contest rule states:  \n*\"To win a prize, a contestant must solve Problem A **or** Problem B.\"*\n\n---\n\n### **1. Samshaya (Doubt Analysis)**  \nContestant M has solved Problem A but not Problem B. The question is whether solving either Problem A or Problem B is sufficient to win the prize.\n\n---\n\n### **2. Pramana (Sources of Knowledge)**  \nThe contest rule is clear: solving **either** Problem A **or** Problem B is required. There are no additional conditions or exceptions mentioned.\n\n---\n\n### **3. Pancha Avayava (5-Member Syllogism)**  \nLet's break down the syllogism:  \n- **Major Premise:** To win a prize, a contestant must solve Problem A **or** Problem B.  \n- **Minor Premise:** Contestant M has solved Problem A **but not** Problem B.  \n- **Conclusion:** Does Contestant M qualify for the prize?\n\nThe syllogism is valid because solving either Problem A **or** Problem B satisfies the condition for winning the prize.\n\n---\n\n### **4. Tarka (Counterfactual Reasoning)**  \nIf Contestant M had not solved Problem A, they would not qualify. However, since they have solved Problem A, the counterfactual does not apply here.\n\n---\n\n### **5. Hetvabhasa (Fallacy Check)**  \nThere are no logical fallacies in the given statement. The rule is straightforward and does not introduce any contradictions.\n\n---\n\n### **6. Nirnaya (Ascertainment)**  \nBased on the analysis, Contestant M qualifies for the prize because solving Problem A satisfies the condition of solving **either** Problem A **or** Problem B.\n\n---\n\n### **Final Answer**  \n\\boxed{\\text{Yes}}",
+  "response_length": 1669,
+  "generation_time_ms": 29333,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Contestant M qualifies."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": true,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "VIR-10-C: Can prize be denied? False\n",
+        "problem_id": "VIR-10-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "viruddha",
+        "ground_truth_type": "viruddha",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response uses deductive language on viruddha-type problem"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "viruddha",
+  "hetvabhasa_used_fallback": false
+}

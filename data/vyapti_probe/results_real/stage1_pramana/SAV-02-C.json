@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-02-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # What is the problem?\n    # What is to be proven?\n    # What are the doubts?\n    \n    # Pramana: Sources of Knowledge\n    # What are the sources?\n    # What evidence supports each source?\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # 1. Pratijna (Thesis)\n    # 2. Hetu (Reason)\n    # 3. Pratyaksha (Direct Perception)\n    # 4. Anupaya (Consequence)\n    # 5. Upanaya (Application)\n    \n    # Tarka: Counterfactual Reasoning\n    # What if the opposite were true?\n    # What follows from that?\n    # What follows from the original statement?\n    \n    # Hetvabhasa: Fallacy Check\n    # Which fallacies are present?\n    # How to avoid them?\n    \n    # Nirnaya: Ascertainment\n    # What is the final answer?\n    # What is the reasoning?\n    # What is the conclusion?\n    \n    # Example: Solve a simple problem\n    # Example: Solve a more complex problem\n    \n    # Instructions: Replace the following with your content\n    # 1. Samshaya template\n    # 2. Pramana template\n    # 3. Pancha Avayava template\n    # 4. Tarka template\n    # 5. Hetvabhasa template\n    # 6. Nirnaya template\n    \n    # Add your own problem description and solution content\n    # Start by copying the template and filling in the placeholders\n    \n    # Note: The code structure is provided for reference only. The actual problem-solving code\n    # would depend on the specific problem and required output format.\n    \n    # For example, if you need to return a specific answer format:\n    # return {\"property\": value, \"reasoning\": reasoning}\n    \n    # This code is for demonstration purposes only.\n    \n    # To implement the Nyaya reasoning engine, you would need to:\n    # 1. Create a knowledge graph with Nyaya rules\n    # 2. Implement each of the six phases as functions\n    # 3. Connect them in a pipeline\n    # 4. Add validation and error handling\n    \n    # The following is a template for a Nyaya reasoning problem:\n    \n    # Nyaya Template\n    # -----------------\n    # Problem: [Problem Statement]\n    # Solution:\n    # Samshaya: [Doubt Analysis]\n    # Pramana: [Sources of Knowledge]\n    # Pancha Avayava: [5-Member Syllogism]\n    # Tarka: [Counterfactual Reasoning]\n    # Hetvabhasa: [Fallacy Check]\n    # Nirnaya: [Ascertainment]\n    # Final Answer: [Final Answer]\n    # Reasoning: [Reasoning]\n    # -----------------\n    \n    # Instructions: Replace the placeholder text with your actual content\n    \n    # Note: The code structure is provided for reference only. The actual problem-solving code\n    # would depend on the specific problem and required output format.\n    \n    # For example, if you need to return a specific answer format:\n    # return {\"property\": value, \"reasoning\": reasoning}\n    \n    # This code is for demonstration purposes only.\n    \n    # To implement the Nyaya reasoning engine, you would need to:\n    # 1. Create a knowledge graph with Nyaya rules\n    # 2. Implement each of the six phases as functions\n    # 3. Connect them in a pipeline\n    # 4. Add validation and error handling\n    \n    # The following is a template for a Nyaya reasoning problem:\n    \n    # Nyaya Template\n    # -----------------\n    # Problem: [Problem Statement]\n    # Solution:\n    # Samshaya: [Doubt Analysis]\n    # Pramana: [Sources of Knowledge]\n    # Pancha Avayava: [5-Member Syllogism]\n    # Tarka: [Counterfactual Reasoning]\n    # Hetvabhasa: [Fallacy Check]\n    # Nirnaya: [Ascertainment]\n    # Final Answer: [Final Answer]\n    # Reasoning: [Reasoning]\n    # -----------------\n    \n    # Instructions: Replace the placeholder text with your actual content\n    \n    # Note: The code structure is provided for reference only. The actual problem-solving code\n    # would depend on the specific problem and required output format.\n    \n    # For example, if you need to return a specific answer format:\n    # return {\"property\": value, \"reasoning\": reasoning}\n    \n    # This code is for demonstration purposes only.\n    \n    # To implement the Nyaya reasoning engine, you would need to:\n    # 1. Create a knowledge graph with Nyaya rules\n    # 2. Implement each of the six phases as functions\n    # 3. Connect them in a pipeline\n    # 4. Add validation and error handling\n    \n    # The following is a template for a Nyaya reasoning problem:\n    \n    # Nyaya Template\n    # -----------------\n    # Problem: [Problem Statement]\n    # Solution:\n    # Samshaya: [Doubt Analysis]\n    # Pramana: [Sources of Knowledge]\n    # Pancha Avayava: [5-Member Syllogism]\n    # Tarka: [Counterfactual Reasoning]\n    # Hetvabhasa: [Fallacy Check]\n    # Nirnaya: [Ascertainment]\n    # Final Answer: [Final Answer]\n    # Reasoning: [Reasoning]\n    # -----------------\n    \n    # Instructions: Replace the placeholder text with your actual content\n    \n    # Note: The code structure is provided for reference only. The actual problem-solving code\n    # would depend on the specific problem and required output format.\n    \n    # For example, if you need to return a specific answer format:\n    # return {\"property\": value, \"reasoning\": reasoning}\n    \n    # This code is for demonstration purposes only.\n    \n    # To implement the Nyaya reasoning engine, you would need to:\n    # 1. Create a knowledge graph with Nyaya rules\n    # 2. Implement each of the six phases as functions\n    # 3. Connect them in a pipeline\n    # 4. Add validation and error handling\n    \n    # The following is a template for a Nyaya reasoning problem:\n    \n    # Nyaya Template\n    # -----------------\n    # Problem: [Problem Statement]\n    # Solution:\n    # Samshaya: [Doubt Analysis]\n    # Pramana: [Sources of Knowledge]\n    # Pancha Avayava: [5-Member Syllogism]\n    # Tarka: [Counterfactual Reasoning]\n    # Hetvabhasa: [Fallacy Check]\n    # Nirnaya: [Ascertainment]\n    # Final Answer: [Final Answer]\n    # Reasoning: [Reasoning]\n    # -----------------\n    \n    # Instructions: Replace the placeholder text with your actual content\n    \n    # Note: The code structure is provided for reference only. The actual problem-solving code\n    # would depend on the specific problem and required output format.\n    \n    # For example, if you need to return a specific answer format:\n    # return {\"property\": value, \"reasoning\": reasoning}\n    \n    # This code is for demonstration purposes only.\n    \n    # To implement the Nyaya reasoning engine, you would need to:\n    # 1. Create a knowledge graph with Nyaya rules\n    # 2. Implement each of the six phases as functions\n    # 3. Connect them in a pipeline\n    # 4. Add validation and error handling\n    \n    # The following is a template for a Nyaya reasoning problem:\n    \n    # Nyaya Template\n    # -----------------\n    # Problem: [Problem Statement]\n    # Solution:\n    # Samshaya: [Doubt Analysis]\n    # Pramana: [Sources of Knowledge]\n    # Pancha Avayava: [5-Member Syllogism]\n    # Tarka: [Counterfactual Reasoning]\n    # Hetvabhasa: [Fallacy Check]\n    # Nirnaya: [Ascertainment]\n    # Final Answer: [Final Answer]\n    # Reasoning: [Reasoning]\n    # -----------------\n    \n    # Instructions: Replace the placeholder text with your actual content\n    \n    # Note: The code structure is provided for reference only. The actual problem-solving code\n    # would depend on the specific problem and required output format.\n    \n    # For example, if you need to return a specific answer format:\n    # return {\"property\": value, \"reasoning\": reasoning}\n    \n    # This code is for demonstration purposes only.\n    \n    # To implement the Nyaya reasoning engine, you would need to:\n    # 1. Create a knowledge graph with Nyaya rules\n    # 2. Implement each of the six phases as functions\n    # 3. Connect them in a pipeline\n    # 4. Add validation and error handling\n    \n    # The following is a template for a Nyaya reasoning problem:\n    \n    # Nyaya Template\n    # -----------------\n    # Problem: [Problem Statement]\n    # Solution:\n    # Samshaya: [Doubt Analysis]\n    # Pramana: [Sources of Knowledge]\n    # Pancha Avayava: [5-Member Syllogism]\n    # Tarka: [Counterfactual Reasoning]\n    # Hetvabhasa:",
+  "response_length": 8105,
+  "generation_time_ms": 149126,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, Species H has echolocation."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": false,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": ""
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-02-C: H can lack echolocation: False\n",
+        "problem_id": "SAV-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response does not mention counterexamples"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": false
+}

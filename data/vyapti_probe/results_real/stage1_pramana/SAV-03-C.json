@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAV-03-C",
+  "category": "savyabhichara",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef solve():\n    # Samshaya: Doubt Analysis\n    # Identify the doubt and resolve it using pramana, tarka, etc.\n    doubt = \"Is the hypothesis that S1 being ON always results in the light being ON valid?\"\n    \n    # Pramana: Sources of Knowledge\n    # The circuit manual states that the light turns ON iff S1 is ON.\n    # Test results show that in all cases where S1 is ON, the light is ON.\n    # Therefore, the manual is a valid source of knowledge.\n    pramana = [\n        \"The circuit manual is a reliable source of knowledge.\",\n        \"Manual: Light ON \u2194 S1 ON.\",\n        \"Test 1: S1 ON \u2192 Light ON.\",\n        \"Test 2: S1 ON \u2192 Light ON.\",\n        \"Test 3: S1 ON \u2192 Light ON.\",\n        \"Test 4: S1 ON \u2192 Light ON.\",\n        \"Test 5: S1 OFF \u2192 Light OFF.\"\n    ]\n    \n    # Tarka: Counterfactual Reasoning\n    # Assume the hypothesis is false and check for contradictions.\n    tarka = [\n        \"Assume: Whenever S1 is ON, the light is ON is false.\",\n        \"Therefore, there exists a case where S1 is ON and light is OFF.\",\n        \"But all test cases where S1 is ON have light ON. No such case exists.\",\n        \"Hence, the hypothesis must be true.\"\n    ]\n    \n    # Pancha Avayava: 5-Member Syllogism\n    # Structure: Thesis + 4 Reasoning Steps + Conclusion\n    syllogism = [\n        \"The circuit manual states: Light ON \u2194 S1 ON.\",\n        \"In Test 1: S1 ON \u2192 Light ON.\",\n        \"In Test 2: S1 ON \u2192 Light ON.\",\n        \"In Test 3: S1 ON \u2192 Light ON.\",\n        \"In Test 4: S1 ON \u2192 Light ON.\",\n        \"Therefore, in all cases where S1 is ON, the light is ON.\",\n        \"Hence, the hypothesis 'Whenever S1 is ON, the light is ON' is valid.\"\n    ]\n    \n    # Hetvabhasa: Fallacy Check\n    # Check for common fallacies: Ad hominem, Appeal to authority, etc.\n    fallacy_check = [\n        \"The circuit manual is not being appealed to directly; the test results are empirical evidence.\",\n        \"The manual's statement is used as a premise, not as an appeal to authority.\",\n        \"No logical fallacies are present in the reasoning.\"\n    ]\n    \n    # Nirnaya: Ascertainment\n    # Combine all phases to conclude the answer.\n    final_answer = (\n        \"Based on the circuit manual and the test results, the hypothesis is valid. \"\n        \"The light turns ON precisely when S1 is ON, and OFF when S1 is OFF. \"\n        \"All test cases are consistent with this rule, confirming the hypothesis.\"\n    )\n    \n    return final_answer\n\nsolve()\n```\n\n### Explanation:\nThe solution systematically applies the Nyaya methodology to analyze the problem. It starts by identifying the doubt, verifies the sources of knowledge (pramana) through empirical test results and the circuit manual, uses counterfactual reasoning (tarka) to test the validity of the hypothesis, constructs a syllogism (pancha avayava) to logically structure the proof, checks for fallacies (hetvabhasa) to ensure the reasoning is sound, and finally ascertains (nirnaya) the conclusion. This structured approach ensures that the hypothesis is thoroughly validated and any potential doubts are resolved.",
+  "response_length": 3090,
+  "generation_time_ms": 56422,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, \"S1=ON \u2192 Light=ON\" is valid."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "# Test results show that in all cases where S1 is ON, the light is ON"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAV-03-C: Vy\u0101pti 'S1\u2192Light' holds: True\n",
+        "problem_id": "SAV-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "savyabhichara",
+        "ground_truth_type": "savyabhichara",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: savyabhichara"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "savyabhichara",
+  "hetvabhasa_used_fallback": true
+}

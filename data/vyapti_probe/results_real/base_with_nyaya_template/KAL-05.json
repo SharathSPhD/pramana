@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-05",
+  "category": "kalatita",
+  "problem_type": "probe",
+  "model_name": "base_with_nyaya_template",
+  "raw_response": "### Solution Code:\n```python\n# Building Z was constructed in 2023, which is after 2020.\n# The current building code requires a minimum ceiling height of 9 feet for buildings constructed after 2020.\n# Building Z has 8.5-foot ceilings, which is less than 9 feet.\n# Therefore, Building Z does not comply with the current building code.\n\n# So, the answer is \"No, Building Z does not comply with the current building code.\"\n```\n\n### Explanation:\n1. **Samshaya (Doubt Analysis):** The inspector is unsure whether Building Z meets the current code because the code has changed since the building was constructed.\n2. **Pramana (Sources of Knowledge):** The inspector refers to the updated building code and the construction date of Building Z.\n3. **Pancha Avayava (5-Member Syllogism):** The inspector uses a syllogism to determine if the building meets the current requirements based on its construction date and ceiling height.\n4. **Tarka (Counterfactual Reasoning):** The inspector considers what would happen if the ceiling height were different or if the construction date were earlier.\n5. **Hetvabhasa (Fallacy Check):** The inspector checks for any logical fallacies in the reasoning, ensuring that the conclusion is valid.\n6. **Nirnaya (Ascertainment):** The inspector concludes that Building Z does not meet the current minimum ceiling height requirement.\n\nThe final answer is that Building Z does not comply with the current building code.\n```\n\nI need to make sure I understand each step of the Nyaya methodology correctly. Let me try to break it down.\n\nStarting with Samshaya, the inspector has a doubt about whether Building Z complies. That makes sense because the code has changed, so the previous code might not apply anymore.\n\nNext, Pramana. The inspector would look at the sources of knowledge, which are the building code and the construction date. The code says after 2020, a minimum of 9 feet is needed. Building Z was built in 2023, so it's after 2020.\n\nThen, Pancha Avayava. This is the syllogism part. The major premise is that all buildings after 2020 need at least 9 feet. The minor premise is that Building Z was built after 2020. The middle term connects them, so the conclusion is that Building Z needs to meet the 9-foot requirement.\n\nTarka is about counterfactuals. If Building Z had 9 feet, it would comply. If it were built before 2020, it would be grandfathered. But since it's after 2020, the grandfather clause doesn't apply.\n\nHetvabhasa checks for fallacies. Did the inspector assume something without proof? Maybe assuming the code applies only if the building is after 2020. But the code clearly states that, so that's valid.\n\nFinally, Nirnaya is the conclusion. After all this analysis, the inspector knows Building Z doesn't meet the current code.\n\nSo, putting it all together, the answer is that Building Z does not comply.\n```\n\n**Final Answer**\nNo, Building Z does not comply with the current building code.\n```",
+  "response_length": 2945,
+  "generation_time_ms": 49796,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "No, Building Z does not comply."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "stated": true,
+        "correct": false,
+        "negation_detected": false,
+        "vyapti_text": "The major premise is that all buildings after 2020 need at least 9 feet. The minor premise is that Building Z was built after 2020"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-05: Building Z compliant? False\n",
+        "problem_id": "KAL-05"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.6,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.6,
+        "used_fallback": false,
+        "evidence": [
+          "Response references past state"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": false
+}

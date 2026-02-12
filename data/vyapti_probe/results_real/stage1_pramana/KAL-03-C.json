@@ -1,0 +1,70 @@
+{
+  "problem_id": "KAL-03-C",
+  "category": "kalatita",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "### Problem:\nIt is currently fall semester. Student A already has 4 books checked out and wants to check out a fifth. Can Student A check out the fifth book?\n\n### Solution Code:\n```python\ndef can_check_out_fifth_book():\n    # Samshaya (Doubt Analysis)\n    # What is the question? When is a student allowed to check out a fifth book?\n    # What are the possibilities? Yes or No.\n    # What is the doubt? We need to determine if Student A can check out the fifth book.\n    \n    # Pramana (Sources of Knowledge)\n    # The university policy states:\n    # - \"During fall semester: Students may check out up to 5 library books simultaneously.\"\n    # - \"During summer session: Students may check out up to 2 library books simultaneously.\"\n    # This is a direct statement from the university policy.\n    \n    # Pancha Avayava (5-Member Syllogism)\n    # 1. Pratyaksha: Direct perception: The university policy states that during fall semester, students may check out up to 5 books.\n    # 2. Anumana: Inference: Student A is during fall semester and currently has 4 books checked out. Therefore, they can check out one more.\n    # 3. Pratyaksha: Direct perception: Student A is currently during fall semester.\n    # 4. Anumana: Inference: Having 4 books checked out does not exceed the fall semester limit. Therefore, they can check out another.\n    # 5. Pratyaksha: Direct perception: Student A wants to check out a fifth book.\n    \n    # Tarka (Counterfactual Reasoning)\n    # If Student A could not check out the fifth book, then the university policy would allow only up to 4 books during fall semester. But the policy states up to 5, so this is false.\n    \n    # Hetvabhasa (Fallacy Check)\n    # No fallacies detected in the reasoning. All statements align with the university policy.\n    \n    # Nirnaya (Ascertainment)\n    # Student A can check out the fifth book during fall semester as the policy allows up to 5 books simultaneously.\n    \n    return True\n```\n\n### Solution Code Explanation:\nThe function `can_check_out_fifth_book` systematically applies the Nyaya methodology to determine whether Student A can check out a fifth book during fall semester. The analysis begins with Samshaya, identifying the question and possibilities. Pramana introduces the university policy as the source of knowledge. Pancha Avayava constructs a syllogism using direct perception and inference. Tarka employs counterfactual reasoning to test the validity of the conclusion. Hetvabhasa checks for logical fallacies, ensuring the reasoning is sound. Finally, Nirnaya concludes that Student A can check out the fifth book based on the university policy. The function returns `True` as the final answer.",
+  "response_length": 2684,
+  "generation_time_ms": 44661,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": false,
+      "score": 0.0,
+      "details": {
+        "correct_answer": "Yes, can check out 5th book."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "# Tarka (Counterfactual Reasoning)\n    # If Student A could not check out the fifth book, then the university policy would allow only up to 4 books during fall semester. But the policy states up to 5,"
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "KAL-03-C: Can check out 5th? True\n",
+        "problem_id": "KAL-03-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 0.4,
+      "details": {
+        "classified_type": "kalatita",
+        "ground_truth_type": "kalatita",
+        "confidence": 0.4,
+        "used_fallback": true,
+        "evidence": [
+          "Defaulting to problem's designed category: kalatita"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": false,
+  "hetvabhasa_classification": "kalatita",
+  "hetvabhasa_used_fallback": true
+}

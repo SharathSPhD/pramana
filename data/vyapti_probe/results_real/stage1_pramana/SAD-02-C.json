@@ -1,0 +1,70 @@
+{
+  "problem_id": "SAD-02-C",
+  "category": "sadhyasama",
+  "problem_type": "control",
+  "model_name": "stage1_pramana",
+  "raw_response": "---\n\n### Solution Code:\n```python\ndef determine_x():\n    # Samshaya: Identify the problem and raise doubts\n    # Pramana: Gather facts from reliable sources\n    # Pancha Avayava: Structure the syllogism\n    # Tarka: Use counterfactual reasoning\n    # Hetvabhasa: Check for logical fallacies\n    # Nirnaya: Reach a definite conclusion\n\n    # Define the variables\n    x = True\n    y = True\n\n    # Samshaya: Doubt Analysis\n    # What do we know?\n    # - X is true iff Y is true\n    # - Y is true\n    # What do we need to determine?\n    # - The value of X\n\n    # Pramana: Sources of Knowledge\n    # 1. X \u2194 Y (X is true if and only if Y is true)\n    # 2. Y is true\n\n    # Pancha Avayava: 5-Member Syllogism\n    # 1. Pratyaksha (Direct Perception): X \u2194 Y\n    # 2. Anumana (Inference): Y is true\n    # 3. Pratyaksha (Direct Perception): Y is true\n    # 4. Hetvabhasa (Fallacy Check): Ensure no fallacies\n    # 5. Nirnaya (Ascertainment): Conclude X\n\n    # Tarka: Counterfactual Reasoning\n    # Assume X is false, then check consistency\n    # If X is false, then Y must be false (since X \u2194 Y)\n    # But Y is given as true, leading to contradiction\n    # Therefore, X must be true\n\n    # Hetvabhasa: Check for Fallacies\n    # 1. Kala: Time-related? No\n    # 2. Desa: Space-related? No\n    # 3. Samanya: Universal? No\n    # 4. Nirguna: Non-quality related? No\n    # 5. Asraya: Substrate? No\n    # 6. Kriya: Action? No\n    # 7. Nama: Name? No\n    # 8. Dharma: Quality? Yes (X is a quality)\n    # 9. Pancha Avayava: Syllogism structure is complete\n\n    # Nirnaya: Ascertainment\n    # X must be true because Y is true and X \u2194 Y\n\n    return x\n```\n\n### Explanation:\nThe problem defines two boolean variables, X and Y, with specific logical and factual constraints. By systematically applying the Nyaya methodology, we analyze the relationships between X and Y. Through direct perception and inference, we determine that X must be true given that Y is true and X is logically dependent on Y. Counterfactual reasoning confirms this conclusion, and a thorough check for logical fallacies ensures the validity of the solution. The final conclusion is that X is true.",
+  "response_length": 2147,
+  "generation_time_ms": 45344,
+  "tiers": [
+    {
+      "tier": 1,
+      "name": "outcome",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "correct_answer": "X = true."
+      }
+    },
+    {
+      "tier": 2,
+      "name": "structure",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "has_nyaya_structure": true
+      }
+    },
+    {
+      "tier": 3,
+      "name": "vyapti_explicitness",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "stated": true,
+        "correct": true,
+        "negation_detected": false,
+        "vyapti_text": "Nirnaya (Ascertainment): Conclude X\n\n    # Tarka: Counterfactual Reasoning\n    # Assume X is false, then check consistency\n    # If X is false, then Y must be false (since X \u2194 Y)\n    # But Y is given "
+      }
+    },
+    {
+      "tier": 4,
+      "name": "z3_encoding_execution",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "success": true,
+        "output": "SAD-02-C: X can be False? False\n",
+        "problem_id": "SAD-02-C"
+      }
+    },
+    {
+      "tier": 5,
+      "name": "hetvabhasa_classification",
+      "passed": true,
+      "score": 1.0,
+      "details": {
+        "classified_type": "none",
+        "ground_truth_type": "sadhyasama",
+        "confidence": 1.0,
+        "used_fallback": false,
+        "evidence": [
+          "Answer correct; no failure to classify"
+        ]
+      }
+    }
+  ],
+  "final_answer_correct": true,
+  "hetvabhasa_classification": "none",
+  "hetvabhasa_used_fallback": false
+}
